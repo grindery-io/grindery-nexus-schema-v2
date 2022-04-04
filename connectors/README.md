@@ -43,7 +43,7 @@ A `string` that identifies a blockchain.
 
 Type | Required | Description
 -----|----------|------------
-`string` | yes | The [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-2.md) identifier for the blockchain e.g eip155:1 for Ethereum Mainnet.
+`string` | yes | The [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-2.md) identifier for the blockchain e.g `eip155:1` for Ethereum Mainnet.
 
 ## ChainAccountSchema
 
@@ -51,7 +51,7 @@ A `string` that identifies a blockchain account.
 
 Type | Required | Description
 -----|----------|------------
-`string` | yes | The [CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-10.md) identifier for the blockchain account e.g eip155:1:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb for an Ethereum Mainnet address.
+`string` | yes | The [CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-10.md) identifier for the blockchain account e.g `eip155:1:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb` for an Ethereum Mainnet address.
 
 
 ## ChainCallOperationSchema
