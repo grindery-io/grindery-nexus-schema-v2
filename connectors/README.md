@@ -34,7 +34,7 @@ Key | Type | Required | Description
 `key` | `string` | yes | A key to uniquely identify this action.
 `name` | `string` | yes | A short name to uniquely identify this action.
 `display` | [DisplaySchema](#displayschema) | yes | Defines UI representation this action.
-`operation` | anyOf([ChainCallOperationSchema](#chaineventoperationschema)) | yes | Defines the functionality for this action.
+`operation` | anyOf([ChainCallOperationSchema](#chaincalloperationschema)) | yes | Defines the functionality for this action.
 
 
 ## ChainSchema
