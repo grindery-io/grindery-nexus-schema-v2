@@ -63,7 +63,7 @@ Key | Type | Required | Description
 `type` | `string` in (`blockchain:call`) | yes | Must be set to `blockchain:call`.
 `accounts` | array<[ChainAccountSchema](#chainaccountschema)> | yes | The blockchain accounts for which this function can be called.
 `signature` | `string` | yes | Signature of the function e.g `transfer(address,uint256)` for ERC20 transfer call.
-`arguments` | array<[ChainCallOperationArgsSchema](#chaineventoperationfilterschema)> | Defines the blockchain function call arguments for this action.
+`arguments` | array<[ChainCallOperationArgsSchema](#chaineventoperationfilterschema)> | yes | Defines the blockchain function call arguments for this action.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this action.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this action.
 `sample` | `object` | yes | Sample output data.
@@ -88,7 +88,7 @@ Key | Type | Required | Description
 `type` | `string` in (`blockchain:event`) | yes | Must be set to `blockchain:event`.
 `chains` | array<[ChainSchema](#chainschema)> | yes | All the chains for which this event is supported.
 `signature` | `string` | yes | Signature of the event e.g `Transfer(address,uint256)` for ERC20 Transfer event.
-`filters` | [ChainEventOperationFilterSchema](#chaineventoperationfilterschema) | Defines the blockchain event filter parameters for this trigger.
+`filters` | [ChainEventOperationFilterSchema](#chaineventoperationfilterschema) | yes | Defines the blockchain event filter parameters for this trigger.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
 `sample` | `object` | yes | Sample output data.
