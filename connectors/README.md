@@ -23,7 +23,7 @@ Key | Type | Required | Description
 `key` | `string` | yes | A key to uniquely identify this trigger.
 `name` | `string` | yes | A short name to uniquely identify this trigger.
 `display` | [DisplaySchema](#displayschema) | yes | Defines UI representation this trigger.
-`operation` | anyOf([ChainEventOperationSchema](#chaineventoperationschema)) | yes | Defines the functionality for this trigger.
+`operation` | anyOf([ChainEventOperationSchema](#chaineventoperationschema), [HookOperationSchema](#hookoperationschema), [PollingOperationSchema](#pollingoperationschema)) | yes | Defines the functionality for this trigger.
 
 
 ## ActionSchema
@@ -35,7 +35,7 @@ Key | Type | Required | Description
 `key` | `string` | yes | A key to uniquely identify this action.
 `name` | `string` | yes | A short name to uniquely identify this action.
 `display` | [DisplaySchema](#displayschema) | yes | Defines UI representation this action.
-`operation` | anyOf([ChainCallOperationSchema](#chaincalloperationschema)) | yes | Defines the functionality for this action.
+`operation` | anyOf([ChainCallOperationSchema](#chaincalloperationschema), [APICallOperationSchema](#apicalloperationschema)) | yes | Defines the functionality for this action.
 
 
 ## AuthenticationSchema
@@ -87,6 +87,19 @@ Key | Type | Required | Description
 `operation` | oneOf([RequestSchema](#requestschema)) | yes | Defines how Nexus fetches the additional authData needed to make API calls.
 
 
+## APICallOperationSchema
+
+An `object` that defines the mechanics of an API call operation.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`type` | `string` in (`api`) | yes | Must be set to `api`.
+`operation` | oneOf([RequestSchema](#requestschema)) | yes | Defines how Nexus makes the API call.
+`inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
+`sample` | `object` | yes | Sample output data.
+
+
 ## ChainSchema
 
 A `string` that identifies a blockchain.
@@ -132,7 +145,7 @@ Key | Type | Required | Description
 
 ## ChainEventOperationSchema
 
-An `object` that defines a blockchain event
+An `object` that defines a blockchain event.
 
 Key | Type | Required | Description
 ----|------|----------|------------
@@ -170,7 +183,7 @@ Key | Type | Required | Description
 
 ## FieldSchema
 
-An `object` that defines an input or output field
+An `object` that defines an input or output field.
 
 Key | Type | Required | Description
 ----|------|----------|------------
@@ -200,6 +213,31 @@ Key | Type | Required | Description
 `value` | `string` | yes | The actual value that is sent into the connector. Should match sample exactly.
 `label` | `string` | yes | A human readable label for this value.
 `sample` | `string` | yes | Displayed as light grey text in the editor. It's important that the value match the sample.
+
+
+## HookOperationSchema
+
+An `object` that defines the mechanics of an inbound hook.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`type` | `string` in (`hook`) | yes | Must be set to `hook`.
+`inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
+`sample` | `object` | yes | Sample output data.
+
+
+## PollingOperationSchema
+
+An `object` that defines the mechanics of a polling operation.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`type` | `string` in (`polling`) | yes | Must be set to `polling`.
+`operation` | oneOf([RequestSchema](#requestschema)) | yes | Defines how Nexus fetches data.
+`inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
+`sample` | `object` | yes | Sample output data.
 
 
 ## RequestSchema
