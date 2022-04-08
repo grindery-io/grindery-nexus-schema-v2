@@ -11,11 +11,12 @@ Key | Type | Required | Description
 `platformVersion` | `string` | yes | version identifier for the Grindery Nexus execution environment.
 `triggers` | array<[TriggerSchema](#triggerschema)> | no | All the triggers for your connector app.
 `actions` | array<[ActionSchema](#actionschema)> | no | All the actions for your connector app.
+`authentication` | [AuthenticationSchema](#authenticationschema) | no | Choose what scheme your API uses for authentication.
 
 
 ## TriggerSchema
 
-An `object` that defines a trigger for a workflow
+An `object` that defines a trigger for a workflow.
 
 Key | Type | Required | Description
 ----|------|----------|------------
@@ -27,7 +28,7 @@ Key | Type | Required | Description
 
 ## ActionSchema
 
-An `object` that defines an action for a workflow
+An `object` that defines an action for a workflow.
 
 Key | Type | Required | Description
 ----|------|----------|------------
@@ -37,6 +38,55 @@ Key | Type | Required | Description
 `operation` | anyOf([ChainCallOperationSchema](#chaincalloperationschema)) | yes | Defines the functionality for this action.
 
 
+## AuthenticationSchema
+
+An `object` that defines the authentication schemes.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`type` | `string` in (`basic`, `custom`, `digest`, `oauth1`, `oauth2`, `session`) | yes | Choose which scheme you want to use.
+`test` | oneOf([RequestSchema](#requestschema)) | yes | A request that confirms the authentication is working.
+`fields` | array<[FieldSchema](#fieldschema)> | no | Fields you can request from the user before they connect your app to Nexus.
+`label` | anyOf(`string`, [RequestSchema](#requestschema)) | no | A string with variables or request that returns the connection label for the authenticated user.
+`oauth1Config` | [AuthenticationOAuth1ConfigSchema](#authenticationoauth1configschema) | no | OAuth1 authentication configuration.
+`oauth2Config` | [AuthenticationOAuth2ConfigSchema](#authenticationoauth2configschema) | no | OAuth2 authentication configuration.
+`sessionConfig` | [AuthenticationSessionConfigSchema](#authenticationsessionconfigschema) | no | session authentication configuration.
+
+
+## AuthenticationOAuth1ConfigSchema
+
+An `object` that defines OAuth1 authentication config.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`getRequestToken` | oneOf([RequestSchema](#requestschema)) | yes | Define where Nexus will acquire a request token which is used for the rest of the three legged authentication process.
+`authorizeUrl` | oneOf([RequestSchema](#requestschema)) | yes | Define where Nexus will redirect the user to authorize our app. Typically, you should append an `oauth_token` querystring parameter to the request.
+`getAccessToken` | oneOf([RequestSchema](#requestschema)) | yes | Define how Nexus fetches an access token from the API
+
+
+## AuthenticationOAuth2ConfigSchema
+
+An `object` that defines OAuth2 authentication config.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`authorizeUrl` | oneOf([RequestSchema](#requestschema)) | yes | Define where Nexus will redirect the user to authorize our app. Note: we append the redirect URL and state parameters to return value of this function.
+`getAccessToken` | oneOf([RequestSchema](#requestschema)) | yes | Define how Nexus fetches an access token from the API
+`refreshAccessToken` | oneOf([RequestSchema](#requestschema)) | no | Define how Nexus will refresh the access token from the API
+`codeParam` | `string` | no | Define a non-standard code param Nexus should scrape instead.
+`scope` | `string` | no | What scope should Nexus request?
+`autoRefresh` | `boolean` | no | Should Nexus invoke `refreshAccessToken` when we receive an error for a 401 response?
+
+
+## AuthenticationSessionConfigSchema
+
+An `object` that defines session authentication config.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`operation` | oneOf([RequestSchema](#requestschema)) | yes | Defines how Nexus fetches the additional authData needed to make API calls.
+
+
 ## ChainSchema
 
 A `string` that identifies a blockchain.
@@ -44,6 +94,7 @@ A `string` that identifies a blockchain.
 Type | Required | Description
 -----|----------|------------
 `string` | yes | The [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-2.md) identifier for the blockchain e.g `eip155:1` for Ethereum Mainnet.
+
 
 ## ChainAccountSchema
 
@@ -75,7 +126,7 @@ An `object` that defines the arguments sent to the blockchain function call.
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`type` | `string` | yes | The value type for this argument e.g `bool`, `int`, `uint`, `address` etc for EVM function calls.
+`type` | `string` | yes | The value type for this argument e.g `bool`, `int`, `uint`, `address` etc.
 `value` | anyOf(`number`, `string`) | yes | The value of the argument to be passed to the function.
 
 
@@ -146,7 +197,20 @@ In the case of an object, the properties should be defined as follows:
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`value` | `string` | yes | The actual value that is sent into the Zap. Should match sample exactly.
+`value` | `string` | yes | The actual value that is sent into the connector. Should match sample exactly.
 `label` | `string` | yes | A human readable label for this value.
 `sample` | `string` | yes | Displayed as light grey text in the editor. It's important that the value match the sample.
 
+
+## RequestSchema
+
+An `object` that represents an HTTP request. 
+
+Key | Type | Required | Description
+----|------|----------|------------
+`method` | `string` in (`GET`, `PUT`, `POST`, `PATCH`, `DELETE`, `HEAD`) | no | The HTTP method for the request.
+`url` | `string` | no | A URL for the request (the querystring will be parsed and merged with params). Keys and values will not be re-encoded.
+`body` | oneOf(`null`, `string`, `object`, `array`) | no | Can be nothing, a raw string or JSON (object or array).
+`params` | `object` | no | A mapping of the querystring - will get merged with any query params in the URL. Keys and values will be encoded.
+`headers` | `object` | no | The HTTP headers for the request.
+`auth` | oneOf(`array<string>`, `object`) | no | An object holding the auth parameters for OAuth1 request signing or an array to hold the username and password for Basic Auth.

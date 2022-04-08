@@ -21,3 +21,4 @@ Key | Type | Required | Description
 `operation` | `string` | yes | the identifier of the connector app's trigger or action that defines this operation.
 `input` | `object` | yes | An object that defines the user's input as a `key`, `value` map where the `key` is the input field's identifier as defined in the corresponding [FieldSchema](../connectors/README.md#fieldschema) and the value is the user defined input value.
 `display` | `object` | no | An object that defines the user's input as a `key`, `label` map where the `key` is the input field's identifier as defined in the corresponding [FieldSchema](../connectors/README.md#fieldschema) and the label is the user friendly label that corresponds to the user's input value.
+`authentication` | `string` | no | the identifier of the connector app's authentication config.
