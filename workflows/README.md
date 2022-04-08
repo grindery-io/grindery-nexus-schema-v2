@@ -2,6 +2,7 @@
 
 
 ## WorkflowSchema
+
 An `object` that represents a workflow.
 
 Key | Type | Required | Description
@@ -12,6 +13,7 @@ Key | Type | Required | Description
 
 
 ## OperationSchema
+
 An `object` that defines a workflow operation e.g a trigger or an action.
 
 Key | Type | Required | Description
