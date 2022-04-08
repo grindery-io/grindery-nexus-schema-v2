@@ -250,6 +250,8 @@ Key | Type | Required | Description
 `instructions` | `string` | no | Short instructions for how to use this trigger or action.
 
 
+### Fields
+
 #### FieldSchema
 
 An `object` that defines an input or output field.
