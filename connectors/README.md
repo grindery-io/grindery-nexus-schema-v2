@@ -1,5 +1,7 @@
 # Grindery Nexus Connector Schema Definitions
 
+Connectors abstract web3 and web2 protocols into an interface of composable triggers and actions.
+
 
 ## Index
 
@@ -24,6 +26,8 @@
   - [Chains](#chains)
     - [ChainSchema](#chainschema)
     - [ChainAccountSchema](#chainaccountschema)
+  - [DIDs](#dids)
+    - [DIDSchema](#didschema)
   - [Display](#display)
     - [DisplaySchema](#displayschema)
   - [Fields](#fields)
@@ -235,6 +239,17 @@ A `string` that identifies a blockchain account.
 Type | Required | Description
 -----|----------|------------
 `string` | yes | The [CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-10.md) identifier for the blockchain account e.g `eip155:1:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb` for an Ethereum Mainnet address.
+
+
+### DIDs
+
+#### DIDSchema
+
+A `string` that represents a [Decentralized Identifier (DID)](https://www.w3.org/TR/did-core/).
+
+Type | Required | Description
+-----|----------|------------
+`string` | yes | The [CIP-79](https://github.com/ceramicnetwork/CIP/blob/main/CIPs/CIP-79/CIP-79.md) identifier for the 3ID DID Account e.g `did:3:kjzl6cwe1jw149tlplc4bgnpn1v4uwk9rg9jkvijx0u0zmfa97t69dnqibqa2as` for Ceramic 3ID DID with streamID `kjzl6cwe1jw149tlplc4bgnpn1v4uwk9rg9jkvijx0u0zmfa97t69dnqibqa2as`.
 
 
 ### Display

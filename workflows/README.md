@@ -1,5 +1,9 @@
 # Grindery Nexus Workflow Schema Definitions
 
+Workflows define a sequence of actions to be executed predicated on a trigger (an event or condition).
+
+Workflows leverage the composability of connectors hence a workflow can include triggers and actions from multiple connectors.
+
 
 ## WorkflowSchema
 
@@ -10,7 +14,8 @@ Key | Type | Required | Description
 `title` | `string` | yes | A short name for the workflow
 `trigger` | [OperationSchema](#operationschema) | yes | Defines the trigger of the workflow.
 `actions` | array<[OperationSchema](#operationschema)> | yes | Defines the actions of the workflow.
-
+`creator` | [3ID DID Account](../connectors/README.md#didschema) | yes | The DID of the creator of this workflow.
+`signature` | `string` | yes | signature of the workflow definition by the creator (i.e JSON of all fields except signature).
 
 ## OperationSchema
 
