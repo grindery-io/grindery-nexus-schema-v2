@@ -33,6 +33,8 @@ Connectors abstract web3 and web2 protocols into an interface of composable trig
   - [Fields](#fields)
     - [FieldSchema](#fieldschema)
       - [FieldChoiceSchema](#fieldchoiceschema)
+    - [FieldProviderRequestSchema](#fieldproviderrequestschema)
+    - [FieldProviderResponseSchema](#fieldproviderresponseschema)
   - [Requests](#requests)
     - [RequestSchema](#requestschema)
 
@@ -75,6 +77,7 @@ Key | Type | Required | Description
 `signature` | `string` | yes | Signature of the event e.g `Transfer(address,uint256)` for ERC20 Transfer event.
 `filters` | [ChainEventOperationFilterSchema](#chaineventoperationfilterschema) | yes | Defines the blockchain event filter parameters for this trigger.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
 `sample` | `object` | yes | Sample output data.
 
@@ -99,6 +102,7 @@ Key | Type | Required | Description
 ----|------|----------|------------
 `type` | `string` in (`hook`) | yes | Must be set to `hook`.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
 `sample` | `object` | yes | Sample output data.
 
@@ -112,6 +116,7 @@ Key | Type | Required | Description
 `type` | `string` in (`polling`) | yes | Must be set to `polling`.
 `operation` | oneOf([RequestSchema](#requestschema)) | yes | Defines how Nexus fetches data.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
 `sample` | `object` | yes | Sample output data.
 
@@ -139,6 +144,7 @@ Key | Type | Required | Description
 `type` | `string` in (`api`) | yes | Must be set to `api`.
 `operation` | oneOf([RequestSchema](#requestschema)) | yes | Defines how Nexus makes the API call.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
+`inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
 `sample` | `object` | yes | Sample output data.
 
@@ -154,6 +160,7 @@ Key | Type | Required | Description
 `signature` | `string` | yes | Signature of the function e.g `transfer(address,uint256)` for ERC20 transfer call.
 `arguments` | array<[ChainCallOperationArgsSchema](#chaineventoperationfilterschema)> | yes | Defines the blockchain function call arguments for this action.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this action.
+`inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this action.
 `sample` | `object` | yes | Sample output data.
 
@@ -285,6 +292,7 @@ Key | Type | Required | Description
 `children` | array<[FieldSchema](#fieldschema)> | no | An array of child fields that define the structure of a sub-object for this field. Usually used for line items.
 `dict` | `boolean` | no | Is this field a key/value input?
 `computed` | `boolean` | no | Is this field automatically populated (and hidden from the user)?
+`updateFieldDefinition` | `boolean` | no | Only has effect when `inputFieldProviderUrl` is present. If not set or set to `true`, `inputFieldProviderUrl` is called to update field definition after this field is changed. If set to `false`, this field won't trigger field definition update.
 `inputFormat` | `string` | no | Useful when you expect the input to be part of a longer string. Put "{{input}}" in place of the user's input (e.g "https://{{input}}.yourdomain.com").
 
 
@@ -299,6 +307,28 @@ Key | Type | Required | Description
 `value` | `string` | yes | The actual value that is sent into the connector. Should match sample exactly.
 `label` | `string` | yes | A human readable label for this value.
 `sample` | `string` | yes | Displayed as light grey text in the editor. It's important that the value match the sample.
+
+
+#### FieldProviderRequestSchema
+
+This is wrapped in JSON-RPC request. `method` field in the request should be `grinderyNexusConnectorUpdateFields`.
+
+Parameters:
+
+Key | Type | Required | Description
+----|------|----------|------------
+`key` | `string` | yes | Unique key of the trigger or action.
+`credentials` | `object` | no | Credentials configured by user on the UI. May not be present if the connector doesn't require authentication.
+`fieldData` | `object` | yes | Fields already filled by user.
+
+
+#### FieldProviderResponseSchema
+
+This is wrapped in JSON-RPC response.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`inputFields` | array<[FieldSchema](#fieldschema)> | yes | Updated field definition to be shown in UI.
 
 
 ### Requests
