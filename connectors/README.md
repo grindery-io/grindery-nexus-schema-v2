@@ -44,12 +44,14 @@ An `object` that represents a connector app.
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`name` | `string` | yes | A short name to uniquely identify this connector app.
+`key` | `string` | yes | A key to uniquely identify this connector.
+`name` | `string` | yes | A short name to uniquely identify this connector app. Name for web3 connector must include blockchain name, for example: "Moloch on Ethereum".
 `version` | `string` | yes | version identifier for your code.
 `platformVersion` | `string` | yes | version identifier for the Grindery Nexus execution environment.
 `triggers` | array<[TriggerSchema](#triggerschema)> | no | All the triggers for your connector app.
 `actions` | array<[ActionSchema](#actionschema)> | no | All the actions for your connector app.
 `authentication` | [AuthenticationSchema](#authenticationschema) | no | Choose what scheme your API uses for authentication.
+`icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
 
 
 ## Triggers
@@ -270,6 +272,7 @@ Key | Type | Required | Description
 `label` | `string` | yes | A short label for this trigger or action e.g "New Record" or "Create Record".
 `description` | `string` | yes | A short description for what this trigger or action does.
 `instructions` | `string` | no | Short instructions for how to use this trigger or action.
+`icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
 
 
 ### Fields
