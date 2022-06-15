@@ -16,6 +16,7 @@ Key | Type | Required | Description
 `actions` | array<[OperationSchema](#operationschema)> | yes | Defines the actions of the workflow.
 `creator` | [DIDSchema](../connectors/README.md#didschema) | yes | The DID of the creator of this workflow.
 `signature` | `string` | yes | signature of the workflow definition by the creator (i.e JSON of all fields except signature).
+`state` | `string` in (`on`, `off`) | yes | State of the workflow. If `on` workflow must be executed immediately. If `off` workflow must be saved, but not executed.
 
 ## OperationSchema
 
