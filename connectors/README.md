@@ -52,6 +52,7 @@ Key | Type | Required | Description
 `actions` | array<[ActionSchema](#actionschema)> | no | All the actions for your connector app.
 `authentication` | [AuthenticationSchema](#authenticationschema) | no | Choose what scheme your API uses for authentication.
 `icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
+`pricing` | `string` | no | URL of the pricing page. Required if connector is a paid service.
 
 
 ## Triggers
