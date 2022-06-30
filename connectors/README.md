@@ -17,6 +17,9 @@ Connectors abstract web3 and web2 protocols into an interface of composable trig
     - [APICallOperationSchema](#apicalloperationschema)
     - [ChainCallOperationSchema](#chaincalloperationschema)
       - [ChainCallOperationArgsSchema](#chaincalloperationargsschema)
+- [Recipes](#recipes)
+  - [RecipeSchema](#recipeschema)
+    - [RecipeOperationSchema](#recipeoperationschema)
 - [Authentication](#authentication)
   - [AuthenticationSchema](#authenticationschema)
     - [AuthenticationOAuth1ConfigSchema](#authenticationoauth1configschema)
@@ -139,19 +142,31 @@ Key | Type | Required | Description
 `sample` | `object` | yes | Sample output data.
 
 
-#### ChainCallOperationSchema
+## Recipes
 
-An `object` that defines a blockchain contract function call.
+### RecipeSchema
+
+An `object` that defines a recipe. A recipe is composed of trigger and/or actions with simplified input fields so that it can be easily used by users.
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`type` | `string` in (`blockchain:call`) | yes | Must be set to `blockchain:call`.
-`accounts` | array<[ChainAccountSchema](#chainaccountschema)> | yes | The blockchain accounts for which this function can be called.
-`signature` | `string` | yes | Signature of the function including parameter names (which are mapped to input fields by key) e.g `function transfer(address to, uint256 value)` for ERC20 transfer call.
-`inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this action.
-`inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
-`outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this action.
-`sample` | `object` | yes | Sample output data.
+`key` | `string` | yes | A key to uniquely identify this recipe.
+`name` | `string` | yes | A short name to uniquely identify this recipe.
+`display` | [DisplaySchema](#displayschema) | yes | Defines UI representation this recipe.
+`inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this recipe.
+`trigger` | [RecipeOperationSchema](#recipeoperationschema) | no | Defines trigger of this recipe.
+`actions` | array<[RecipeOperationSchema](#recipeoperationschema)> | no | Defines trigger of this recipe.
+
+
+#### RecipeOperationSchema
+
+An `object` that defines a recipe operation e.g a trigger or an action.
+
+Key | Type | Required | Description
+----|------|----------|------------
+`connector` | `string` | no | the identifier of the connector app that defines this operation. Leave empty to use current connector.
+`operation` | `string` | yes | the identifier of the connector app's trigger or action that defines this operation.
+`input` | `object` | yes | An object that defines the user's input as a `key`, `value` map where the `key` is the input field's identifier as defined in the corresponding [FieldSchema](#fieldschema) and the value is the user defined input value. `value` can contain mustache expressions like `{{input.fieldName}}` to reference input of the recipe, or `{{trigger.fieldName}}`/`{{recipeStep0.fieldName}}` to reference output of a trigger or action.
 
 
 ## Authentication
