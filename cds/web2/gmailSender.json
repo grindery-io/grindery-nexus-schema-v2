@@ -1,15 +1,15 @@
 {
   "key": "gmailSender",
-  "name": "GMail Sender",
+  "name": "Gmail",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "actions": [
     {
       "key": "sendEmailViaGmail",
-      "name": "Send email via GMail",
+      "name": "Send email",
       "display": {
-        "label": "Send email via GMail",
-        "description": "Send email via GMail"
+        "label": "Send email",
+        "description": "Send email via Gmail"
       },
       "operation": {
         "type": "api",
@@ -22,40 +22,41 @@
             "label": "To",
             "type": "string",
             "required": true,
-            "default": "receiver@mail.com"
+            "placeholder": "receiver@mail.com"
           },
           {
             "key": "cc",
             "label": "Cc",
             "type": "string",
             "required": false,
-            "default": "cc@mail.com"
+            "placeholder": "cc@mail.com"
           },
           {
             "key": "bcc",
             "label": "Bcc",
             "type": "string",
             "required": false,
-            "default": "bcc@mail.com"
+            "placeholder": "bcc@mail.com"
           },
           {
             "key": "subject",
             "label": "Subject",
             "type": "string",
             "required": true,
-            "default": "subject of email"
+            "placeholder": "subject of email"
           },
           {
             "key": "message",
             "label": "Message",
             "type": "string",
             "required": true,
-            "default": "message"
+            "placeholder": "message"
           }
         ],
         "outputFields": [
         ]
       }
     }
-  ]
+  ],
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIHSURBVHgB7ZNLSFRRGMf/5869iTUxBUWJRFNueiwaqYkiCMuLtIwCXUUULspF06LFtGsRVIsiK5J2tbSFG1FBfG1kxFmMKxeieBFE8IHjAwfHe8/nOTPe8TFzvdcXuPAH95zDOd/3/c/5n3OBI1xgsvkAKFVlF+ssojMmV/4+MAwDuyDdjhAx9bGP0aiqW/9yAr2Xgw0AvVqLS4FR9N7I2A/sgHSHFmGgL2JYtDb1VdPNd0p2nCsuKQax+ik9/HtEvxlwKzxaETo19TDcKIp/31BcUisbxSmRCK9PkjIw8SgUdIqZ1G+Vn/BpCWKoLrAcyAksa36nGkHfijY4WRl+s3VhpjIcEZuIyZhCiQtcy/SqbH49acLLlhc4vTheKLZYfNKyK/Pg7xXTYn5F+2MB1Sx7hXkMmQFE52+LUVv2BEl/KX4+bUbs+jM4YVu2jSUZGlNlqJ27jwl+fP0EkhW1CK13opgOXEJV/JtTftBpQVryefEGutKlm+bzLrn/ak3GMrFjA95JPE9W5BUvKCCRlqVT6jUOuP4LIqb+7LHZu7YlngQkF2Kx1PnOuHwpdYxoLi+AKGlx1IiYt6xteNmpjqOAzbmueIPJ1dAWyxIWV8tLuuP/3fJdBSQlPX2GbZltiZzzkqvCI9Iy0UWwQzydYC8cpICZE2Dgnyjz4vYJoiXxfcQRh4JVjgy4tvLUe0AAAAAASUVORK5CYII="
 }
