@@ -1,0 +1,99 @@
+{
+    "key": "syndicate",
+    "name": "Syndicate",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+      {
+        "key": "newDeposit",
+        "name": "New Deposit",
+        "display": {
+          "label": "New Deposit",
+          "description": "New Deposit"
+        },
+        "operation": {
+          "type": "polling",
+          "operation": {
+            "url": "wss://www.example.com"
+          },
+          "inputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "clubAddress",
+              "label": "Club address",
+              "type": "address",
+              "placeholder": "Enter address of the club",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "clubAddress",
+              "label": "Club address",
+              "type": "address",
+              "placeholder": "Enter address of the club",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            }
+          ],
+          "sample": {}
+        }
+      }
+    ],
+    "actions": [
+    ]
+  }
