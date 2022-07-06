@@ -1,0 +1,91 @@
+{
+    "key": "doraFactory",
+    "name": "Dora Factory",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [],
+    "actions": [
+      {
+        "key": "createProposal",
+        "name": "Create proposal",
+        "display": {
+          "label": "Create proposal",
+          "description": "Create proposal"
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "wss://www.example.com"
+          },
+          "inputFields": [
+            {
+              "key": "applicant",
+              "label": "Applicant",
+              "type": "string",
+              "placeholder": "Enter wallet address of the applicant",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "sharesRequested",
+              "label": "Shares Requested",
+              "type": "string",
+              "placeholder": "",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "lootRequested",
+              "label": "Loot Requested",
+              "type": "string",
+              "placeholder": "",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "tributeOffered",
+              "label": "Tribute Offered",
+              "type": "string",
+              "placeholder": "",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "tributeToken",
+              "label": "Tribute Token",
+              "type": "string",
+              "placeholder": "Enter address of the token smart contract",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "paymentRequested",
+              "label": "Payment Requested",
+              "type": "string",
+              "placeholder": "",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "paymentToken",
+              "label": "Payment Token",
+              "type": "string",
+              "placeholder": "Enter address of the token smart contract",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "details",
+              "label": "Details",
+              "type": "string",
+              "placeholder": "",
+              "list": false,
+              "required": true
+            }
+          ],
+          "outputFields": [],
+          "sample": {}
+        }
+      }
+    ]
+  }
