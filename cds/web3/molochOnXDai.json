@@ -1465,7 +1465,7 @@
             "key": "applicant",
             "label": "Applicant",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter wallet address of the applicant",
             "list": false,
             "required": true
           },
@@ -1497,7 +1497,7 @@
             "key": "tributeToken",
             "label": "Tribute Token",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter address of the token smart contract",
             "list": false,
             "required": true
           },
@@ -1513,7 +1513,7 @@
             "key": "paymentToken",
             "label": "Payment Token",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter address of the token smart contract",
             "list": false,
             "required": true
           },
