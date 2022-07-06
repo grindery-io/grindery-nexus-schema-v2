@@ -1,0 +1,159 @@
+{
+    "key": "gnosisSafe",
+    "name": "Gnosis Safe",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+      {
+        "key": "newDeposit",
+        "name": "New Deposit",
+        "display": {
+          "label": "New Deposit",
+          "description": "New Deposit"
+        },
+        "operation": {
+          "type": "polling",
+          "operation": {
+            "url": "wss://www.example.com"
+          },
+          "inputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "safeAddress",
+              "label": "Safe address",
+              "type": "address",
+              "placeholder": "Enter address of the safe",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "safeAddress",
+              "label": "Safe address",
+              "type": "address",
+              "placeholder": "Enter address of the safe",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            }
+          ],
+          "sample": {}
+        }
+      }
+    ],
+    "actions": [
+      {
+        "key": "requestWithdrawal",
+        "name": "Request withdrawal",
+        "display": {
+          "label": "Request withdrawal",
+          "description": "Request withdrawal"
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "wss://www.example.com"
+          },
+          "inputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "safeAddress",
+              "label": "Safe address",
+              "type": "address",
+              "placeholder": "Enter address of the safe",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter receiver address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            },
+            {
+              "key": "details",
+              "label": "Details",
+              "type": "string",
+              "placeholder": "Details",
+              "list": false
+            }
+          ],
+          "outputFields": [],
+          "sample": {}
+        }
+      }
+    ]
+  }
