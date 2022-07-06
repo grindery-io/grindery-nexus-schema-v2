@@ -1,0 +1,175 @@
+{
+    "key": "superfluid",
+    "name": "Superfluid",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+      {
+        "key": "FlowUpdatedTrigger",
+        "name": "Incoming stream",
+        "display": {
+          "label": "Incoming stream",
+          "description": "Incoming stream"
+        },
+        "operation": {
+          "type": "blockchain:event",
+          "signature": "event FlowUpdated(address indexed token, address indexed sender, address indexed receiver, int96 flowRate, int256 totalSenderFlowRate, int256 totalReceiverFlowRate, bytes userData)",
+          "inputFields": [
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter receiver address",
+              "list": false
+            },
+            {
+              "key": "flowRate",
+              "label": "Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalSenderFlowRate",
+              "label": "Total Sender Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalReceiverFlowRate",
+              "label": "Total Receiver Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "userData",
+              "label": "User Data",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter a blockchain address",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter a blockchain address",
+              "list": false
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter a blockchain address",
+              "list": false
+            },
+            {
+              "key": "flowRate",
+              "label": "Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalSenderFlowRate",
+              "label": "Total Sender Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalReceiverFlowRate",
+              "label": "Total Receiver Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "userData",
+              "label": "User Data",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            }
+          ],
+          "sample": {}
+        }
+      }
+    ],
+    "actions": [
+      {
+        "key": "createFlowAction",
+        "name": "Create a new stream",
+        "display": {
+          "label": "Create a new stream",
+          "description": "Create a new stream"
+        },
+        "operation": {
+          "type": "blockchain:call",
+          "signature": "function createFlow(address token, address receiver, int96 flowRate, bytes ctx) returns bytes",
+          "inputFields": [
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter receiver address",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "flowRate",
+              "label": "Flow Rate",
+              "type": "string",
+              "placeholder": "Enter amount of token flowed per second (in wei)",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "ctx",
+              "label": "Ctx",
+              "type": "string",
+              "placeholder": "",
+              "default": "0x",
+              "computed": true,
+              "list": false,
+              "required": true
+            }
+          ],
+          "outputFields": [],
+          "sample": {}
+        }
+      }
+    ]
+  }
