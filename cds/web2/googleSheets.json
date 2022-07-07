@@ -14,6 +14,9 @@
       },
       "operation": {
         "type": "polling",
+        "operation": {
+          "url": "wss://grindery-gsheet-connector.herokuapp.com/ws/"
+        },
         "inputFieldProviderUrl": "https://grindery-gsheet-connector.herokuapp.com/file-list/",
         "inputFields": []
       }
