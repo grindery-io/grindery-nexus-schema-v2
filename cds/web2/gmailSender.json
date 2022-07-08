@@ -67,7 +67,7 @@
     "oauth2Config": {
       "authorizeUrl": {
         "method": "GET",
-        "url": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id=676778012745-q5lg8up8nq94qet4fjhs3ftvpgd4nalv.apps.googleusercontent.com&scope=openid+https://www.googleapis.com/auth/gmail.send&access_type=offline"
+        "url": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id=676778012745-q5lg8up8nq94qet4fjhs3ftvpgd4nalv.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email+openid+https://www.googleapis.com/auth/gmail.send&access_type=offline"
       },
       "getAccessToken": {
         "method": "POST",
