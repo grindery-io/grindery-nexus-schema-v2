@@ -39,8 +39,46 @@
                         "required": false
                     }
                 ],
-                "outputFields": [],
-                "sample": {}
+                "outputFields": [
+                    {
+                        "key": "hash",
+                        "label": "Transaction hash",
+                        "type": "string"
+                    },
+                    {
+                        "key": "blockHash",
+                        "label": "Block hash",
+                        "type": "string"
+                    },
+                    {
+                        "key": "blockNumber",
+                        "label": "Block number",
+                        "type": "string"
+                    },
+                    {
+                        "key": "from",
+                        "label": "From address",
+                        "type": "string"
+                    },
+                    {
+                        "key": "to",
+                        "label": "To address",
+                        "type": "string"
+                    },
+                    {
+                        "key": "value",
+                        "label": "Amount transferred in wei",
+                        "type": "string"
+                    }
+                ],
+                "sample": {
+                    "blockHash": "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
+                    "blockNumber": "0x5daf3b",
+                    "from": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+                    "hash": "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
+                    "to": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+                    "value": "0xf3dbb76162000"
+                }
             }
         }
     ],
