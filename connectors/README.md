@@ -287,7 +287,7 @@ Key | Type | Required | Description
 `key` | `string` | yes | A unique machine readable key for this value (e.g "name").
 `label` | `string` | no | A human readable label for this value (e.g "Name").
 `helpText` | `string` | no | A human readable description of this value (e.g "Your full name.").
-`type` | `string` in (`string`, `text`, `integer`, `number`, `boolean`, `datetime`, `file`, `password`, `copy`, `code`) | no | The type of this value. Use `string` for basic text input, `text` for a large, `<textarea>` style box, and `code` for a `<textarea>` with a fixed-width (monospaced) font.
+`type` | `string` in (`string`, `text`, `integer`, `number`, `boolean`, `datetime`, `file`, `password`, `copy`, `code`, `address`) | no | The type of this value. Use `string` for basic text input, `text` for a large, `<textarea>` style box, and `code` for a `<textarea>` with a fixed-width (monospaced) font. User `address` to allow user to use Address Book to enter the value.
 `required` | `boolean` | no | If this value is required or not.
 `placeholder` | `string` | no | An example value that is not saved.
 `default` | `string` | no | A default value that is saved if no value is provided by the user.
@@ -298,7 +298,6 @@ Key | Type | Required | Description
 `computed` | `boolean` | no | Is this field automatically populated (and hidden from the user)?
 `updateFieldDefinition` | `boolean` | no | Only has effect when `inputFieldProviderUrl` is present. If not set or set to `true`, `inputFieldProviderUrl` is called to update field definition after this field is changed. If set to `false`, this field won't trigger field definition update.
 `inputFormat` | `string` | no | Useful when you expect the input to be part of a longer string. Put "{{input}}" in place of the user's input (e.g "https://{{input}}.yourdomain.com").
-`useAddressBook` | `boolean` | no | Set to `true` if the field should allow user to use Address Book to enter the value.
 
 
 ##### FieldChoiceSchema
