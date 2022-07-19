@@ -34,7 +34,7 @@
           {
             "key": "tokens",
             "label": "FCM tokens",
-            "type": "array",
+            "type": "list",
             "required": true,
             "placeholder": ""
           }
