@@ -77,24 +77,11 @@ Key | Type | Required | Description
 ----|------|----------|------------
 `type` | `string` in (`blockchain:event`) | yes | Must be set to `blockchain:event`.
 `chains` | array<[ChainSchema](#chainschema)> | yes | All the chains for which this event is supported.
-`signature` | `string` | yes | Signature of the event e.g `Transfer(address,uint256)` for ERC20 Transfer event.
-`filters` | [ChainEventOperationFilterSchema](#chaineventoperationfilterschema) | yes | Defines the blockchain event filter parameters for this trigger.
+`signature` | `string` | yes | Signature of the event including parameter names (which are mapped to input fields by key) e.g `Transfer(address indexed from, address indexed to, uint256 value)` for ERC20 Transfer event.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this trigger.
 `inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this trigger.
 `sample` | `object` | yes | Sample output data.
-
-
-##### ChainEventOperationFilterSchema
-
-An `object` that defines the parameters used to filter blockchain events.
-
-Key | Type | Required | Description
-----|------|----------|------------
-`fromBlock` | anyOf(`number`, `string`) | no | The number of the earliest block ("latest" may be given to mean the most recent and "pending" currently mining, block). By default "latest".
-`toBlock` | anyOf(`number`, `string`) | no | The number of the latest block ("latest" may be given to mean the most recent and "pending" currently mining, block). By default "latest".
-`address` | anyOf(`string`, `array<string>`) | no | An address or a list of addresses to only get logs from particular account(s).
-`topics` | `array<string>` | no | An array of values which must each appear in the log entries. The order is important, if you want to leave topics out use null, e.g. [null, '0x12...']. You can also pass an array for each topic with options for that topic e.g. [null, ['option1', 'option2']]
 
 
 #### HookOperationSchema
@@ -160,22 +147,11 @@ Key | Type | Required | Description
 ----|------|----------|------------
 `type` | `string` in (`blockchain:call`) | yes | Must be set to `blockchain:call`.
 `accounts` | array<[ChainAccountSchema](#chainaccountschema)> | yes | The blockchain accounts for which this function can be called.
-`signature` | `string` | yes | Signature of the function e.g `transfer(address,uint256)` for ERC20 transfer call.
-`arguments` | array<[ChainCallOperationArgsSchema](#chaineventoperationfilterschema)> | yes | Defines the blockchain function call arguments for this action.
+`signature` | `string` | yes | Signature of the function including parameter names (which are mapped to input fields by key) e.g `function transfer(address to, uint256 value)` for ERC20 transfer call.
 `inputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields the user needs to configure for this action.
 `inputFieldProviderUrl` | `string` | no | A [JSON-RPC 2.0](https://www.jsonrpc.org/specification) endpoint for updating available input fields based on user input. If present, it is called after user changes a field (see `updateFieldDefinition` in [FieldSchema](#fieldschema) for details) to update available fields or choices. See also [FieldProviderRequestSchema](#fieldproviderrequestschema) and [FieldProviderResponseSchema](#fieldproviderresponseschema) for definition of the endpoint.
 `outputFields` | array<[FieldSchema](#fieldschema)> | no | The data fields returned by this action.
 `sample` | `object` | yes | Sample output data.
-
-
-#### ChainCallOperationArgsSchema
-
-An `object` that defines the arguments sent to the blockchain function call.
-
-Key | Type | Required | Description
-----|------|----------|------------
-`type` | `string` | yes | The value type for this argument e.g `bool`, `int`, `uint`, `address` etc.
-`value` | anyOf(`number`, `string`) | yes | The value of the argument to be passed to the function.
 
 
 ## Authentication

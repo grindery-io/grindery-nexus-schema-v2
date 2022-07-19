@@ -1,0 +1,160 @@
+{
+    "key": "multis",
+    "name": "multis",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+      {
+        "key": "newDeposit",
+        "name": "New Deposit",
+        "display": {
+          "label": "New Deposit",
+          "description": "New Deposit"
+        },
+        "operation": {
+          "type": "polling",
+          "operation": {
+            "url": "wss://www.example.com"
+          },
+          "inputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "safeAddress",
+              "label": "Safe address",
+              "type": "address",
+              "placeholder": "Enter address of the safe",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "safeAddress",
+              "label": "Safe address",
+              "type": "address",
+              "placeholder": "Enter address of the safe",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            }
+          ],
+          "sample": {}
+        }
+      }
+    ],
+    "actions": [
+      {
+        "key": "requestWithdrawal",
+        "name": "Request withdrawal",
+        "display": {
+          "label": "Request withdrawal",
+          "description": "Request withdrawal"
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "wss://www.example.com"
+          },
+          "inputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "safeAddress",
+              "label": "Safe address",
+              "type": "address",
+              "placeholder": "Enter address of the safe",
+              "list": false
+            },
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter receiver address",
+              "list": false
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "string",
+              "placeholder": "Amount in wei",
+              "list": false
+            },
+            {
+              "key": "details",
+              "label": "Details",
+              "type": "string",
+              "placeholder": "Details",
+              "list": false
+            }
+          ],
+          "outputFields": [],
+          "sample": {}
+        }
+      }
+    ],
+    "icon": "data:image/png;base64,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"
+  }

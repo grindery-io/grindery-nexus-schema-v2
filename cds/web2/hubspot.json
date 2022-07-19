@@ -1,0 +1,63 @@
+{
+    "key": "hubspot",
+    "name": "HubSpot",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+        {
+            "key": "triggerFromWorkflow",
+            "name": "Trigger from a workflow",
+            "display": {
+                "label": "Trigger from a workflow",
+                "description": "Trigger from a workflow"
+            },
+            "operation": {
+                "type": "polling",
+                "operation": {
+                    "url": "wss://www.example.com"
+                },
+                "inputFields": [
+                    {
+                        "key": "token",
+                        "label": "Token",
+                        "type": "string",
+                        "placeholder": "Enter token generated in your HubSpot workflow action",
+                        "list": false,
+                        "required": true
+                    }
+                ],
+                "outputFields": [],
+                "sample": {}
+            }
+        }
+    ],
+    "actions": [
+        {
+            "key": "triggerWorkflow",
+            "name": "Trigger a workflow",
+            "display": {
+                "label": "Trigger a workflow",
+                "description": "Trigger a workflow"
+            },
+            "operation": {
+                "type": "api",
+                "operation": {
+                    "url": "wss://www.example.com"
+                },
+                "inputFields": [
+                    {
+                        "key": "token",
+                        "label": "Token",
+                        "type": "string",
+                        "placeholder": "Enter token generated in your HubSpot workflow trigger",
+                        "list": false,
+                        "required": true
+                    }
+                ],
+                "outputFields": [],
+                "sample": {}
+            }
+        }
+    ],
+    "icon": "data:image/png;base64,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"
+}
