@@ -1,20 +1,20 @@
 {
-  "key": "grinderyPingConnector",
-  "name": "GrinderyPingConnector",
+  "key": "firebaseCloudMessagingConnector",
+  "name": "FirebaseCloudMessagingConnector",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "actions": [
     {
-      "key": "grinderyPingConnector",
-      "name": "Send Push Notification",
+      "key": "firebaseCloudMessagingConnector",
+      "name": "Firebase Cloud Messaging Connector",
       "display": {
-        "label": "Send Push Notification",
-        "description": "Send Push Notification"
+        "label": "Firebase Cloud Messaging Connector",
+        "description": "Firebase Cloud Messaging Connector"
       },
       "operation": {
         "type": "api",
         "operation": {
-          "url": "https://grindery-ping-connector.herokuapp.com/fcm-sender/"
+          "url": "wss://grindery-ping-connector.herokuapp.com/ws/"
         },
         "inputFields": [
           {
