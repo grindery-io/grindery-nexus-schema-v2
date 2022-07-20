@@ -1,15 +1,15 @@
 {
   "key": "firebaseCloudMessagingConnector",
-  "name": "FirebaseCloudMessagingConnector",
+  "name": "Firebase Cloud Messaging Connector",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "actions": [
     {
       "key": "fcmPushNotification",
-      "name": "Firebase Cloud Messaging Connector",
+      "name": "Send push notification",
       "display": {
-        "label": "Firebase Cloud Messaging Connector",
-        "description": "Firebase Cloud Messaging Connector"
+        "label": "Send push notification",
+        "description": ""
       },
       "operation": {
         "type": "api",
