@@ -24,7 +24,7 @@ An `object` that defines a workflow operation e.g a trigger or an action.
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`type` | `string` in (`trigger`, `action`) | yes | The type of operation.
+`type` | `string` in (`trigger`, `action`, `recipe`) | yes | The type of operation.
 `connector` | `string` | yes | the identifier of the connector app that defines this operation.
 `operation` | `string` | yes | the identifier of the connector app's trigger or action that defines this operation.
 `input` | `object` | yes | An object that defines the user's input as a `key`, `value` map where the `key` is the input field's identifier as defined in the corresponding [FieldSchema](../connectors/README.md#fieldschema) and the value is the user defined input value.
