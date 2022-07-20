@@ -1,6 +1,6 @@
 {
   "key": "firebaseCloudMessagingConnector",
-  "name": "Firebase Cloud Messaging Connector",
+  "name": "Firebase Cloud Messaging",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "actions": [
