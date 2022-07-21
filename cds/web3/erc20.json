@@ -13,7 +13,10 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": "event Transfer(address indexed from, address indexed to, uint256 value)",
+        "signature": [
+          "event Transfer(address indexed from, address indexed to, uint256 value)",
+          "event Transfer(address indexed from, address indexed to, uint256 value, bytes data)"
+        ],
         "inputFields": [
           {
             "key": "from",
@@ -58,76 +61,10 @@
             "type": "string",
             "placeholder": "",
             "list": false
-          }
-        ],
-        "sample": {}
-      }
-    },
-    {
-      "key": "TransferTrigger",
-      "name": "Transfer (Alternative signature)",
-      "display": {
-        "label": "Transfer (Alternative signature)",
-        "description": "Transfer (Alternative signature)"
-      },
-      "operation": {
-        "type": "blockchain:event",
-        "signature": "event Transfer(address indexed from, address indexed to, uint256 value, bytes data)",
-        "inputFields": [
-          {
-            "key": "from",
-            "label": "From",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
           },
           {
-            "key": "to",
-            "label": "To",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "value",
-            "label": "Value",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "data",
-            "label": "Data",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "from",
-            "label": "From",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "to",
-            "label": "To",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "value",
-            "label": "Value",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "data",
-            "label": "Data",
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
             "type": "string",
             "placeholder": "",
             "list": false
