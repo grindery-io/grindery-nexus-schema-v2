@@ -44,6 +44,13 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "tokenID",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "",
+            "list": false
           }
         ],
         "outputFields": [
@@ -64,6 +71,13 @@
           {
             "key": "value",
             "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "tokenID",
+            "label": "Token ID",
             "type": "string",
             "placeholder": "",
             "list": false
