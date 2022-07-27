@@ -295,7 +295,7 @@ An `object` describing additional validation rules for the field.
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`type` | `string` in (`date`, `email`, `enum`, `luhn`, `mac`, `url`, `uuid`) | no | If not specified the `type` property of the [field](#fieldschema) will be used.
+`type` | `string` in (`date`, `email`, `enum`, `luhn`, `mac`, `url`, `uuid`, `evmAddress`, `flowAddress`) | no | If not specified the `type` property of the [field](#fieldschema) will be used.
 `positive` | `boolean` | no | The value must be a `number` greater than zero.
 `negative` | `boolean` | no | The  value must be a `number` less than zero.
 `integer` | `boolean` | no | The value must be a non-decimal `number`.
