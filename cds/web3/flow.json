@@ -25,6 +25,10 @@
             "default": "flow:mainnet"
           },
           {
+            "key": "_grinderyContractAddress",
+            "type": "string"
+          },
+          {
             "key": "from",
             "label": "From",
             "type": "address",
