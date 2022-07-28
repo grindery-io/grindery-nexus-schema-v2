@@ -28,7 +28,9 @@
             "key": "_grinderyContractAddress",
             "type": "string",
             "label": "Contract address",
-            "placeholder": "Enter Contract address"
+            "placeholder": "Enter Contract address",
+            "required": true,
+            "default": "A.1654653399040a61.FlowToken"
           },
           {
             "key": "from",
