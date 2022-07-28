@@ -13,10 +13,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "event Transfer(address indexed from, address indexed to, uint256 value)",
-          "event Transfer(address indexed from, address indexed to, uint256 value, bytes data)"
-        ],
+        "signature": "TokensDeposited/TokensWithdrawn[amount]",
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -45,20 +42,6 @@
             "type": "address",
             "placeholder": "Enter a Flow wallet address",
             "list": false
-          },
-          {
-            "key": "value",
-            "label": "Value",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "tokenID",
-            "label": "Token ID",
-            "type": "string",
-            "placeholder": "",
-            "list": false
           }
         ],
         "outputFields": [
@@ -77,15 +60,8 @@
             "list": false
           },
           {
-            "key": "value",
-            "label": "Value",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "tokenID",
-            "label": "Token ID",
+            "key": "amount",
+            "label": "Amount",
             "type": "string",
             "placeholder": "",
             "list": false
@@ -110,10 +86,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "event Transfer(address indexed from, address indexed to, uint64 id)",
-          "event Transfer(address indexed from, address indexed to, uint64 value, bytes data)"
-        ],
+        "signature": "Deposit/Withdraw[id]",
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -124,8 +97,7 @@
           {
             "key": "_grinderyContractAddress",
             "type": "string",
-            "computed": true,
-            "default": "0x1d7e57aa55817448"
+            "default": ""
           },
           {
             "key": "from",
@@ -142,7 +114,7 @@
             "list": false
           },
           {
-            "key": "tokenID",
+            "key": "id",
             "label": "Token ID",
             "type": "string",
             "placeholder": "",
@@ -165,7 +137,7 @@
             "list": false
           },
           {
-            "key": "tokenID",
+            "key": "id",
             "label": "Token ID",
             "type": "string",
             "placeholder": "",
@@ -191,10 +163,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "event Transfer(address indexed from, address indexed to, uint256 value)",
-          "event Transfer(address indexed from, address indexed to, uint256 value, bytes data)"
-        ],
+        "signature": "Deposit/Withdraw[id]",
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -205,32 +174,31 @@
           {
             "key": "_grinderyContractAddress",
             "type": "string",
-            "computed": true,
-            "default": "0x1d7e57aa55817448"
+            "default": ""
           },
           {
             "key": "from",
-            "type": "string",
-            "computed": "true",
-            "default": "0x0"
+            "label": "From",
+            "computed": true,
+            "default": "!!GRINDERY!!UNDEFINED!!"
           },
           {
             "key": "to",
             "label": "To",
             "type": "address",
             "placeholder": "Enter a Flow wallet address",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "",
             "list": false
           }
         ],
         "outputFields": [
           {
-            "key": "from",
-            "label": "From",
-            "type": "address",
-            "placeholder": "Enter a Flow wallet address",
-            "list": false
-          },
-          {
             "key": "to",
             "label": "To",
             "type": "address",
@@ -238,7 +206,7 @@
             "list": false
           },
           {
-            "key": "tokenId",
+            "key": "id",
             "label": "Token ID",
             "type": "string",
             "placeholder": "",
