@@ -26,7 +26,9 @@
           },
           {
             "key": "_grinderyContractAddress",
-            "type": "string"
+            "type": "string",
+            "label": "Contract address",
+            "placeholder": "Enter Contract address"
           },
           {
             "key": "from",
