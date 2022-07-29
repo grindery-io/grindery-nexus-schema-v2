@@ -38,6 +38,14 @@
             "list": true,
             "required": true,
             "placeholder": ""
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "dict",
+            "list": true,
+            "required": false,
+            "placeholder": ""
           }
         ],
         "outputFields": [
