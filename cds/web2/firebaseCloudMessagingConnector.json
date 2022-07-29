@@ -42,8 +42,8 @@
           {
             "key": "data",
             "label": "Data",
-            "type": "dict",
-            "list": true,
+            "type": "string",
+            "dict": true,
             "required": false,
             "placeholder": ""
           }
