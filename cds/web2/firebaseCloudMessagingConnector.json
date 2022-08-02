@@ -36,7 +36,8 @@
             "label": "Icon",
             "type": "string",
             "required": false,
-            "placeholder": ""
+            "placeholder": "",
+            "helpText": "Image URL. Supports JPEG or PNG format. Recommended image size at least 50x50px."
           },
           {
             "key": "tokens",
@@ -52,7 +53,8 @@
             "type": "string",
             "dict": true,
             "required": false,
-            "placeholder": ""
+            "placeholder": "",
+            "helpText": "Custom data as a serialized JSON string. Will be passed as a 'data' property in a notification payload."
           }
         ],
         "outputFields": [
