@@ -89,7 +89,6 @@
                         "type": "string",
                         "label": "Contract address",
                         "placeholder": "Enter Contract address",
-                        "required": true,
                         "default": ""
                     },
                     {
