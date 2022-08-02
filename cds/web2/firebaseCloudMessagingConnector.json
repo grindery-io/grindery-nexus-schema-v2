@@ -32,6 +32,13 @@
             "placeholder": "Enter notification text"
           },
           {
+            "key": "icon",
+            "label": "Icon",
+            "type": "string",
+            "required": false,
+            "placeholder": ""
+          },
+          {
             "key": "tokens",
             "label": "FCM tokens",
             "type": "string",
