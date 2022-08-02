@@ -34,7 +34,7 @@
           {
             "key": "icon",
             "label": "Icon",
-            "type": "string",
+            "type": "url",
             "required": false,
             "placeholder": "",
             "helpText": "Image URL. Supports JPEG or PNG format. Recommended image size at least 50x50px."
