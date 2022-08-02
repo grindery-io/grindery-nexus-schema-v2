@@ -97,6 +97,7 @@
           {
             "key": "_grinderyContractAddress",
             "type": "string",
+            "required": true,
             "default": ""
           },
           {
@@ -174,6 +175,7 @@
           {
             "key": "_grinderyContractAddress",
             "type": "string",
+            "required": true,
             "default": ""
           },
           {
