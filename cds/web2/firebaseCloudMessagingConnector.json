@@ -32,12 +32,29 @@
             "placeholder": "Enter notification text"
           },
           {
+            "key": "icon",
+            "label": "Icon",
+            "type": "url",
+            "required": false,
+            "placeholder": "",
+            "helpText": "Image URL. Supports JPEG or PNG format. Recommended image size at least 50x50px."
+          },
+          {
             "key": "tokens",
             "label": "FCM tokens",
             "type": "string",
             "list": true,
             "required": true,
             "placeholder": ""
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "dict": true,
+            "required": false,
+            "placeholder": "",
+            "helpText": "Custom data as a serialized JSON string. Will be passed as a 'data' property in a notification payload."
           }
         ],
         "outputFields": [
