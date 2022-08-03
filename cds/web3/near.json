@@ -5,7 +5,7 @@
     "platformVersion": "1.0.0",
     "triggers": [
         {
-            "key": "WalletTransferTrigger",
+            "key": "newTransaction",
             "name": "Wallet transfer",
             "display": {
                 "label": "Wallet transfer",
