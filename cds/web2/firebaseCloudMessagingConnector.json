@@ -95,10 +95,10 @@
       }
     },
     {
-      "key": "unsubscribeDeviceToTopic",
-      "name": "unsubscribe a device to topic",
+      "key": "unsubscribeDeviceFromTopic",
+      "name": "unsubscribe a device from topic",
       "display": {
-        "label": "unsubscribe a device to topic",
+        "label": "unsubscribe a device from topic",
         "description": ""
       },
       "operation": {
