@@ -63,9 +63,9 @@
     },
     {
       "key": "subscribeDeviceToTopic",
-      "name": "subscribe a device to topic",
+      "name": "Subscribe a device to topic",
       "display": {
-        "label": "subscribe a device to topic",
+        "label": "Subscribe a device to topic",
         "description": ""
       },
       "operation": {
@@ -96,9 +96,9 @@
     },
     {
       "key": "unsubscribeDeviceFromTopic",
-      "name": "unsubscribe a device from topic",
+      "name": "Unsubscribe a device from topic",
       "display": {
-        "label": "unsubscribe a device from topic",
+        "label": "Unsubscribe a device from topic",
         "description": ""
       },
       "operation": {
@@ -129,9 +129,9 @@
     },
     {
       "key": "sendMessageToDevices",
-      "name": "Send message to devices",
+      "name": "Send message to a topic subscribers",
       "display": {
-        "label": "Send message to devices",
+        "label": "Send message to a topic subscribers",
         "description": ""
       },
       "operation": {
