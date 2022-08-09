@@ -14,7 +14,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://grindery-ping-connector.herokuapp.com/ws/"
+          "url": "ws://grindery-ping-connector:3000/ws/"
         },
         "inputFields": [
           {
@@ -71,7 +71,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://grindery-ping-connector.herokuapp.com/ws/"
+          "url": "ws://grindery-ping-connector:3000/ws/"
         },
         "inputFields": [
           {
@@ -104,7 +104,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://grindery-ping-connector.herokuapp.com/ws/"
+          "url": "ws://grindery-ping-connector:3000/ws/"
         },
         "inputFields": [
           {
@@ -137,7 +137,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://grindery-ping-connector.herokuapp.com/ws/"
+          "url": "ws://grindery-ping-connector:3000/ws/"
         },
         "inputFields": [
           {
