@@ -1,6 +1,6 @@
 {
-    "key": "near",
-    "name": "Near blockchain",
+    "key": "algorand",
+    "name": "Algorand blockchain",
     "version": "1.0.0",
     "platformVersion": "1.0.0",
     "triggers": [
