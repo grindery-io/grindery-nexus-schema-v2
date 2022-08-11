@@ -20,6 +20,23 @@
         "inputFieldProviderUrl": "https://grindery-gsheet-connector.herokuapp.com/file-list/",
         "inputFields": []
       }
+    },
+    {
+      "key": "newWorksheet",
+      "name": "New Worksheet",
+      "display": {
+        "label": "New Worksheet",
+        "description": "",
+        "instructions": ""
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://gsheet-connector:3000/ws/"
+        },
+        "inputFieldProviderUrl": "https://grindery-gsheet-connector.herokuapp.com/file-list/",
+        "inputFields": []
+      }
     }
   ],
   "authentication": {
