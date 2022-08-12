@@ -16,22 +16,8 @@
         "operation": {
           "url": "wss://grindery-slack-connector.herokuapp.com/ws/"
         },
-        "inputFields": [
-          {
-            "key": "channel_id",
-            "label": "Channel",
-            "type": "string",
-            "required": true,
-            "placeholder": "Pick a channel..."
-          },
-          {
-            "key": "message",
-            "label": "Message Text",
-            "type": "string",
-            "required": true,
-            "placeholder": "Enter text"
-          }
-        ],
+        "inputFieldProviderUrl": "https://grindery-slack-connector.herokuapp.com/channel-list/",
+        "inputFields": [],
         "outputFields": [
         ]
       }
