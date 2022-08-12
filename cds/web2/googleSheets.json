@@ -26,7 +26,10 @@
     "type": "oauth2",
     "test": {
       "method": "GET",
-      "url": "https://www.googleapis.com/oauth2/v3/userinfo"
+      "url": "https://www.googleapis.com/oauth2/v3/userinfo",
+      "headers": {
+        "Authorization": "Bearer {{access_token}}"
+      }
     },
     "oauth2Config": {
       "authorizeUrl": {
