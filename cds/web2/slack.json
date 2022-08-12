@@ -1,5 +1,5 @@
 {
-    "key": "slackConnector",
+    "key": "slack",
     "name": "Slack",
     "version": "1.0.0",
     "platformVersion": "1",
