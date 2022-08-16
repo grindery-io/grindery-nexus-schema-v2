@@ -14,9 +14,9 @@
         "operation": {
           "type": "api",
           "operation": {
-            "url": "wss://grindery-slack-connector.herokuapp.com/ws/"
+            "url": "ws://slack-connector:3000/ws/"
           },
-          "inputFieldProviderUrl": "https://grindery-slack-connector.herokuapp.com/channel-list/",
+          "inputFieldProviderUrl": "http://slack-connector:3000/channel-list/",
           "inputFields": [],
           "outputFields": []
         }

@@ -17,7 +17,7 @@
         "operation": {
           "url": "ws://gsheet-connector:3000/ws/"
         },
-        "inputFieldProviderUrl": "https://grindery-gsheet-connector.herokuapp.com/file-list/",
+        "inputFieldProviderUrl": "http://gsheet-connector:3000/file-list/",
         "inputFields": []
       }
     }
