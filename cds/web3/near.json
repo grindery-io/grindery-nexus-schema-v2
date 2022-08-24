@@ -26,14 +26,14 @@
                     {
                         "key": "from",
                         "label": "From",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
                     {
                         "key": "to",
                         "label": "To",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     }
@@ -42,14 +42,14 @@
                     {
                         "key": "from",
                         "label": "From",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
                     {
                         "key": "to",
                         "label": "To",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
@@ -94,14 +94,14 @@
                     {
                         "key": "_from",
                         "label": "From",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
                     {
                         "key": "receiver_id",
                         "label": "To",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     }
@@ -110,14 +110,14 @@
                     {
                         "key": "_from",
                         "label": "From",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
                     {
                         "key": "receiver_id",
                         "label": "To",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
@@ -167,14 +167,14 @@
                     {
                         "key": "_from",
                         "label": "From",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
                     {
                         "key": "receiver_id",
                         "label": "To",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
@@ -190,14 +190,14 @@
                     {
                         "key": "_from",
                         "label": "From",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
                     {
                         "key": "receiver_id",
                         "label": "To",
-                        "type": "address",
+                        "type": "string",
                         "placeholder": "Enter a Near wallet ID",
                         "list": false
                     },
