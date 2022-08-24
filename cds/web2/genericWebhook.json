@@ -73,7 +73,7 @@
           {
             "key": "url",
             "label": "Request URL",
-            "type": "string",
+            "type": "url",
             "required": true,
             "placeholder": "https://example.com"
           },
@@ -83,7 +83,7 @@
             "type": "string",
             "dict": true,
             "required": false,
-            "placeholder": "{'key': 'value'}",
+            "placeholder": "{\"key\": \"value\"}",
             "helpText": "Key-value pairs that will form the data portion of the request."
           }
         ],
