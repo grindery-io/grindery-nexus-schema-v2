@@ -1,14 +1,14 @@
 {
   "key": "genericWebhook",
-  "name": "GenericWebhook",
+  "name": "Nexus Webhook",
   "version": "1.0.0",
   "platformVersion": "1",
   "triggers": [
     {
       "key": "inboundWebhook",
-      "name": "inboundWebhook",
+      "name": "Webhooks by Nexus",
       "display": {
-        "label": "Inbound Webhook",
+        "label": "Webhooks by Nexus",
         "description": "",
         "instructions": ""
       },
@@ -24,16 +24,16 @@
   ],
   "actions": [
     {
-      "key": "inboundWebhook",
-      "name": "inboundWebhook",
+      "key": "inboundWebhookAction",
+      "name": "Webhooks by Nexus",
       "display": {
-        "label": "Inbound Webhook",
+        "label": "Webhooks by Nexus",
         "description": ""
       },
       "operation": {
         "type": "api",
         "operation": {
-          "url": "ws://grindery-ping-connector:3000/ws/"
+          "url": "wss://webhook-connector.herokuapp.com/ws/"
         },
         "inputFields": [
           {
@@ -41,14 +41,31 @@
             "label": "Method",
             "type": "string",
             "required": true,
-            "placeholder": "Enter event type"
+            "placeholder": "Enter event type",
+            "choices": [
+              {
+                "value": "GET",
+                "label": "GET",
+                "sample": "Fire off a single GET request with optional querystrings"
+              },
+              {
+                "value": "POST",
+                "label": "POST",
+                "sample": "Fire off a single POST request as a form or JSON"
+              },
+              {
+                "value": "PUT",
+                "label": "PUT",
+                "sample": "Fire off a single PUT request as a form or JSON"
+              }
+            ]
           },
           {
             "key": "url",
             "label": "URL",
             "type": "string",
             "required": true,
-            "placeholder": "Enter url"
+            "placeholder": "https://example.com"
           },
           {
             "key": "data",
@@ -56,8 +73,8 @@
             "type": "string",
             "dict": true,
             "required": false,
-            "placeholder": "",
-            "helpText": ""
+            "placeholder": "{key: value}",
+            "helpText": "These are key-value pairs that will form the data portion of the request."
           }
         ],
         "outputFields": []
