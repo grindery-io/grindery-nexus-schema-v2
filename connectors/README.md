@@ -275,6 +275,7 @@ Key | Type | Required | Description
 `updateFieldDefinition` | `boolean` | no | Only has effect when `inputFieldProviderUrl` is present. If not set or set to `true`, `inputFieldProviderUrl` is called to update field definition after this field is changed. If set to `false`, this field won't trigger field definition update.
 `inputFormat` | `string` | no | Useful when you expect the input to be part of a longer string. Put "{{input}}" in place of the user's input (e.g "https://{{input}}.yourdomain.com").
 `validation` | [FieldValidationSchema](#fieldvalidationschema) | no | Additional validation rules for the field.
+`readonly` | `boolean` | no | Set this to `true` if the field should be read only.
 
 
 ##### FieldChoiceSchema
