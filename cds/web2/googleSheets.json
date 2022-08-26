@@ -25,14 +25,14 @@
   "actions": [
     {
       "key": "createSpreadsheetRow",
-      "name": "Create Spreadsheet Row",
+      "name": "Create spreadsheet row",
       "display": {
-        "label": "Create Spreadsheet Row",
+        "label": "Create spreadsheet row",
         "description": "",
         "instructions": ""
       },
       "operation": {
-        "type": "polling",
+        "type": "api",
         "operation": {
           "url": "ws://gsheet-connector:3000/ws/"
         },
