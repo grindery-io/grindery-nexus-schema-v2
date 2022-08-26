@@ -22,6 +22,25 @@
       }
     }
   ],
+  "actions": [
+    {
+      "key": "createSpreadsheetRow",
+      "name": "Create Spreadsheet Row",
+      "display": {
+        "label": "Create Spreadsheet Row",
+        "description": "",
+        "instructions": ""
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://gsheet-connector:3000/ws/"
+        },
+        "inputFieldProviderUrl": "http://gsheet-connector:3000/getFirstRow/",
+        "inputFields": []
+      }
+    }
+  ],
   "authentication": {
     "type": "oauth2",
     "test": {
