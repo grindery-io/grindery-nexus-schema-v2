@@ -5,6 +5,7 @@
   "platformVersion": "1.0.0",
   "actions": [
     {
+      
       "key": "fcmPushNotification",
       "name": "Send push notification",
       "display": {
