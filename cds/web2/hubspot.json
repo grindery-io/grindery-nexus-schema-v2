@@ -9,7 +9,7 @@
             "name": "Trigger from a workflow",
             "display": {
                 "label": "Trigger from a workflow",
-                "description": "Trigger from a workflow"
+                "description": "Trigger from a HubSpot workflow"
             },
             "operation": {
                 "type": "polling",
@@ -37,7 +37,7 @@
             "name": "Trigger a workflow",
             "display": {
                 "label": "Trigger a workflow",
-                "description": "Trigger a workflow"
+                "description": "Trigger a HubSpot workflow"
             },
             "operation": {
                 "type": "api",
