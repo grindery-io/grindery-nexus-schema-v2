@@ -71,6 +71,25 @@
             ]
           },
           {
+            "key": "content_type",
+            "label": "Payload type",
+            "type": "string",
+            "required": false,
+            "placeholder": "Select payload type",
+            "choices": [
+              {
+                "value": "application/x-www-form-urlencoded",
+                "label": "form",
+                "sample": "form"
+              },
+              {
+                "value": "application/json",
+                "label": "row",
+                "sample": "row"
+              }
+            ]
+          },
+          {
             "key": "url",
             "label": "Request URL",
             "type": "url",
