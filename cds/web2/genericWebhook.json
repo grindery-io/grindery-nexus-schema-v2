@@ -72,20 +72,20 @@
           },
           {
             "key": "content_type",
-            "label": "Payload type",
+            "label": "Request Content-Type",
             "type": "string",
             "required": false,
-            "placeholder": "Select payload type",
+            "placeholder": "Select Content-Type",
             "choices": [
               {
                 "value": "application/x-www-form-urlencoded",
-                "label": "form",
-                "sample": "form"
+                "label": "application/x-www-form-urlencoded",
+                "sample": "application/x-www-form-urlencoded"
               },
               {
                 "value": "application/json",
-                "label": "row",
-                "sample": "row"
+                "label": "application/json",
+                "sample": "application/json"
               }
             ]
           },
