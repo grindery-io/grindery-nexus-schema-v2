@@ -37,7 +37,7 @@
             "name": "Trigger a workflow",
             "display": {
                 "label": "Trigger a workflow",
-                "description": "Trigger a workflow"
+                "description": "Trigger a HubSpot workflow"
             },
             "operation": {
                 "type": "api",
