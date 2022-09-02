@@ -25,13 +25,11 @@
     "authentication": {
       "type": "oauth2",
       "test": {
-        "method": "POST",
-        "url": "https://slack.com/api/team.info",
+        "method": "GET",
+        "url": "https://discordapp.com/api/users/@me",
         "headers": {
-          "Content-Type": "multipart/form-data"
-        },
-        "body": {
-          "token": "{{access_token}}"
+          "Content-Type": "application/json",
+          "Authorization": "Bearer {{access_token}}"
         }
       },
       "oauth2Config": {
@@ -41,7 +39,7 @@
         },
         "getAccessToken": {
           "method": "POST",
-          "url": "https://slack.com/api/oauth.v2.access",
+          "url": "https://discord.com/api/oauth2/token",
           "body": {
             "client_id": "1009089644748603513",
             "client_secret": "11M4yQRZlxwAQeX2wmydYJEcJ6C8Clqt",
