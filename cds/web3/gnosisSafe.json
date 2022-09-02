@@ -197,7 +197,7 @@
           {
             "key": "to",
             "label": "Send to",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a wallet address",
             "list": false,
             "required": true
@@ -236,7 +236,7 @@
           {
             "key": "to",
             "label": "Send to",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a wallet address",
             "list": false,
             "required": true
@@ -244,7 +244,7 @@
           {
             "key": "tokenContractAddress",
             "label": "Token contract address",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter token contract address",
             "list": false,
             "required": true
