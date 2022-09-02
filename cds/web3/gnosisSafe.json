@@ -95,6 +95,12 @@
         ],
         "outputFields": [
           {
+            "key": "__transactionHash",
+            "label": "Transaction Hash",
+            "type": "string",
+            "list": false
+          },
+          {
             "key": "to",
             "label": "To",
             "type": "address",
