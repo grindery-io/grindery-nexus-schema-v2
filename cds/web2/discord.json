@@ -39,7 +39,7 @@
         },
         "getAccessToken": {
           "method": "POST",
-          "url": "https://discord.com/api/oauth2/token",
+          "url": "https://discord.com/api/v10/oauth2/token",
           "body": {
             "client_id": "1009089644748603513",
             "client_secret": "11M4yQRZlxwAQeX2wmydYJEcJ6C8Clqt",
