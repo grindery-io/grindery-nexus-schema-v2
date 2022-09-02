@@ -198,11 +198,18 @@
           },
           {
             "key": "value",
-            "label": "Amount in wei",
+            "label": "Amount",
             "type": "string",
             "placeholder": "",
             "list": false,
             "required": true
+          },
+          {
+            "key": "_grinderyUnitConversion_value",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
           }
         ],
         "outputFields": [],
@@ -229,7 +236,7 @@
             "required": true
           },
           {
-            "key": "gasToken",
+            "key": "tokenContractAddress",
             "label": "Token contract address",
             "type": "address",
             "placeholder": "Enter token contract address",
@@ -238,11 +245,18 @@
           },
           {
             "key": "value",
-            "label": "Amount in wei",
+            "label": "Amount",
             "type": "string",
             "placeholder": "",
             "list": false,
             "required": true
+          },
+          {
+            "key": "_grinderyUnitConversion_value",
+            "type": "string",
+            "default": "erc20Decimals[tokenContractAddress]",
+            "list": false,
+            "computed": true
           }
         ],
         "outputFields": [],
