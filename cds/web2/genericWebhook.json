@@ -15,9 +15,9 @@
       "operation": {
         "type": "polling",
         "operation": {
-          "url": "wss://webhook-connector.herokuapp.com/ws/"
+          "url": "ws://webhook-connector:3000/ws/"
         },
-        "inputFieldProviderUrl": "https://webhook-connector.herokuapp.com/genericWebhook/",
+        "inputFieldProviderUrl": "https://webhook-connector:3000/genericWebhook/",
         "inputFields": []
       }
     }
@@ -33,7 +33,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://webhook-connector.herokuapp.com/ws/"
+          "url": "ws://webhook-connector:3000/ws/"
         },
         "inputFields": [
           {
