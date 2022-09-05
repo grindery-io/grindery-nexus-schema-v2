@@ -1,0 +1,20 @@
+{
+  "name": "grindery-nexus-schema",
+  "version": "1.0.0",
+  "description": "Schema definitions for Grindery Nexus components.",
+  "main": "build.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "([ -d dist ] && rm -r dist) && cp -r cds dist && cp dist/*/*.json dist/ && git rev-parse HEAD > dist/COMMIT && node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindery-io/grindery-nexus-schema-v2.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grindery-io/grindery-nexus-schema-v2/issues"
+  },
+  "homepage": "https://github.com/grindery-io/grindery-nexus-schema-v2#readme"
+}
