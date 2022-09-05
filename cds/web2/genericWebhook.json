@@ -17,7 +17,7 @@
         "operation": {
           "url": "ws://webhook-connector:3000/ws/"
         },
-        "inputFieldProviderUrl": "https://webhook-connector:3000/genericWebhook/",
+        "inputFieldProviderUrl": "http://webhook-connector:3000/genericWebhook/",
         "inputFields": []
       }
     }
