@@ -71,6 +71,25 @@
             ]
           },
           {
+            "key": "content_type",
+            "label": "Request Content-Type",
+            "type": "string",
+            "required": false,
+            "placeholder": "Select Content-Type",
+            "choices": [
+              {
+                "value": "application/x-www-form-urlencoded",
+                "label": "application/x-www-form-urlencoded",
+                "sample": "application/x-www-form-urlencoded"
+              },
+              {
+                "value": "application/json",
+                "label": "application/json",
+                "sample": "application/json"
+              }
+            ]
+          },
+          {
             "key": "url",
             "label": "Request URL",
             "type": "url",
