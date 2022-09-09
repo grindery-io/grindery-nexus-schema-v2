@@ -1,6 +1,6 @@
 {
   "key": "erc721",
-  "name": "ERC721 Non-Fungible Token",
+  "name": "ERC-721 Non-Fungible Token",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
