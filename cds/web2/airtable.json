@@ -62,7 +62,32 @@
             "url": "wss://grindery-airtable-connector.herokuapp.com/ws/"
         },
         "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/firstRow/",
-        "inputFields": []
+        "inputFields": [
+          {
+            "key": "api_key",
+            "label": "API key",
+            "type": "string",
+            "placeholder": "To generate or manage your API key, visit your account page. https://airtable.com/account",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "app_id",
+            "label": "Base Id",
+            "type": "string",
+            "placeholder": "To get base id, API documentation of Base",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "table_name",
+            "label": "Table Name",
+            "type": "string",
+            "placeholder": "Enter table name in Airtable",
+            "list": false,
+            "required": true
+          }
+        ]
       }
     }
   ],
