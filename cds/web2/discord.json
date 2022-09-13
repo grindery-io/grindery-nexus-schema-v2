@@ -35,7 +35,7 @@
       "oauth2Config": {
         "authorizeUrl": {
           "method": "GET",
-          "url": "https://discord.com/oauth2/authorize?response_type=code&client_id=1009089644748603513&permissions=8&scope=identify%20guilds.join%20guilds%20bot"
+          "url": "https://discord.com/oauth2/authorize?response_type=code&client_id=1009089644748603513&permissions=521942846529&scope=identify%20guilds.join%20guilds%20bot"
         },
         "getAccessToken": {
           "method": "POST",
