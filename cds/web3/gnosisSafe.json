@@ -101,6 +101,12 @@
             "list": false
           },
           {
+            "key": "__chainId",
+            "label": "Chain ID",
+            "type": "string",
+            "list": false
+          },
+          {
             "key": "to",
             "label": "To",
             "type": "address",
