@@ -24,7 +24,7 @@
             "label": "API key",
             "type": "string",
             "placeholder": "keyLOfGeYHXLqpeo0",
-            "helpText": "To generate or manage your API key, visit your account page. https://airtable.com/account.",
+            "helpText": "To get API key, visit your account page: https://airtable.com/account.",
             "list": false,
             "required": true
           },
@@ -33,7 +33,7 @@
             "label": "Base Id",
             "type": "string",
             "placeholder": "appGgI109POdPOOKK",
-            "helpText": "To get base id, API documentation of Base.",
+            "helpText": "You can get base ID from the base URL, or from API documentation at https://airtable.com/api.",
             "list": false,
             "required": true
           },
@@ -42,7 +42,7 @@
             "label": "Table Name",
             "type": "string",
             "placeholder": "Table Name",
-            "helpText": "Enter table name in Airtable.",
+            "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
             "list": false,
             "required": true
           }
@@ -67,20 +67,11 @@
         "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/firstRow/",
         "inputFields": [
           {
-              "key": "help",
-              "label": "Help",
-              "type": "string",
-              "default": "Please add a sample record to get full field list from your table",
-              "readonly": true,
-              "helpText": "You need to full fill to all field with sample data in a record",
-              "required": false
-          },
-          {
             "key": "api_key",
             "label": "API key",
             "type": "string",
             "placeholder": "keyLOfGeYHXLqpeo0",
-            "helpText": "To generate or manage your API key, visit your account page. https://airtable.com/account.",
+            "helpText": "To get API key, visit your account page: https://airtable.com/account.",
             "list": false,
             "required": true
           },
@@ -89,7 +80,7 @@
             "label": "Base Id",
             "type": "string",
             "placeholder": "appGgI109POdPOOKK",
-            "helpText": "To get base id, API documentation of Base.",
+            "helpText": "You can get base ID from the base URL, or from API documentation at https://airtable.com/api.",
             "list": false,
             "required": true
           },
@@ -98,7 +89,7 @@
             "label": "Table Name",
             "type": "string",
             "placeholder": "Table Name",
-            "helpText": "Enter table name in Airtable.",
+            "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
             "list": false,
             "required": true
           }
