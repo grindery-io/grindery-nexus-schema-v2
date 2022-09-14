@@ -67,6 +67,15 @@
         "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/firstRow/",
         "inputFields": [
           {
+              "key": "help",
+              "label": "Help",
+              "type": "string",
+              "default": "Please add a sample record to get full field list from your table",
+              "readonly": true,
+              "helpText": "You need to full fill to all field with sample data in a record",
+              "required": false
+          },
+          {
             "key": "api_key",
             "label": "API key",
             "type": "string",
