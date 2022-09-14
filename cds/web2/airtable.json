@@ -23,7 +23,8 @@
             "key": "api_key",
             "label": "API key",
             "type": "string",
-            "placeholder": "To generate or manage your API key, visit your account page. https://airtable.com/account",
+            "placeholder": "keyLOfGeYHXLqpeo0",
+            "helpText": "To generate or manage your API key, visit your account page. https://airtable.com/account.",
             "list": false,
             "required": true
           },
@@ -31,7 +32,8 @@
             "key": "app_id",
             "label": "Base Id",
             "type": "string",
-            "placeholder": "To get base id, API documentation of Base",
+            "placeholder": "appGgI109POdPOOKK",
+            "helpText": "To get base id, API documentation of Base.",
             "list": false,
             "required": true
           },
@@ -39,7 +41,8 @@
             "key": "table_name",
             "label": "Table Name",
             "type": "string",
-            "placeholder": "Enter table name in Airtable",
+            "placeholder": "Table Name",
+            "helpText": "Enter table name in Airtable.",
             "list": false,
             "required": true
           }
@@ -67,7 +70,8 @@
             "key": "api_key",
             "label": "API key",
             "type": "string",
-            "placeholder": "To generate or manage your API key, visit your account page. https://airtable.com/account",
+            "placeholder": "keyLOfGeYHXLqpeo0",
+            "helpText": "To generate or manage your API key, visit your account page. https://airtable.com/account.",
             "list": false,
             "required": true
           },
@@ -75,7 +79,8 @@
             "key": "app_id",
             "label": "Base Id",
             "type": "string",
-            "placeholder": "To get base id, API documentation of Base",
+            "placeholder": "appGgI109POdPOOKK",
+            "helpText": "To get base id, API documentation of Base.",
             "list": false,
             "required": true
           },
@@ -83,7 +88,8 @@
             "key": "table_name",
             "label": "Table Name",
             "type": "string",
-            "placeholder": "Enter table name in Airtable",
+            "placeholder": "Table Name",
+            "helpText": "Enter table name in Airtable.",
             "list": false,
             "required": true
           }
