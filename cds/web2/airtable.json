@@ -50,8 +50,7 @@
               "key": "warning",
               "label": "Warning",
               "type": "info",
-              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
-              "required": true
+              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record."
           }
         ]
       }
@@ -104,8 +103,7 @@
               "key": "warning",
               "label": "Warning",
               "type": "info",
-              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
-              "required": true
+              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record."
           }
         ]
       }
