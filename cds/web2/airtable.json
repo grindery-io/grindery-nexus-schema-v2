@@ -20,13 +20,6 @@
         "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/trigger/",
         "inputFields": [
           {
-              "key": "warning",
-              "label": "Warning",
-              "type": "info",
-              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
-              "required": true
-          },
-          {
             "key": "api_key",
             "label": "API key",
             "type": "string",
@@ -52,6 +45,13 @@
             "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
             "list": false,
             "required": true
+          },
+          {
+              "key": "warning",
+              "label": "Warning",
+              "type": "info",
+              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
+              "required": true
           }
         ]
       }
@@ -74,13 +74,6 @@
         "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/firstRow/",
         "inputFields": [
           {
-              "key": "warning",
-              "label": "Warning",
-              "type": "info",
-              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
-              "required": true
-          },
-          {
             "key": "api_key",
             "label": "API key",
             "type": "string",
@@ -106,6 +99,13 @@
             "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
             "list": false,
             "required": true
+          },
+          {
+              "key": "warning",
+              "label": "Warning",
+              "type": "info",
+              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
+              "required": true
           }
         ]
       }
