@@ -1,0 +1,111 @@
+{
+    "key": "authTest",
+    "name": "Auth Test",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+      {
+        "key": "helloWorldTrigger",
+        "name": "Hello World Trigger",
+        "display": {
+          "label": "Hello World Trigger",
+          "description": "This is a test trigger"
+        },
+        "operation": {
+          "type": "polling",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-helloworld:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "interval",
+              "label": "Delay before signal in milliseconds",
+              "type": "number",
+              "required": true,
+              "default": "10000"
+            },
+            {
+              "key": "recurring",
+              "label": "Recurring",
+              "type": "boolean",
+              "required": true,
+              "default": "true"
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "random",
+              "label": "A random string"
+            }
+          ],
+          "sample": {
+            "random": "abc"
+          }
+        }
+      }
+    ],
+    "actions": [
+      {
+        "key": "helloWorldAction",
+        "name": "Hello World Action",
+        "display": {
+          "label": "Hello World Action",
+          "description": "This is a test action"
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-helloworld:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "message",
+              "label": "Message",
+              "type": "string",
+              "required": true,
+              "default": "Hello!"
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "message"
+            }
+          ],
+          "sample": {
+            "message": "Hello World!"
+          }
+        }
+      }
+    ],
+    "authentication": {
+      "type": "oauth2",
+      "test": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/oauth2/v3/userinfo"
+      },
+      "authenticatedRequestTemplate": {
+        "headers": {
+          "Authorization": "Bearer {{ auth.access_token }}"
+        }
+      },
+      "oauth2Config": {
+        "authorizeUrl": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id={{ secrets.client_id }}&scope=https://www.googleapis.com/auth/spreadsheets+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/spreadsheets.readonly+https://www.googleapis.com/auth/drive&access_type=offline",
+        "getAccessToken": {
+          "method": "POST",
+          "url": "https://oauth2.googleapis.com/token",
+          "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
+        },
+        "refreshAccessToken": {
+          "method": "POST",
+          "url": "https://oauth2.googleapis.com/token",
+          "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&grant_type=refresh_token"
+        }
+      }
+    }
+  }
