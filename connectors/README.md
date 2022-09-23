@@ -164,6 +164,7 @@ Key | Type | Required | Description
 ----|------|----------|------------
 `type` | `string` in (`basic`, `custom`, `digest`, `oauth1`, `oauth2`, `session`) | yes | Choose which scheme you want to use.
 `test` | oneOf([RequestSchema](#requestschema)) | yes | A request that confirms the authentication is working.
+`defaultDisplayName` | `string` | no | Template for generating display name. Template can contain `{{ data.FIELD }}` to reference data returned from `test` request.
 `authenticatedRequestTemplate` | oneOf([RequestSchema](#requestschema)) | no | Extra request options added to all requests sent via credential manager.
 `allowedHosts` | array<`string`> | no | When specified, credential manager is allowed to send requests to these hosts only.
 `fields` | array<[FieldSchema](#fieldschema)> | no | Fields you can request from the user before they connect your app to Nexus.
