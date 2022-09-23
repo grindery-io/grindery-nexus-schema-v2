@@ -98,6 +98,7 @@
           },
           "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
         },
+        "autoRefresh": true,
         "refreshAccessToken": {
           "method": "POST",
           "url": "https://oauth2.googleapis.com/token",
