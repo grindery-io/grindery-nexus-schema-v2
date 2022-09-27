@@ -14,9 +14,9 @@
         "operation": {
           "type": "api",
           "operation": {
-            "url": "wss://grindery-discord-connector.herokuapp.com/ws/"
+            "url": "ws://discord-connector:3000/ws/"
           },
-          "inputFieldProviderUrl": "https://grindery-discord-connector.herokuapp.com/channel-list/",
+          "inputFieldProviderUrl": "http://discord-connector:3000/channel-list/",
           "inputFields": [],
           "outputFields": []
         }

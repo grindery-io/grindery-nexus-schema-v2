@@ -164,6 +164,9 @@ Key | Type | Required | Description
 ----|------|----------|------------
 `type` | `string` in (`basic`, `custom`, `digest`, `oauth1`, `oauth2`, `session`) | yes | Choose which scheme you want to use.
 `test` | oneOf([RequestSchema](#requestschema)) | yes | A request that confirms the authentication is working.
+`defaultDisplayName` | `string` | no | Template for generating display name. Template can contain `{{ data.FIELD }}` to reference data returned from `test` request.
+`authenticatedRequestTemplate` | oneOf([RequestSchema](#requestschema)) | no | Extra request options added to all requests sent via credential manager.
+`allowedHosts` | array<`string`> | no | When specified, credential manager is allowed to send requests to these hosts only.
 `fields` | array<[FieldSchema](#fieldschema)> | no | Fields you can request from the user before they connect your app to Nexus.
 `label` | anyOf(`string`, [RequestSchema](#requestschema)) | no | A string with variables or request that returns the connection label for the authenticated user.
 `oauth1Config` | [AuthenticationOAuth1ConfigSchema](#authenticationoauth1configschema) | no | OAuth1 authentication configuration.
@@ -188,12 +191,12 @@ An `object` that defines OAuth2 authentication config.
 
 Key | Type | Required | Description
 ----|------|----------|------------
-`authorizeUrl` | oneOf([RequestSchema](#requestschema)) | yes | Define where Nexus will redirect the user to authorize our app. Note: we append the redirect URL and state parameters to return value of this function.
+`authorizeUrl` | `string` | yes | Define where Nexus will redirect the user to authorize our app. Note: we append the redirect URL and state parameters to return value of this function.
 `getAccessToken` | oneOf([RequestSchema](#requestschema)) | yes | Define how Nexus fetches an access token from the API
 `refreshAccessToken` | oneOf([RequestSchema](#requestschema)) | no | Define how Nexus will refresh the access token from the API
 `codeParam` | `string` | no | Define a non-standard code param Nexus should scrape instead.
 `scope` | `string` | no | What scope should Nexus request?
-`autoRefresh` | `boolean` | no | Should Nexus invoke `refreshAccessToken` when we receive an error for a 401 response?
+`autoRefresh` | `boolean` | no | Should Nexus invoke `refreshAccessToken` when we receive an error for a 401 response or the access token has expired?
 
 
 #### AuthenticationSessionConfigSchema

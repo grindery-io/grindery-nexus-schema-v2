@@ -237,11 +237,18 @@
           },
           {
             "key": "_value",
-            "label": "Value",
+            "label": "Transfer amount",
             "type": "string",
             "placeholder": "",
             "list": false,
             "required": true
+          },
+          {
+            "key": "_grinderyUnitConversion__value",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
           }
         ],
         "outputFields": [],
@@ -295,6 +302,13 @@
             "placeholder": "",
             "list": false,
             "required": true
+          },
+          {
+            "key": "_grinderyUnitConversion__subtractedValue",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
           }
         ],
         "outputFields": [],
@@ -373,11 +387,18 @@
           },
           {
             "key": "_value",
-            "label": "Value",
+            "label": "Transfer amount",
             "type": "string",
             "placeholder": "",
             "list": false,
             "required": true
+          },
+          {
+            "key": "_grinderyUnitConversion__value",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
           }
         ],
         "outputFields": [],
@@ -410,6 +431,13 @@
             "placeholder": "",
             "list": false,
             "required": true
+          },
+          {
+            "key": "_grinderyUnitConversion__addedValue",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
           }
         ],
         "outputFields": [],
