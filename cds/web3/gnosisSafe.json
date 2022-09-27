@@ -18,7 +18,7 @@
           {
             "key": "to",
             "label": "To",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
@@ -67,14 +67,14 @@
           {
             "key": "gasToken",
             "label": "Gas Token",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
           {
             "key": "refundReceiver",
             "label": "Refund Receiver",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
@@ -109,7 +109,7 @@
           {
             "key": "to",
             "label": "To",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
@@ -158,14 +158,14 @@
           {
             "key": "gasToken",
             "label": "Gas Token",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
           {
             "key": "refundReceiver",
             "label": "Refund Receiver",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
