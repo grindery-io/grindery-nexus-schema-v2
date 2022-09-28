@@ -14,7 +14,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "ws://grindery-nexus-connector-gmail:3000/ws/"
+          "url": "ws://grindery-nexus-connector-gmail-staging:3000/ws/"
         },
         "inputFields": [
           {
