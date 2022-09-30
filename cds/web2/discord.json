@@ -14,9 +14,9 @@
         "operation": {
           "type": "api",
           "operation": {
-            "url": "ws://discord-connector:3000/ws/"
+            "url": "ws://discord-connector-staging:3000/ws/"
           },
-          "inputFieldProviderUrl": "http://discord-connector:3000/channel-list/",
+          "inputFieldProviderUrl": "http://discord-connector-staging:3000/channel-list/",
           "inputFields": [],
           "outputFields": []
         }
