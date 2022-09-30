@@ -26,28 +26,32 @@
       "type": "oauth2",
       "test": {
         "method": "GET",
-        "url": "https://discordapp.com/api/users/@me",
+        "url": "https://discordapp.com/api/users/@me"
+      },
+      "defaultDisplayName": "{{ data.email }} - {{ data.username }}#{{ data.discriminator }}",
+      "authenticatedRequestTemplate": {
         "headers": {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer {{access_token}}"
+          "Authorization": "Bearer {{ auth.access_token }}"
         }
       },
       "oauth2Config": {
-        "authorizeUrl": {
-          "method": "GET",
-          "url": "https://discord.com/oauth2/authorize?response_type=code&client_id=1009089644748603513&permissions=2146958591&scope=identify%20guilds.join%20guilds%20bot"
-        },
+        "authorizeUrl": "https://discord.com/oauth2/authorize?response_type=code&client_id={{ secrets.client_id|urlencode }}&permissions=2146958591&scope=identify%20guilds.join%20guilds%20bot",
         "getAccessToken": {
           "method": "POST",
           "url": "https://discord.com/api/v10/oauth2/token",
-          "body": {
-            "client_id": "1009089644748603513",
-            "client_secret": "11M4yQRZlxwAQeX2wmydYJEcJ6C8Clqt",
-            "grant_type": "authorization_code"
-          },
           "headers": {
             "Content-Type": "application/x-www-form-urlencoded"
-          }
+          },
+          "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
+        },
+        "autoRefresh": true,
+        "refreshAccessToken": {
+          "method": "POST",
+          "url": "https://discord.com/api/v10/oauth2/token",
+          "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&grant_type=refresh_token"
         }
       }
     },
