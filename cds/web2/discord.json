@@ -28,7 +28,7 @@
         "method": "GET",
         "url": "https://discordapp.com/api/users/@me"
       },
-      "defaultDisplayName": "{{ data.email }} - {{ data.username }}#{{ data.discriminator }}",
+      "defaultDisplayName": "{{ data.guild.name }} - {{ data.username }}#{{ data.discriminator }}",
       "authenticatedRequestTemplate": {
         "headers": {
           "Authorization": "Bearer {{ auth.access_token }}"
