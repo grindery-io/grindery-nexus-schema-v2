@@ -12,10 +12,7 @@
                 "description": "Wait for a zap"
             },
             "operation": {
-                "type": "polling",
-                "operation": {
-                    "url": "wss://connex-grindery-test.herokuapp.com"
-                },
+                "type": "hook",
                 "inputFields": [
                     {
                         "key": "token",
