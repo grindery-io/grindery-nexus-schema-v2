@@ -14,7 +14,7 @@
             "operation": {
                 "type": "polling",
                 "operation": {
-                    "url": "wss://www.example.com"
+                    "url": "wss://connex-grindery-test.herokuapp.com"
                 },
                 "inputFields": [
                     {
@@ -42,7 +42,7 @@
             "operation": {
                 "type": "api",
                 "operation": {
-                    "url": "wss://www.example.com"
+                    "url": "wss://connex-grindery-test.herokuapp.com"
                 },
                 "inputFields": [
                     {

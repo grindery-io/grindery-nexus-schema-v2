@@ -14,9 +14,9 @@
         "operation": {
           "type": "api",
           "operation": {
-            "url": "ws://slack-connector:3000/ws/"
+            "url": "ws://slack-connector-staging:3000/ws/"
           },
-          "inputFieldProviderUrl": "http://slack-connector:3000/channel-list/",
+          "inputFieldProviderUrl": "http://slack-connector-staging:3000/channel-list/",
           "inputFields": [],
           "outputFields": []
         }
@@ -25,31 +25,24 @@
     "authentication": {
       "type": "oauth2",
       "test": {
-        "method": "POST",
-        "url": "https://slack.com/api/team.info",
+        "method": "GET",
+        "url": "https://slack.com/api/team.info"
+      },
+      "defaultDisplayName": "{{ auth.team.name }}",
+      "authenticatedRequestTemplate": {
         "headers": {
-          "Content-Type": "multipart/form-data"
-        },
-        "body": {
-          "token": "{{access_token}}"
+          "Authorization": "Bearer {{ auth.access_token }}"
         }
       },
       "oauth2Config": {
-        "authorizeUrl": {
-          "method": "GET",
-          "url": "https://slack.com/oauth/v2/authorize?client_id=2151773747.3925746869410&scope=channels:join,channels:read,chat:write,groups:read,im:read,mpim:read,team:read&user_scope=channels:read,channels:write,chat:write,groups:read,im:read,mpim:read,users.profile:read"
-        },
+        "authorizeUrl": "https://slack.com/oauth/v2/authorize?client_id={{ secrets.client_id|urlencode }}&scope=channels:join,channels:read,chat:write,groups:read,im:read,mpim:read,team:read&user_scope=channels:read,channels:write,chat:write,groups:read,im:read,mpim:read,users.profile:read",
         "getAccessToken": {
           "method": "POST",
           "url": "https://slack.com/api/oauth.v2.access",
-          "body": {
-            "client_id": "2151773747.3925746869410",
-            "client_secret": "705b13db96178a071697bf8e9c5d101c",
-            "grant_type": "authorization_code"
-          },
           "headers": {
-            "Content-Type": "multipart/form-data"
-          }
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
         }
       }
     },
