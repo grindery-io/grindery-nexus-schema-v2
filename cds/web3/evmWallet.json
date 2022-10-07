@@ -41,6 +41,11 @@
                 ],
                 "outputFields": [
                     {
+                        "key": "_grinderyChain",
+                        "label": "Name of the blockchain",
+                        "type": "string"
+                    },
+                    {
                         "key": "hash",
                         "label": "Transaction hash",
                         "type": "string"
