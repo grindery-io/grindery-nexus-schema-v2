@@ -246,7 +246,7 @@
           {
             "key": "_grinderyUnitConversion__value",
             "type": "string",
-            "default": "ether->wei",
+            "default": "erc20Decimals[@]",
             "list": false,
             "computed": true
           }
@@ -306,7 +306,7 @@
           {
             "key": "_grinderyUnitConversion__subtractedValue",
             "type": "string",
-            "default": "ether->wei",
+            "default": "erc20Decimals[@]",
             "list": false,
             "computed": true
           }
@@ -396,7 +396,7 @@
           {
             "key": "_grinderyUnitConversion__value",
             "type": "string",
-            "default": "ether->wei",
+            "default": "erc20Decimals[@]",
             "list": false,
             "computed": true
           }
@@ -435,7 +435,7 @@
           {
             "key": "_grinderyUnitConversion__addedValue",
             "type": "string",
-            "default": "ether->wei",
+            "default": "erc20Decimals[@]",
             "list": false,
             "computed": true
           }
