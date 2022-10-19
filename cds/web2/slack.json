@@ -14,9 +14,9 @@
         "operation": {
           "type": "api",
           "operation": {
-            "url": "ws://slack-connector-staging:3000/ws/"
+            "url": "ws://slack-connector:3000/ws/"
           },
-          "inputFieldProviderUrl": "http://slack-connector-staging:3000/channel-list/",
+          "inputFieldProviderUrl": "http://slack-connector:3000/channel-list/",
           "inputFields": [],
           "outputFields": []
         }
