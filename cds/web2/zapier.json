@@ -27,7 +27,7 @@
                     },
                     {
                         "key": "data",
-                        "label": "Data",
+                        "label": "Data to Send",
                         "type": "string",
                         "placeholder": "{\"key\":\"value\"}",
                         "list": false,
