@@ -12,13 +12,24 @@
                 "description": "Wait for a zap"
             },
             "operation": {
-                "type": "hook",
+                "type": "polling",
+                "operation": {
+                    "url": "wss://connex-grindery-test.herokuapp.com"
+                },
                 "inputFields": [
                     {
                         "key": "token",
                         "label": "Token",
                         "type": "string",
                         "placeholder": "Enter token generated in your Zapier action",
+                        "list": false,
+                        "required": true
+                    },
+                    {
+                        "key": "data",
+                        "label": "Data",
+                        "type": "string",
+                        "placeholder": "{'key':'value'}",
                         "list": false,
                         "required": true
                     }
