@@ -59,7 +59,7 @@
                         "type": "string",
                         "placeholder": "{\"key\":\"value\"}",
                         "list": false,
-                        "required": true
+                        "required": false
                     }
                 ],
                 "outputFields": [],
