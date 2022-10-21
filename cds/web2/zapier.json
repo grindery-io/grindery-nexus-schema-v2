@@ -29,7 +29,7 @@
                         "key": "data",
                         "label": "Data",
                         "type": "string",
-                        "placeholder": "{'key':'value'}",
+                        "placeholder": "{\"key\":\"value\"}",
                         "list": false,
                         "required": true
                     }
