@@ -52,6 +52,14 @@
                         "placeholder": "Enter token generated in your Zapier trigger",
                         "list": false,
                         "required": true
+                    },
+                    {
+                        "key": "data",
+                        "label": "Data to Send",
+                        "type": "string",
+                        "placeholder": "{\"key\":\"value\"}",
+                        "list": false,
+                        "required": false
                     }
                 ],
                 "outputFields": [],
