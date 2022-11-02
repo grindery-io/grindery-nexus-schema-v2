@@ -21,8 +21,9 @@
                         "key": "token",
                         "label": "Token",
                         "type": "string",
-                        "placeholder": "Enter token generated in your Zapier action",
+                        "placeholder": "Enter a unique token",
                         "list": false,
+                        "helpText": "Please enter a unique combination of characters. You can use a tool like https://www.uuidgenerator.net/ to generate unique id´s",
                         "required": true
                     }
                 ],
@@ -51,7 +52,7 @@
                         "type": "string",
                         "placeholder": "Enter token generated in your Zapier trigger",
                         "list": false,
-                        "required": true
+                        "required": false
                     },
                     {
                         "key": "data",
