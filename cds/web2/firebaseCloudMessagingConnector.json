@@ -3,6 +3,7 @@
   "name": "Firebase Cloud Messaging",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
+  "type": "web2",
   "actions": [
     {
       "key": "fcmPushNotification",

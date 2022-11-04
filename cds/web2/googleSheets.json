@@ -3,6 +3,7 @@
   "name": "Google Sheets",
   "version": "1.0.0",
   "platformVersion": "1",
+  "type": "web2",
   "triggers": [
     {
       "key": "newSpreadsheetRow",
