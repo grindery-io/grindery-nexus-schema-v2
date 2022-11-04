@@ -3,6 +3,7 @@
   "name": "Flow blockchain",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
+  "type": "web3",
   "triggers": [
     {
       "key": "TokenTransferTrigger",

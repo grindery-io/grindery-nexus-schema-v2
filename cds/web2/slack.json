@@ -3,6 +3,7 @@
     "name": "Slack",
     "version": "1.0.0",
     "platformVersion": "1",
+    "type": "web2",
     "actions": [
       {
         "key": "sendChannelMessage",

@@ -3,6 +3,7 @@
   "name": "Token Price by Nexus",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
+  "type": "web2",
   "triggers": [],
   "actions": [
     {
