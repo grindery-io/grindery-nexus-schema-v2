@@ -257,6 +257,7 @@ Key | Type | Required | Description
 `description` | `string` | yes | A short description for what this trigger or action does.
 `instructions` | `string` | no | Short instructions for how to use this trigger or action.
 `icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
+`featured` | `boolean` | no | Featured triggers/actions will be listed higher in the workflow builder UI then the rest.
 
 
 ### Fields
