@@ -5,7 +5,7 @@
   "main": "build.js",
   "devDependencies": {},
   "scripts": {
-    "build": "([ -d dist ] && rm -r dist || true) && cp -r cds dist && cp dist/*/*.json dist/ && git rev-parse HEAD > dist/COMMIT && node build.js"
+    "build": "([ -d dist ] && rm -r dist || true) && cp -r cds dist && cp dist/*/*.json dist/ && git rev-parse HEAD > dist/COMMIT && node build.js && cp dist/*.json ../grindery-nexus-frontend/src/jsonfolder"
   },
   "repository": {
     "type": "git",

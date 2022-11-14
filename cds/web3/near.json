@@ -237,8 +237,8 @@
                 "inputFields": [
                     {
                         "key": "_grinderyContractAddress",
-                        "type": "string",
                         "label": "Contract address",
+                        "type": "string",
                         "placeholder": "Enter Contract address",
                         "required": true,
                         "list": false,
@@ -249,9 +249,36 @@
                         "label": "To",
                         "type": "string",
                         "placeholder": "Enter a blockchain address",
-                        "list": false,
                         "required": true,
+                        "list": false,
                         "default": "tcoratger.testnet"
+                    },
+                    {
+                        "key": "title",
+                        "label": "Title",
+                        "type": "string",
+                        "placeholder": "Enter a title",
+                        "required": true,
+                        "list": false,
+                        "default": "My Non Fungible Token"
+                    },
+                    {
+                        "key": "description",
+                        "label": "Description",
+                        "type": "string",
+                        "placeholder": "Enter a description",
+                        "required": true,
+                        "list": false,
+                        "default": "Streetlife movie NFT"
+                    },
+                    {
+                        "key": "media",
+                        "label": "Media",
+                        "type": "string",
+                        "placeholder": "Enter a link to a media",
+                        "required": true,
+                        "list": false,
+                        "default": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"
                     },
                     {
                         "key": "_grinderyChain",
