@@ -71,9 +71,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -87,10 +85,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "ft_transfer",
-          "ft_transfer_call"
-        ],
+        "signature": ["ft_transfer", "ft_transfer_call"],
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -161,9 +156,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -177,10 +170,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "nft_transfer",
-          "nft_transfer_call"
-        ],
+        "signature": ["nft_transfer", "nft_transfer_call"],
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -266,9 +256,86 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "NFTMint",
+      "name": "Mint NFT",
+      "display": {
+        "label": "Mint NFT",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "Enter Contract address",
+            "required": true,
+            "list": false,
+            "default": "nft-example.tcoratger.testnet"
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "string",
+            "placeholder": "Enter a blockchain address",
+            "required": true,
+            "list": false,
+            "default": "tcoratger.testnet"
+          },
+          {
+            "key": "title",
+            "label": "Title",
+            "type": "string",
+            "placeholder": "Enter a title",
+            "required": true,
+            "list": false,
+            "default": "My Non Fungible Token"
+          },
+          {
+            "key": "description",
+            "label": "Description",
+            "type": "string",
+            "placeholder": "Enter a description",
+            "required": true,
+            "list": false,
+            "default": "Streetlife movie NFT"
+          },
+          {
+            "key": "media",
+            "label": "Media",
+            "type": "string",
+            "placeholder": "Enter a link to a media",
+            "required": true,
+            "list": false,
+            "default": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"
+          },
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "computed": true,
+            "default": "near:testnet"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "NFTAddress",
+            "label": "NFT Address",
+            "type": "string",
+            "placeholder": "NFT Address",
+            "list": false
+          }
+        ],
+        "sample": {}
       }
     }
   ],
