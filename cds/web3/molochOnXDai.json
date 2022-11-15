@@ -3,7 +3,6 @@
   "name": "MolochDAO",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
-  "type": "web3",
   "triggers": [
     {
       "key": "SummonCompleteTrigger",
@@ -20,8 +19,12 @@
             "key": "summoner",
             "label": "Summoner",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter summoner's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "tokens",
@@ -145,7 +148,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -163,8 +168,12 @@
             "key": "applicant",
             "label": "Applicant",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter applicant's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "sharesRequested",
@@ -224,10 +233,14 @@
           },
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "delegateKey",
@@ -240,8 +253,12 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter member's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -330,7 +347,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -355,15 +374,23 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter member's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "proposalIndex",
@@ -417,7 +444,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -433,10 +462,14 @@
         "inputFields": [
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "proposalIndex",
@@ -456,8 +489,12 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter member's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "uintVote",
@@ -504,7 +541,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -512,7 +551,9 @@
       "name": "Process Proposal",
       "display": {
         "label": "Process Proposal",
-        "description": "Process Proposal"
+        "description": "Process a proposal",
+        "instructions": "Process a proposal",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -527,10 +568,14 @@
           },
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "didPass",
@@ -563,7 +608,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -571,7 +618,9 @@
       "name": "Process Whitelist Proposal",
       "display": {
         "label": "Process Whitelist Proposal",
-        "description": "Process Whitelist Proposal"
+        "description": "Process a whitelist proposal",
+        "instructions": "Process a whitelist proposal",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -586,10 +635,14 @@
           },
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "didPass",
@@ -622,7 +675,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -645,10 +700,14 @@
           },
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "didPass",
@@ -681,15 +740,19 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "RagequitTrigger",
-      "name": "Ragequit",
+      "name": "RageQuit",
       "display": {
-        "label": "Ragequit",
-        "description": "Ragequit"
+        "label": "RageQuit",
+        "description": "RageQuit",
+        "instructions": "RageQuit",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -699,8 +762,12 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter member's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "sharesToBurn",
@@ -740,7 +807,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -785,7 +854,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -801,17 +872,25 @@
         "inputFields": [
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "applicantAddress",
             "label": "Applicant Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter applicant's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -830,7 +909,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -848,8 +929,12 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter member's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "newDelegateKey",
@@ -875,7 +960,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -893,8 +980,12 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter member's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "token",
@@ -934,17 +1025,21 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
   "actions": [
     {
       "key": "proposalsAction",
-      "name": "Proposals (View function)",
+      "name": "Proposals (View Function)",
       "display": {
-        "label": "Proposals (View function)",
-        "description": "Proposals (View function)"
+        "label": "Proposals (View Function)",
+        "description": "Proposals (View Function)",
+        "instructions": "Proposals (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -960,15 +1055,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "processingRewardAction",
-      "name": "Processing Reward (View function)",
+      "name": "Processing Reward (View Function)",
       "display": {
-        "label": "Processing Reward (View function)",
-        "description": "Processing Reward (View function)"
+        "label": "Processing Reward (View Function)",
+        "description": "Processing Reward (View Function)",
+        "instructions": "Processing Reward (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -981,15 +1080,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "getMemberProposalVoteAction",
-      "name": "Get Member Proposal Vote (View function)",
+      "name": "Get Member Proposal Vote (View Function)",
       "display": {
-        "label": "Get Member Proposal Vote (View function)",
-        "description": "Get Member Proposal Vote (View function)"
+        "label": "Get Member Proposal Vote (View Function)",
+        "description": "Get Member Proposal Vote (View Function)",
+        "instructions": "Get Member Proposal Vote (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -999,9 +1102,12 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter member's blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "proposalIndex",
@@ -1019,15 +1125,19 @@
             "type": "number"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "getCurrentPeriodAction",
-      "name": "Get Current Period (View function)",
+      "name": "Get Current Period (View Function)",
       "display": {
-        "label": "Get Current Period (View function)",
-        "description": "Get Current Period (View function)"
+        "label": "Get Current Period (View Function)",
+        "description": "Get Current Period (View Function)",
+        "instructions": "Get Current Period (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1040,15 +1150,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "membersAction",
-      "name": "Members (View function)",
+      "name": "Members (View Function)",
       "display": {
-        "label": "Members (View function)",
-        "description": "Members (View function)"
+        "label": "Members (View Function)",
+        "description": "Members (View Function)",
+        "instructions": "Members (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1064,7 +1178,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1090,13 +1206,18 @@
             "key": "amount",
             "label": "Amount",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter the amount you want to withdraw",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1114,9 +1235,12 @@
             "key": "memberToKick",
             "label": "Member To Kick",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter member's blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "details",
@@ -1128,15 +1252,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "ragequitAction",
-      "name": "Ragequit",
+      "name": "RageQuit",
       "display": {
-        "label": "Ragequit",
-        "description": "Ragequit"
+        "label": "RageQuit",
+        "description": "RageQuit",
+        "instructions": "RageQuit",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1160,15 +1288,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "approvedTokensAction",
-      "name": "Approved Tokens (View function)",
+      "name": "Approved Tokens (View Function)",
       "display": {
-        "label": "Approved Tokens (View function)",
-        "description": "Approved Tokens (View function)"
+        "label": "Approved Tokens (View Function)",
+        "description": "Approved Tokens (View Function)",
+        "instructions": "Approved Tokens (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1190,7 +1322,9 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1214,15 +1348,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "TOTALAction",
-      "name": "TOTAL (View function)",
+      "name": "TOTAL (View Function)",
       "display": {
-        "label": "TOTAL (View function)",
-        "description": "TOTAL (View function)"
+        "label": "TOTAL (View Function)",
+        "description": "TOTAL (View Function)",
+        "instructions": "TOTAL (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1235,15 +1373,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "processWhitelistProposalAction",
-      "name": "Process Whitelist Proposal",
+      "name": "Process Whitelist proposal",
       "display": {
-        "label": "Process Whitelist Proposal",
-        "description": "Process Whitelist Proposal"
+        "label": "Process Whitelist proposal",
+        "description": "Process a whitelist proposal",
+        "instructions": "Process a whitelist proposal",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1259,15 +1401,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "totalSharesAction",
-      "name": "Total Shares (View function)",
+      "name": "Total Shares (View Function)",
       "display": {
-        "label": "Total Shares (View function)",
-        "description": "Total Shares (View function)"
+        "label": "Total Shares (View Function)",
+        "description": "Total Shares (View Function)",
+        "instructions": "Total Shares (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1280,15 +1426,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "proposalQueueAction",
-      "name": "Proposal Queue (View function)",
+      "name": "Proposal Queue (View Function)",
       "display": {
-        "label": "Proposal Queue (View function)",
-        "description": "Proposal Queue (View function)"
+        "label": "Proposal Queue (View Function)",
+        "description": "Proposal Queue (View Function)",
+        "instructions": "Proposal Queue (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1310,15 +1460,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "proposedToKickAction",
-      "name": "Proposed To Kick (View function)",
+      "name": "Proposed To Kick (View Function)",
       "display": {
-        "label": "Proposed To Kick (View function)",
-        "description": "Proposed To Kick (View function)"
+        "label": "Proposed To Kick (View Function)",
+        "description": "Proposed To Kick (View Function)",
+        "instructions": "Proposed To Kick (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1340,15 +1494,19 @@
             "type": "boolean"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "memberAddressByDelegateKeyAction",
-      "name": "Member Address By Delegate Key (View function)",
+      "name": "Member Address By Delegate Key (View Function)",
       "display": {
-        "label": "Member Address By Delegate Key (View function)",
-        "description": "Member Address By Delegate Key (View function)"
+        "label": "Member Address By Delegate Key (View Function)",
+        "description": "Member Address By Delegate Key (View Function)",
+        "instructions": "Member Address By Delegate Key (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1370,7 +1528,9 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1410,15 +1570,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "userTokenBalancesAction",
-      "name": "User Token Balances (View function)",
+      "name": "User Token Balances (View Function)",
       "display": {
-        "label": "User Token Balances (View function)",
-        "description": "User Token Balances (View function)"
+        "label": "User Token Balances (View Function)",
+        "description": "User Token Balances (View Function)",
+        "instructions": "User Token Balances (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1448,7 +1612,9 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1456,7 +1622,9 @@
       "name": "Submit Proposal",
       "display": {
         "label": "Submit Proposal",
-        "description": "Submit Proposal"
+        "description": "Submit a proposal",
+        "instructions": "Submit a proposal",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1468,7 +1636,10 @@
             "type": "string",
             "placeholder": "Enter wallet address of the applicant",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "sharesRequested",
@@ -1528,7 +1699,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1552,15 +1725,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "totalLootAction",
-      "name": "Total Loot (View function)",
+      "name": "Total Loot (View Function)",
       "display": {
-        "label": "Total Loot (View function)",
-        "description": "Total Loot (View function)"
+        "label": "Total Loot (View Function)",
+        "description": "Total Loot (View Function)",
+        "instructions": "Total Loot (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1573,15 +1750,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "gracePeriodLengthAction",
-      "name": "Grace Period Length (View function)",
+      "name": "Grace Period Length (View Function)",
       "display": {
-        "label": "Grace Period Length (View function)",
-        "description": "Grace Period Length (View function)"
+        "label": "Grace Period Length (View Function)",
+        "description": "Grace Period Length (View Function)",
+        "instructions": "Grace Period Length (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1594,15 +1775,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "getUserTokenBalanceAction",
-      "name": "Get User Token Balance (View function)",
+      "name": "Get User Token Balance (View Function)",
       "display": {
-        "label": "Get User Token Balance (View function)",
-        "description": "Get User Token Balance (View function)"
+        "label": "Get User Token Balance (View Function)",
+        "description": "Get User Token Balance (View Function)",
+        "instructions": "Get User Token Balance (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1612,9 +1797,12 @@
             "key": "user",
             "label": "User",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter user's blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "token",
@@ -1632,15 +1820,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "tokenWhitelistAction",
-      "name": "Token Whitelist (View function)",
+      "name": "Token Whitelist (View Function)",
       "display": {
-        "label": "Token Whitelist (View function)",
-        "description": "Token Whitelist (View function)"
+        "label": "Token Whitelist (View Function)",
+        "description": "Token Whitelist (View Function)",
+        "instructions": "Token Whitelist (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1662,15 +1854,19 @@
             "type": "boolean"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "getTokenCountAction",
-      "name": "Get Token Count (View function)",
+      "name": "Get Token Count (View Function)",
       "display": {
-        "label": "Get Token Count (View function)",
-        "description": "Get Token Count (View function)"
+        "label": "Get Token Count (View Function)",
+        "description": "Get Token Count (View Function)",
+        "instructions": "Get Token Count (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1683,15 +1879,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "getProposalQueueLengthAction",
-      "name": "Get Proposal Queue Length (View function)",
+      "name": "Get Proposal Queue Length (View Function)",
       "display": {
-        "label": "Get Proposal Queue Length (View function)",
-        "description": "Get Proposal Queue Length (View function)"
+        "label": "Get Proposal Queue Length (View Function)",
+        "description": "Get Proposal Queue Length (View Function)",
+        "instructions": "Get Proposal Queue Length (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1704,15 +1904,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "summoningTimeAction",
-      "name": "Summoning Time (View function)",
+      "name": "Summoning Time (View Function)",
       "display": {
-        "label": "Summoning Time (View function)",
-        "description": "Summoning Time (View function)"
+        "label": "Summoning Time (View Function)",
+        "description": "Summoning Time (View Function)",
+        "instructions": "Summoning Time (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1725,15 +1929,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "votingPeriodLengthAction",
-      "name": "Voting Period Length (View function)",
+      "name": "Voting Period Length (View Function)",
       "display": {
-        "label": "Voting Period Length (View function)",
-        "description": "Voting Period Length (View function)"
+        "label": "Voting Period Length (View Function)",
+        "description": "Voting Period Length (View Function)",
+        "instructions": "Voting Period Length (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1746,15 +1954,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "proposalDepositAction",
-      "name": "Proposal Deposit (View function)",
+      "name": "Proposal Deposit (View Function)",
       "display": {
-        "label": "Proposal Deposit (View function)",
-        "description": "Proposal Deposit (View function)"
+        "label": "Proposal Deposit (View Function)",
+        "description": "Proposal Deposit (View Function)",
+        "instructions": "Proposal Deposit (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1767,15 +1979,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "hasVotingPeriodExpiredAction",
-      "name": "Has Voting Period Expired (View function)",
+      "name": "Has Voting Period Expired (View Function)",
       "display": {
-        "label": "Has Voting Period Expired (View function)",
-        "description": "Has Voting Period Expired (View function)"
+        "label": "Has Voting Period Expired (View Function)",
+        "description": "Has Voting Period Expired (View Function)",
+        "instructions": "Has Voting Period Expired (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1797,7 +2013,9 @@
             "type": "boolean"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1813,15 +2031,20 @@
         "inputFields": [
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter the proposal ID",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1853,15 +2076,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "totalGuildBankTokensAction",
-      "name": "Total Guild Bank Tokens (View function)",
+      "name": "Total Guild Bank Tokens (View Function)",
       "display": {
-        "label": "Total Guild Bank Tokens (View function)",
-        "description": "Total Guild Bank Tokens (View function)"
+        "label": "Total Guild Bank Tokens (View Function)",
+        "description": "Total Guild Bank Tokens (View Function)",
+        "instructions": "Total Guild Bank Tokens (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1874,15 +2101,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "canRagequitAction",
-      "name": "Can Ragequit (View function)",
+      "name": "Can RageQuit (View Function)",
       "display": {
-        "label": "Can Ragequit (View function)",
-        "description": "Can Ragequit (View function)"
+        "label": "Can RageQuit (View Function)",
+        "description": "Can RageQuit (View Function)",
+        "instructions": "Can RageQuit (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -1904,7 +2135,9 @@
             "type": "boolean"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1992,15 +2225,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "dilutionBoundAction",
-      "name": "Dilution Bound (View function)",
+      "name": "Dilution Bound (View Function)",
       "display": {
-        "label": "Dilution Bound (View function)",
-        "description": "Dilution Bound (View function)"
+        "label": "Dilution Bound (View Function)",
+        "description": "Dilution Bound (View Function)",
+        "instructions": "Dilution Bound (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2013,15 +2250,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "getProposalFlagsAction",
-      "name": "Get Proposal Flags (View function)",
+      "name": "Get Proposal Flags (View Function)",
       "display": {
-        "label": "Get Proposal Flags (View function)",
-        "description": "Get Proposal Flags (View function)"
+        "label": "Get Proposal Flags (View Function)",
+        "description": "Get Proposal Flags (View Function)",
+        "instructions": "Get Proposal Flags (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2029,11 +2270,14 @@
         "inputFields": [
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter the proposal ID",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [
@@ -2043,15 +2287,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "memberListAction",
-      "name": "Member List (View function)",
+      "name": "Member List (View Function)",
       "display": {
-        "label": "Member List (View function)",
-        "description": "Member List (View function)"
+        "label": "Member List (View Function)",
+        "description": "Member List (View Function)",
+        "instructions": "Member List (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2073,15 +2321,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "periodDurationAction",
-      "name": "Period Duration (View function)",
+      "name": "Period Duration (View Function)",
       "display": {
-        "label": "Period Duration (View function)",
-        "description": "Period Duration (View function)"
+        "label": "Period Duration (View Function)",
+        "description": "Period Duration (View Function)",
+        "instructions": "Period Duration (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2094,15 +2346,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "depositTokenAction",
-      "name": "Deposit Token (View function)",
+      "name": "Deposit Token (View Function)",
       "display": {
-        "label": "Deposit Token (View function)",
-        "description": "Deposit Token (View function)"
+        "label": "Deposit Token (View Function)",
+        "description": "Deposit Token (View Function)",
+        "instructions": "Deposit Token (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2115,15 +2371,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "proposalCountAction",
-      "name": "Proposal Count (View function)",
+      "name": "Proposal Count (View Function)",
       "display": {
-        "label": "Proposal Count (View function)",
-        "description": "Proposal Count (View function)"
+        "label": "Proposal Count (View Function)",
+        "description": "Proposal Count (View Function)",
+        "instructions": "Proposal Count (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2136,15 +2396,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "ragekickAction",
-      "name": "Ragekick",
+      "name": "RageKick",
       "display": {
-        "label": "Ragekick",
-        "description": "Ragekick"
+        "label": "RageKick",
+        "description": "RageKick",
+        "instructions": "RageKick",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2154,13 +2418,18 @@
             "key": "memberToKick",
             "label": "Member To Kick",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter member's blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -2168,7 +2437,9 @@
       "name": "Cancel Proposal",
       "display": {
         "label": "Cancel Proposal",
-        "description": "Cancel Proposal"
+        "description": "Cancel a proposal",
+        "instructions": "Cancel a proposal",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2176,23 +2447,30 @@
         "inputFields": [
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "proposedToWhitelistAction",
-      "name": "Proposed To Whitelist (View function)",
+      "name": "Proposed To Whitelist (View Function)",
       "display": {
-        "label": "Proposed To Whitelist (View function)",
-        "description": "Proposed To Whitelist (View function)"
+        "label": "Proposed To Whitelist (View Function)",
+        "description": "Proposed To Whitelist (View Function)",
+        "instructions": "Proposed To Whitelist (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2214,7 +2492,9 @@
             "type": "boolean"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -2238,7 +2518,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -2246,7 +2528,9 @@
       "name": "Process Proposal",
       "display": {
         "label": "Process Proposal",
-        "description": "Process Proposal"
+        "description": "Process a proposal",
+        "instructions": "Process a proposal",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2262,15 +2546,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "ESCROWAction",
-      "name": "ESCROW (View function)",
+      "name": "ESCROW (View Function)",
       "display": {
-        "label": "ESCROW (View function)",
-        "description": "ESCROW (View function)"
+        "label": "ESCROW (View Function)",
+        "description": "ESCROW (View Function)",
+        "instructions": "ESCROW (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2283,15 +2571,19 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "GUILDAction",
-      "name": "GUILD (View function)",
+      "name": "GUILD (View Function)",
       "display": {
-        "label": "GUILD (View function)",
-        "description": "GUILD (View function)"
+        "label": "GUILD (View Function)",
+        "description": "GUILD (View Function)",
+        "instructions": "GUILD (View Function)",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -2304,7 +2596,9 @@
             "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -2336,9 +2630,15 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPYSURBVHgBpVVNaF1FFD7zf99LatLEgC1dxJa48IFUzE6EJ4KooAmVuHCTgiCIP3FbsFDBnaB0LVRdCK5EXApaNy4KpaWLdtekpbS7NqU0NHn35/Q799173+S9V9KfgXPvzJmZ880555szRHu3LuRnr/QG/psQFnFKX9TQo79Mz9DWaqNOa9ZKlcZjcdrU/XXIKj1Bm4ecrQ0ZGE+MHQEQ8QBpGcNqoPu32r8nwEZs6LNkAkbUWBAxfjJpxyC1V48Emh4G8AjThk94Cv9xIBZe3nSBX7Ajnq5X9kbaj/FCCdOb3nOhHL/t3FiQeYQx05Y/B9CYnP0wLky7FkkePg0t3tGOF+14EPEww/x563lu1JuC+swkXYGcihHBGkoQ6PcUPpCtcs9o67FYUrSAfwtitY6nsZmWYpClZgZGFYzeyzLaynJiZjpGZgRgv9L0UQilgSvYc7vIS3qo0nbTVqnKTXd3mEwT3w7ClCvLm8bzhyBAvO5EkvCF1iT/M7GPj/nQsE0oPRwyOcjRGtbgdLmEgPvhuZyl9LvRNJXndAYn/diFUr9iA32d5nT0wTbptEe6Wi/fFH23O2zzVOWjuVw0lNz34U0Pyd0Gy1LIHzbwbTBqR4ne8pfwcnhPeUEHbDvVQEqymYsGvmMMTuwQZE3vGkWv4qr8BK+W4NFfmFvEeNVY8tCtGEdH9CBv23lByWBcunm8j26bWjQDal4C9wuy/JtxzY1HOPmWb3FQ/cupof8b84Uy/L9vc1LpA/Yn/dzIqdfEk2slOk4ouUhwsnsAfz1PadkquoJxTeAWenPIz/6IQOfg1Tvw9I30AeXQwzhl2LCTN1G5RBXFNidxodrwRle3XfIjZeUgbvtbhw7xK7PPo7wb/sYl3IJ+YW6OPzhwkPfBE1eeHHtVv1pPiq7vyR0BEE/uQn69n/VK3xzi7MD7DMGSMUJDN7a26IvpaTo8M0Xfpdt0YGaWTrYn6HqeyV0tPd1B32tFeHcoxc4UHqP9SVHrUsNzW55GYhogL2L8FbxUQ7VJ1nyPCgy7pRfB6HJNdE+Kmr41u/6DnJYZ8QDhAkNy6kEYMX5NdvHu0iLjTsE4vUE+szIHeC1Rarhm1Ok633FrSr3kwtUMwum+DcnYt+QE9DHzosftKj2i1BNFj5aETam+wZed51mMP5EHCqArKCPzqLoLlVE5iFH6sR6tGOiseBKa+Cp+KQReROk/DIBuq80LwTcvoqzDnZEcPNbzG7fjoOaGr4Cm8O+gKB7xjjsI03OV3ipdwAuh6ho9bfOGlsGOX9C9SIOciNF16M9MW9vdy8ZD70rmn2OilNoAAAAASUVORK5CYII="
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPYSURBVHgBpVVNaF1FFD7zf99LatLEgC1dxJa48IFUzE6EJ4KooAmVuHCTgiCIP3FbsFDBnaB0LVRdCK5EXApaNy4KpaWLdtekpbS7NqU0NHn35/Q799173+S9V9KfgXPvzJmZ880555szRHu3LuRnr/QG/psQFnFKX9TQo79Mz9DWaqNOa9ZKlcZjcdrU/XXIKj1Bm4ecrQ0ZGE+MHQEQ8QBpGcNqoPu32r8nwEZs6LNkAkbUWBAxfjJpxyC1V48Emh4G8AjThk94Cv9xIBZe3nSBX7Ajnq5X9kbaj/FCCdOb3nOhHL/t3FiQeYQx05Y/B9CYnP0wLky7FkkePg0t3tGOF+14EPEww/x563lu1JuC+swkXYGcihHBGkoQ6PcUPpCtcs9o67FYUrSAfwtitY6nsZmWYpClZgZGFYzeyzLaynJiZjpGZgRgv9L0UQilgSvYc7vIS3qo0nbTVqnKTXd3mEwT3w7ClCvLm8bzhyBAvO5EkvCF1iT/M7GPj/nQsE0oPRwyOcjRGtbgdLmEgPvhuZyl9LvRNJXndAYn/diFUr9iA32d5nT0wTbptEe6Wi/fFH23O2zzVOWjuVw0lNz34U0Pyd0Gy1LIHzbwbTBqR4ne8pfwcnhPeUEHbDvVQEqymYsGvmMMTuwQZE3vGkWv4qr8BK+W4NFfmFvEeNVY8tCtGEdH9CBv23lByWBcunm8j26bWjQDal4C9wuy/JtxzY1HOPmWb3FQ/cupof8b84Uy/L9vc1LpA/Yn/dzIqdfEk2slOk4ouUhwsnsAfz1PadkquoJxTeAWenPIz/6IQOfg1Tvw9I30AeXQwzhl2LCTN1G5RBXFNidxodrwRle3XfIjZeUgbvtbhw7xK7PPo7wb/sYl3IJ+YW6OPzhwkPfBE1eeHHtVv1pPiq7vyR0BEE/uQn69n/VK3xzi7MD7DMGSMUJDN7a26IvpaTo8M0Xfpdt0YGaWTrYn6HqeyV0tPd1B32tFeHcoxc4UHqP9SVHrUsNzW55GYhogL2L8FbxUQ7VJ1nyPCgy7pRfB6HJNdE+Kmr41u/6DnJYZ8QDhAkNy6kEYMX5NdvHu0iLjTsE4vUE+szIHeC1Rarhm1Ok633FrSr3kwtUMwum+DcnYt+QE9DHzosftKj2i1BNFj5aETam+wZed51mMP5EHCqArKCPzqLoLlVE5iFH6sR6tGOiseBKa+Cp+KQReROk/DIBuq80LwTcvoqzDnZEcPNbzG7fjoOaGr4Cm8O+gKB7xjjsI03OV3ipdwAuh6ho9bfOGlsGOX9C9SIOciNF16M9MW9vdy8ZD70rmn2OilNoAAAAASUVORK5CYII=",
+  "type": "web3",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
 }
