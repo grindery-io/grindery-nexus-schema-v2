@@ -3,14 +3,15 @@
   "name": "Gmail",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
-  "type": "web2",
   "actions": [
     {
       "key": "sendEmailViaGmail",
-      "name": "Send email",
+      "name": "Send Email",
       "display": {
-        "label": "Send email",
-        "description": "Send email via Gmail"
+        "label": "Send Email",
+        "description": "Compose and send a new message",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
@@ -23,39 +24,53 @@
             "label": "To",
             "type": "string",
             "required": true,
-            "placeholder": "receiver@mail.com"
+            "placeholder": "Enter recipient address",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "cc",
             "label": "Cc",
             "type": "string",
             "required": false,
-            "placeholder": "cc@mail.com"
+            "placeholder": "Enter email addresses you want to cc, separated by comma.",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "bcc",
             "label": "Bcc",
             "type": "string",
             "required": false,
-            "placeholder": "bcc@mail.com"
+            "placeholder": "Enter email addresses you want to bcc, separated by comma.",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "subject",
             "label": "Subject",
             "type": "string",
             "required": true,
-            "placeholder": "subject of email"
+            "placeholder": "Enter text...",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "message",
             "label": "Message",
             "type": "string",
             "required": true,
-            "placeholder": "message"
+            "placeholder": "Enter text...",
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
-        "outputFields": [
-        ]
+        "outputFields": []
       }
     }
   ],
@@ -71,7 +86,10 @@
         "Authorization": "Bearer {{ auth.access_token }}"
       }
     },
-    "allowedHosts": ["www.googleapis.com", "gmail.googleapis.com"],
+    "allowedHosts": [
+      "www.googleapis.com",
+      "gmail.googleapis.com"
+    ],
     "oauth2Config": {
       "authorizeUrl": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=https://www.googleapis.com/auth/userinfo.email+openid+https://www.googleapis.com/auth/gmail.send&access_type=offline",
       "getAccessToken": {
@@ -93,5 +111,9 @@
       }
     }
   },
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIHSURBVHgB7ZNLSFRRGMf/5869iTUxBUWJRFNueiwaqYkiCMuLtIwCXUUULspF06LFtGsRVIsiK5J2tbSFG1FBfG1kxFmMKxeieBFE8IHjAwfHe8/nOTPe8TFzvdcXuPAH95zDOd/3/c/5n3OBI1xgsvkAKFVlF+ssojMmV/4+MAwDuyDdjhAx9bGP0aiqW/9yAr2Xgw0AvVqLS4FR9N7I2A/sgHSHFmGgL2JYtDb1VdPNd0p2nCsuKQax+ik9/HtEvxlwKzxaETo19TDcKIp/31BcUisbxSmRCK9PkjIw8SgUdIqZ1G+Vn/BpCWKoLrAcyAksa36nGkHfijY4WRl+s3VhpjIcEZuIyZhCiQtcy/SqbH49acLLlhc4vTheKLZYfNKyK/Pg7xXTYn5F+2MB1Sx7hXkMmQFE52+LUVv2BEl/KX4+bUbs+jM4YVu2jSUZGlNlqJ27jwl+fP0EkhW1CK13opgOXEJV/JtTftBpQVryefEGutKlm+bzLrn/ak3GMrFjA95JPE9W5BUvKCCRlqVT6jUOuP4LIqb+7LHZu7YlngQkF2Kx1PnOuHwpdYxoLi+AKGlx1IiYt6xteNmpjqOAzbmueIPJ1dAWyxIWV8tLuuP/3fJdBSQlPX2GbZltiZzzkqvCI9Iy0UWwQzydYC8cpICZE2Dgnyjz4vYJoiXxfcQRh4JVjgy4tvLUe0AAAAAASUVORK5CYII="
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIHSURBVHgB7ZNLSFRRGMf/5869iTUxBUWJRFNueiwaqYkiCMuLtIwCXUUULspF06LFtGsRVIsiK5J2tbSFG1FBfG1kxFmMKxeieBFE8IHjAwfHe8/nOTPe8TFzvdcXuPAH95zDOd/3/c/5n3OBI1xgsvkAKFVlF+ssojMmV/4+MAwDuyDdjhAx9bGP0aiqW/9yAr2Xgw0AvVqLS4FR9N7I2A/sgHSHFmGgL2JYtDb1VdPNd0p2nCsuKQax+ik9/HtEvxlwKzxaETo19TDcKIp/31BcUisbxSmRCK9PkjIw8SgUdIqZ1G+Vn/BpCWKoLrAcyAksa36nGkHfijY4WRl+s3VhpjIcEZuIyZhCiQtcy/SqbH49acLLlhc4vTheKLZYfNKyK/Pg7xXTYn5F+2MB1Sx7hXkMmQFE52+LUVv2BEl/KX4+bUbs+jM4YVu2jSUZGlNlqJ27jwl+fP0EkhW1CK13opgOXEJV/JtTftBpQVryefEGutKlm+bzLrn/ak3GMrFjA95JPE9W5BUvKCCRlqVT6jUOuP4LIqb+7LHZu7YlngQkF2Kx1PnOuHwpdYxoLi+AKGlx1IiYt6xteNmpjqOAzbmueIPJ1dAWyxIWV8tLuuP/3fJdBSQlPX2GbZltiZzzkqvCI9Iy0UWwQzydYC8cpICZE2Dgnyjz4vYJoiXxfcQRh4JVjgy4tvLUe0AAAAAASUVORK5CYII=",
+  "type": "web2",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
 }
