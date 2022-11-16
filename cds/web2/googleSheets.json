@@ -6,18 +6,19 @@
   "triggers": [
     {
       "key": "newSpreadsheetRow",
-      "name": "New spreadsheet row",
+      "name": "New Spreadsheet Row",
       "display": {
-        "label": "New spreadsheet row",
+        "label": "New Spreadsheet Row",
         "description": "",
-        "instructions": ""
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "polling",
         "operation": {
-          "url": "ws://gsheet-connector:3000/ws/"
+          "url": "ws://gsheet-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://gsheet-connector:3000/file-list/",
+        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/file-list/",
         "inputFields": []
       }
     }
@@ -25,18 +26,19 @@
   "actions": [
     {
       "key": "createSpreadsheetRow",
-      "name": "Create spreadsheet row",
+      "name": "Create Spreadsheet Row",
       "display": {
-        "label": "Create spreadsheet row",
-        "description": "",
-        "instructions": ""
+        "label": "Create Spreadsheet Row",
+        "description": "Triggered when a new row is added to the bottom of a spreadsheet.",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
         "operation": {
-          "url": "ws://gsheet-connector:3000/ws/"
+          "url": "ws://gsheet-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://gsheet-connector:3000/getFirstRow/",
+        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/getFirstRow/",
         "inputFields": []
       }
     }
@@ -45,35 +47,41 @@
     "type": "oauth2",
     "test": {
       "method": "GET",
-      "url": "https://www.googleapis.com/oauth2/v3/userinfo",
+      "url": "https://www.googleapis.com/oauth2/v3/userinfo"
+    },
+    "defaultDisplayName": "{{ data.email }}",
+    "authenticatedRequestTemplate": {
       "headers": {
-        "Authorization": "Bearer {{access_token}}"
+        "Authorization": "Bearer {{ auth.access_token }}"
       }
     },
+    "allowedHosts": [
+      "www.googleapis.com",
+      "sheets.googleapis.com"
+    ],
     "oauth2Config": {
-      "authorizeUrl": {
-        "method": "GET",
-        "url": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id=676778012745-q5lg8up8nq94qet4fjhs3ftvpgd4nalv.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/spreadsheets+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/spreadsheets.readonly+https://www.googleapis.com/auth/drive&access_type=offline"
-      },
+      "authorizeUrl": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=https://www.googleapis.com/auth/spreadsheets+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/spreadsheets.readonly+https://www.googleapis.com/auth/drive&access_type=offline",
       "getAccessToken": {
         "method": "POST",
         "url": "https://oauth2.googleapis.com/token",
-        "body": {
-          "client_id": "676778012745-q5lg8up8nq94qet4fjhs3ftvpgd4nalv.apps.googleusercontent.com",
-          "client_secret": "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",
-          "grant_type": "authorization_code"
-        }
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
       },
+      "autoRefresh": true,
       "refreshAccessToken": {
         "method": "POST",
         "url": "https://oauth2.googleapis.com/token",
-        "body": {
-          "client_id": "676778012745-q5lg8up8nq94qet4fjhs3ftvpgd4nalv.apps.googleusercontent.com",
-          "client_secret": "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",
-          "grant_type": "refresh_token"
-        }
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&grant_type=refresh_token"
       }
     }
   },
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIPSURBVHgBzZVPSBRRHMe/b/7utmsubYfKpd0pw0y2Q0SBkRGRQUSdOnQsCqJDENWhU3STMOxWQbf+YmlQhCCuf06CKIqIIoguXlRQcEVdd2Z3nm9WHccBnVl3BL/D4/F783vzeb/35c0jsOnE98ddhOo1cFDVoejEZSV+7eXp2xNOuZw1KP/6MOIGYMjHi4qQoYmG/j8xp9wtkCwvCChAFFDAce11Q43H4RayGxkgWZcTH0ZaYtgrSB5EUb6iau1vexqPeApR9exWEKjC+6RE/fD/qD23IA+sGktNISwEEeRl6/CZHGgb6095AklnM+icHoKWSkNXc9ZXJ+25xXlCADHkByftvFZPjBdDPvB+EXsKMSSUyNuCHD05G445pWBwLmmCjC0sCKKzA9B84xVmVxbMscO+g2YsEJ4deIJzv55tfjAoFwbZUO2/11jQlhEU/Ri4+x4Xml6AIwSVoQi+XX/uON8VpL76PnJUh8yt7fmnK0/yfal0wM10d5CGwb9IqYsICH7UHKvCm96frBKgojSCd5ceeAN5VFmLTE6FtF7J0/itvL8lYsDNdHeQlsk+zKtLDCLgjnIRzePdIMyTskAY1UcrvIFcLYuzSjTTk5vR8/lKQpIHlbDF4vNIqxkbIGs8k57Hl9EOFAdhT11/E4qVZ7+V/QVJ3vuYZFv0m11zmoum2hu7HdOU0B92yCoK7aihV9++QAAAAABJRU5ErkJggg=="
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIPSURBVHgBzZVPSBRRHMe/b/7utmsubYfKpd0pw0y2Q0SBkRGRQUSdOnQsCqJDENWhU3STMOxWQbf+YmlQhCCuf06CKIqIIoguXlRQcEVdd2Z3nm9WHccBnVl3BL/D4/F783vzeb/35c0jsOnE98ddhOo1cFDVoejEZSV+7eXp2xNOuZw1KP/6MOIGYMjHi4qQoYmG/j8xp9wtkCwvCChAFFDAce11Q43H4RayGxkgWZcTH0ZaYtgrSB5EUb6iau1vexqPeApR9exWEKjC+6RE/fD/qD23IA+sGktNISwEEeRl6/CZHGgb6095AklnM+icHoKWSkNXc9ZXJ+25xXlCADHkByftvFZPjBdDPvB+EXsKMSSUyNuCHD05G445pWBwLmmCjC0sCKKzA9B84xVmVxbMscO+g2YsEJ4deIJzv55tfjAoFwbZUO2/11jQlhEU/Ri4+x4Xml6AIwSVoQi+XX/uON8VpL76PnJUh8yt7fmnK0/yfal0wM10d5CGwb9IqYsICH7UHKvCm96frBKgojSCd5ceeAN5VFmLTE6FtF7J0/itvL8lYsDNdHeQlsk+zKtLDCLgjnIRzePdIMyTskAY1UcrvIFcLYuzSjTTk5vR8/lKQpIHlbDF4vNIqxkbIGs8k57Hl9EOFAdhT11/E4qVZ7+V/QVJ3vuYZFv0m11zmoum2hu7HdOU0B92yCoK7aihV9++QAAAAABJRU5ErkJggg==",
+  "type": "web2",
+  "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d"
 }

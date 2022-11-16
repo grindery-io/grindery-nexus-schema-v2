@@ -6,51 +6,58 @@
   "triggers": [
     {
       "key": "newAirtableRow",
-      "name": "New airtable row",
+      "name": "New Airtable Record",
       "display": {
-        "label": "New airtable row",
+        "label": "New Airtable Record",
         "description": "",
-        "instructions": ""
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "polling",
         "operation": {
-            "url": "wss://grindery-airtable-connector.herokuapp.com/ws/"
+          "url": "ws://airtable-connector:3000/ws/"
         },
-        "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/trigger/",
+        "inputFieldProviderUrl": "http://airtable-connector:3000/trigger/",
         "inputFields": [
           {
             "key": "api_key",
-            "label": "API key",
+            "label": "Airtable API Key",
             "type": "string",
             "placeholder": "keyLOfGeYHXLqpeo0",
             "helpText": "To get API key, visit your account page: https://airtable.com/account.",
             "list": false,
-            "required": true
+            "required": true,
+            "default": "",
+            "computed": false
           },
           {
             "key": "app_id",
-            "label": "Base Id",
+            "label": "Airtable ID",
             "type": "string",
             "placeholder": "appGgI109POdPOOKK",
             "helpText": "You can get base ID from the base URL, or from API documentation at https://airtable.com/api.",
             "list": false,
-            "required": true
+            "required": true,
+            "default": "",
+            "computed": false
           },
           {
             "key": "table_name",
             "label": "Table Name",
             "type": "string",
-            "placeholder": "Table Name",
+            "placeholder": "Sample Table Name",
             "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
             "list": false,
-            "required": true
+            "required": true,
+            "default": "",
+            "computed": false
           },
           {
-              "key": "warning",
-              "label": "Warning",
-              "type": "info",
-              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record."
+            "key": "warning",
+            "label": "Warning",
+            "type": "info",
+            "helpText": "Table must have at least one record with data. If your table is empty, please add an example record."
           }
         ]
       }
@@ -59,55 +66,66 @@
   "actions": [
     {
       "key": "createAirtableRow",
-      "name": "Create airtable row",
+      "name": "Create Airtable Record",
       "display": {
-        "label": "Create airtable row",
+        "label": "Create Airtable Record",
         "description": "",
-        "instructions": ""
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
         "operation": {
-            "url": "wss://grindery-airtable-connector.herokuapp.com/ws/"
+          "url": "ws://airtable-connector:3000/ws/"
         },
-        "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/firstRow/",
+        "inputFieldProviderUrl": "http://airtable-connector:3000/firstRow/",
         "inputFields": [
           {
             "key": "api_key",
-            "label": "API key",
+            "label": "Airtable API key",
             "type": "string",
             "placeholder": "keyLOfGeYHXLqpeo0",
             "helpText": "To get API key, visit your account page: https://airtable.com/account.",
             "list": false,
-            "required": true
+            "required": true,
+            "default": "",
+            "computed": false
           },
           {
             "key": "app_id",
-            "label": "Base Id",
+            "label": "Airtable ID",
             "type": "string",
             "placeholder": "appGgI109POdPOOKK",
             "helpText": "You can get base ID from the base URL, or from API documentation at https://airtable.com/api.",
             "list": false,
-            "required": true
+            "required": true,
+            "default": "",
+            "computed": false
           },
           {
             "key": "table_name",
             "label": "Table Name",
             "type": "string",
-            "placeholder": "Table Name",
+            "placeholder": "Sample Table Name",
             "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
             "list": false,
-            "required": true
+            "required": true,
+            "default": "",
+            "computed": false
           },
           {
-              "key": "warning",
-              "label": "Warning",
-              "type": "info",
-              "helpText": "Table must have at least one record with data. If your table is empty, please add an example record."
+            "key": "warning",
+            "label": "Warning",
+            "type": "info",
+            "helpText": "Table must have at least one record with data. If your table is empty, please add an example record."
           }
         ]
       }
     }
   ],
-  "icon": "data:image/png;base64,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"
+  "icon": "data:image/png;base64,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",
+  "type": "web2",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
 }
