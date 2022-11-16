@@ -1,31 +1,84 @@
 {
-  "key": "zapier",
-  "name": "Zapier",
-  "version": "1.0.0",
-  "platformVersion": "1.0.0",
-  "type": "web2",
-  "triggers": [
-    {
-      "key": "waitForZap",
-      "name": "Wait for a zap",
-      "display": {
-        "label": "Wait for a zap",
-        "description": "Wait for a zap"
-      },
-      "operation": {
-        "type": "polling",
-        "operation": {
-          "url": "wss://connex-grindery-test.herokuapp.com"
-        },
-        "inputFieldProviderUrl": "https://connex-zapier-grindery.herokuapp.com/uniqueID",
-        "inputFields": [],
-        "outputFields": [],
-        "sample": {
-          
+    "key": "zapier",
+    "name": "Zapier",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "triggers": [
+        {
+            "key": "waitForZap",
+            "name": "Wait for a zap",
+            "display": {
+                "label": "Wait for a zap",
+                "description": "Wait for a zap"
+            },
+            "operation": {
+                "type": "polling",
+                "operation": {
+                    "url": "wss://connex-grindery-test.herokuapp.com"
+                },
+                "inputFieldProviderUrl": "https://connex-zapier-grindery.herokuapp.com/uniqueID/",
+                "inputFields": [],
+                "outputFields": [
+                    {
+                        "key": "param1",
+                        "label": "Param1",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param2",
+                        "label": "Param2",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param3",
+                        "label": "Param3",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param4",
+                        "label": "Param4",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param5",
+                        "label": "Param5",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param6",
+                        "label": "Param6",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param7",
+                        "label": "Param7",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param8",
+                        "label": "Param1",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param8",
+                        "label": "Param8",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param9",
+                        "label": "Param9",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param10",
+                        "label": "Param10",
+                        "type": "string"
+                    }
+                ],
+                "sample": {}
+            }
         }
-      }
-    }
-  ],
+    ],
   "actions": [
     {
       "key": "triggerZap",
