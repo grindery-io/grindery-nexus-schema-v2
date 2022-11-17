@@ -15,7 +15,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://nexus-token-price-driver.herokuapp.com/"
+          "url": "ws://nexus-token-price-driver:3000/"
         },
         "inputFields": [
           {
@@ -541,7 +541,7 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "wss://nexus-token-price-driver.herokuapp.com/"
+          "url": "ws://nexus-token-price-driver:3000/"
         },
         "inputFields": [
           {
