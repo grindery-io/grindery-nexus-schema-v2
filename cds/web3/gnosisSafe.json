@@ -17,17 +17,25 @@
         "inputFields": [
           {
             "key": "to",
-            "label": "To",
+            "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "value",
-            "label": "Value",
+            "label": "Amount",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "data",
@@ -75,8 +83,12 @@
             "key": "refundReceiver",
             "label": "Refund Receiver",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "Enter receiver's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "signatures",
@@ -89,8 +101,12 @@
             "key": "additionalInfo",
             "label": "Additional Info",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Provide additional information",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -184,17 +200,21 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
   "actions": [
     {
       "key": "gnosisSafeSimpleTransfer",
-      "name": "Transfer to address",
+      "name": "Transfer to Address",
       "display": {
-        "label": "Transfer to address",
-        "description": "Transfer to address"
+        "label": "Transfer to Address",
+        "description": "Transfer a native token to address",
+        "instructions": "Use this to transfer a native token (e.g. ETH) to address",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -202,19 +222,25 @@
         "inputFields": [
           {
             "key": "to",
-            "label": "Send to",
+            "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter a wallet address",
+            "placeholder": "Enter recipient's wallet address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter the amount of token you want to transfer",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "_grinderyUnitConversion_value",
@@ -225,15 +251,19 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
       "key": "gnosisSafeSimpleTransferToken",
-      "name": "Transfer token to address",
+      "name": "Transfer Token to Address",
       "display": {
-        "label": "Transfer token to address",
-        "description": "Transfer token to address"
+        "label": "Transfer Token to Address",
+        "description": "Transfer an ERC-20 token to address",
+        "instructions": "Use this to transfer an ERC-20 token (e.g. USDC) to address",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -241,27 +271,36 @@
         "inputFields": [
           {
             "key": "to",
-            "label": "Send to",
+            "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter a wallet address",
+            "placeholder": "Enter recipient's wallet address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "tokenContractAddress",
-            "label": "Token contract address",
+            "label": "Token Contract Address",
             "type": "string",
-            "placeholder": "Enter token contract address",
+            "placeholder": "Enter the token's contract address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter the amount of token you want to transfer",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "_grinderyUnitConversion_value",
@@ -272,9 +311,15 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATASURBVHgB5ZpPbBRVHMe/b3YptrYFk9IQBW0TuZEoRiOhBdsaiXopBzmYCAcOYkBju9uVEIg2pbHB7h9rwIAHItF4oBzwYKIl1JqKlqRq/HeRQ6sgmhYDupuyqbvz/L7ZXbq7zLYznWk7jZ9kZ9689+bN+733e/9+vwWWOQJu0PliBSrLt0KseAJSbmSpaxhbA4nKbI6b/E0w/l/GfQNN/xz/XB1EZ/80HOJMgKOvPgWf7yCE2MSKrYY94pDiIoQ8iY7IOcwT+wIc31eJZMXzrHAXINfCDQTGWdYRjFw5jf7+tL1X7dDb1gThO8VQPRYCJYjELvbIl1Zf8VnKJaVAdTwGaCf4dA8WDqWGe7B9ix9Pbx7BZyOpuV6Yuwd6X6oFKs9SV7diMRFyFCl/Kw68dW3WbLMlojuwHndpF9gFG7AUZMbGNgSjV0pnKcXRl++Ff+VF6mQdlpbLnK0aEQpPmCVqpq9E28uhlX3sgcorNrCWZ41xaIK5AGlxiHP7o/AKkuMvGoqaJd0pVSzUgLRueRpbVGS6GaG3h/KjCnvgzE4fdP1DeBW1BqmFNI9CAa4+sNsjel+KemMXkEehAFK+Dq8jZVf+44wA4bYdHm/9HGuNTWSWGQGEfy+WC37/wVwwMwt1dpahMn6doSq4ww32NdcRMcUmKoMu7+e0vB3ucROJ+H3ofG/KbzxW/N3CznCj8gn+DiNRdZKNkixI6e2opzBd1OEX4JzVqL67kfeBjABCa4FzbkCmmhDq+8E0NRQe4xjbjVhwEjra4ZQUmnkdyIwBIR+BU3QZKFn5HIIiBCIBhobgFE1sNG7ZklfAGd/jtej7lnNLcQSOETXqmpuFauEEKS/Yyh8KD/J6Hc4wBMiMAQiehCTmjcSPsEtHZI3lvOHgPl6PF8UaWwoNbuBzqZyS5YvvSiVle0BPOLKwyMyAskWk4xxVb5WlvLp82CRW2Zpuq5DSxwcxXwQet5U/EniWlW+1nN9cu40TmpbNMAknSGyhnj5nKe87r6yELrrhFGXlQ04AgZ/hnFOItc29nkyX9fB7m+AUHd+qW27wDcE5VUj7LrEn2tHOM3Ux4eBj1PtPGHK+Ciukrqbi3GZOGWerfgds2zdLcY2r+yUO7r/4JY4zUce4JrhHnPutGu63pmemnkhwkLrcjOWAFJ9yMXxGBWfmb4keLBeURTsXLEjo7fiDie5YnBcKIcdpqbttXNaKEt+A9ynYCBYKUH7rI17H4FVU6ysfQh6FAux/N8EBsgdeRYpdxQ6QO/0D578ap31e+QA2w1t0cwd7ujjSfBcZjLSzu4bhFYQYpWPwTbMkcwHU0U+fUnuby1hqlN6nkq0IxG6ZJZfex4dOTCApnzQKWDpUA27DgWMlvTSzH0QO0zOS8jdw6zuKxUaKYcOxMYt3RmHtFKMcHmkffQbyEBaHPgTDHIdiznOuvWNYONhIIT5gy9RhYRgzpvFQeMjqC9bcrDkGvv4Nq9Ydw/rqXyn6QxljgCv8yYYJoDy5H219v9h50dlfDcLBHfzwXuhaA+/2TJOCZ1oJdVjv4fx+HvPEnT97nNlZhvF1LYaJ0rDyGYayWqpDpoeEYTRQ5+5J6vVPnBS+oHF2WBln8X/nP8UvY/QI84C8AAAAAElFTkSuQmCC"
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATASURBVHgB5ZpPbBRVHMe/b3YptrYFk9IQBW0TuZEoRiOhBdsaiXopBzmYCAcOYkBju9uVEIg2pbHB7h9rwIAHItF4oBzwYKIl1JqKlqRq/HeRQ6sgmhYDupuyqbvz/L7ZXbq7zLYznWk7jZ9kZ9689+bN+733e/9+vwWWOQJu0PliBSrLt0KseAJSbmSpaxhbA4nKbI6b/E0w/l/GfQNN/xz/XB1EZ/80HOJMgKOvPgWf7yCE2MSKrYY94pDiIoQ8iY7IOcwT+wIc31eJZMXzrHAXINfCDQTGWdYRjFw5jf7+tL1X7dDb1gThO8VQPRYCJYjELvbIl1Zf8VnKJaVAdTwGaCf4dA8WDqWGe7B9ix9Pbx7BZyOpuV6Yuwd6X6oFKs9SV7diMRFyFCl/Kw68dW3WbLMlojuwHndpF9gFG7AUZMbGNgSjV0pnKcXRl++Ff+VF6mQdlpbLnK0aEQpPmCVqpq9E28uhlX3sgcorNrCWZ41xaIK5AGlxiHP7o/AKkuMvGoqaJd0pVSzUgLRueRpbVGS6GaG3h/KjCnvgzE4fdP1DeBW1BqmFNI9CAa4+sNsjel+KemMXkEehAFK+Dq8jZVf+44wA4bYdHm/9HGuNTWSWGQGEfy+WC37/wVwwMwt1dpahMn6doSq4ww32NdcRMcUmKoMu7+e0vB3ucROJ+H3ofG/KbzxW/N3CznCj8gn+DiNRdZKNkixI6e2opzBd1OEX4JzVqL67kfeBjABCa4FzbkCmmhDq+8E0NRQe4xjbjVhwEjra4ZQUmnkdyIwBIR+BU3QZKFn5HIIiBCIBhobgFE1sNG7ZklfAGd/jtej7lnNLcQSOETXqmpuFauEEKS/Yyh8KD/J6Hc4wBMiMAQiehCTmjcSPsEtHZI3lvOHgPl6PF8UaWwoNbuBzqZyS5YvvSiVle0BPOLKwyMyAskWk4xxVb5WlvLp82CRW2Zpuq5DSxwcxXwQet5U/EniWlW+1nN9cu40TmpbNMAknSGyhnj5nKe87r6yELrrhFGXlQ04AgZ/hnFOItc29nkyX9fB7m+AUHd+qW27wDcE5VUj7LrEn2tHOM3Ux4eBj1PtPGHK+Ciukrqbi3GZOGWerfgds2zdLcY2r+yUO7r/4JY4zUce4JrhHnPutGu63pmemnkhwkLrcjOWAFJ9yMXxGBWfmb4keLBeURTsXLEjo7fiDie5YnBcKIcdpqbttXNaKEt+A9ynYCBYKUH7rI17H4FVU6ysfQh6FAux/N8EBsgdeRYpdxQ6QO/0D578ap31e+QA2w1t0cwd7ujjSfBcZjLSzu4bhFYQYpWPwTbMkcwHU0U+fUnuby1hqlN6nkq0IxG6ZJZfex4dOTCApnzQKWDpUA27DgWMlvTSzH0QO0zOS8jdw6zuKxUaKYcOxMYt3RmHtFKMcHmkffQbyEBaHPgTDHIdiznOuvWNYONhIIT5gy9RhYRgzpvFQeMjqC9bcrDkGvv4Nq9Ydw/rqXyn6QxljgCv8yYYJoDy5H219v9h50dlfDcLBHfzwXuhaA+/2TJOCZ1oJdVjv4fx+HvPEnT97nNlZhvF1LYaJ0rDyGYayWqpDpoeEYTRQ5+5J6vVPnBS+oHF2WBln8X/nP8UvY/QI84C8AAAAAElFTkSuQmCC",
+  "type": "web3",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
 }

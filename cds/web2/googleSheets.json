@@ -6,11 +6,12 @@
   "triggers": [
     {
       "key": "newSpreadsheetRow",
-      "name": "New spreadsheet row",
+      "name": "New Spreadsheet Row",
       "display": {
-        "label": "New spreadsheet row",
+        "label": "New Spreadsheet Row",
         "description": "",
-        "instructions": ""
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "polling",
@@ -25,11 +26,12 @@
   "actions": [
     {
       "key": "createSpreadsheetRow",
-      "name": "Create spreadsheet row",
+      "name": "Create Spreadsheet Row",
       "display": {
-        "label": "Create spreadsheet row",
-        "description": "",
-        "instructions": ""
+        "label": "Create Spreadsheet Row",
+        "description": "Triggered when a new row is added to the bottom of a spreadsheet.",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
@@ -53,7 +55,10 @@
         "Authorization": "Bearer {{ auth.access_token }}"
       }
     },
-    "allowedHosts": ["www.googleapis.com", "sheets.googleapis.com"],
+    "allowedHosts": [
+      "www.googleapis.com",
+      "sheets.googleapis.com"
+    ],
     "oauth2Config": {
       "authorizeUrl": "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=https://www.googleapis.com/auth/spreadsheets+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/spreadsheets.readonly+https://www.googleapis.com/auth/drive&access_type=offline",
       "getAccessToken": {
@@ -75,5 +80,8 @@
       }
     }
   },
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIPSURBVHgBzZVPSBRRHMe/b/7utmsubYfKpd0pw0y2Q0SBkRGRQUSdOnQsCqJDENWhU3STMOxWQbf+YmlQhCCuf06CKIqIIoguXlRQcEVdd2Z3nm9WHccBnVl3BL/D4/F783vzeb/35c0jsOnE98ddhOo1cFDVoejEZSV+7eXp2xNOuZw1KP/6MOIGYMjHi4qQoYmG/j8xp9wtkCwvCChAFFDAce11Q43H4RayGxkgWZcTH0ZaYtgrSB5EUb6iau1vexqPeApR9exWEKjC+6RE/fD/qD23IA+sGktNISwEEeRl6/CZHGgb6095AklnM+icHoKWSkNXc9ZXJ+25xXlCADHkByftvFZPjBdDPvB+EXsKMSSUyNuCHD05G445pWBwLmmCjC0sCKKzA9B84xVmVxbMscO+g2YsEJ4deIJzv55tfjAoFwbZUO2/11jQlhEU/Ri4+x4Xml6AIwSVoQi+XX/uON8VpL76PnJUh8yt7fmnK0/yfal0wM10d5CGwb9IqYsICH7UHKvCm96frBKgojSCd5ceeAN5VFmLTE6FtF7J0/itvL8lYsDNdHeQlsk+zKtLDCLgjnIRzePdIMyTskAY1UcrvIFcLYuzSjTTk5vR8/lKQpIHlbDF4vNIqxkbIGs8k57Hl9EOFAdhT11/E4qVZ7+V/QVJ3vuYZFv0m11zmoum2hu7HdOU0B92yCoK7aihV9++QAAAAABJRU5ErkJggg=="
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIPSURBVHgBzZVPSBRRHMe/b/7utmsubYfKpd0pw0y2Q0SBkRGRQUSdOnQsCqJDENWhU3STMOxWQbf+YmlQhCCuf06CKIqIIoguXlRQcEVdd2Z3nm9WHccBnVl3BL/D4/F783vzeb/35c0jsOnE98ddhOo1cFDVoejEZSV+7eXp2xNOuZw1KP/6MOIGYMjHi4qQoYmG/j8xp9wtkCwvCChAFFDAce11Q43H4RayGxkgWZcTH0ZaYtgrSB5EUb6iau1vexqPeApR9exWEKjC+6RE/fD/qD23IA+sGktNISwEEeRl6/CZHGgb6095AklnM+icHoKWSkNXc9ZXJ+25xXlCADHkByftvFZPjBdDPvB+EXsKMSSUyNuCHD05G445pWBwLmmCjC0sCKKzA9B84xVmVxbMscO+g2YsEJ4deIJzv55tfjAoFwbZUO2/11jQlhEU/Ri4+x4Xml6AIwSVoQi+XX/uON8VpL76PnJUh8yt7fmnK0/yfal0wM10d5CGwb9IqYsICH7UHKvCm96frBKgojSCd5ceeAN5VFmLTE6FtF7J0/itvL8lYsDNdHeQlsk+zKtLDCLgjnIRzePdIMyTskAY1UcrvIFcLYuzSjTTk5vR8/lKQpIHlbDF4vNIqxkbIGs8k57Hl9EOFAdhT11/E4qVZ7+V/QVJ3vuYZFv0m11zmoum2hu7HdOU0B92yCoK7aihV9++QAAAAABJRU5ErkJggg==",
+  "type": "web2",
+  "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d"
 }

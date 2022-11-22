@@ -1,15 +1,17 @@
 {
   "key": "flow",
-  "name": "Flow blockchain",
+  "name": "Flow",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
     {
       "key": "TokenTransferTrigger",
-      "name": "Token transfer",
+      "name": "Token Transfer",
       "display": {
-        "label": "Token transfer",
-        "description": ""
+        "label": "Token Transfer",
+        "description": "Tranfer a token",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -24,24 +26,34 @@
           {
             "key": "_grinderyContractAddress",
             "type": "string",
-            "label": "Contract address",
-            "placeholder": "Enter Contract address",
+            "label": "Contract Address",
+            "placeholder": "Enter your contract address",
             "required": true,
-            "default": "A.1654653399040a61.FlowToken"
+            "default": "A.1654653399040a61.FlowToken",
+            "helpText": "",
+            "computed": false
           },
           {
             "key": "from",
-            "label": "From",
+            "label": "Sender",
             "type": "address",
-            "placeholder": "Enter a Flow wallet address",
-            "list": false
+            "placeholder": "Enter sender's Flow wallet address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "to",
-            "label": "To",
+            "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter a Flow wallet address",
-            "list": false
+            "placeholder": "Enter recipient's Flow wallet address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -79,10 +91,12 @@
     },
     {
       "key": "NFTTransferTrigger",
-      "name": "NFT transfer",
+      "name": "NFT Transfer",
       "display": {
-        "label": "NFT transfer",
-        "description": ""
+        "label": "NFT Transfer",
+        "description": "Transfer an NFT",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -98,28 +112,44 @@
             "key": "_grinderyContractAddress",
             "type": "string",
             "required": true,
-            "default": ""
+            "default": "",
+            "label": "Contract Address",
+            "helpText": "",
+            "computed": false,
+            "placeholder": "Enter your contract address"
           },
           {
             "key": "from",
-            "label": "From",
+            "label": "Sender",
             "type": "address",
-            "placeholder": "Enter a Flow wallet address",
-            "list": false
+            "placeholder": "Enter sender's Flow wallet address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "to",
-            "label": "To",
+            "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter a Flow wallet address",
-            "list": false
+            "placeholder": "Enter recipient's Flow wallet address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "id",
             "label": "Token ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -157,10 +187,12 @@
     },
     {
       "key": "NFTMintingTrigger",
-      "name": "NFT minting",
+      "name": "NFT Minting",
       "display": {
-        "label": "NFT minting",
-        "description": ""
+        "label": "NFT Minting",
+        "description": "Mint an NFT",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -176,27 +208,43 @@
             "key": "_grinderyContractAddress",
             "type": "string",
             "required": true,
-            "default": ""
+            "default": "",
+            "label": "Contract Address",
+            "helpText": "",
+            "computed": false,
+            "placeholder": "Enter your contract address"
           },
           {
             "key": "from",
-            "label": "From",
+            "label": "Sender",
             "computed": true,
-            "default": "!!GRINDERY!!UNDEFINED!!"
+            "default": "!!GRINDERY!!UNDEFINED!!",
+            "helpText": "",
+            "required": false,
+            "type": "string",
+            "placeholder": "Enter sender's address"
           },
           {
             "key": "to",
-            "label": "To",
+            "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter a Flow wallet address",
-            "list": false
+            "placeholder": "Enter recipient's Flow wallet address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "id",
             "label": "Token ID",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -248,7 +296,10 @@
             "key": "_grinderyContractAddress",
             "type": "string",
             "computed": true,
-            "default": "0x0"
+            "default": "0x0",
+            "label": "Contract Address",
+            "helpText": "",
+            "required": false
           },
           {
             "key": "amount",
@@ -262,9 +313,12 @@
             "key": "recipient",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter recipient's Flow wallet address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
@@ -302,5 +356,10 @@
       }
     }
   },
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAT/SURBVHgBzZpNbBtFFMf/u3aTpfnwVoKkl7RGQhUiLQmHShUC1b0lhIikF0CqRDgQ0vZgiipAvTQFKbRSpRYkSgWHphItzaUKKojccKGqkAJqTCgH4GCSS6Ac1qEG09Re3pvYwXZ2dr2bsZOftNrJzOzmzex78+a9sQYFPGiYsZCGbltHlwZ0w4YJDdFiuw1YVJ+iAl/XczZm/sxaCawRDQERAofwHAk2RC8x4Z8UPZuw7+G9O0vWDALgW/iC0MepGIM6ErkcTvj9GlULv9Uwo3YIF6BW6DLoS4zrNIiFrJWqpn+omk7tD5hxEvwKjfRR1BBhLzoGNjcY6b+Xsp6q5Cl8e5N5ht46Si82UB9M+l8DTZsMZJay1906ugrf1mReoBeNYB3QNMSaGowoDeAzWR+p8AXBh7COsBq5DcBReFaV9ZrxSsQAJCq0arVh4ySjOYsa0WpGEIm0uvaZ/21+VR05wME//rImS+vKhOflMB/CrYBOR0rH9m145dAIep/tE2Uvdnd20QDmKqstLYcnSpfRcGkrCX5cteBvnxrD8OGDUIBJs3+G7oPFihXh2zabA6oN9OqX1/Dk009BGRoGtjabsYW7y55YX6nXEIdCeMaVCl7AtsXWRCCE5/0KFLr95w+8qEpVnIjx7HNBCK+H8BIUMnyoZoIL8vnliRY6r9n0R+DNcTm8mnQ+vkvafvObG+JyI22lXdsLKj4aFipTEjislc5dO6VtE59cRnzkMBRgPrTJ7NY5AoJCdrrM+kfnzkMVehixsK1h71o0xsljOjgYAffr2N6xqj6dXsSih6pUwiFnOIjKsMDD5DF5KaxcDk+PnRQe0onp20lHD8s2sL+3H36gCY+ywUb9PNTT/wze//CcGMA6E9X9bAeOHnsT459e2giCC/RqO/KMHz32FjYQ0aqFf+fku9hgpHSRCPKA3X01W9l6o1G4d0tE7S647Q4X02lcIefD96Bw8DFx6TJ8kgjTzCfh4ahkjmd+bg77e/rFvQgbtcw2JEFGUJI67Wtc8yOtkYi4nLj59Y0ywetKnnReCyFQnlDg4Jo7ttXHNvL3kdA5KuEsrqwT67JMn3sqYlIuuwUgClUmxcnZ5S0xcJFu0kjqxx9mHYWKkDqxy5/6/Avan6TR29cndWBe22A/cHaZ7yJv09JoZOEav2ro7e+Ttj6yY4cw6kZDnhE8PXYKt2dnoQJKxg7evZ+1VrSWEk1fwSUUnP4pGVif2ah3P9YFRSR+z1j7uFAagJ9we+LlFw4gKPFXlQQggjxwpFheEb6QTkjIHmK9DxIF8TOq9J3z93cy/5+i+M6YsepcnbrmqUKsKjzjCg01RRmzfaUZs7JEKxtBc4PxLxV7ZG/gZfPjD84Llx7hKIquoqFy2/fT34n2N+Kv49eff4EqaEKPLPxTfuzjGAG2N5tn6RtVnYQqeuC17G/cYHsktR5dVS97gDZs49SoNJ8TBPZBCxlryKlNerhA+fBJSuw/7LXjrCVugjOuxzo8gOZGYwsV96DOCFXJWK+59fE8UMvcy06REadpmdpTj0M13mfR+n2QBPc84KjqKJO+wLctIWOCciVbaqxGCXL9vZWrigzf+aa2Fsrj58VKFIM6EoUVJeHnocDJMk4z520MUTCzN0jiqvBjiosk9KRfoYsoyQ3zQOwcqROlDu3lgUTLvDQF+VTPMcMMfbUkB0BBBS7lP15/tJ6iE8HwAAAAAElFTkSuQmCC"
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAT/SURBVHgBzZpNbBtFFMf/u3aTpfnwVoKkl7RGQhUiLQmHShUC1b0lhIikF0CqRDgQ0vZgiipAvTQFKbRSpRYkSgWHphItzaUKKojccKGqkAJqTCgH4GCSS6Ac1qEG09Re3pvYwXZ2dr2bsZOftNrJzOzmzex78+a9sQYFPGiYsZCGbltHlwZ0w4YJDdFiuw1YVJ+iAl/XczZm/sxaCawRDQERAofwHAk2RC8x4Z8UPZuw7+G9O0vWDALgW/iC0MepGIM6ErkcTvj9GlULv9Uwo3YIF6BW6DLoS4zrNIiFrJWqpn+omk7tD5hxEvwKjfRR1BBhLzoGNjcY6b+Xsp6q5Cl8e5N5ht46Si82UB9M+l8DTZsMZJay1906ugrf1mReoBeNYB3QNMSaGowoDeAzWR+p8AXBh7COsBq5DcBReFaV9ZrxSsQAJCq0arVh4ySjOYsa0WpGEIm0uvaZ/21+VR05wME//rImS+vKhOflMB/CrYBOR0rH9m145dAIep/tE2Uvdnd20QDmKqstLYcnSpfRcGkrCX5cteBvnxrD8OGDUIBJs3+G7oPFihXh2zabA6oN9OqX1/Dk009BGRoGtjabsYW7y55YX6nXEIdCeMaVCl7AtsXWRCCE5/0KFLr95w+8qEpVnIjx7HNBCK+H8BIUMnyoZoIL8vnliRY6r9n0R+DNcTm8mnQ+vkvafvObG+JyI22lXdsLKj4aFipTEjislc5dO6VtE59cRnzkMBRgPrTJ7NY5AoJCdrrM+kfnzkMVehixsK1h71o0xsljOjgYAffr2N6xqj6dXsSih6pUwiFnOIjKsMDD5DF5KaxcDk+PnRQe0onp20lHD8s2sL+3H36gCY+ywUb9PNTT/wze//CcGMA6E9X9bAeOHnsT459e2giCC/RqO/KMHz32FjYQ0aqFf+fku9hgpHSRCPKA3X01W9l6o1G4d0tE7S647Q4X02lcIefD96Bw8DFx6TJ8kgjTzCfh4ahkjmd+bg77e/rFvQgbtcw2JEFGUJI67Wtc8yOtkYi4nLj59Y0ywetKnnReCyFQnlDg4Jo7ttXHNvL3kdA5KuEsrqwT67JMn3sqYlIuuwUgClUmxcnZ5S0xcJFu0kjqxx9mHYWKkDqxy5/6/Avan6TR29cndWBe22A/cHaZ7yJv09JoZOEav2ro7e+Ttj6yY4cw6kZDnhE8PXYKt2dnoQJKxg7evZ+1VrSWEk1fwSUUnP4pGVif2ah3P9YFRSR+z1j7uFAagJ9we+LlFw4gKPFXlQQggjxwpFheEb6QTkjIHmK9DxIF8TOq9J3z93cy/5+i+M6YsepcnbrmqUKsKjzjCg01RRmzfaUZs7JEKxtBc4PxLxV7ZG/gZfPjD84Llx7hKIquoqFy2/fT34n2N+Kv49eff4EqaEKPLPxTfuzjGAG2N5tn6RtVnYQqeuC17G/cYHsktR5dVS97gDZs49SoNJ8TBPZBCxlryKlNerhA+fBJSuw/7LXjrCVugjOuxzo8gOZGYwsV96DOCFXJWK+59fE8UMvcy06REadpmdpTj0M13mfR+n2QBPc84KjqKJO+wLctIWOCciVbaqxGCXL9vZWrigzf+aa2Fsrj58VKFIM6EoUVJeHnocDJMk4z520MUTCzN0jiqvBjiosk9KRfoYsoyQ3zQOwcqROlDu3lgUTLvDQF+VTPMcMMfbUkB0BBBS7lP15/tJ6iE8HwAAAAAElFTkSuQmCC",
+  "type": "web3",
+  "description": "",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
 }

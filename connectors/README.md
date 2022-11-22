@@ -48,11 +48,15 @@ Key | Type | Required | Description
 `name` | `string` | yes | A short name to uniquely identify this connector app. Name for web3 connector must include blockchain name, for example: "Moloch on Ethereum".
 `version` | `string` | yes | version identifier for your code.
 `platformVersion` | `string` | yes | version identifier for the Grindery Nexus execution environment.
+`type` | `string` in (`web2`, `web3`) | yes | Connector type.
 `triggers` | array<[TriggerSchema](#triggerschema)> | no | All the triggers for your connector app.
 `actions` | array<[ActionSchema](#actionschema)> | no | All the actions for your connector app.
 `authentication` | [AuthenticationSchema](#authenticationschema) | no | Choose what scheme your API uses for authentication.
 `icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
 `pricing` | `string` | no | URL of the pricing page. Required if connector is a paid service.
+`access` | `string` in (`private`, `workspace`, `public`) | no | Who can use this connector: only creator, all members of the creator's workspace or anyone. Default value is `public`.
+`user` | `string` | no | Creator's user ID.
+`workspace` | `string` | no | Creator's workspace ID.
 
 
 ## Triggers
@@ -253,6 +257,7 @@ Key | Type | Required | Description
 `description` | `string` | yes | A short description for what this trigger or action does.
 `instructions` | `string` | no | Short instructions for how to use this trigger or action.
 `icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
+`featured` | `boolean` | no | Featured triggers/actions will be listed higher in the workflow builder UI then the rest.
 
 
 ### Fields

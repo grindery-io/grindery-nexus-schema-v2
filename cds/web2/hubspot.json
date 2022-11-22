@@ -3,6 +3,7 @@
     "name": "HubSpot",
     "version": "1.0.0",
     "platformVersion": "1.0.0",
+    "type": "web2",
     "triggers": [
         {
             "key": "triggerFromWorkflow",
