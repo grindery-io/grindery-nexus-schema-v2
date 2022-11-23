@@ -1,57 +1,54 @@
 {
-    "key": "slack",
-    "name": "Slack",
-    "version": "1.0.0",
-    "platformVersion": "1",
-    "actions": [
-      {
-        "key": "sendChannelMessage",
-        "name": "Send Channel Message",
-        "display": {
-          "label": "Send Channel Message",
-          "description": "Post a new message to a specific #channel you choose"
-        },
-        "operation": {
-          "type": "api",
-          "operation": {
-            "url": "ws://slack-connector:3000/ws/"
-          },
-          "inputFieldProviderUrl": "http://slack-connector:3000/channel-list/",
-          "inputFields": [],
-          "outputFields": []
-        }
-      }
-    ],
-    "authentication": {
-      "type": "oauth2",
-      "test": {
-        "method": "POST",
-        "url": "https://slack.com/api/team.info",
-        "headers": {
-          "Content-Type": "multipart/form-data"
-        },
-        "body": {
-          "token": "{{access_token}}"
-        }
+  "key": "slack",
+  "name": "Slack",
+  "version": "1.0.0",
+  "platformVersion": "1",
+  "actions": [
+    {
+      "key": "sendChannelMessage",
+      "name": "Send Channel Message",
+      "display": {
+        "label": "Send Channel Message",
+        "description": "Post a new message to a specific #channel you choose"
       },
-      "oauth2Config": {
-        "authorizeUrl": {
-          "method": "GET",
-          "url": "https://slack.com/oauth/v2/authorize?client_id=2151773747.3925746869410&scope=channels:join,channels:read,chat:write,groups:read,im:read,mpim:read,team:read&user_scope=channels:read,channels:write,chat:write,groups:read,im:read,mpim:read,users.profile:read"
+      "operation": {
+        "type": "api",
+        "operation": {
+          "url": "ws://slack-connector-staging:3000/ws/"
         },
-        "getAccessToken": {
-          "method": "POST",
-          "url": "https://slack.com/api/oauth.v2.access",
-          "body": {
-            "client_id": "2151773747.3925746869410",
-            "client_secret": "705b13db96178a071697bf8e9c5d101c",
-            "grant_type": "authorization_code"
-          },
-          "headers": {
-            "Content-Type": "multipart/form-data"
-          }
-        }
+        "inputFieldProviderUrl": "http://slack-connector-staging:3000/channel-list/",
+        "inputFields": [],
+        "outputFields": []
+      }
+    }
+  ],
+  "authentication": {
+    "type": "oauth2",
+    "test": {
+      "method": "GET",
+      "url": "https://slack.com/api/team.info"
+    },
+    "defaultDisplayName": "{{ auth.team.name }}",
+    "authenticatedRequestTemplate": {
+      "headers": {
+        "Authorization": "Bearer {{ auth.access_token }}"
       }
     },
-    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK+SURBVHgB3VVNTxNhEJ55d9tgjAkciBeCcvGglgZtBEHaJYQDNZR4A3+C/8AQog3xZrz4I4SL2gaByMFWwpcWKgK9mIgmnCQRqokJ7b4zvlvcbpfCNhAv+iSb3U7nnWc+ntkF+NeBtRw65nYNAmwH2J95131+zbIFXo2EQUCnzr5kNvowd2qC0MJuGxJmEFU4BZZs/Mo/2dM0+GD7SIZbm7fH5o+LoXsRCAmDKrRw0uGbQldn2PHRgPrU7VgCAR4ggJTLGdEvJHmeORFBprshJQRcB+K4dRFBGk4IV4tCb390CZR9lTYyD/pBmj+R6TybDU6ORI4K1DY1GpFMPSaKRC46lrXt5SG3L/28zFJuwnFgIGLuLeYfh1mIuGOnOGicVBmslP2IejcGHqWsn+UWEckYeEEpCYE7VHCz6j+JMZefZsn6AM4MWFuAGkA/TnOFYlhlW5Qq+0MgiTMOXwVuzO0GWfAAMLqGz4AmEs+/DzeUhtw2Mxo0JfUzwZLVikDyfgSEiKhoBUCxuB4dK4vBNeSJ4Xv1qiZTEPiVRNMt28/SW01Dhiq6oyjN/KU/fq8Lk/VMUlMtC8PLQBhosqRp1EBXe7HXUFm1/fC5abhVCFxzsoa4HylhksiwvcnEhu/pWr5O07PgAQY2GmPraVcFmsB+PuRYYDFovyZK2SB21aFGUAPM2KluJYIKFdEylAq1g8mq4TGyzsxLyOxJcsZnJuzncgUt2+OpLxeGQqyyVlv7pmV7YnWr+W6VdBvvbKS+TQVDWOTBo4ITyNlz0VyuisDCxa/jVm89+7vzPBCBIvdYzz6EZH3s46qX/4leXKUDSo5qLg+sS23cys6Lq8ZfI2BEa7cKhxgNOC2BAJx1GUyZZAGLDiOTDs5Aj0LNT+an5uErfhADSmWL1uJZtu/T11ppv9ivFLVsDR3+a/wG8kUkIc9A9TMAAAAASUVORK5CYII="
-  }  
+    "oauth2Config": {
+      "authorizeUrl": "https://slack.com/oauth/v2/authorize?client_id={{ secrets.client_id|urlencode }}&scope=channels:join,channels:read,chat:write,groups:read,im:read,mpim:read,team:read&user_scope=channels:read,channels:write,chat:write,groups:read,im:read,mpim:read,users.profile:read",
+      "getAccessToken": {
+        "method": "POST",
+        "url": "https://slack.com/api/oauth.v2.access",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
+      }
+    }
+  },
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK+SURBVHgB3VVNTxNhEJ55d9tgjAkciBeCcvGglgZtBEHaJYQDNZR4A3+C/8AQog3xZrz4I4SL2gaByMFWwpcWKgK9mIgmnCQRqokJ7b4zvlvcbpfCNhAv+iSb3U7nnWc+ntkF+NeBtRw65nYNAmwH2J95131+zbIFXo2EQUCnzr5kNvowd2qC0MJuGxJmEFU4BZZs/Mo/2dM0+GD7SIZbm7fH5o+LoXsRCAmDKrRw0uGbQldn2PHRgPrU7VgCAR4ggJTLGdEvJHmeORFBprshJQRcB+K4dRFBGk4IV4tCb390CZR9lTYyD/pBmj+R6TybDU6ORI4K1DY1GpFMPSaKRC46lrXt5SG3L/28zFJuwnFgIGLuLeYfh1mIuGOnOGicVBmslP2IejcGHqWsn+UWEckYeEEpCYE7VHCz6j+JMZefZsn6AM4MWFuAGkA/TnOFYlhlW5Qq+0MgiTMOXwVuzO0GWfAAMLqGz4AmEs+/DzeUhtw2Mxo0JfUzwZLVikDyfgSEiKhoBUCxuB4dK4vBNeSJ4Xv1qiZTEPiVRNMt28/SW01Dhiq6oyjN/KU/fq8Lk/VMUlMtC8PLQBhosqRp1EBXe7HXUFm1/fC5abhVCFxzsoa4HylhksiwvcnEhu/pWr5O07PgAQY2GmPraVcFmsB+PuRYYDFovyZK2SB21aFGUAPM2KluJYIKFdEylAq1g8mq4TGyzsxLyOxJcsZnJuzncgUt2+OpLxeGQqyyVlv7pmV7YnWr+W6VdBvvbKS+TQVDWOTBo4ITyNlz0VyuisDCxa/jVm89+7vzPBCBIvdYzz6EZH3s46qX/4leXKUDSo5qLg+sS23cys6Lq8ZfI2BEa7cKhxgNOC2BAJx1GUyZZAGLDiOTDs5Aj0LNT+an5uErfhADSmWL1uJZtu/T11ppv9ivFLVsDR3+a/wG8kUkIc9A9TMAAAAASUVORK5CYII=",
+  "type": "web2",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
+}

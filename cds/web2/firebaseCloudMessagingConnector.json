@@ -6,10 +6,12 @@
   "actions": [
     {
       "key": "fcmPushNotification",
-      "name": "Send push notification",
+      "name": "Send Push Notification",
       "display": {
-        "label": "Send push notification",
-        "description": ""
+        "label": "Send Push Notification",
+        "description": "Send a push notification",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
@@ -19,17 +21,23 @@
         "inputFields": [
           {
             "key": "title",
-            "label": "Notification title",
+            "label": "Notification Title",
             "type": "string",
             "required": false,
-            "placeholder": "Enter optional title"
+            "placeholder": "Provide a title for the notification (optional)",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "body",
-            "label": "Notification text",
+            "label": "Notification Text",
             "type": "string",
             "required": true,
-            "placeholder": "Enter notification text"
+            "placeholder": "Enter notification text",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "icon",
@@ -41,11 +49,14 @@
           },
           {
             "key": "tokens",
-            "label": "FCM tokens",
+            "label": "FCM Tokens",
             "type": "string",
             "list": true,
             "required": true,
-            "placeholder": ""
+            "placeholder": "",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "data",
@@ -57,16 +68,17 @@
             "helpText": "Custom data as a serialized JSON string. Will be passed as a 'data' property in a notification payload."
           }
         ],
-        "outputFields": [
-        ]
+        "outputFields": []
       }
     },
     {
       "key": "subscribeDeviceToTopic",
-      "name": "Subscribe a device to topic",
+      "name": "Subscribe a Device to Topic",
       "display": {
-        "label": "Subscribe a device to topic",
-        "description": ""
+        "label": "Subscribe a Device to Topic",
+        "description": "Subscribe a device to topic",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
@@ -83,23 +95,27 @@
           },
           {
             "key": "tokens",
-            "label": "FCM tokens",
+            "label": "FCM Tokens",
             "type": "string",
             "list": true,
             "required": true,
-            "placeholder": ""
+            "placeholder": "",
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
-        "outputFields": [
-        ]
+        "outputFields": []
       }
     },
     {
       "key": "unsubscribeDeviceFromTopic",
-      "name": "Unsubscribe a device from topic",
+      "name": "Unsubscribe a Device from Topic",
       "display": {
-        "label": "Unsubscribe a device from topic",
-        "description": ""
+        "label": "Unsubscribe a Device from Topic",
+        "description": "Unsubscribe a device from topic",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
@@ -116,23 +132,27 @@
           },
           {
             "key": "tokens",
-            "label": "FCM tokens",
+            "label": "FCM Tokens",
             "type": "string",
             "list": true,
             "required": true,
-            "placeholder": ""
+            "placeholder": "",
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
-        "outputFields": [
-        ]
+        "outputFields": []
       }
     },
     {
       "key": "sendMessageToDevices",
-      "name": "Send message to a topic subscribers",
+      "name": "Send Message to Topic Subscribers",
       "display": {
-        "label": "Send message to a topic subscribers",
-        "description": ""
+        "label": "Send Message to Topic Subscribers",
+        "description": "Send message to subscribers of a topic",
+        "instructions": "",
+        "featured": false
       },
       "operation": {
         "type": "api",
@@ -145,14 +165,20 @@
             "label": "Topic",
             "type": "string",
             "required": true,
-            "placeholder": "Enter Topic"
+            "placeholder": "Enter topic",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "title",
-            "label": "Notification title",
+            "label": "Notification Title",
             "type": "string",
             "required": false,
-            "placeholder": "Enter optional title"
+            "placeholder": "Provide a title for the notification (optional)",
+            "helpText": "",
+            "default": "",
+            "computed": false
           },
           {
             "key": "body",
@@ -179,10 +205,13 @@
             "helpText": "Custom data as a serialized JSON string. Will be passed as a 'data' property in a notification payload."
           }
         ],
-        "outputFields": [
-        ]
+        "outputFields": []
       }
     }
   ],
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALxSURBVHgBtZXLaxNBHMd/k3d3E6uk1lartJq22EooRQP2UDwULFoPLRZ8gOKhV/8ATwEvgnpS/AM89FCwiKggWATBnAQvatGCj4O0pq+8N7s7Mz9nNg83bWJWtD8YZmd25/v5zXd/swvQIHBu2o2Jky3wj+FqeEf5Og3LGy9xPhaGHQEYqRjQ9Ai4ipOwIwBOBwE5gLl5Cx9GVTmFzyN+2eC/AJBGABGAamEImTPWXNFzA4p4E/4iSF3tuAAP7i8ANUS2YhfulmXwdl4C/ftTCxrqjpKJt1+sZz9NtIFuXiDRF/fB8Q5GRo9UxaWgWeg01lYeM8NQgesqaD9vi2liiRfSj8BI3sOl6b3OAbm1g1VxQGA6B5bMtNIClOaM3Dg8OTYmxBeAZUcBGYCWjdST8tQFkEKkIi57c0P0HEVRIXgVuQoV0qbOE5YNWoVQyqrL+Q5MfrwizjQElE16InZSLPgAunqA+PWyeDkRhjHnACJKFEqidLPUW2PiAv/Rw+BSJJzbFsgxHXIEwFengsDMbiv7vGjFsrjHC/5YL7hVahMvZ29dmr3y89IUAJlkhwAoKD1PlWyS4oETPeAJc6ixxd64EYRIal9zQCHfLgqwleZQVGTJlsBIBNx76thSGyoQ40BzgIf0I+dEZl+1JdjAFjsEMQCM9jUHcGOIZrmoSge2/BYvjcn2F739JZt00Ew5tqUsXgkaxXjc1RCAcwNBI0/afcOObamFc/MQnP+g2DVrTnLOs1vxRdSwZ5dps2UrYKs4VjtGmde98UMCcnV3EJxMrBppbayYZbOcIq0RqCteHjJkWprPaSvGOXI6kbTfqwEQAhiaer8YeB2+ml3Fs3qOfZTHoJEt4qygmcc3mXU23pLovByaWlrcmkvd/0FVQPwXssO9ZwJ7PHe8ftJvz9jU+ZKWdl1vfbe4QOLAG2n8EVCJ5LOBDtWNM74gXBFSip5nd1dXjAc9174Vm611BKhEZravTfahi5/XpZ1O1vwCT3OtK4J0Is8AAAAASUVORK5CYII="
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALxSURBVHgBtZXLaxNBHMd/k3d3E6uk1lartJq22EooRQP2UDwULFoPLRZ8gOKhV/8ATwEvgnpS/AM89FCwiKggWATBnAQvatGCj4O0pq+8N7s7Mz9nNg83bWJWtD8YZmd25/v5zXd/swvQIHBu2o2Jky3wj+FqeEf5Og3LGy9xPhaGHQEYqRjQ9Ai4ipOwIwBOBwE5gLl5Cx9GVTmFzyN+2eC/AJBGABGAamEImTPWXNFzA4p4E/4iSF3tuAAP7i8ANUS2YhfulmXwdl4C/ftTCxrqjpKJt1+sZz9NtIFuXiDRF/fB8Q5GRo9UxaWgWeg01lYeM8NQgesqaD9vi2liiRfSj8BI3sOl6b3OAbm1g1VxQGA6B5bMtNIClOaM3Dg8OTYmxBeAZUcBGYCWjdST8tQFkEKkIi57c0P0HEVRIXgVuQoV0qbOE5YNWoVQyqrL+Q5MfrwizjQElE16InZSLPgAunqA+PWyeDkRhjHnACJKFEqidLPUW2PiAv/Rw+BSJJzbFsgxHXIEwFengsDMbiv7vGjFsrjHC/5YL7hVahMvZ29dmr3y89IUAJlkhwAoKD1PlWyS4oETPeAJc6ixxd64EYRIal9zQCHfLgqwleZQVGTJlsBIBNx76thSGyoQ40BzgIf0I+dEZl+1JdjAFjsEMQCM9jUHcGOIZrmoSge2/BYvjcn2F739JZt00Ew5tqUsXgkaxXjc1RCAcwNBI0/afcOObamFc/MQnP+g2DVrTnLOs1vxRdSwZ5dps2UrYKs4VjtGmde98UMCcnV3EJxMrBppbayYZbOcIq0RqCteHjJkWprPaSvGOXI6kbTfqwEQAhiaer8YeB2+ml3Fs3qOfZTHoJEt4qygmcc3mXU23pLovByaWlrcmkvd/0FVQPwXssO9ZwJ7PHe8ftJvz9jU+ZKWdl1vfbe4QOLAG2n8EVCJ5LOBDtWNM74gXBFSip5nd1dXjAc9174Vm611BKhEZravTfahi5/XpZ1O1vwCT3OtK4J0Is8AAAAASUVORK5CYII=",
+  "type": "web2",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
 }

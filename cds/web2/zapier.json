@@ -14,50 +14,107 @@
             "operation": {
                 "type": "polling",
                 "operation": {
-                    "url": "wss://www.example.com"
+                    "url": "wss://connex-grindery-test.herokuapp.com"
                 },
-                "inputFields": [
+                "inputFieldProviderUrl": "https://connex-zapier-grindery.herokuapp.com/uniqueID/",
+                "inputFields": [],
+                "outputFields": [
                     {
-                        "key": "token",
-                        "label": "Token",
-                        "type": "string",
-                        "placeholder": "Enter token generated in your Zapier action",
-                        "list": false,
-                        "required": true
+                        "key": "param1",
+                        "label": "Param1",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param2",
+                        "label": "Param2",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param3",
+                        "label": "Param3",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param4",
+                        "label": "Param4",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param5",
+                        "label": "Param5",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param6",
+                        "label": "Param6",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param7",
+                        "label": "Param7",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param8",
+                        "label": "Param1",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param8",
+                        "label": "Param8",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param9",
+                        "label": "Param9",
+                        "type": "string"
+                    },
+                    {
+                        "key": "param10",
+                        "label": "Param10",
+                        "type": "string"
                     }
                 ],
-                "outputFields": [],
                 "sample": {}
             }
         }
     ],
-    "actions": [
-        {
-            "key": "triggerZap",
-            "name": "Trigger a zap",
-            "display": {
-                "label": "Trigger a zap",
-                "description": "Trigger a zap"
-            },
-            "operation": {
-                "type": "api",
-                "operation": {
-                    "url": "wss://www.example.com"
-                },
-                "inputFields": [
-                    {
-                        "key": "token",
-                        "label": "Token",
-                        "type": "string",
-                        "placeholder": "Enter token generated in your Zapier trigger",
-                        "list": false,
-                        "required": true
-                    }
-                ],
-                "outputFields": [],
-                "sample": {}
-            }
+  "actions": [
+    {
+      "key": "triggerZap",
+      "name": "Trigger a zap",
+      "display": {
+        "label": "Trigger a zap",
+        "description": "Trigger a zap"
+      },
+      "operation": {
+        "type": "api",
+        "operation": {
+          "url": "wss://connex-grindery-test.herokuapp.com"
+        },
+        "inputFieldProviderUrl": "https://connex-zapier-grindery.herokuapp.com/uniqueID",
+        "inputFields": [
+          {
+            "key": "data",
+            "label": "Data to Send",
+            "type": "string",
+            "placeholder": "{\"key1\":\"value1\", \"key2\": \"value2\"}",
+            "list": false,
+            "required": false,
+            "helpText": "Key-value pairs that will form the data portion of the request. Example: {\"key1\":\"value1\", \"key2\": \"value2\"}",
+            "default": "{\"key\":\"value\"}",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
         }
-    ],
-    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQySURBVHgB7ZtNSFRRFMf/T1pVkBtrl9OmFkm6sl1f4C61TQiBH4WBCwcsgoKyqGwRGEi6a8gviKQINVcVjrVrVhq6icBpFdpmDAxcxOv+35nb3Hkzb1R0YvS+H1zfm/fu1/nfc84dZK4DH+4FlKtLG1w0qmuNKuXY2aRUmYWDYXWdccaRNF865gdlfKsyvA873+ggksri+0qEIf2gTN8o4+8p4/litxpPIsrGQbdB2ZrG8wBlPF1+EDbhoE15wrCjjKcqcVAdu0gpEY4wBM7APuOJl+wpQCtsRe10ZepPDeylhh6wm7P+epSXwXJCAWA5oQCwnFAAWE4oACwnFACWEwoAywkFgOWEAsByQgFgOaEAsJxQAFhOKAAsJxQAlhMKAMsJBUCpUnUaqG1AsSlNAc42Aw/eAbdeAU3dKCalKcB+4zcb+4r7+409KEWmR4FItTL+ADD1FMXEcRvhYrvganlFTXxxbuP1V1NSNsrBCFBxWO4XPmFLUIC85UW36/5ZK1yuVkrdrhOuO/c++92vJelD9/eowXV/fJXCdrGo1NH1P8Rc91K51O1rzjw3+7h92nW/JQqPwzr6XVe1jMMx2X8eO7ceAgcrgZuv5WrClW26Iys71S9eoevQvS/3Ztdn4lv+Dow9DB6HiVHDuuzTP44JdxG+Iwv5uw1OgokJoL89u5ju9lNNYHVFJsbJ6Al0HAWe38jUOx/N7Tv6TOo+vpg96fOdCKQzlrm/WyfjNB8C5tNz0oaaaGEYjgEhFuwBi1+kaM61AMdPyT2N766TTjmB+brstjSKhlMcv2eQxNuMSJ8nxSOqTslqHqnOrc/nVemxvfGMhYiPBLflPK/XFswvGwsB7sVaYQ7OlTM7pfvS3cwtK5/hGn+CpGdpA/ceyK2/z3jGem/WkBd/W+4m6yTX9QUwjY+PSigEvac4VJ1w4GLs4RRreiT/O47NHWITFBYgGpPVJUxOYz25dWrr5Zqck9jUjC4hEHqLGft6DPJ7Jbe+zjEUNHJCFkJDT6uozOSnbROAK2tOjB1HY9l1KIpeZU6Ccc+Jnm0pvPp04ycJyQXMKzpcuIIMDxrpZ2pAPI39ch70At5f6ZX2HLfjGDZLsAD+GDbF0HASiUkxXE9GG8JVyteG0JOY8f2Z+2UPAqHHnKyXhMl+/X3z/Wa+TKUJFoBuN7/Otyy6qw6L4+lMzHYD7fK5okAiZLhwa2Pm5sTZTzwd29xe9djLyfSzlGR0Gk7BdTvuVBT7X9tUbtsCbO9X4UJw4jqEaGzQF57/jPX/EGEIMHCKf2aAu4QOl4WPKBFSPDQVV0FwBnYywxCYgK04GKYAQ5AwsI0k6AHOuHd+7hpsQ47QJr1dwDtLqx7AFtzM+WH/4WkeoeW52gh2J563m4enHX8N7yitnCZtTZ8p3PnH5x3MQpL9kBfyBn8BTUEGOuSP+cEAAAAASUVORK5CYII="
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQySURBVHgB7ZtNSFRRFMf/T1pVkBtrl9OmFkm6sl1f4C61TQiBH4WBCwcsgoKyqGwRGEi6a8gviKQINVcVjrVrVhq6icBpFdpmDAxcxOv+35nb3Hkzb1R0YvS+H1zfm/fu1/nfc84dZK4DH+4FlKtLG1w0qmuNKuXY2aRUmYWDYXWdccaRNF865gdlfKsyvA873+ggksri+0qEIf2gTN8o4+8p4/litxpPIsrGQbdB2ZrG8wBlPF1+EDbhoE15wrCjjKcqcVAdu0gpEY4wBM7APuOJl+wpQCtsRe10ZepPDeylhh6wm7P+epSXwXJCAWA5oQCwnFAAWE4oACwnFACWEwoAywkFgOWEAsByQgFgOaEAsJxQAFhOKAAsJxQAlhMKAMsJBUCpUnUaqG1AsSlNAc42Aw/eAbdeAU3dKCalKcB+4zcb+4r7+409KEWmR4FItTL+ADD1FMXEcRvhYrvganlFTXxxbuP1V1NSNsrBCFBxWO4XPmFLUIC85UW36/5ZK1yuVkrdrhOuO/c++92vJelD9/eowXV/fJXCdrGo1NH1P8Rc91K51O1rzjw3+7h92nW/JQqPwzr6XVe1jMMx2X8eO7ceAgcrgZuv5WrClW26Iys71S9eoevQvS/3Ztdn4lv+Dow9DB6HiVHDuuzTP44JdxG+Iwv5uw1OgokJoL89u5ju9lNNYHVFJsbJ6Al0HAWe38jUOx/N7Tv6TOo+vpg96fOdCKQzlrm/WyfjNB8C5tNz0oaaaGEYjgEhFuwBi1+kaM61AMdPyT2N766TTjmB+brstjSKhlMcv2eQxNuMSJ8nxSOqTslqHqnOrc/nVemxvfGMhYiPBLflPK/XFswvGwsB7sVaYQ7OlTM7pfvS3cwtK5/hGn+CpGdpA/ceyK2/z3jGem/WkBd/W+4m6yTX9QUwjY+PSigEvac4VJ1w4GLs4RRreiT/O47NHWITFBYgGpPVJUxOYz25dWrr5Zqck9jUjC4hEHqLGft6DPJ7Jbe+zjEUNHJCFkJDT6uozOSnbROAK2tOjB1HY9l1KIpeZU6Ccc+Jnm0pvPp04ycJyQXMKzpcuIIMDxrpZ2pAPI39ch70At5f6ZX2HLfjGDZLsAD+GDbF0HASiUkxXE9GG8JVyteG0JOY8f2Z+2UPAqHHnKyXhMl+/X3z/Wa+TKUJFoBuN7/Otyy6qw6L4+lMzHYD7fK5okAiZLhwa2Pm5sTZTzwd29xe9djLyfSzlGR0Gk7BdTvuVBT7X9tUbtsCbO9X4UJw4jqEaGzQF57/jPX/EGEIMHCKf2aAu4QOl4WPKBFSPDQVV0FwBnYywxCYgK04GKYAQ5AwsI0k6AHOuHd+7hpsQ47QJr1dwDtLqx7AFtzM+WH/4WkeoeW52gh2J563m4enHX8N7yitnCZtTZ8p3PnH5x3MQpL9kBfyBn8BTUEGOuSP+cEAAAAASUVORK5CYII=",
+  "access": "Public",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d"
 }

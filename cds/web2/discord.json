@@ -1,55 +1,63 @@
 {
-    "key": "discord",
-    "name": "Discord",
-    "version": "1.0.0",
-    "platformVersion": "1",
-    "actions": [
-      {
-        "key": "sendChannelMessage",
-        "name": "Send Channel Message",
-        "display": {
-          "label": "Send Channel Message",
-          "description": "Post a new message to a specific #channel you choose"
-        },
-        "operation": {
-          "type": "api",
-          "operation": {
-            "url": "wss://grindery-discord-connector.herokuapp.com/ws/"
-          },
-          "inputFieldProviderUrl": "https://grindery-discord-connector.herokuapp.com/channel-list/",
-          "inputFields": [],
-          "outputFields": []
-        }
-      }
-    ],
-    "authentication": {
-      "type": "oauth2",
-      "test": {
-        "method": "GET",
-        "url": "https://discordapp.com/api/users/@me",
-        "headers": {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer {{access_token}}"
-        }
+  "key": "discord",
+  "name": "Discord",
+  "version": "1.0.0",
+  "platformVersion": "1",
+  "actions": [
+    {
+      "key": "sendChannelMessage",
+      "name": "Send Channel Message",
+      "display": {
+        "label": "Send Channel Message",
+        "description": "Post a new message to a specific #channel you choose"
       },
-      "oauth2Config": {
-        "authorizeUrl": {
-          "method": "GET",
-          "url": "https://discord.com/oauth2/authorize?response_type=code&client_id=1009089644748603513&permissions=2146958591&scope=identify%20guilds.join%20guilds%20bot"
+      "operation": {
+        "type": "api",
+        "operation": {
+          "url": "ws://discord-connector-staging:3000/ws/"
         },
-        "getAccessToken": {
-          "method": "POST",
-          "url": "https://discord.com/api/v10/oauth2/token",
-          "body": {
-            "client_id": "1009089644748603513",
-            "client_secret": "11M4yQRZlxwAQeX2wmydYJEcJ6C8Clqt",
-            "grant_type": "authorization_code"
-          },
-          "headers": {
-            "Content-Type": "application/x-www-form-urlencoded"
-          }
-        }
+        "inputFieldProviderUrl": "http://discord-connector-staging:3000/channel-list/",
+        "inputFields": [],
+        "outputFields": []
+      }
+    }
+  ],
+  "authentication": {
+    "type": "oauth2",
+    "test": {
+      "method": "GET",
+      "url": "https://discordapp.com/api/users/@me"
+    },
+    "defaultDisplayName": "{{ data.guild.name }} - {{ data.username }}#{{ data.discriminator }}",
+    "authenticatedRequestTemplate": {
+      "headers": {
+        "Authorization": "Bearer {{ auth.access_token }}"
       }
     },
-    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQVSURBVHgB7VldbttGEJ7ZlQynSW3rBKVPUN0g9AmqPrRR+mIZtYC+tTqBpBNYeShQxAkgv9RC+qKeILpBlBOEOQFlJ4ASW9zJLPVHyeRyJRuxAvB70XKHs/xmf2a/XQFkyJAhQ4ZbAGFNlCr+3nYuVyQBPwGQ8/kqOOq2CwMb33LFd2hLnqCitwCi92k06tv6LiO3ysua9IOcqBAikwaXiQPS2La9JZgMNGzaoZwosV8JEEv8VN/OSyhXL3tsOoProNdpFzywhNUIlI8/uMy0Piad2NAAiJok8cewQoETtROyHdBDpS6Y+CFXOUlt8btdCuDs1cudLtw2ACZfZ/INuAcgYuv8+fc14zsmo56rkJfv4D5BwUHnRaGXZBYmXyb/Gu4bKOsmc2IAvKgqYJinXxHuhEssTCNgjPwrI5FLbAAb1PtTOEmjkDQCm9T7IRDwz7j6GwGEOX+zej8EARXLx767XH9zBJAOYVMRk5EW9oFQ3+SlDxsKvdsPr4P9qG5aGIEtKV3YYLDs2tsWshStWwhAhMrSDggUah+9UyoV/MzlM1tfZtIb+wQH/HTE09az9pXwOPq4rEZdsAF/kIQ66PyzoBq75eMLjwVMPcW32TndbUSryn/4PVDiNas4B9I+zTMddNDz50kjK+ge3XuvXhZilSLnay0/XIgn73We7+7H+ukMg3bSRWzlnX//fvA+LM9ISVm0cdYLKYn8mCP9n+isIHGaTQSbBxZQw+uDaXkWgECyCoAXUt9oV5h8slLogRlp9jEEObPi7MM4OYikwzEZUdDeOraQA6DRPm8If5gWZwHw1LBz5gB+qfqJo6UQHyfZJkfRWOg1yJnNahZApBNFXGUaJMiTuHotQyZZIgnur7/78fa8XEV/OdPCPAtVL9/BCkHocyteBTV9ANc7+Hf5/CGRanB96kgiUm14pdp6R/2t+rFIoOpkDnwZXud0Z38hgKfVS5/sp9GcDMHAhvRd+upMeH66U9Dl+SKG9UisS/42vlGu0TXgwbcDb1oQ8I1jpoU4Bw8QKN1jKtrGl1N3Ai0M+ftdbhst2/WmhfkaUKOmlSrkFAIj1QAZ6CxwpJUlrIGxmoUeS4/a8KHa5yvFZti2hZ9CeDZ/joBVoQMj0bDshXYAwbP/TguhtNBiDEEUwx2dJukYx1s+cbYRiB6zGzDht5w2+58eQb/b4jRa8YsqL/V5t5L2QSbbHT7kS+TW/EATezMX3gDou9B0eXvE+bgNt8CT44u/+ArxxPQOIfX5TrUWd0Nnvlo0BWKQxqviSfXiDU/+Ytw3+NtNUyfZ3U7rQAgO+W13VslrYOlAszZunAXCdRU0TXeiU6z0B4deIzgS4ZZ//mK3BXeIpzyV9O/wEUuM1np/dmTIkCFDhpXxBYuKkMLUEll6AAAAAElFTkSuQmCC"
-  }  
+    "oauth2Config": {
+      "authorizeUrl": "https://discord.com/oauth2/authorize?response_type=code&client_id={{ secrets.client_id|urlencode }}&permissions=2146958591&scope=identify%20guilds.join%20guilds%20bot",
+      "getAccessToken": {
+        "method": "POST",
+        "url": "https://discord.com/api/v10/oauth2/token",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code"
+      },
+      "autoRefresh": true,
+      "refreshAccessToken": {
+        "method": "POST",
+        "url": "https://discord.com/api/v10/oauth2/token",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&grant_type=refresh_token"
+      }
+    }
+  },
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQVSURBVHgB7VldbttGEJ7ZlQynSW3rBKVPUN0g9AmqPrRR+mIZtYC+tTqBpBNYeShQxAkgv9RC+qKeILpBlBOEOQFlJ4ASW9zJLPVHyeRyJRuxAvB70XKHs/xmf2a/XQFkyJAhQ4ZbAGFNlCr+3nYuVyQBPwGQ8/kqOOq2CwMb33LFd2hLnqCitwCi92k06tv6LiO3ysua9IOcqBAikwaXiQPS2La9JZgMNGzaoZwosV8JEEv8VN/OSyhXL3tsOoProNdpFzywhNUIlI8/uMy0Piad2NAAiJok8cewQoETtROyHdBDpS6Y+CFXOUlt8btdCuDs1cudLtw2ACZfZ/INuAcgYuv8+fc14zsmo56rkJfv4D5BwUHnRaGXZBYmXyb/Gu4bKOsmc2IAvKgqYJinXxHuhEssTCNgjPwrI5FLbAAb1PtTOEmjkDQCm9T7IRDwz7j6GwGEOX+zej8EARXLx767XH9zBJAOYVMRk5EW9oFQ3+SlDxsKvdsPr4P9qG5aGIEtKV3YYLDs2tsWshStWwhAhMrSDggUah+9UyoV/MzlM1tfZtIb+wQH/HTE09az9pXwOPq4rEZdsAF/kIQ66PyzoBq75eMLjwVMPcW32TndbUSryn/4PVDiNas4B9I+zTMddNDz50kjK+ge3XuvXhZilSLnay0/XIgn73We7+7H+ukMg3bSRWzlnX//fvA+LM9ISVm0cdYLKYn8mCP9n+isIHGaTQSbBxZQw+uDaXkWgECyCoAXUt9oV5h8slLogRlp9jEEObPi7MM4OYikwzEZUdDeOraQA6DRPm8If5gWZwHw1LBz5gB+qfqJo6UQHyfZJkfRWOg1yJnNahZApBNFXGUaJMiTuHotQyZZIgnur7/78fa8XEV/OdPCPAtVL9/BCkHocyteBTV9ANc7+Hf5/CGRanB96kgiUm14pdp6R/2t+rFIoOpkDnwZXud0Z38hgKfVS5/sp9GcDMHAhvRd+upMeH66U9Dl+SKG9UisS/42vlGu0TXgwbcDb1oQ8I1jpoU4Bw8QKN1jKtrGl1N3Ai0M+ftdbhst2/WmhfkaUKOmlSrkFAIj1QAZ6CxwpJUlrIGxmoUeS4/a8KHa5yvFZti2hZ9CeDZ/joBVoQMj0bDshXYAwbP/TguhtNBiDEEUwx2dJukYx1s+cbYRiB6zGzDht5w2+58eQb/b4jRa8YsqL/V5t5L2QSbbHT7kS+TW/EATezMX3gDou9B0eXvE+bgNt8CT44u/+ArxxPQOIfX5TrUWd0Nnvlo0BWKQxqviSfXiDU/+Ytw3+NtNUyfZ3U7rQAgO+W13VslrYOlAszZunAXCdRU0TXeiU6z0B4deIzgS4ZZ//mK3BXeIpzyV9O/wEUuM1np/dmTIkCFDhpXxBYuKkMLUEll6AAAAAElFTkSuQmCC",
+  "type": "web2",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
+}
