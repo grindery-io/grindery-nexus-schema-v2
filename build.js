@@ -29,3 +29,27 @@ for (const path of ["web2", "web3"]) {
   }
 }
 fs.writeFileSync("dist/_index.json", JSON.stringify(index));
+
+const chains = [];
+const chainFiles = fs.readdirSync(`dist/chains`);
+
+for (const file of chainFiles) {
+  const content = fs.readFileSync(`dist/chains/${file}`, "utf-8");
+  try {
+    const data = JSON.parse(content);
+    if (!Array.isArray(data)) {
+      console.warn(`Not an array: dist/chains/${file}`);
+      continue;
+    }
+    if (data.length < 1) {
+      console.warn(`Empty list: dist/chains/${file}`);
+      continue;
+    }
+    data.forEach((chain) => {
+      chains.push(chain);
+    });
+  } catch (e) {
+    console.warn(`Invalid chains list: dist/chains/${file}`);
+  }
+}
+fs.writeFileSync("dist/chains/_index.json", JSON.stringify(chains));
