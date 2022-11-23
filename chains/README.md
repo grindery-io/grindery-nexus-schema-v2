@@ -1,9 +1,7 @@
 # Blockchains supported by Nexus
 
 - [EVM chains list](evm.json)
-- [Flow chains list](flow.json)
-- [Near chains list](near.json)
-- [Algorand chains list](algorand.json)
+- [Non-EVM chains list](non-evm.json)
 
 ## Schema
 
