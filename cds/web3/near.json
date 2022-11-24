@@ -276,7 +276,7 @@
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
-            "label": "Contract address",
+            "label": "Contract Address",
             "type": "string",
             "placeholder": "Enter Contract address",
             "required": true,
@@ -287,7 +287,7 @@
             "key": "to",
             "label": "To",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter a Near Wallet",
             "required": true,
             "list": false,
             "default": "tcoratger.testnet"
@@ -332,8 +332,7 @@
             "label": "NFT Address",
             "type": "string",
             "placeholder": "NFT Address",
-            "list": false,
-            "default":"street-life-movie.neargrindery.testnet"
+            "list": false
           }
         ],
         "sample": {}
