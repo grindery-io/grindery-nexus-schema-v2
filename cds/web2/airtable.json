@@ -16,9 +16,9 @@
       "operation": {
         "type": "polling",
         "operation": {
-          "url": "ws://airtable-connector:3000/ws/"
+          "url": "ws://airtable-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://airtable-connector:3000/trigger/",
+        "inputFieldProviderUrl": "http://airtable-connector-staging:3000/trigger/",
         "inputFields": [
           {
             "key": "personal_access_token",
@@ -48,9 +48,9 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "ws://airtable-connector:3000/ws/"
+          "url": "ws://airtable-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://airtable-connector:3000/firstRow/",
+        "inputFieldProviderUrl": "http://airtable-connector-staging:3000/firstRow/",
         "inputFields": [
           {
             "key": "api_key",
