@@ -16,9 +16,9 @@
       "operation": {
         "type": "polling",
         "operation": {
-          "url": "ws://airtable-connector:3000/ws/"
+          "url": "wss://grindery-airtable-connector.herokuapp.com/ws/"
         },
-        "inputFieldProviderUrl": "http://airtable-connector:3000/trigger/",
+        "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/trigger/",
         "inputFields": [
           {
             "key": "personal_access_token",
@@ -48,9 +48,9 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "ws://airtable-connector:3000/ws/"
+            "url": "wss://grindery-airtable-connector.herokuapp.com/ws/"
         },
-        "inputFieldProviderUrl": "http://airtable-connector:3000/firstRow/",
+        "inputFieldProviderUrl": "https://grindery-airtable-connector.herokuapp.com/firstRow/",
         "inputFields": [
           {
             "key": "api_key",
