@@ -53,33 +53,11 @@
         "inputFieldProviderUrl": "http://airtable-connector-staging:3000/firstRow/",
         "inputFields": [
           {
-            "key": "api_key",
-            "label": "Airtable API key",
+            "key": "personal_access_token",
+            "label": "Airtable Personal access token",
             "type": "string",
-            "placeholder": "keyLOfGeYHXLqpeo0",
-            "helpText": "To get API key, visit your account page: https://airtable.com/account.",
-            "list": false,
-            "required": true,
-            "default": "",
-            "computed": false
-          },
-          {
-            "key": "app_id",
-            "label": "Airtable ID",
-            "type": "string",
-            "placeholder": "appGgI109POdPOOKK",
-            "helpText": "You can get base ID from the base URL, or from API documentation at https://airtable.com/api.",
-            "list": false,
-            "required": true,
-            "default": "",
-            "computed": false
-          },
-          {
-            "key": "table_name",
-            "label": "Table Name",
-            "type": "string",
-            "placeholder": "Sample Table Name",
-            "helpText": "Table must have at least one record with data. If your table is empty, please add an example record.",
+            "placeholder": "patTPTGCSDECZm7i.3fa8581g1r52a52cb5a224sb8arccaf2ae82df346cd685ee766ff939dcb879be6",
+            "helpText": "To get Personal access token, visit your account page: https://airtable.com/create/tokens.",
             "list": false,
             "required": true,
             "default": "",
