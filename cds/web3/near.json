@@ -281,7 +281,7 @@
             "placeholder": "Enter Contract address",
             "required": true,
             "list": false,
-            "default": "street-life-movie.neargrindery.testnet"
+            "default": "nft.grindery.near"
           },
           {
             "key": "to",
@@ -290,7 +290,7 @@
             "placeholder": "Enter a Near Wallet",
             "required": true,
             "list": false,
-            "default": "tcoratger.testnet"
+            "default": "grindery.near"
           },
           {
             "key": "title",
@@ -323,7 +323,7 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "near:testnet"
+            "default": "near:mainnet"
           }
         ],
         "outputFields": [
