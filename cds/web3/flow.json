@@ -86,9 +86,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -184,9 +182,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -274,66 +270,40 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
-  "actions": [
-    {
-      "key": "transferFlowToken",
-      "name": "Transfer Flow Token",
-      "display": {
-        "label": "Transfer Flow Token",
-        "description": "Transfer Flow Token"
+  "authentication": {
+    "type": "oauth2",
+    "test": {
+      "method": "POST",
+      "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/echo",
+      "headers": {
+        "Content-Type": "application/json"
       },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "[amount: UFix64, recipient: Address]aW1wb3J0IEZ1bmdpYmxlVG9rZW4gZnJvbSAweGYyMzNkY2VlODhmZTBhYmUKaW1wb3J0IERvbWFpbnMgZnJvbSAweDIzM2ViMDEyZDM0YjAwNzAKaW1wb3J0IEZsb3dUb2tlbiBmcm9tIDB4MTY1NDY1MzM5OTA0MGE2MQoKdHJhbnNhY3Rpb24oYW1vdW50OiBVRml4NjQsIHJlY2lwaWVudDogQWRkcmVzcykgewogIGxldCBzZW5kZXJSZWY6ICZ7RnVuZ2libGVUb2tlbi5SZWNlaXZlcn0KICAvLyBUaGUgVmF1bHQgcmVzb3VyY2UgdGhhdCBob2xkcyB0aGUgdG9rZW5zIHRoYXQgYXJlIGJlaW5nIHRyYW5zZmVyZWQKICBsZXQgc2VudFZhdWx0OiBARnVuZ2libGVUb2tlbi5WYXVsdAogIGxldCBzZW5kZXI6IEFkZHJlc3MKCiAgcHJlcGFyZShzaWduZXI6IEF1dGhBY2NvdW50KSB7CiAgICAvLyBHZXQgYSByZWZlcmVuY2UgdG8gdGhlIHNpZ25lcicncyBzdG9yZWQgdmF1bHQKICAgIGxldCB2YXVsdFJlZiA9IHNpZ25lci5ib3Jyb3c8JkZsb3dUb2tlbi5WYXVsdD4oZnJvbTogL3N0b3JhZ2UvZmxvd1Rva2VuVmF1bHQpCiAgICAgID8/IHBhbmljKCJDb3VsZCBub3QgYm9ycm93IHJlZmVyZW5jZSB0byB0aGUgb3duZXInJ3MgVmF1bHQhIikKICAgIHNlbGYuc2VuZGVyUmVmID0gc2lnbmVyLmdldENhcGFiaWxpdHkoL3B1YmxpYy9mbG93VG9rZW5SZWNlaXZlcikKICAgICAgLmJvcnJvdzwme0Z1bmdpYmxlVG9rZW4uUmVjZWl2ZXJ9PigpIQogICAgc2VsZi5zZW5kZXIgPSB2YXVsdFJlZi5vd25lciEuYWRkcmVzcwogICAgLy8gV2l0aGRyYXcgdG9rZW5zIGZyb20gdGhlIHNpZ25lcicncyBzdG9yZWQgdmF1bHQKICAgIHNlbGYuc2VudFZhdWx0IDwtIHZhdWx0UmVmLndpdGhkcmF3KGFtb3VudDogYW1vdW50KQogIH0KCiAgZXhlY3V0ZSB7CiAgICAvLyBHZXQgdGhlIHJlY2lwaWVudCcncyBwdWJsaWMgYWNjb3VudCBvYmplY3QKICAgIGxldCByZWNpcGllbnRBY2NvdW50ID0gZ2V0QWNjb3VudChyZWNpcGllbnQpCgogICAgLy8gR2V0IGEgcmVmZXJlbmNlIHRvIHRoZSByZWNpcGllbnQnJ3MgUmVjZWl2ZXIKICAgIGxldCByZWNlaXZlclJlZiA9IHJlY2lwaWVudEFjY291bnQuZ2V0Q2FwYWJpbGl0eSgvcHVibGljL2Zsb3dUb2tlblJlY2VpdmVyKQogICAgICAuYm9ycm93PCZ7RnVuZ2libGVUb2tlbi5SZWNlaXZlcn0+KCkKICAgIAogICAgaWYgcmVjZWl2ZXJSZWYgPT0gbmlsIHsKICAgICAgICBsZXQgY29sbGVjdGlvbkNhcCA9IHJlY2lwaWVudEFjY291bnQuZ2V0Q2FwYWJpbGl0eTwme0RvbWFpbnMuQ29sbGVjdGlvblB1YmxpY30+KERvbWFpbnMuQ29sbGVjdGlvblB1YmxpY1BhdGgpCiAgICAgICAgbGV0IGNvbGxlY3Rpb24gPSBjb2xsZWN0aW9uQ2FwLmJvcnJvdygpIQogICAgICAgIHZhciBkZWZhdWx0RG9tYWluOiAme0RvbWFpbnMuRG9tYWluUHVibGljfT8gPSBuaWwKCiAgICAgICAgbGV0IGlkcyA9IGNvbGxlY3Rpb24uZ2V0SURzKCkKCiAgICAgICAgaWYgaWRzLmxlbmd0aCA9PSAwIHsKICAgICAgICAgICAgcGFuaWMoIlJlY2lwaWVudCBoYXZlIG5vIGRvbWFpbiAiKQogICAgICAgIH0KICAgICAgICAKICAgICAgICBkZWZhdWx0RG9tYWluID0gY29sbGVjdGlvbi5ib3Jyb3dEb21haW4oaWQ6IGlkc1swXSkhCiAgICAgICAgICAgIC8vIGNoZWNrIGRlZnVhbHQgZG9tYWluIAogICAgICAgIGZvciBpZCBpbiBpZHMgewogICAgICAgICAgbGV0IGRvbWFpbiA9IGNvbGxlY3Rpb24uYm9ycm93RG9tYWluKGlkOiBpZCkhCiAgICAgICAgICBsZXQgaXNEZWZhdWx0ID0gZG9tYWluLmdldFRleHQoa2V5OiAiaXNEZWZhdWx0IikKICAgICAgICAgIGlmIGlzRGVmYXVsdCA9PSAidHJ1ZSIgewogICAgICAgICAgICBkZWZhdWx0RG9tYWluID0gZG9tYWluCiAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIC8vIERlcG9zaXQgdGhlIHdpdGhkcmF3biB0b2tlbnMgaW4gdGhlIHJlY2lwaWVudCcncyBkb21haW4gaW5ib3gKICAgICAgICBkZWZhdWx0RG9tYWluIS5kZXBvc2l0VmF1bHQoZnJvbTogPC0gc2VsZi5zZW50VmF1bHQsIHNlbmRlclJlZjogc2VsZi5zZW5kZXJSZWYpCgogICAgfSBlbHNlIHsKICAgICAgICAvLyBEZXBvc2l0IHRoZSB3aXRoZHJhd24gdG9rZW5zIGluIHRoZSByZWNpcGllbnQnJ3MgcmVjZWl2ZXIKICAgICAgICByZWNlaXZlclJlZiEuZGVwb3NpdChmcm9tOiA8LSBzZWxmLnNlbnRWYXVsdCkKICAgIH0KICB9Cn0=",
-        "inputFields": [
-          {
-            "key": "_grinderyChain",
-            "type": "string",
-            "computed": true,
-            "default": "flow:mainnet"
-          },
-          {
-            "key": "_grinderyContractAddress",
-            "type": "string",
-            "computed": true,
-            "default": "0x0",
-            "label": "Contract Address",
-            "helpText": "",
-            "required": false
-          },
-          {
-            "key": "amount",
-            "label": "Amount",
-            "type": "string",
-            "placeholder": "0.12345678 (must have 8 digits after decimal)",
-            "list": false,
-            "required": true
-          },
-          {
-            "key": "recipient",
-            "label": "Recipient",
-            "type": "string",
-            "placeholder": "Enter recipient's Flow wallet address",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          }
-        ],
-        "outputFields": [],
-        "sample": {
-          
-        }
+      "body": "{\"address\":\"{{ auth.address }}\"}"
+    },
+    "defaultDisplayName": "{{ auth.address }}",
+    "authenticatedRequestTemplate": {
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": "{\"address\":\"{{ auth.address }}\"}"
+    },
+    "allowedHosts": ["grindery-nexus-orchestrator:3000"],
+    "oauth2Config": {
+      "authorizeUrl": "https://microsites.grindery.org/grindery-nexus-connector-web3-microsite/?path=flow",
+      "getAccessToken": {
+        "method": "POST",
+        "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/flowCreateAccountComplete",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": "{\"code\":\"{{ code }}\"}"
       }
     }
-  ],
+  },
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAT/SURBVHgBzZpNbBtFFMf/u3aTpfnwVoKkl7RGQhUiLQmHShUC1b0lhIikF0CqRDgQ0vZgiipAvTQFKbRSpRYkSgWHphItzaUKKojccKGqkAJqTCgH4GCSS6Ac1qEG09Re3pvYwXZ2dr2bsZOftNrJzOzmzex78+a9sQYFPGiYsZCGbltHlwZ0w4YJDdFiuw1YVJ+iAl/XczZm/sxaCawRDQERAofwHAk2RC8x4Z8UPZuw7+G9O0vWDALgW/iC0MepGIM6ErkcTvj9GlULv9Uwo3YIF6BW6DLoS4zrNIiFrJWqpn+omk7tD5hxEvwKjfRR1BBhLzoGNjcY6b+Xsp6q5Cl8e5N5ht46Si82UB9M+l8DTZsMZJay1906ugrf1mReoBeNYB3QNMSaGowoDeAzWR+p8AXBh7COsBq5DcBReFaV9ZrxSsQAJCq0arVh4ySjOYsa0WpGEIm0uvaZ/21+VR05wME//rImS+vKhOflMB/CrYBOR0rH9m145dAIep/tE2Uvdnd20QDmKqstLYcnSpfRcGkrCX5cteBvnxrD8OGDUIBJs3+G7oPFihXh2zabA6oN9OqX1/Dk009BGRoGtjabsYW7y55YX6nXEIdCeMaVCl7AtsXWRCCE5/0KFLr95w+8qEpVnIjx7HNBCK+H8BIUMnyoZoIL8vnliRY6r9n0R+DNcTm8mnQ+vkvafvObG+JyI22lXdsLKj4aFipTEjislc5dO6VtE59cRnzkMBRgPrTJ7NY5AoJCdrrM+kfnzkMVehixsK1h71o0xsljOjgYAffr2N6xqj6dXsSih6pUwiFnOIjKsMDD5DF5KaxcDk+PnRQe0onp20lHD8s2sL+3H36gCY+ywUb9PNTT/wze//CcGMA6E9X9bAeOHnsT459e2giCC/RqO/KMHz32FjYQ0aqFf+fku9hgpHSRCPKA3X01W9l6o1G4d0tE7S647Q4X02lcIefD96Bw8DFx6TJ8kgjTzCfh4ahkjmd+bg77e/rFvQgbtcw2JEFGUJI67Wtc8yOtkYi4nLj59Y0ywetKnnReCyFQnlDg4Jo7ttXHNvL3kdA5KuEsrqwT67JMn3sqYlIuuwUgClUmxcnZ5S0xcJFu0kjqxx9mHYWKkDqxy5/6/Avan6TR29cndWBe22A/cHaZ7yJv09JoZOEav2ro7e+Ttj6yY4cw6kZDnhE8PXYKt2dnoQJKxg7evZ+1VrSWEk1fwSUUnP4pGVif2ah3P9YFRSR+z1j7uFAagJ9we+LlFw4gKPFXlQQggjxwpFheEb6QTkjIHmK9DxIF8TOq9J3z93cy/5+i+M6YsepcnbrmqUKsKjzjCg01RRmzfaUZs7JEKxtBc4PxLxV7ZG/gZfPjD84Llx7hKIquoqFy2/fT34n2N+Kv49eff4EqaEKPLPxTfuzjGAG2N5tn6RtVnYQqeuC17G/cYHsktR5dVS97gDZs49SoNJ8TBPZBCxlryKlNerhA+fBJSuw/7LXjrCVugjOuxzo8gOZGYwsV96DOCFXJWK+59fE8UMvcy06REadpmdpTj0M13mfR+n2QBPc84KjqKJO+wLctIWOCciVbaqxGCXL9vZWrigzf+aa2Fsrj58VKFIM6EoUVJeHnocDJMk4z520MUTCzN0jiqvBjiosk9KRfoYsoyQ3zQOwcqROlDu3lgUTLvDQF+VTPMcMMfbUkB0BBBS7lP15/tJ6iE8HwAAAAAElFTkSuQmCC",
   "type": "web3",
   "description": "",

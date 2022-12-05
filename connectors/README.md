@@ -168,7 +168,7 @@ Key | Type | Required | Description
 ----|------|----------|------------
 `type` | `string` in (`basic`, `custom`, `digest`, `oauth1`, `oauth2`, `session`) | yes | Choose which scheme you want to use.
 `test` | oneOf([RequestSchema](#requestschema)) | yes | A request that confirms the authentication is working.
-`defaultDisplayName` | `string` | no | Template for generating display name. Template can contain `{{ data.FIELD }}` to reference data returned from `test` request.
+`defaultDisplayName` | `string` | no | Template for generating display name. Template can contain `{{ data.FIELD }}` to reference data returned from `test` request, and `{{ auth.FIELD }}` to reference data in token response.
 `authenticatedRequestTemplate` | oneOf([RequestSchema](#requestschema)) | no | Extra request options added to all requests sent via credential manager.
 `allowedHosts` | array<`string`> | no | When specified, credential manager is allowed to send requests to these hosts only.
 `fields` | array<[FieldSchema](#fieldschema)> | no | Fields you can request from the user before they connect your app to Nexus.
@@ -198,8 +198,8 @@ Key | Type | Required | Description
 `authorizeUrl` | `string` | yes | Define where Nexus will redirect the user to authorize our app. Note: we append the redirect URL and state parameters to return value of this function.
 `getAccessToken` | oneOf([RequestSchema](#requestschema)) | yes | Define how Nexus fetches an access token from the API
 `refreshAccessToken` | oneOf([RequestSchema](#requestschema)) | no | Define how Nexus will refresh the access token from the API
-`codeParam` | `string` | no | Define a non-standard code param Nexus should scrape instead.
-`scope` | `string` | no | What scope should Nexus request?
+`codeParam` | `string` | no | Define a non-standard code param Nexus should scrape instead. (The parameter is still named `code` when interpolating token requests)
+`scope` | `string` | no | What scope should Nexus request? (This with override `scope` parameter in the authorize URL)
 `autoRefresh` | `boolean` | no | Should Nexus invoke `refreshAccessToken` when we receive an error for a 401 response or the access token has expired?
 
 
@@ -258,6 +258,7 @@ Key | Type | Required | Description
 `instructions` | `string` | no | Short instructions for how to use this trigger or action.
 `icon` | `string` | no | Base64 encoded image string. Recommended icon size 24x24px. Allowed formats: PNG or SVG. Must be on transparent background.
 `featured` | `boolean` | no | Featured triggers/actions will be listed higher in the workflow builder UI then the rest.
+`hidden` | `boolean` | no | Hidden triggers/actions will not be listed in the workflow builder UI.
 
 
 ### Fields
