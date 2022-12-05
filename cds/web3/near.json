@@ -276,21 +276,21 @@
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
-            "label": "Contract address",
+            "label": "Contract Address",
             "type": "string",
             "placeholder": "Enter Contract address",
             "required": true,
             "list": false,
-            "default": "nft-example.tcoratger.testnet"
+            "default": "nft.grindery.near"
           },
           {
             "key": "to",
             "label": "To",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
+            "placeholder": "Enter a Near Wallet",
             "required": true,
             "list": false,
-            "default": "tcoratger.testnet"
+            "default": "grindery.near"
           },
           {
             "key": "title",
@@ -308,7 +308,7 @@
             "placeholder": "Enter a description",
             "required": true,
             "list": false,
-            "default": "Streetlife movie NFT"
+            "default": "Streetlife Movie NFT"
           },
           {
             "key": "media",
@@ -323,7 +323,7 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "near:testnet"
+            "default": "near:mainnet"
           }
         ],
         "outputFields": [
