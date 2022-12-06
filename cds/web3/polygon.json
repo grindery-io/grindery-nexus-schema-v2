@@ -1,0 +1,1679 @@
+{
+  "key": "polygon",
+  "name": "Polygon blockchain",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "triggers": [
+    {
+      "key": "newTransaction",
+      "name": "New Wallet Transaction",
+      "display": {
+        "label": "New Wallet Transaction",
+        "description": "Triggers when a new transaction occurs",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "from",
+            "label": "Sender's Address",
+            "type": "string",
+            "placeholder": "0x...",
+            "required": false,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient's Address",
+            "type": "string",
+            "placeholder": "0x...",
+            "required": false,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "hash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
+            "key": "blockHash",
+            "label": "Block hash",
+            "type": "string"
+          },
+          {
+            "key": "blockNumber",
+            "label": "Block number",
+            "type": "string"
+          },
+          {
+            "key": "from",
+            "label": "From address",
+            "type": "string"
+          },
+          {
+            "key": "to",
+            "label": "To address",
+            "type": "string"
+          },
+          {
+            "key": "value",
+            "label": "Amount transferred in wei",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          "blockHash": "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
+          "blockNumber": "0x5daf3b",
+          "from": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "hash": "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
+          "to": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "value": "0xf3dbb76162000"
+        }
+      }
+    },
+    {
+      "key": "TransferTrigger",
+      "name": "ERC-20 Token Transfer",
+      "display": {
+        "label": "ERC-20 Token Transfer",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": [
+          "event Transfer(address indexed from, address indexed to, uint256 value)",
+          "event Transfer(address indexed from, address indexed to, uint256 value, bytes data)"
+        ],
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "from",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter sender's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter the amount of tokens you want to transfer",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "ApprovalTrigger",
+      "name": "ERC-20 Token Approval",
+      "display": {
+        "label": "ERC-20 Token Approval",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Approval(address indexed owner, address indexed spender, uint256 value)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter owner's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter spender's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter amount of tokens",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "ApprovalTrigger721",
+      "name": "ERC-721 NFT Approval",
+      "display": {
+        "label": "ERC-721 NFT Approval",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter owner's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "ApprovalForAllTrigger",
+      "name": "ERC-721 NFT Approval For All",
+      "display": {
+        "label": "ERC-721 NFT Approval For All",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ApprovalForAll(address indexed owner, address indexed operator, bool approved)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter owner's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter operator's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "TransferTrigger721",
+      "name": "ERC-721 NFT Transfer",
+      "display": {
+        "label": "ERC-721 NFT Transfer",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "from",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter sender's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "onMintItemTrigger",
+      "name": "ERC-721 NFT On Mint Item",
+      "display": {
+        "label": "ERC-721 NFT On Mint Item",
+        "description": "(Extension)"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event onMintItem(address indexed recipient, uint256 itemId, uint256 timestamp)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "recipient",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "itemId",
+            "label": "Item ID",
+            "type": "string",
+            "placeholder": "Enter the item ID",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
+          },
+          {
+            "key": "timestamp",
+            "label": "Timestamp",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "recipient",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "itemId",
+            "label": "Item Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "timestamp",
+            "label": "Timestamp",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "nameAction",
+      "name": "ERC-20 Token Name",
+      "display": {
+        "label": "ERC-20 Token Name ",
+        "description": "(View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function name() view returns string",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Name",
+            "type": "string"
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "approveAction",
+      "name": "ERC-20 Token Approve",
+      "display": {
+        "label": "ERC-20 Token Approve",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approve(address _spender, uint256 _value) returns bool",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter spender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Amount of tokens",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "totalSupplyAction",
+      "name": "ERC-20 Token Total Supply",
+      "display": {
+        "label": "ERC-20 Token Total Supply",
+        "description": "(View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function totalSupply() view returns uint256",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Total Supply",
+            "type": "string"
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "transferFromAction",
+      "name": "ERC-20 Token Transfer From",
+      "display": {
+        "label": "ERC-20 Token Transfer From",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferFrom(address _from, address _to, uint256 _value) returns bool",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_from",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter sender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter the amount you want to transfer",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyUnitConversion__value",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "decimalsAction",
+      "name": "ERC-20 Token Decimals",
+      "display": {
+        "label": "ERC-20 Token Decimals",
+        "description": "(View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decimals() view returns uint8",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Decimals",
+            "type": "number"
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "decreaseApprovalAction",
+      "name": "ERC-20 Token Decrease Approval",
+      "display": {
+        "label": "ERC-20 Token Decrease Approval",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decreaseApproval(address _spender, uint256 _subtractedValue) returns bool",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter spender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_subtractedValue",
+            "label": "Subtracted Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyUnitConversion__subtractedValue",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "balanceOfAction",
+      "name": "ERC-20 Token Balance Of",
+      "display": {
+        "label": "ERC-20 Token Balance Of",
+        "description": "(View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address _owner) view returns uint256",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter owner's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Balance Of",
+            "type": "string"
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "symbolAction",
+      "name": "ERC-20 Token Symbol",
+      "display": {
+        "label": "ERC-20 Token Symbol",
+        "description": "(View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function symbol() view returns string",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Symbol",
+            "type": "string"
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "transferAction",
+      "name": "ERC-20 Token Transfer",
+      "display": {
+        "label": "ERC-20 Token Transfer",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transfer(address _to, uint256 _value) returns bool",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter the amount you want to transfer",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyUnitConversion__value",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "increaseApprovalAction",
+      "name": "ERC-20 Token Increase Approval",
+      "display": {
+        "label": "ERC-20 Token Increase Approval",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function increaseApproval(address _spender, uint256 _addedValue) returns bool",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter spender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_addedValue",
+            "label": "Added Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyUnitConversion__addedValue",
+            "type": "string",
+            "default": "ether->wei",
+            "list": false,
+            "computed": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "allowanceAction",
+      "name": "ERC-20 Token Allowance",
+      "display": {
+        "label": "ERC-20 Token Allowance",
+        "description": "(View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function allowance(address _owner, address _spender) view returns uint256",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-20 token contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter owner's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter spender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Allowance",
+            "type": "string"
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "approveAction721",
+      "name": "ERC-721 NFT Approve",
+      "display": {
+        "label": "ERC-721 NFT Approve",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approve(address to, uint256 tokenId)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "balanceOfAction721",
+      "name": "ERC-721 NFT Get Balance",
+      "display": {
+        "label": "ERC-721 NFT Get Balance",
+        "description": "Get the token balance of a particular owner.",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address owner) returns uint256",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter the owner's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "ownerOfAction",
+      "name": "ERC-721 NFT Get Owner",
+      "display": {
+        "label": "ERC-721 NFT Get Owner",
+        "description": "Get the owner of a token ID",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function ownerOf(uint256 tokenId) returns address",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "safeTransferFromAction",
+      "name": "ERC-721 NFT Safe Transfer From",
+      "display": {
+        "label": "ERC-721 NFT Safe Transfer From",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function safeTransferFrom(address from, address to, uint256 tokenId)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "from",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter sender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "safeTransferFromWithDataAction",
+      "name": "ERC-721 NFT Safe Transfer From ",
+      "display": {
+        "label": "ERC-721 NFT Safe Transfer From (With Data)",
+        "description": "(With Data)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function safeTransferFrom(address from, address to, uint256 tokenId, bytes data)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "from",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter sender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "setApprovalForAllAction",
+      "name": "ERC-721 NFT Set Approval For All",
+      "display": {
+        "label": "ERC-721 NFT Set Approval For All",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setApprovalForAll(address operator, bool approved)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter operator's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "transferFromAction721",
+      "name": "ERC-721 NFT Transfer From",
+      "display": {
+        "label": "ERC-721 NFT Transfer From",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferFrom(address from, address to, uint256 tokenId)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eip155:137",
+            "helpText": "",
+            "computed": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "placeholder": "Enter ERC-721 NFT contract address",
+            "type": "string",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "from",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter sender's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "Enter recipient's blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "tokenId",
+            "label": "Token ID",
+            "type": "string",
+            "placeholder": "Enter the token ID",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVNSURBVHgB7VhdbBRVFD7nTrulErWEmNDulj958EEFEyTq05Kw3a28QJRoVKRVfEEEAaGtsrt3dguN/IhGSoiJUl54MCT6gGl3IdoQjT8xvEliBCl2d6FiTNNa22137vFMYWF3dtrutlN84Ut2Z+bMPXe+OXPud84MwD3MDFjMIOm7UaNhulEBlZPIdMiuJT1wlzApwaY1lx+cKyrfAqTdfPjALQdSIA6otHFU7/Yk4P8iqPtS61HQB7y7eIIhPaBID531dMAsooBgxJ9YDgRHAHE1FAFE+BYgvTnYtfRXmAXcJii9V6rAVaYLFFv4sAxKBAGc0MZQ3/t1zVVwEIKnRj2QfF1UlF9mctsKyBH0Iyo5ZIxUKRRL2LDfbiK+00ZVTucj/mtbwUFgxJ86zBfdaX9R1W4o2i/PLkzl2mXg2mJBdIz96m39CHcG4zVHwBmCyX94OzefGHVnBLTonZ4fJnPW6xKbEFGCdSERXAnF3UvBAQgrObYcCMY8q6ciZyIc95xUaXiSgH7KO4HF6WuxBHMmRqWM4cNQAmS3+y9C3AWzhHyCSg3I+LI/oWSIogW7bW3/vJb63x4qdnzJcjIVOH/HCPBzq136e5chiKNjmSF/JdzHepvsUDiqT1U2HSXIiXcOQXsvGKu+nZOmvmL5nGYBaivl53uDANdzkbpUe8KVin5yZuW/dnMKcAIjI/1IsD4Yc/v25pCL+HtfEq7yiyhUE1kXowmC+1mTmj1j1b9EfIkGu6lNmaE7DtQfinvmwQwRCfQ9jWTs59XtLcWPy+bPhqa9IL9a8HvWVmYZ4TIriym1MA3IwJXFGlS0EmVetpuAZ/5OKDhrAFUJxHVg0U8iWCkyxmXdlzxB2mjEzM/8CDIUqtWyq7YbSiE2XscrdgmgrZyIVQXEgP7m6rJbPVPTISUq0xb2JjyigkJs38yBKdBNtlw1BK3DSF1CWQb0chsVKraN0v2JjazLZlmbb3M6zXO3q5F0VHYv6bfzb+OyOaaMKI97BQpuDLsxWpf8nkP/lI3vpDIQ8fctRzA+nDjP6JwSxnbZuegiFAEZSDQIxTea/wR6cJ8vscIQ+AXYN6aDTOBgOOZuzebluGy4KvYgUovdhXjQJe65t4XjtZ1QIqKB1A6i8Sb5DkHz38wHzSXe5AxssssHcyATPMWRrkSi5/m41oZZP//aBlBrPxRfMATTQLS+72FSmUsFBLMw2yiNKMJR2wjFgsxUgZPDQuxp66y+ATOAXHt9qbmKc0w9eUItu6p7grGaV/ldZAOMR20qbnCeV5g3FHM35pKTgd5nwSHYlrpgp+c0b07r/t7tvEJ38ONdZBlylbXiXRlzn8o17qu7/qiBxkFm7uXDSnAAk5a6cKz2I4Wal3c7OF4ZM88Ila7Soyus5KL+5CEm9yPvBsBBTNksmI+dN423fhOCU5EXGc6BmSAzJqwxc6ZZKMSccH3CAyVCQ+1xq222CIJGeHDDBtKKHd9al6zlWrzPaneMIC+mwTwDwYuPDaQutfpTU0oWV7PdCukCOz2SPwcNOvZyw41nm9nb2Z0zG1kDR9+wlk25pteLAt/n2rBqAr9mxwiaYFlq4o76bb71BXbnFcFnvCo/JaVcSsPXOOr20TWrEhotodjC444SNGFWI1SG5KhsgtLB8iqOqfRIMNv9OE4wi8ia5BOo0XGug6uK86BvVDm+I8+4L+RaZ41gFuNtFGEYJvmMx49+h4y7v7Q7OesETUjfHzUoyrawZDSzoN+UHvOjlEaHMlD5sd45f2Ai37tCMIub+Zlp4K9owwYNn5jeR4J7KA3/ASreGp/5do/gAAAAAElFTkSuQmCC",
+  "type": "web3",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Public"
+}

@@ -30,4 +30,3 @@ for (const path of ["web2", "web3"]) {
 }
 fs.writeFileSync("dist/_index.json", JSON.stringify(index));
 
-
