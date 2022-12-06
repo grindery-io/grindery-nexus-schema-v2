@@ -335,7 +335,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+            "NFTAddress": "The NFT Address"
+        }
       }
     }
   ],
