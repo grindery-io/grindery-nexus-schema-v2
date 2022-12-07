@@ -7,25 +7,17 @@
   "triggers": [
     {
       "key": "nftmint",
-      "name": "NFT mint",
+      "name": "NFT Mint",
       "display": {
-        "label": "NFT mint",
-        "description": "NFT mint",
+        "label": "NFT Mint",
+        "description": "NFT Mint",
         "instructions": "",
         "featured": false
       },
       "operation": {
-        "type": "blockchain:call",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "type": "blockchain:event",
+        "signature": "event mintNFT(address recipient, string tokenURI) returns (uint256)",
         "inputFields": [
-          {
-            "key": "_grinderyChain",
-            "type": "string",
-            "computed": true,
-            "default": "eip155:5"
-          },
           {
             "key": "recipient",
             "label": "Recipient Address",
@@ -38,10 +30,32 @@
             "computed": false
           },
           {
-            "key": "tokenURI",
-            "label": "tokenURI",
+            "key": "name",
+            "label": "Name",
             "type": "string",
-            "placeholder": "Enter token URI",
+            "placeholder": "Enter NFT Name",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "description",
+            "label": "Description",
+            "type": "string",
+            "placeholder": "Description",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "image",
+            "label": "Image",
+            "type": "string",
+            "placeholder": "NFT Image",
             "list": false,
             "helpText": "",
             "default": "",
@@ -51,18 +65,163 @@
         ],
         "outputFields": [
           {
-            "key": "NFTAddress",
-            "label": "NFT Address",
+            "key": "recipient",
+            "label": "Recipient Address",
+            "type": "address",
+            "placeholder": "Enter Recipient Address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "name",
+            "label": "Name",
             "type": "string",
-            "placeholder": "NFT Address",
-            "list": false
+            "placeholder": "Enter NFT Name",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "description",
+            "label": "Description",
+            "type": "string",
+            "placeholder": "Description",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "image",
+            "label": "Image",
+            "type": "string",
+            "placeholder": "NFT Image",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
           }
         ],
         "sample": {}
       }
     }
   ],
-  "actions": [],
+  "actions": [
+    {
+      "key": "evmMint",
+      "name": "EVM Mint",
+      "display": {
+        "label": "EVM Mint",
+        "description": "Mint NFT"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function mintNFT(address recipient, string tokenURI)",
+        "inputFields": [
+          {
+            "key": "recipient",
+            "label": "Recipient Address",
+            "type": "address",
+            "placeholder": "Enter Recipient Address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "name",
+            "label": "Name",
+            "type": "string",
+            "placeholder": "Enter NFT Name",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "description",
+            "label": "Description",
+            "type": "string",
+            "placeholder": "Description",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "image",
+            "label": "Image",
+            "type": "string",
+            "placeholder": "NFT Image",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "recipient",
+            "label": "Recipient Address",
+            "type": "address",
+            "placeholder": "Enter Recipient Address",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "name",
+            "label": "Name",
+            "type": "string",
+            "placeholder": "Enter NFT Name",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "description",
+            "label": "Description",
+            "type": "string",
+            "placeholder": "Description",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          },
+          {
+            "key": "image",
+            "label": "Image",
+            "type": "string",
+            "placeholder": "NFT Image",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAL4SURBVHgBxVdBTxpBFH7YHuhJTHrgBia9w63e0PRQb/gLQNO7qL0r+gOU9NBokwp4b5TeaNLo9lwj3CRpI9xq0kS4cWgyfd8Ls1lXZhlkDV8y2WFnZ973vjfz5hEhIkVTxAxNGaESSKXT9Pvmhi6vrii/ukqxWMxqngqrfT8/V/+UUn/v7uTJZNRxuaySyWTQvPAIwDBIoM8KuITQAoiEY5zlF0P7pdK995nFRXVcqbgkJiYALzi2D96vb2yIkezKyljzIpqFCdhI7AVls1l5drtdabwgtdttajab8szn87IJX87NybgtnnErmga3d3bo4+Eh/bm9pXanQ61Wi77V61Sr1Whrc5O+8hPG4vG47Hrg9cICRSIR6g2IjoJRAXj4k48TFtKeOhcX0ocqGE9w6/BvGFovFOikWnWJz/I3r+bnR5IwKgA5X0Sj9GZpiX44DvX7fQkBpOZ4i9e9Xo9a19eUY+/h+dvlZYrynDqrhP6no6ORBJ4HDUJ2ebKXaLWzM/Eci4Ig+jkmlMlk6N3amvQRFhCFMjYwEsDifkD6z+WyqIJwOIP3MArjAMJCSglhGxhTMWLo9+LL6akbZy9g7D1vyjSrAuOO45AtjAT8eXz/4EBUgefDABI4GXwEJFS2CNwDegNhV2Pj4Tf6Xni9heFxjAcSgALa4Hax6L7LDc47sLe7S5MiMATSOLPBK0jfbDTcceyPvQGxSTAyBFssvQb2wC++7wGJdwgYqyDB+QZOKpWxYx0KAZx1kd4y9ja5wBgCfwqF/FAAGc+78Oxgr/hhW47NBBHwZkOdXqssv5/YkxHwAvIjBfuRGJKyx4GRAK5hvTi81IWHH+lUauh8fZE9moCEIJGQPuL8oVR68A1uRJMCeu6jCSDpwABij/4w7wueHOGFzqK2MBagKK35BpT6Hk8UnqhyUWDy5eSW3PgO36PoxPhloyHfkkWRO7Io1dBqoPjAnsBvDTdF802IlI1w2dYD1gSGwXtMu5ZFaKgEwsDU/x3/B4oyJBfnDg9WAAAAAElFTkSuQmCC",
   "description": "",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
