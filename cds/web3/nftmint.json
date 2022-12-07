@@ -7,10 +7,10 @@
   "triggers": [
     {
       "key": "nftmint",
-      "name": "NFT mint",
+      "name": "NFT Mint",
       "display": {
-        "label": "NFT mint",
-        "description": "NFT mint",
+        "label": "NFT Mint",
+        "description": "NFT Mint",
         "instructions": "",
         "featured": false
       },
