@@ -16,9 +16,9 @@
       "operation": {
         "type": "polling",
         "operation": {
-          "url": "ws://gsheet-connector:3000/ws/"
+          "url": "ws://gsheet-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://gsheet-connector:3000/file-list/",
+        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/file-list/",
         "inputFields": []
       }
     }
@@ -36,9 +36,9 @@
       "operation": {
         "type": "api",
         "operation": {
-          "url": "ws://gsheet-connector:3000/ws/"
+          "url": "ws://gsheet-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://gsheet-connector:3000/getFirstRow/",
+        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/getFirstRow/",
         "inputFields": []
       }
     }

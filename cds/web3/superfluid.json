@@ -1,0 +1,177 @@
+{
+    "key": "superfluid",
+    "name": "Superfluid",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "type": "web3",
+    "triggers": [
+      {
+        "key": "FlowUpdatedTrigger",
+        "name": "Incoming stream",
+        "display": {
+          "label": "Incoming stream",
+          "description": "Incoming stream"
+        },
+        "operation": {
+          "type": "blockchain:event",
+          "signature": "event FlowUpdated(address indexed token, address indexed sender, address indexed receiver, int96 flowRate, int256 totalSenderFlowRate, int256 totalReceiverFlowRate, bytes userData)",
+          "inputFields": [
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter sender address",
+              "list": false
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter receiver address",
+              "list": false
+            },
+            {
+              "key": "flowRate",
+              "label": "Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalSenderFlowRate",
+              "label": "Total Sender Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalReceiverFlowRate",
+              "label": "Total Receiver Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "userData",
+              "label": "User Data",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter a blockchain address",
+              "list": false
+            },
+            {
+              "key": "sender",
+              "label": "Sender",
+              "type": "address",
+              "placeholder": "Enter a blockchain address",
+              "list": false
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter a blockchain address",
+              "list": false
+            },
+            {
+              "key": "flowRate",
+              "label": "Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalSenderFlowRate",
+              "label": "Total Sender Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "totalReceiverFlowRate",
+              "label": "Total Receiver Flow Rate",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "userData",
+              "label": "User Data",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            }
+          ],
+          "sample": {}
+        }
+      }
+    ],
+    "actions": [
+      {
+        "key": "createFlowAction",
+        "name": "Create a new stream",
+        "display": {
+          "label": "Create a new stream",
+          "description": "Create a new stream"
+        },
+        "operation": {
+          "type": "blockchain:call",
+          "signature": "function createFlow(address token, address receiver, int96 flowRate, bytes ctx) returns bytes",
+          "inputFields": [
+            {
+              "key": "token",
+              "label": "Token",
+              "type": "address",
+              "placeholder": "Enter address of the token contract",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "receiver",
+              "label": "Receiver",
+              "type": "address",
+              "placeholder": "Enter receiver address",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "flowRate",
+              "label": "Flow Rate",
+              "type": "string",
+              "placeholder": "Enter amount of token flowed per second (in wei)",
+              "list": false,
+              "required": true
+            },
+            {
+              "key": "ctx",
+              "label": "Ctx",
+              "type": "string",
+              "placeholder": "",
+              "default": "0x",
+              "computed": true,
+              "list": false,
+              "required": true
+            }
+          ],
+          "outputFields": [],
+          "sample": {}
+        }
+      }
+    ],
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVRIie3Vz6qqQBzAcaNNCxs1Tc1Rm3yHoE1QIi61sseJFvkOFXHNV4mobbugpEX05yVOqReKE3HNe05dWxy437Xjh58zjFj45rD/wM/4REEQfHyvIAieA3zfD8Nwt9vpul6r1VRVrcekqmq1Wl0sFrdVTwCe5/E8T5IkTdO5mGiazmaz0+k0DMPz+fwcsNlsSqWSIAiSJIkxSZLEcdxsNnsRKBaLPM9DCIWYIIT5fP51oBSZ4A/snwDP81iWBQBQFEVeIgiCYZh740UguBy7w+FgWZZhGM1ms9FomKZpWValUuE47ma8CDzsun48HuM4LklSMkBw1+l0CsPQcZwkgbdPkCTg+/45UhgBXNclCAIhJF2SZZnn+fl8/txV8bArMBwOMQwjSTJ7CQCQyWQmk8nXE7iu2+l0bNvu9Xq2bXe73cFgcL/menaXy2W/33cc59dno9HoeDzeHogFNE1LpVIEQeA4DgBIp9Plcvl6cqK38Zc9AFqtFsMwCCFZlhFCLMtqmhYFgiCIbtW3/gemaRIEIYqiIAiiKOZyuXq9nuQEbwcMwwAAQAgLhQKEkKKoWq2WJNBut1mWVRQFIaQoCs/zuq4nCez3+9Vq5X22Xq+32+0Lr44Fkg37+8V5K0kg2bAfD/wGXfYRQJG3wfYAAAAASUVORK5CYII="
+  }
