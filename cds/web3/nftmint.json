@@ -17,13 +17,22 @@
         "signature": "function mintNFT(address recipient, string tokenURI)",
         "inputFields": [
           {
+            "key": "_grinderyContractAddress",
+            "label": "Contract Address",
+            "type": "string",
+            "placeholder": "Enter Contract address",
+            "required": true,
+            "list": false,
+            "default": "0x2d28c8967B240f10e478Da41cD4f749b9fc0d0c0"
+          },
+          {
             "key": "recipient",
             "label": "Recipient Address",
             "type": "address",
             "placeholder": "Enter Recipient Address",
             "list": false,
             "helpText": "",
-            "default": "",
+            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1",
             "required": true,
             "computed": false
           },
@@ -34,7 +43,7 @@
             "placeholder": "Enter NFT Name",
             "list": false,
             "helpText": "",
-            "default": "",
+            "default": "test name",
             "required": true,
             "computed": false
           },
@@ -45,7 +54,7 @@
             "placeholder": "Description",
             "list": false,
             "helpText": "",
-            "default": "",
+            "default": "test description",
             "required": true,
             "computed": false
           },
@@ -56,7 +65,7 @@
             "placeholder": "NFT Image",
             "list": false,
             "helpText": "",
-            "default": "",
+            "default": "https://ipfs.io/ipfs/QmTgqnhFBMkfT9s8PHKcdXBn1f5bG3Q5hmBaR4U6hoTvb1?filename=Chainlink_Elf.png",
             "required": true,
             "computed": false
           }
