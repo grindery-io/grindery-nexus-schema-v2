@@ -1,0 +1,86 @@
+{
+    "key": "parcel",
+    "name": "Parcel",
+    "version": "1.0.0",
+    "platformVersion": "1.0.0",
+    "type": "web3",
+    "triggers": [
+        {
+            "key": "newDeposit",
+            "name": "New Deposit",
+            "display": {
+                "label": "New Deposit",
+                "description": "New Deposit"
+            },
+            "operation": {
+                "type": "polling",
+                "operation": {
+                    "url": "wss://www.example.com"
+                },
+                "inputFields": [
+                    {
+                        "key": "_grinderyChain",
+                        "label": "Chain",
+                        "type": "string",
+                        "placeholder": "",
+                        "list": false
+                    },
+                    {
+                        "key": "token",
+                        "label": "Token",
+                        "type": "address",
+                        "placeholder": "Enter address of the token contract",
+                        "list": false
+                    },
+                    {
+                        "key": "sender",
+                        "label": "Sender",
+                        "type": "address",
+                        "placeholder": "Enter sender address",
+                        "list": false
+                    },
+                    {
+                        "key": "amount",
+                        "label": "Amount",
+                        "type": "string",
+                        "placeholder": "Amount in wei",
+                        "list": false
+                    }
+                ],
+                "outputFields": [
+                    {
+                        "key": "_grinderyChain",
+                        "label": "Chain",
+                        "type": "string",
+                        "placeholder": "",
+                        "list": false
+                    },
+                    {
+                        "key": "token",
+                        "label": "Token",
+                        "type": "address",
+                        "placeholder": "Enter address of the token contract",
+                        "list": false
+                    },
+                    {
+                        "key": "sender",
+                        "label": "Sender",
+                        "type": "address",
+                        "placeholder": "Enter sender address",
+                        "list": false
+                    },
+                    {
+                        "key": "amount",
+                        "label": "Amount",
+                        "type": "string",
+                        "placeholder": "Amount in wei",
+                        "list": false
+                    }
+                ],
+                "sample": {}
+            }
+        }
+    ],
+    "actions": [],
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAAAAAB3tzPbAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAANnSURBVHja7ZxRcdxAEEQF4SAcBEM4CIZwEMwgyyBmkDCIGQhCxOAgGILylYpjS7M9sztSb1X3/+re+5DvtrvK06QoiqIoiqIoiqIoiqIoiqIoiqJ8zO1+G5r/27quvy5j86/r78vY/OMa/OUf1eAf/5gGH/lHNPiffzyDz/yjGXzlH8tgi38kg23+cQz2+Ecx2Ocfw8DiH8HA5uc3qPGzG9T5uQ0QfmYDjJ/XAOVnNcD5OQ08/IwGPn4+Ay8/m4Gfn8vA4J9HMDD4y1T4DUz+id+gwk9vUOUnNwD4qQ0gfmIDkJ/WAOYnNXDwUxq4+AkNnPx0Bm5+MoMAP5VBiJ/IIMhPYxDmJzFo4KcwaOInMGjkP93A4P8OPuL1TAOrf3h/gh5xWU7sKuz+BDIw+bMNav0PYFDhzzWo91dVgyp/pgHSv1UMAP48A6w/NA0g/iwDtP80DED+HAO8v901gPkzDDz9846Bg7+/ga8/3zRw8fc28Pb/GwZO/r4G/v3ii4Gbv6dBZH/5ZBDg72dg8L8+MAOLP33DMX//XyEDiz99w6ncXxADmz/5hlO9f9UNavypBsD9sWZQ5080gO6/tgHCn2YA3t8tg9uCPSPFAO4fDIP1xA3H0Z9EDNI3HFf/4zdI33Cc/ZXXIH3DcfdvPoP0DSfQH3oM0jecUP+JG6RvOMH+FjVI33Du0f4ZMwhvOGh5PM3h/hwxiG8476jAW7z/rxu0bDiowHPDflEzaNlwfsAvcWnYX2yDlg1ncfwZKuHPnqantf01LI38W09A+c3+Adxwtj5/cX4Vlwz+BoPF/WOoZPCHDZbAz9GSwR80WEIXgpLBHzJYgleyksEfMFjCl+KSwe82WBpqiZLB7zSYm4qh6+3an99hcH0+6h9rOPtz2GDi5KczCOwXVAah/YXIwOJHNxxWfnTD4eWf6A3q/T+3AbJfMBtg+wuvwQXcX1gNUH5WA5yf08DDz2jg4+cz8PKzGfj5uQwi/EwGMX4egyg/jUGYn8TgHuc3DeajBH427ReGwVECpW1/2TV4HPYOP1r49w1eDnuJtwnKYedzDMqB5zMMyqHn+xuUg8/3NiiHn+9rUE4439OgnHK+n0E56Xwvg3La+Q4G8/po+f68vrWdVxRFURRFURRFURRFURRFURRFUU7IH69VdYjG9yRtAAAAAElFTkSuQmCC"
+}

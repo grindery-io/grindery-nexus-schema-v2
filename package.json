@@ -5,7 +5,8 @@
   "main": "build.js",
   "devDependencies": {},
   "scripts": {
-    "build": "([ -d dist ] && rm -r dist || true) && cp -r cds dist && cp dist/*/*.json dist/ && cp -r chains dist && rm -r dist/chains/README.md && git rev-parse HEAD > dist/COMMIT && node build.js"
+    "build": "([ -d dist ] && rm -r dist || true) && cp -r cds dist && cp dist/*/*.json dist/ && cp -r chains dist && rm -r dist/chains/README.md && git rev-parse HEAD > dist/COMMIT && node build.js",
+    "buildlocal": "([ -d dist ] && rm -r dist || true) && cp -r cds dist && cp dist/*/*.json dist/ && cp -r chains dist && rm -r dist/chains/README.md && git rev-parse HEAD > dist/COMMIT && node build.js && cp dist/*.json ../grindery-flow/src/jsonfolder"
   },
   "repository": {
     "type": "git",
