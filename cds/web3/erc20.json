@@ -395,23 +395,31 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function balanceOf(address _owner) view returns uint256",
+        "signature": "getBalance",
         "inputFields": [
           {
-            "key": "_owner",
-            "label": "Owner",
+            "key": "_grinderyContractAddress",
+            "label": "Contract Address",
+            "type": "string",
+            "placeholder": "Enter Contract address",
+            "computed": true,
+            "default": "0x"
+          },
+          {
+            "key": "address",
+            "label": "address",
             "type": "address",
             "placeholder": "Enter owner's blockchain address",
             "list": false,
             "required": true,
             "helpText": "",
-            "default": "",
+            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1",
             "computed": false
           }
         ],
         "outputFields": [
           {
-            "key": "returnValue",
+            "key": "balance",
             "label": "Return value of Balance Of",
             "type": "string"
           }
