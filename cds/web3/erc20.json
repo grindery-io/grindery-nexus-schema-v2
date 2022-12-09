@@ -396,6 +396,9 @@
       "operation": {
         "type": "blockchain:call",
         "signature": "getBalance",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
@@ -408,25 +411,23 @@
           {
             "key": "address",
             "label": "address",
-            "type": "address",
-            "placeholder": "Enter owner's blockchain address",
-            "list": false,
+            "type": "string",
+            "placeholder": "Enter an address",
             "required": true,
-            "helpText": "",
-            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1",
-            "computed": false
+            "list": false,
+            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1"
           }
         ],
         "outputFields": [
           {
             "key": "balance",
-            "label": "Return value of Balance Of",
-            "type": "string"
+            "label": "balance",
+            "type": "string",
+            "placeholder": "balance",
+            "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
