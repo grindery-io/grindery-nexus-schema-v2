@@ -385,17 +385,64 @@
       }
     },
     {
-      "key": "balanceOfAction",
-      "name": "Balance Of (View Function)",
+      "key": "balanceOfActionERC20",
+      "name": "Balance Of ERC20 (View Function)",
       "display": {
-        "label": "Balance Of (View Function)",
-        "description": "Balance Of (View Function)",
+        "label": "Balance Of ERC20 (View Function)",
+        "description": "Balance Of ERC20 (View Function)",
         "instructions": "",
         "featured": false
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "getBalance",
+        "signature": "getBalanceERC20Token",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+          },
+          {
+            "key": "address",
+            "label": "Token holder address",
+            "type": "string",
+            "placeholder": "Enter a token holder address",
+            "required": true,
+            "list": false,
+            "default": "0xaf0b0000f0210d0f421f0009c72406703b50506b"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "balance",
+            "label": "balance",
+            "type": "string",
+            "placeholder": "balance",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "balanceOfActionNative",
+      "name": "Balance Of Native (View Function)",
+      "display": {
+        "label": "Balance Of Native (View Function)",
+        "description": "Balance Of Native (View Function)",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "getBalanceNative",
         "operation": {
           "url": "ws://grindery-nexus-connector-web3:3000/"
         },
@@ -404,15 +451,15 @@
             "key": "_grinderyContractAddress",
             "label": "Contract Address",
             "type": "string",
-            "placeholder": "Enter Contract address",
+            "placeholder": "",
             "computed": true,
             "default": "0x"
           },
           {
             "key": "address",
-            "label": "address",
+            "label": "Holder address",
             "type": "string",
-            "placeholder": "Enter an address",
+            "placeholder": "Enter a holder address",
             "required": true,
             "list": false,
             "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1"
@@ -431,22 +478,45 @@
       }
     },
     {
-      "key": "symbolAction",
-      "name": "Symbol (View Function)",
+      "key": "InformationERC20TokenAction",
+      "name": "Information of ERC20 token (View Function)",
       "display": {
-        "label": "Symbol (View Function)",
-        "description": "Symbol (View Function)",
+        "label": "Information of ERC20 token (View Function)",
+        "description": "Information of ERC20 token (View Function)",
         "instructions": "",
         "featured": false
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function symbol() view returns string",
-        "inputFields": [],
+        "signature": "getInformationERC20Token",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          }
+        ],
         "outputFields": [
           {
-            "key": "returnValue",
-            "label": "Return value of Symbol",
+            "key": "symbol",
+            "label": "symbol",
+            "type": "string"
+          },
+          {
+            "key": "decimals",
+            "label": "decimals",
+            "type": "string"
+          },
+          {
+            "key": "name",
+            "label": "name",
             "type": "string"
           }
         ],
