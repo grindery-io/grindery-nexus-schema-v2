@@ -14,12 +14,15 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "mintNFT(address recipient, string tokenURI)",
+        "signature": "mintNFT(address recipient, string tokenURI) returns (uint256)",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
             "label": "Contract Address",
-            "type": "string",
+            "type": "address",
             "placeholder": "Enter Contract address",
             "required": true,
             "list": false,
@@ -72,43 +75,10 @@
         ],
         "outputFields": [
           {
-            "key": "recipient",
-            "label": "Recipient Address",
-            "type": "address",
-            "placeholder": "Enter Recipient Address",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          },
-          {
-            "key": "name",
-            "label": "Name",
+            "key": "transactionHash",
+            "label": "Transaction hash",
             "type": "string",
-            "placeholder": "Enter NFT Name",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          },
-          {
-            "key": "description",
-            "label": "Description",
-            "type": "string",
-            "placeholder": "Description",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          },
-          {
-            "key": "image",
-            "label": "Image",
-            "type": "string",
-            "placeholder": "NFT Image",
+            "placeholder": "Transaction hash",
             "list": false,
             "helpText": "",
             "default": "",
