@@ -22,7 +22,7 @@
           {
             "key": "_grinderyContractAddress",
             "label": "Contract Address",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter Contract address",
             "required": true,
             "list": false,
@@ -31,7 +31,7 @@
           {
             "key": "recipient",
             "label": "Recipient Address",
-            "type": "address",
+            "type": "string",
             "placeholder": "Enter Recipient Address",
             "list": false,
             "helpText": "",
