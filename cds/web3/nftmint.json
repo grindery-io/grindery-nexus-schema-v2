@@ -14,7 +14,7 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function mintNFT(address recipient, string tokenURI)",
+        "signature": "mintNFT(address recipient, string tokenURI)",
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
