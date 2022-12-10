@@ -279,8 +279,7 @@
             "label": "Contract Address",
             "type": "string",
             "placeholder": "Enter Contract address",
-            "required": true,
-            "list": false,
+            "computed": true,
             "default": "nft.grindery.near"
           },
           {
@@ -328,11 +327,15 @@
         ],
         "outputFields": [
           {
-            "key": "NFTAddress",
-            "label": "NFT Address",
+            "key": "transactionHash",
+            "label": "Transaction hash",
             "type": "string",
-            "placeholder": "NFT Address",
-            "list": false
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
           }
         ],
         "sample": {}
