@@ -188,8 +188,20 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function approve(address _spender, uint256 _value) returns bool",
+        "signature": "function approve(address _spender, uint256 _value) returns (bool)",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
         "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          },
           {
             "key": "_spender",
             "label": "Spender",
@@ -213,7 +225,19 @@
             "computed": false
           }
         ],
-        "outputFields": [],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction hash",
+            "type": "string",
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
         "sample": {
           
         }
