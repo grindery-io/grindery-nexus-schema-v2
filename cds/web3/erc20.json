@@ -80,6 +80,11 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "_grinderyChain",
+            "label": "Chain ID (in eip155 format)",
+            "type": "string"
           }
         ],
         "sample": {
@@ -153,6 +158,18 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_grinderyChain",
+            "label": "Chain ID (in eip155 format)",
+            "type": "string"
           }
         ],
         "sample": {
