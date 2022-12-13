@@ -23,7 +23,7 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "algorand:mainnet"
+            "default": "algorand:testnet"
           },
           {
             "key": "from",
@@ -93,7 +93,7 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "algorand:mainnet"
+            "default": "algorand:testnet"
           },
           {
             "key": "_grinderyContractAddress",
@@ -151,6 +151,88 @@
         "sample": {
           
         }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "NFTMint",
+      "name": "Mint NFT",
+      "display": {
+        "label": "Mint NFT",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "NFTMint",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract Address",
+            "type": "string",
+            "placeholder": "Enter Contract address",
+            "default": "WCS4RIVFBELVNE6ZYVQB3KIKO54TLGL7JFBMZBX46UMAX5UABVKALRZPIU"
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "string",
+            "placeholder": "Enter a Algorand wallet address",
+            "required": true,
+            "list": false,
+            "default": "G53BTEF3OSZXDBHLDKXNE5Q4GYQRJ7S3G3D3QEFAD2JDNCTJ55CAAZK63U"
+          },
+          {
+            "key": "unitName",
+            "label": "Title",
+            "type": "string",
+            "placeholder": "Enter a title",
+            "required": true,
+            "list": false,
+            "default": "ALICEART"
+          },
+          {
+            "key": "assetName",
+            "label": "Asset Name",
+            "type": "string",
+            "placeholder": "Enter a description",
+            "required": true,
+            "list": false,
+            "default": "NFT"
+          },
+          {
+            "key": "image_url",
+            "label": "Media",
+            "type": "string",
+            "placeholder": "Enter a link to a media",
+            "required": true,
+            "list": false,
+            "default": "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2021/12/nft-singes-1024x576.jpg?webp=1&key=681596ec"
+          },
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "computed": true,
+            "default": "algorand:testnet"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "TxHash",
+            "label": "Transaction hash",
+            "type": "string",
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "sample": {}
       }
     }
   ],

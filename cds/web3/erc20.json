@@ -180,31 +180,6 @@
   ],
   "actions": [
     {
-      "key": "nameAction",
-      "name": "Name (View Function)",
-      "display": {
-        "label": "Name (View Function)",
-        "description": "Name (View Function)",
-        "instructions": "",
-        "featured": false
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "function name() view returns string",
-        "inputFields": [],
-        "outputFields": [
-          {
-            "key": "returnValue",
-            "label": "Return value of Name",
-            "type": "string"
-          }
-        ],
-        "sample": {
-          
-        }
-      }
-    },
-    {
       "key": "approveAction",
       "name": "Approve",
       "display": {
@@ -330,31 +305,6 @@
       }
     },
     {
-      "key": "decimalsAction",
-      "name": "Decimals (View Function)",
-      "display": {
-        "label": "Decimals (View Function)",
-        "description": "Decimals (View Function)",
-        "instructions": "",
-        "featured": false
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "function decimals() view returns uint8",
-        "inputFields": [],
-        "outputFields": [
-          {
-            "key": "returnValue",
-            "label": "Return value of Decimals",
-            "type": "number"
-          }
-        ],
-        "sample": {
-          
-        }
-      }
-    },
-    {
       "key": "decreaseApprovalAction",
       "name": "Decrease Approval",
       "display": {
@@ -403,10 +353,10 @@
     },
     {
       "key": "balanceOfActionERC20",
-      "name": "Balance Of ERC20 (View Function)",
+      "name": "Balance Of ERC20",
       "display": {
-        "label": "Balance Of ERC20 (View Function)",
-        "description": "Balance Of ERC20 (View Function)",
+        "label": "Balance Of ERC20",
+        "description": "Balance Of ERC20",
         "instructions": "",
         "featured": false
       },
@@ -449,57 +399,11 @@
       }
     },
     {
-      "key": "balanceOfActionNative",
-      "name": "Balance Of Native (View Function)",
-      "display": {
-        "label": "Balance Of Native (View Function)",
-        "description": "Balance Of Native (View Function)",
-        "instructions": "",
-        "featured": false
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "getBalanceNative",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
-        "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract Address",
-            "type": "string",
-            "placeholder": "",
-            "computed": true,
-            "default": "0x"
-          },
-          {
-            "key": "address",
-            "label": "Holder address",
-            "type": "string",
-            "placeholder": "Enter a holder address",
-            "required": true,
-            "list": false,
-            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1"
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "balance",
-            "label": "balance",
-            "type": "string",
-            "placeholder": "balance",
-            "list": false
-          }
-        ],
-        "sample": {}
-      }
-    },
-    {
       "key": "InformationERC20TokenAction",
-      "name": "Information of ERC20 token (View Function)",
+      "name": "Information of ERC20 token",
       "display": {
-        "label": "Information of ERC20 token (View Function)",
-        "description": "Information of ERC20 token (View Function)",
+        "label": "Information of ERC20 token",
+        "description": "Information of ERC20 token",
         "instructions": "",
         "featured": false
       },
