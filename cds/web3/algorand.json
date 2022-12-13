@@ -164,6 +164,7 @@
       },
       "operation": {
         "type": "blockchain:call",
+        "signature": "NFTMint",
         "operation": {
           "url": "ws://grindery-nexus-connector-web3:3000/"
         },
