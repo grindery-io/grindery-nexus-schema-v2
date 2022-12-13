@@ -221,20 +221,33 @@
     },
     {
       "key": "totalSupplyAction",
-      "name": "Total Supply (View Function)",
+      "name": "Total Supply",
       "display": {
-        "label": "Total Supply (View Function)",
-        "description": "Total Supply (View Function)",
+        "label": "Total Supply",
+        "description": "Total Supply",
         "instructions": "",
         "featured": false
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function totalSupply() view returns uint256",
-        "inputFields": [],
+        "signature": "getTotalSupplyERC20Token",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          }
+        ],
         "outputFields": [
           {
-            "key": "returnValue",
+            "key": "totalSupply",
             "label": "Return value of Total Supply",
             "type": "string"
           }
