@@ -26,7 +26,7 @@
             "placeholder": "Enter Contract address",
             "required": true,
             "list": false,
-            "default": "0x2d28c8967B240f10e478Da41cD4f749b9fc0d0c0"
+            "default": "0xDa378d4D5D0c8Bf62c0bdFd44fF8E00574B59Fe7"
           },
           {
             "key": "recipient",
