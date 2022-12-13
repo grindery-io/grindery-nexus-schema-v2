@@ -359,16 +359,28 @@
       }
     },
     {
-      "key": "decreaseApprovalAction",
-      "name": "Decrease Approval",
+      "key": "decreaseAllowanceAction",
+      "name": "Decrease Allowance",
       "display": {
-        "label": "Decrease Approval",
-        "description": "Decrease Approval"
+        "label": "Decrease Allowance",
+        "description": "Decrease Allowance"
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function decreaseApproval(address _spender, uint256 _subtractedValue) returns bool",
+        "signature": "function decreaseAllowance(address _spender, uint256 _subtractedValue) returns (bool)",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
         "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+          },
           {
             "key": "_spender",
             "label": "Spender",
@@ -390,16 +402,21 @@
             "helpText": "",
             "default": "",
             "computed": false
-          },
-          {
-            "key": "_grinderyUnitConversion__subtractedValue",
-            "type": "string",
-            "default": "ether->wei",
-            "list": false,
-            "computed": true
           }
         ],
-        "outputFields": [],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction hash",
+            "type": "string",
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
         "sample": {
           
         }
