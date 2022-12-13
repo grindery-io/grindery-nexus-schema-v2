@@ -23,15 +23,15 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "algorand:testnet"
+            "default": "algorand:mainnet"
           },
           {
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's Algorand wallet address",
+            "placeholder": "L42...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter sender's Algorand address",
             "default": "",
             "required": false,
             "computed": false
@@ -40,9 +40,9 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's Algorand wallet address",
+            "placeholder": "FGU...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's Algorand address",
             "default": "",
             "required": false,
             "computed": false
@@ -72,7 +72,9 @@
           }
         ],
         "sample": {
-          
+          "from": "ETF5U5H7KVK662MYXPP7DWWHO3SPI4A6UQOX6E4XDFDLZXDWLO3NVPSKZU",
+          "to": "ZW3ISEHZUHPO7OZGMKLUIIMKVICOUDRCERI454I3DB2BH52HGLSO67W754",
+          "amount": "239"
         }
       }
     },
@@ -93,22 +95,25 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "algorand:testnet"
+            "default": "algorand:mainnet"
           },
           {
             "key": "_grinderyContractAddress",
             "type": "string",
             "label": "Token ID",
-            "placeholder": "Enter Token ID (0x0 for any)",
-            "default": ""
+            "placeholder": "Enter Token ID",
+            "default": "",
+            "helpText": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "snd",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's Algorand wallet address",
+            "placeholder": "ETF...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter sender's Algorand address",
             "default": "",
             "required": false,
             "computed": false
@@ -117,9 +122,9 @@
             "key": "arcv",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's Algorand wallet address",
+            "placeholder": "ZW3...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's Algorand address",
             "default": "",
             "required": false,
             "computed": false
@@ -149,90 +154,10 @@
           }
         ],
         "sample": {
-          
+          "snd": "ETF5U5H7KVK662MYXPP7DWWHO3SPI4A6UQOX6E4XDFDLZXDWLO3NVPSKZU",
+          "arcv": "ZW3ISEHZUHPO7OZGMKLUIIMKVICOUDRCERI454I3DB2BH52HGLSO67W754",
+          "aamt": "105"
         }
-      }
-    }
-  ],
-  "actions": [
-    {
-      "key": "NFTMint",
-      "name": "Mint NFT",
-      "display": {
-        "label": "Mint NFT",
-        "description": ""
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "NFTMint",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
-        "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract Address",
-            "type": "string",
-            "placeholder": "Enter Contract address",
-            "default": "WCS4RIVFBELVNE6ZYVQB3KIKO54TLGL7JFBMZBX46UMAX5UABVKALRZPIU"
-          },
-          {
-            "key": "to",
-            "label": "To",
-            "type": "string",
-            "placeholder": "Enter a Algorand wallet address",
-            "required": true,
-            "list": false,
-            "default": "G53BTEF3OSZXDBHLDKXNE5Q4GYQRJ7S3G3D3QEFAD2JDNCTJ55CAAZK63U"
-          },
-          {
-            "key": "unitName",
-            "label": "Title",
-            "type": "string",
-            "placeholder": "Enter a title",
-            "required": true,
-            "list": false,
-            "default": "ALICEART"
-          },
-          {
-            "key": "assetName",
-            "label": "Asset Name",
-            "type": "string",
-            "placeholder": "Enter a description",
-            "required": true,
-            "list": false,
-            "default": "NFT"
-          },
-          {
-            "key": "image_url",
-            "label": "Media",
-            "type": "string",
-            "placeholder": "Enter a link to a media",
-            "required": true,
-            "list": false,
-            "default": "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2021/12/nft-singes-1024x576.jpg?webp=1&key=681596ec"
-          },
-          {
-            "key": "_grinderyChain",
-            "type": "string",
-            "computed": true,
-            "default": "algorand:testnet"
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "TxHash",
-            "label": "Transaction hash",
-            "type": "string",
-            "placeholder": "Transaction hash",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          }
-        ],
-        "sample": {}
       }
     }
   ],
@@ -241,5 +166,90 @@
   "description": "",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Public"
+  "access": "Workspace",
+  "actions": [
+    {
+      "key": "NFTMint",
+      "name": "Mint NFT",
+      "display": {
+        "label": "Mint NFT",
+        "description": "",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
+      },
+      "operation": {
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "algorand:testnet",
+            "computed": true,
+            "helpText": ""
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract Address",
+            "helpText": "",
+            "default": "WCS4RIVFBELVNE6ZYVQB3KIKO54TLGL7JFBMZBX46UMAX5UABVKALRZPIU",
+            "required": false,
+            "computed": false,
+            "type": "string",
+            "placeholder": "Enter Contract address"
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "helpText": "",
+            "default": "G53BTEF3OSZXDBHLDKXNE5Q4GYQRJ7S3G3D3QEFAD2JDNCTJ55CAAZK63U",
+            "required": true,
+            "computed": false,
+            "type": "string",
+            "placeholder": "Enter a Algorand wallet address"
+          },
+          {
+            "key": "unitName",
+            "label": "Title",
+            "helpText": "Enter a title",
+            "default": "ALICEART",
+            "required": true,
+            "computed": false,
+            "type": "string"
+          },
+          {
+            "key": "assetName",
+            "label": "Asset Name",
+            "helpText": "",
+            "default": "NFT",
+            "required": true,
+            "computed": false,
+            "type": "string",
+            "placeholder": "Enter a description"
+          },
+          {
+            "key": "image_url",
+            "label": "Media",
+            "helpText": "",
+            "default": "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2021/12/nft-singes-1024x576.jpg?webp=1&key=681596ec",
+            "required": true,
+            "computed": false,
+            "type": "url",
+            "placeholder": "Enter a link to a media"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "TxHash",
+            "label": "Transaction hash",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          "TxHash": "0"
+        }
+      }
+    }
+  ]
 }
