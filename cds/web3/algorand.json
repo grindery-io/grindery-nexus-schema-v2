@@ -23,7 +23,7 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "algorand:mainnet"
+            "default": "algorand:testnet"
           },
           {
             "key": "from",
@@ -93,7 +93,7 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "algorand:mainnet"
+            "default": "algorand:testnet"
           },
           {
             "key": "_grinderyContractAddress",
