@@ -526,8 +526,20 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function transfer(address _to, uint256 _value) returns bool",
+        "signature": "function transfer(address _to, uint256 _value) returns (bool)",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
         "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          },
           {
             "key": "_to",
             "label": "Recipient",
@@ -549,32 +561,49 @@
             "helpText": "",
             "default": "",
             "computed": false
-          },
-          {
-            "key": "_grinderyUnitConversion__value",
-            "type": "string",
-            "default": "ether->wei",
-            "list": false,
-            "computed": true
           }
         ],
-        "outputFields": [],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction hash",
+            "type": "string",
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
         "sample": {
           
         }
       }
     },
     {
-      "key": "increaseApprovalAction",
-      "name": "Increase Approval",
+      "key": "increaseAllowanceAction",
+      "name": "Increase Allowance",
       "display": {
-        "label": "Increase Approval",
-        "description": "Increase Approval"
+        "label": "Increase Allowance",
+        "description": "Increase Allowance"
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function increaseApproval(address _spender, uint256 _addedValue) returns bool",
+        "signature": "function increaseAllowance(address _spender, uint256 _addedValue) returns (bool)",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
         "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token contract address",
+            "type": "string",
+            "placeholder": "Enter a token contract address",
+            "required": true,
+            "list": false,
+            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+          },
           {
             "key": "_spender",
             "label": "Spender",
@@ -596,16 +625,21 @@
             "helpText": "",
             "default": "",
             "computed": false
-          },
-          {
-            "key": "_grinderyUnitConversion__addedValue",
-            "type": "string",
-            "default": "ether->wei",
-            "list": false,
-            "computed": true
           }
         ],
-        "outputFields": [],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction hash",
+            "type": "string",
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
         "sample": {
           
         }
