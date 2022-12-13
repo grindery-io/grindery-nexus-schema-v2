@@ -236,7 +236,7 @@
         "description": "View the total token supply",
         "instructions": "",
         "featured": false,
-        "hidden": false
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
