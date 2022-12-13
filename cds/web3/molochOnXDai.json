@@ -168,9 +168,9 @@
             "key": "applicant",
             "label": "Applicant",
             "type": "string",
-            "placeholder": "Enter applicant's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter applicant's blockchain address",
             "default": "",
             "required": false,
             "computed": false
@@ -200,8 +200,12 @@
             "key": "tributeToken",
             "label": "Tribute Token",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "paymentRequested",
@@ -214,8 +218,12 @@
             "key": "paymentToken",
             "label": "Payment Token",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "details",
@@ -246,8 +254,12 @@
             "key": "delegateKey",
             "label": "Delegate Key",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "memberAddress",
@@ -366,17 +378,21 @@
           {
             "key": "delegateKey",
             "label": "Delegate Key",
-            "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "type": "address",
+            "placeholder": "0x...",
+            "list": false,
+            "helpText": "Enter a blockchain address",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter member's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter member's blockchain address",
             "default": "",
             "required": false,
             "computed": false
@@ -411,20 +427,20 @@
           {
             "key": "delegateKey",
             "label": "Delegate Key",
-            "type": "string",
+            "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
           {
             "key": "memberAddress",
             "label": "Member Address",
-            "type": "string",
+            "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
           {
             "key": "proposalId",
-            "label": "Proposal Id",
+            "label": "Proposal ID",
             "type": "string",
             "placeholder": "",
             "list": false
@@ -445,7 +461,11 @@
           }
         ],
         "sample": {
-          
+          "delegateKey": "0x3A3A65aAb0dd2A17E3F1947bA16138cd37d08c04",
+          "memberAddress": "0x5cBd871DBe5e5c5A5c903fE8Fa7DeB5C5f5f5B5B",
+          "proposalId": "239",
+          "proposalIndex": "135",
+          "startingPeriod": "1623137600"
         }
       }
     },
@@ -552,8 +572,9 @@
       "display": {
         "label": "Process Proposal",
         "description": "Process a proposal",
-        "instructions": "Process a proposal",
-        "featured": false
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -609,7 +630,9 @@
           }
         ],
         "sample": {
-          
+          "proposalIndex": "102",
+          "proposalId": "378",
+          "didPass": "True"
         }
       }
     },
@@ -619,8 +642,9 @@
       "display": {
         "label": "Process Whitelist Proposal",
         "description": "Process a whitelist proposal",
-        "instructions": "Process a whitelist proposal",
-        "featured": false
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -676,7 +700,9 @@
           }
         ],
         "sample": {
-          
+          "proposalIndex": "128",
+          "proposalId": "173",
+          "didPass": "False"
         }
       }
     },
@@ -695,8 +721,12 @@
             "key": "proposalIndex",
             "label": "Proposal Index",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "Enter the proposal index",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "proposalId",
@@ -713,8 +743,12 @@
             "key": "didPass",
             "label": "Did Pass",
             "type": "boolean",
-            "placeholder": "",
-            "list": false
+            "placeholder": "True or False",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -741,7 +775,9 @@
           }
         ],
         "sample": {
-          
+          "proposalIndex": "124",
+          "proposalId": "9183",
+          "didPass": "True"
         }
       }
     },
@@ -751,8 +787,9 @@
       "display": {
         "label": "RageQuit",
         "description": "RageQuit",
-        "instructions": "RageQuit",
-        "featured": false
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -762,9 +799,9 @@
             "key": "memberAddress",
             "label": "Member Address",
             "type": "string",
-            "placeholder": "Enter member's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter member's blockchain address",
             "default": "",
             "required": false,
             "computed": false
@@ -808,7 +845,9 @@
           }
         ],
         "sample": {
-          
+          "memberAddress": "0x3A3A65aAb0dd2A17E3F1947bA16138cd37d08c04",
+          "sharesToBurn": "123",
+          "lootToBurn": "35"
         }
       }
     },
@@ -885,9 +924,9 @@
             "key": "applicantAddress",
             "label": "Applicant Address",
             "type": "string",
-            "placeholder": "Enter applicant's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter applicant's blockchain address",
             "default": "",
             "required": false,
             "computed": false
@@ -910,7 +949,8 @@
           }
         ],
         "sample": {
-          
+          "proposalId": "1783",
+          "applicantAddress": "0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa"
         }
       }
     },
@@ -2640,5 +2680,5 @@
   "type": "web3",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Public"
+  "access": "Workspace"
 }
