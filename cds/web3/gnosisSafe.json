@@ -19,9 +19,9 @@
             "key": "to",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's blockchain address",
             "default": "",
             "required": false,
             "computed": false
@@ -76,16 +76,20 @@
             "key": "gasToken",
             "label": "Gas Token",
             "type": "string",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "0x...",
+            "list": false,
+            "helpText": "Enter a blockchain address",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "refundReceiver",
             "label": "Refund Receiver",
             "type": "string",
-            "placeholder": "Enter receiver's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter receiver's blockchain address",
             "default": "",
             "required": false,
             "computed": false
@@ -201,7 +205,19 @@
           }
         ],
         "sample": {
-          
+          "__transactionHash": "0x05a8f93b00cf1b744f65b6b5e95f9b9e0859cc05f64dda5a868bb303d1a6cbe7",
+          "__chainId": "1337",
+          "to": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "value": "1349",
+          "data": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",
+          "safeTxGas": "104",
+          "baseGas": "20",
+          "gasPrice": "198",
+          "gasToken": "0xDeaDBeef2cB0F62D14d9e5504B4bFe4b40Df07c7",
+          "refundReceiver": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "additionalInfo": "This is any form of additional information you may have",
+          "signatures": "hello1234",
+          "operation": "24557"
         }
       }
     }
@@ -224,10 +240,10 @@
             "key": "to",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter recipient's wallet address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's wallet address",
             "default": "",
             "computed": false
           },
@@ -235,7 +251,7 @@
             "key": "value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "Enter the amount of token you want to transfer",
+            "placeholder": "Enter token amount",
             "list": false,
             "required": true,
             "helpText": "",
@@ -273,10 +289,10 @@
             "key": "to",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter recipient's wallet address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's wallet address",
             "default": "",
             "computed": false
           },
@@ -284,10 +300,10 @@
             "key": "tokenContractAddress",
             "label": "Token Contract Address",
             "type": "string",
-            "placeholder": "Enter the token's contract address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter the token's contract address",
             "default": "",
             "computed": false
           },
@@ -295,10 +311,10 @@
             "key": "value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "Enter the amount of token you want to transfer",
+            "placeholder": "Enter token amount",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter the amount of tokens you want to transfer",
             "default": "",
             "computed": false
           },
@@ -321,5 +337,5 @@
   "type": "web3",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Public"
+  "access": "Workspace"
 }
