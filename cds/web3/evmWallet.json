@@ -1,6 +1,6 @@
 {
   "key": "evmWallet",
-  "name": "EVM Wallet",
+  "name": "Wallet on EVM Chains (EOA)",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
@@ -11,7 +11,8 @@
         "label": "New Transaction",
         "description": "Triggers when a new transaction occurs",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "polling",
@@ -34,7 +35,7 @@
             "type": "string",
             "placeholder": "0x...",
             "required": false,
-            "helpText": "",
+            "helpText": "Sender's EVM wallet address",
             "default": "",
             "computed": false
           },
@@ -44,7 +45,7 @@
             "type": "string",
             "placeholder": "0x...",
             "required": false,
-            "helpText": "",
+            "helpText": "Recipient's EVM wallet address",
             "default": "",
             "computed": false
           }
@@ -67,7 +68,7 @@
           },
           {
             "key": "from",
-            "label": "From address",
+            "label": "Sender",
             "type": "string"
           },
           {
@@ -87,12 +88,12 @@
           }
         ],
         "sample": {
-          "blockHash": "0x71401089b93a49b6695b6cd30fbb0541d7cb3c2c32a1fe9fba0c718edebb7fc0",
-          "blockNumber": "5995768",
+          "blockHash": "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
+          "blockNumber": "0x5daf3b",
           "from": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
-          "hash": "0x693b3127773e1b37552a32f1b2aa075a5b874fafc5881c8d517972530cdddace",
+          "hash": "0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
           "to": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-          "value": "22000000000000000000",
+          "value": "0xf3dbb76162000",
           "_grinderyChain": "eip155:1"
         }
       }
@@ -104,51 +105,43 @@
       "name": "Balance Of",
       "display": {
         "label": "Balance Of",
-        "description": "Balance Of",
+        "description": "Get the balance of a specified token holder",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": false
       },
       "operation": {
-        "type": "blockchain:call",
-        "signature": "getBalanceNative",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
         "inputFields": [
           {
-            "key": "_grinderyContractAddress",
-            "label": "Contract Address",
-            "type": "string",
-            "placeholder": "",
-            "computed": true,
-            "default": "0x"
-          },
-          {
             "key": "address",
-            "label": "Holder address",
-            "type": "string",
-            "placeholder": "Enter a holder address",
+            "label": "Holder's Wallet Address",
+            "helpText": "Enter holder's wallet address",
+            "default": "",
             "required": true,
-            "list": false,
-            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1"
+            "computed": false,
+            "type": "string",
+            "placeholder": "0x..."
           }
         ],
+        "type": "blockchain:call",
+        "signature": "getBalanceNative",
         "outputFields": [
           {
             "key": "balance",
             "label": "balance",
-            "type": "string",
-            "placeholder": "balance",
-            "list": false
+            "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          "balance": "10000"
+        }
       }
     }
   ],
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAXlSURBVHgB1VpZSFtZGP5dum/a2nbaTtsrdKF0OmjbB/tQuPalfapxKLSlhUkcBhEG1Hma8WFMQFBEifFB0AfjAqI+mJk+uZKIiIJK4sCg4nbdcNzjvut8J4wlZozem5w70A/E5J57Lv93zv/9y7kh+sIRRCoiPT1duHDhgqarq8tBKiGQVMTx48dTl5eXjVqtNoRUgmoESktLE3d3d7WLi4sh+LOQSlCFAFxGmJycTNr7LkmS+OrVK5FUgCoErFYrW33B/drU1FQqqQDuBJhwV1dXkw4YEjUaTRJxBncCJ0+eNGL1Dxybn59P1ev1AnEEVwKZmZna7e1tjbfxhYWFkO7ubjNxBDcCdrs9JCgo6Eg/7+3tFaOiokTiBG4EWltbf/MUrjdsbm5yEzQXAv8KN1nBFPH9+/dcBM2FwPnz5607OzuK5oyOjhp5CNpvAky4WH2BFGJlZYXpxkh+wi8CLS0tghzhegN2QSMC5Af8IgDhfi9XuN6wtLTkl6B9JmCxWET805OfwAKIjx8/9lnQPhMYHx83I2kRD5w9e9bIIhn5AJ8IMOFChMJR901MTBBKafJWWuwBPQO1t7f7JOgAUgi4jjAwMGD15vtIUtTf3099fX20trZGg4ODLgKnT58mdGcUHBzs9dmhoaHR9fX1NlKAYFIIrGriQcYzw1EmuIxfX1/fN8ZyBMTqWukzZ854JcK6N5Ti0YCTZEJRT1xXVxczMjKS435tbm6OUKAxF3C5jKcunE7nPhfa2NhwuRUjHBAQQMeOHfs8hrlfNTc3rw8NDdlIJhS5UG5u7iAMENhnZmxPTw+h8zp0DnOhw8TOdoLtCIS8d8mJ+8MdDoesXZDtQtnZ2Vr4tDA9Pc1aRtZhEQ9sbW3RzMwM6xVcRKCVkKtXrzJB6+TMl7UDrMfNyMiwwn0EVgIowVE74AlkdpdO7t27F11dXW076n5ZYfTBgwcSfLb41KlTpDaY4C9dulT09u1bWWdJsvNAWVmZHlsdjsqzmIlPDWDlbQ8fPoxua2vTdXZ2ypojm0BJSYk5JiaGamtrtYgq4bdv3/6LOOHEiRPS/fv3YxB9olHbSWj+c1BnyToMk00AvmkKCwsbKCoqKjQajVRRUfENGvgfMSSRj2DJ7cqVK6a7d+9GInx+ev36dWJjY6MdvbMEApKcZ8jOA1VVVX+/ePFiHsnmF1YGv3z5cr6goKDw48ePf2A4FOE1gsV2T3jmgT1cvnzZ9uzZM01DQ0PxnTt3om7evGmBi2qhgfKmpqZfSSYUO3N+fr4Fich18hAYGCgh5MV++PDBgUZdQCy3IONGuN/vGYXg505oKBandbaIiIgQgD1PZGOY77x27VpkeXm5RDKhuJhDGNUhe86xz1gtAQnNnpOTY0bUINQxkVhZFr8lz3nYBScCgAH1Tjhc0AE/T4XvD+4ZzwLD8+fPY5UY75pHPgAGiFhVq/s1nETPnTt3zqTT6QxjY2NhCQkJP83Ozv6AHfgaArXeunUrDvqRsOoiiJjhisI+QwICDChH9KQQPsfDwsLCKhgY63kdYpfgzzFv3rz5Ewe6wtOnT79NS0v7lJSUJICYGZWseMDjpI6OjnDyAX4FdJPJZIdwIw4aA5EilB6GmpoaJ9wuETvGuq7/hEZEIuejR4+i8/LyfHoJoricdgc0wHbAfpBhMFgL49hRIyvOvMb069evG3w1nsGvpj45OVm6ePGi17NOFlYPMx45wIZ8kkN+wO9zobi4uJ9RI1mVzkNUktBLyKo4DwOXkzkkse9Q18vuohgg8mS52fYwcCEAV3JiF2SvJpKXKSUl5XfiAG6n0/Hx8cwg01H3YaekrKwsPXEC1xccCJ16ZGnJ2zhWnlD/6CIjIxW522HgSoC5ErJsrHuj7g40KgaUHTbiCO7vyFBKOFDkGTyv37hxo7GyslJPnKHKa1ZUp0bswufkxLLt8PCwllSAKgSQ3OZRPsTuVa1PnjzR4ZhEoi8N6B0079694/pW8n+H2WxW7YceDP8APjW7724QO2oAAAAASUVORK5CYII=",
   "type": "web3",
-  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Public"
+  "access": "Public",
+  "description": ""
 }
