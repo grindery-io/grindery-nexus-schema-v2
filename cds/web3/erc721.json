@@ -1,6 +1,6 @@
 {
   "key": "erc721",
-  "name": "ERC-721 NFT",
+  "name": "NFT on EVM Chains",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
@@ -9,7 +9,10 @@
       "name": "Approval",
       "display": {
         "label": "Approval",
-        "description": "Approval"
+        "description": "Triggers when an owner grants or revokes permission for an operator to transfer an NFT",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -19,19 +22,23 @@
             "key": "owner",
             "label": "Owner",
             "type": "address",
-            "placeholder": "Enter owner's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter owner's EVM address",
             "default": "",
             "required": false,
             "computed": false
           },
           {
             "key": "approved",
-            "label": "Approved",
+            "label": "Approve",
             "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
+            "placeholder": "0x...",
+            "list": false,
+            "helpText": "Grant or revoke permission",
+            "default": "",
+            "required": false,
+            "computed": false
           },
           {
             "key": "tokenId",
@@ -66,22 +73,12 @@
             "type": "string",
             "placeholder": "",
             "list": false
-          },
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract address",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_grinderyChain",
-            "label": "Chain ID (in eip155 format)",
-            "type": "string"
           }
         ],
         "sample": {
-          
+          "owner": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "approved": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "tokenId": "15073"
         }
       }
     },
@@ -90,7 +87,10 @@
       "name": "Approval For All",
       "display": {
         "label": "Approval For All",
-        "description": "Approval For All"
+        "description": "Triggers when an owner grants or revokes permission for an operator to transfer all NFTs",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -100,9 +100,9 @@
             "key": "owner",
             "label": "Owner",
             "type": "address",
-            "placeholder": "Enter owner's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter owner's EVM address",
             "default": "",
             "required": false,
             "computed": false
@@ -111,19 +111,23 @@
             "key": "operator",
             "label": "Operator",
             "type": "address",
-            "placeholder": "Enter operator's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter operator's EVM address",
             "default": "",
             "required": false,
             "computed": false
           },
           {
             "key": "approved",
-            "label": "Approved",
+            "label": "Approve",
             "type": "boolean",
-            "placeholder": "",
-            "list": false
+            "placeholder": "True or False",
+            "list": false,
+            "helpText": "Grant or revoke permission",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -147,22 +151,12 @@
             "type": "boolean",
             "placeholder": "",
             "list": false
-          },
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract address",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_grinderyChain",
-            "label": "Chain ID (in eip155 format)",
-            "type": "string"
           }
         ],
         "sample": {
-          
+          "owner": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "operator": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "approved": "False"
         }
       }
     },
@@ -171,7 +165,10 @@
       "name": "Transfer",
       "display": {
         "label": "Transfer",
-        "description": "Transfer"
+        "description": "Transfer an NFT",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -181,9 +178,9 @@
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter sender's EVM address",
             "default": "",
             "required": false,
             "computed": false
@@ -192,9 +189,9 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's EVM address",
             "default": "",
             "required": false,
             "computed": false
@@ -232,22 +229,12 @@
             "type": "string",
             "placeholder": "",
             "list": false
-          },
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract address",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_grinderyChain",
-            "label": "Chain ID (in eip155 format)",
-            "type": "string"
           }
         ],
         "sample": {
-          
+          "from": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "to": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "tokenId": "4958"
         }
       }
     },
@@ -266,9 +253,9 @@
             "key": "recipient",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's EVM address",
             "default": "",
             "required": false,
             "computed": false
@@ -288,8 +275,12 @@
             "key": "timestamp",
             "label": "Timestamp",
             "type": "string",
-            "placeholder": "",
-            "list": false
+            "placeholder": "e.g. 1599662400",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": false
           }
         ],
         "outputFields": [
@@ -313,22 +304,12 @@
             "type": "string",
             "placeholder": "",
             "list": false
-          },
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract address",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_grinderyChain",
-            "label": "Chain ID (in eip155 format)",
-            "type": "string"
           }
         ],
         "sample": {
-          
+          "recipient": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "itemId": "3039",
+          "timestamp": "1623137600"
         }
       }
     }
@@ -336,10 +317,13 @@
   "actions": [
     {
       "key": "approveAction",
-      "name": "Approve",
+      "name": "Approval",
       "display": {
-        "label": "Approve",
-        "description": "Approve"
+        "label": "Approval",
+        "description": "Approval to transfer NFT",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -349,10 +333,10 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's EVM address",
             "default": "",
             "computed": false
           },
@@ -379,9 +363,10 @@
       "name": "Get Balance",
       "display": {
         "label": "Get Balance",
-        "description": "Get the token balance of a particular owner.",
+        "description": "Get the token balance of a specific owner",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -391,10 +376,10 @@
             "key": "owner",
             "label": "Owner",
             "type": "address",
-            "placeholder": "Enter the owner's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter the owner's EVM address",
             "default": "",
             "computed": false
           }
@@ -451,10 +436,10 @@
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter sender's EVM address",
             "default": "",
             "computed": false
           },
@@ -462,10 +447,10 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's EVM address",
             "default": "",
             "computed": false
           },
@@ -502,10 +487,10 @@
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter sender's EVM address",
             "default": "",
             "computed": false
           },
@@ -513,10 +498,10 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's EVM address",
             "default": "",
             "computed": false
           },
@@ -535,10 +520,10 @@
             "key": "data",
             "label": "Data",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "When recipient is a smart contract, the NFT contract  calls a function on recipient's contract with this",
             "default": "",
             "computed": false
           }
@@ -554,7 +539,10 @@
       "name": "Set Approval For All",
       "display": {
         "label": "Set Approval For All",
-        "description": "Set Approval For All"
+        "description": "Grant or revoke permission to transfer all NFTs",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -564,20 +552,23 @@
             "key": "operator",
             "label": "Operator",
             "type": "address",
-            "placeholder": "Enter operator's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter operator's EVM address",
             "default": "",
             "computed": false
           },
           {
             "key": "approved",
-            "label": "Approved",
+            "label": "Approve",
             "type": "boolean",
-            "placeholder": "",
+            "placeholder": "True or False",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "Grant or revoke approval for all",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
@@ -591,7 +582,10 @@
       "name": "Transfer From",
       "display": {
         "label": "Transfer From",
-        "description": "Transfer From"
+        "description": "Transfer NFT",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
@@ -601,10 +595,10 @@
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter sender's EVM address",
             "default": "",
             "computed": false
           },
@@ -612,10 +606,10 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's EVM address",
             "default": "",
             "computed": false
           },
@@ -643,5 +637,5 @@
   "description": "",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Public"
+  "access": "Workspace"
 }
