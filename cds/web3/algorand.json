@@ -216,12 +216,12 @@
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "WCS4RIVFBELVNE6ZYVQB3KIKO54TLGL7JFBMZBX46UMAX5UABVKALRZPIU"
+            "default": "algorand:testnet"
           }
         ],
         "outputFields": [
           {
-            "key": "transactionHash",
+            "key": "TxHash",
             "label": "Transaction hash",
             "type": "string",
             "placeholder": "Transaction hash",
