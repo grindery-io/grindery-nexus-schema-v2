@@ -154,6 +154,88 @@
       }
     }
   ],
+  "actions": [
+    {
+      "key": "NFTMint",
+      "name": "Mint NFT",
+      "display": {
+        "label": "Mint NFT",
+        "description": ""
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract Address",
+            "type": "string",
+            "placeholder": "Enter Contract address",
+            "computed": true,
+            "default": "WCS4RIVFBELVNE6ZYVQB3KIKO54TLGL7JFBMZBX46UMAX5UABVKALRZPIU"
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "string",
+            "placeholder": "Enter a Algorand wallet address",
+            "required": true,
+            "list": false,
+            "default": "G53BTEF3OSZXDBHLDKXNE5Q4GYQRJ7S3G3D3QEFAD2JDNCTJ55CAAZK63U"
+          },
+          {
+            "key": "unitName",
+            "label": "Title",
+            "type": "string",
+            "placeholder": "Enter a title",
+            "required": true,
+            "list": false,
+            "default": "ALICEART"
+          },
+          {
+            "key": "assetName",
+            "label": "Asset Name",
+            "type": "string",
+            "placeholder": "Enter a description",
+            "required": true,
+            "list": false,
+            "default": "NFT"
+          },
+          {
+            "key": "image_url",
+            "label": "Media",
+            "type": "string",
+            "placeholder": "Enter a link to a media",
+            "required": true,
+            "list": false,
+            "default": "https://c0.lestechnophiles.com/www.numerama.com/wp-content/uploads/2021/12/nft-singes-1024x576.jpg?webp=1&key=681596ec"
+          },
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "computed": true,
+            "default": "WCS4RIVFBELVNE6ZYVQB3KIKO54TLGL7JFBMZBX46UMAX5UABVKALRZPIU"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction hash",
+            "type": "string",
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
+          }
+        ],
+        "sample": {}
+      }
+    }
+  ],
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVGSURBVHgB5ZvPTxNBFMdfjWfkHyDUk4mYWC+G1oM1MameNDHWK8TiFVTOAp79AVd/RDgK0ehJPNmTmHgQEkrCqSX8ARL+gXG+u1uy3Z2ZnZ2dnbb4SaZLl31t35s3b9683SlQzjDGivxQ5a3E2zhveD8aHMN0eDsKjju8baMVCoUODRtc6Spvy7y1WXbavH3AZ9Igw3/gKG8LvP1l+dHmbYr5XjUYOFI8Cr7rdd8NwX/ALHOreJQ2b1PkGlietx9scGgzV97A+t/rMvCb5ihPmD/uBp0FygPmT0XDwgddvQo6F/EPRFJymYYLJFFXki46k3RBYM1hUx6U0niCEObP78POazKB+dH+tCCdHQoS5Yv88If8RYsTDg8P6eXLV7HzY2Nj9PTpE8oIFllXRAsrmQHaFF+t5cr09EPa3PweOz8yMkK/f//yjhlpcgPciJ6MBUHmp5ZFcsjHjxtC5cHx8THt7rbIAlXRUOgxQOD6+SQSCkSuH+bnzy2yxALXsWdYRz1glhz3PpTH+FextWXNAFC+xwtOYkC/At/NmzXPzZPY39+zEQcAAuJ5Hg9w7PGAKjlUHqD3dZQHFodBjxeEDeB07KP3Efx0sWgAMNv9wzMA8+ttRXLIvXt14flyuSw8L5slDBkNdKazwYkpcgh6Xhb4VlZe0dzck1iP4/q3b9/xOHAuJvPgwX0y4C5vza4BrpMjMOZl0x4UQeYHLxC5/LNni7FzMzMN/mpkgDu8zZ0Jon+RHIFeFPV+OOWtVMpanwWZmZmHZAjKekXEgBI5Aoq/eCHu/fn5x55CAAbQmfLCMoZUnRpA5vpQol7vDYrXrqm9QCRjQMmZARDFZdPe8+eLsXOTk2oDiGQM8IbAODlAFMAAAt+tW7XY+du3ayRDJmPAOAyQe/anmvZka33VvN9oNMgSozBAkXJEVugAUF4UxPw5/z3J0E2fNSgmFkWzIlvtQfFHjxqpZLrYzApzNYAq38cUJprqdNYINtcFuRpAFvhUUxjS4CRarZa1YQADdCgHVGWuT5/WpTK6vfvt2yZZoAMDHFEOJOX7aWREtFp7ZIEjGOCALCMLYhjzsmlPFfhEscJSIDywPgSgxJs374T/w8pNNu3J1ggw2KVLE0KZpFqiBtswwDZZRFbmguLz8/LeF9GVqdXEWZ8FL/AM0CRLJE17IlDzT5KRLYwsTIfbXlXY1p2gq1fLQrdEgePz541MMhcuXIx5FmIDqsWGdHhl+Hw3D/hKGUkqc2WVES1+YJAMXtDES9cAXygDOmWuKKo1gkimUqkIr81ggDW8eAbgrtCkDPmATpkryvr6RioZ2fLY8K5RJ9C5JxVeIQN0y1xZZTDeJybi0yGCqEFavNT9I2yAZTLwgjRlriwyQFQsNbh7DB2b3TcnBgjulaXyAoy/NGUukLY0FkZWBUqZD6yFH5SIrgZTeYFs5aYqWaUtjYVBRihKi1MEwg75Op7QY4DAC5ZIA5Myl4lMGCgvSotTLI+Xoo/JxOoB/AJYqEkKTMtcaWVEyNJijeUxIv9q9ORZycXTpHhWAEvRcnnSa1Fk9+lUMrLSmAgEwno9/h0F9SOf8OwblAY8T8NOD2YPUTN/28uws0hZ4B+wyoaX1ST9dB+WRjxwdg/REjs86CX+Zq2qcPDU9RoND2s6yqeGe8IiG3yWKU+YPzv8n1tmQkbA0xVtNjj8YP3YQsf8TYxt1j/c9brCCPCGZeZ+4yTikdMHO5UEhsjbIwZPcRHM3zy9yuxtnoaHVSkHtBKhLDA/OJWChs1XeJ+0fR6363DDppn39vl/d+T7hVjZv6kAAAAASUVORK5CYII=",
   "type": "web3",
   "description": "",
