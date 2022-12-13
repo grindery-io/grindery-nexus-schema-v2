@@ -11,7 +11,8 @@
         "label": "New Proposal",
         "description": "Create a new proposal",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -45,15 +46,15 @@
             "default": "",
             "required": false,
             "computed": false,
-            "placeholder": "Enter the token ID"
+            "placeholder": "XXX"
           },
           {
             "key": "proposal.kind.Transfer.receiver_id",
             "label": "Token Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's NEAR wallet address",
+            "placeholder": "recipient.near",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's NEAR wallet address (either named or implicit address)",
             "default": "",
             "required": false,
             "computed": false
@@ -91,7 +92,11 @@
                 "amount": "64354700"
               }
             }
-          }
+          },
+          "proposal.description": "Here is the description of the new proposal",
+          "proposal.kind.Transfer.token_id": "112",
+          "proposal.kind.Transfer.receiver_id": "jamiu.near",
+          "proposal.kind.Transfer.amount": "4964"
         }
       }
     }
@@ -100,5 +105,5 @@
   "type": "web3",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Public"
+  "access": "Workspace"
 }
