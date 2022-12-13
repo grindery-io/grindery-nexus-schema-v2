@@ -1,6 +1,6 @@
 {
   "key": "erc20",
-  "name": "ERC-20 Token",
+  "name": "Tokens on EVM Chains",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
@@ -9,7 +9,10 @@
       "name": "Transfer",
       "display": {
         "label": "Transfer",
-        "description": "Transfer"
+        "description": "Transfer a specific amount of tokens",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
@@ -22,9 +25,9 @@
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter sender's wallet address",
             "default": "",
             "required": false,
             "computed": false
@@ -33,9 +36,9 @@
             "key": "to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter recipient's wallet address",
             "default": "",
             "required": false,
             "computed": false
@@ -44,7 +47,7 @@
             "key": "value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "Enter the amount of tokens you want to transfer",
+            "placeholder": "Enter token amount",
             "list": false,
             "helpText": "",
             "default": "",
@@ -69,7 +72,7 @@
           },
           {
             "key": "value",
-            "label": "Value",
+            "label": "Amount",
             "type": "string",
             "placeholder": "",
             "list": false
@@ -88,7 +91,11 @@
           }
         ],
         "sample": {
-          
+          "from": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "to": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
+          "value": "137",
+          "_grinderyChain": "eip155:1"
         }
       }
     },
@@ -97,7 +104,10 @@
       "name": "Approval",
       "display": {
         "label": "Approval",
-        "description": "Approval"
+        "description": "Approve a specific amount of tokens",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
@@ -105,22 +115,22 @@
         "inputFields": [
           {
             "key": "owner",
-            "label": "Owner",
+            "label": "Owner's Address",
             "type": "address",
-            "placeholder": "Enter owner's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter owner's wallet address",
             "default": "",
             "required": false,
             "computed": false
           },
           {
             "key": "spender",
-            "label": "Spender",
+            "label": "Spender's Address",
             "type": "address",
-            "placeholder": "Enter spender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
-            "helpText": "",
+            "helpText": "Enter spender's wallet address",
             "default": "",
             "required": false,
             "computed": false
@@ -154,14 +164,7 @@
           },
           {
             "key": "value",
-            "label": "Value",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Contract address",
+            "label": "Amount",
             "type": "string",
             "placeholder": "",
             "list": false
@@ -173,7 +176,10 @@
           }
         ],
         "sample": {
-          
+          "owner": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
+          "spender": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
+          "value": "374",
+          "_grinderyChain": "eip155:1"
         }
       }
     }
@@ -184,32 +190,23 @@
       "name": "Approve",
       "display": {
         "label": "Approve",
-        "description": "Approve"
+        "description": "Approve a specific amount of tokens",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function approve(address _spender, uint256 _value) returns (bool)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "signature": "function approve(address _spender, uint256 _value) returns bool",
         "inputFields": [
           {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
-          },
-          {
             "key": "_spender",
-            "label": "Spender",
+            "label": "Spender's Address",
             "type": "address",
-            "placeholder": "Enter spender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter spender's wallet address",
             "default": "",
             "computed": false
           },
@@ -217,7 +214,7 @@
             "key": "_value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "Amount of tokens",
+            "placeholder": "Enter token amount",
             "list": false,
             "required": true,
             "helpText": "",
@@ -225,19 +222,7 @@
             "computed": false
           }
         ],
-        "outputFields": [
-          {
-            "key": "transactionHash",
-            "label": "Transaction hash",
-            "type": "string",
-            "placeholder": "Transaction hash",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          }
-        ],
+        "outputFields": [],
         "sample": {
           
         }
@@ -248,27 +233,15 @@
       "name": "Total Supply",
       "display": {
         "label": "Total Supply",
-        "description": "Total Supply",
+        "description": "View the total token supply",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
         "signature": "getTotalSupplyERC20Token",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
-        "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
-          }
-        ],
+        "inputFields": [],
         "outputFields": [
           {
             "key": "totalSupply",
@@ -277,7 +250,7 @@
           }
         ],
         "sample": {
-          
+          "returnValue": "9496348"
         }
       }
     },
@@ -286,34 +259,23 @@
       "name": "Transfer From",
       "display": {
         "label": "Transfer From",
-        "description": "Transfer From",
+        "description": "Token transfer from a specific sender to a recipient",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function transferFrom(address _from, address _to, uint256 _value) returns (bool)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "signature": "function transferFrom(address _from, address _to, uint256 _value) returns bool",
         "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
-          },
           {
             "key": "_from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter sender's wallet address",
             "default": "",
             "computed": false
           },
@@ -321,10 +283,10 @@
             "key": "_to",
             "label": "Recipient",
             "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter recipient's wallet address",
             "default": "",
             "computed": false
           },
@@ -332,91 +294,72 @@
             "key": "_value",
             "label": "Amount",
             "type": "string",
-            "placeholder": "Enter the amount you want to transfer",
+            "placeholder": "Enter token amount",
             "list": false,
             "required": true,
             "helpText": "",
             "default": "",
             "computed": false
-          }
-        ],
-        "outputFields": [
+          },
           {
-            "key": "transactionHash",
-            "label": "Transaction hash",
+            "key": "_grinderyUnitConversion__value",
             "type": "string",
-            "placeholder": "Transaction hash",
+            "default": "erc20Decimals[@]",
             "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
+            "computed": true
           }
         ],
+        "outputFields": [],
         "sample": {
           
         }
       }
     },
     {
-      "key": "decreaseAllowanceAction",
-      "name": "Decrease Allowance",
+      "key": "decreaseApprovalAction",
+      "name": "Decrease Approval",
       "display": {
-        "label": "Decrease Allowance",
-        "description": "Decrease Allowance"
+        "label": "Decrease Approval",
+        "description": "Approve the reduction of a specific amount of tokens",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function decreaseAllowance(address _spender, uint256 _subtractedValue) returns (bool)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "signature": "function decreaseApproval(address _spender, uint256 _subtractedValue) returns bool",
         "inputFields": [
           {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
-          },
-          {
             "key": "_spender",
-            "label": "Spender",
+            "label": "Spender's Address",
             "type": "address",
-            "placeholder": "Enter spender's blockchain address",
+            "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Enter spender's wallet address",
             "default": "",
             "computed": false
           },
           {
             "key": "_subtractedValue",
-            "label": "Subtracted Amount",
+            "label": "Amount",
             "type": "string",
-            "placeholder": "",
+            "placeholder": "Enter token amount",
             "list": false,
             "required": true,
-            "helpText": "",
+            "helpText": "Specify the amount of tokens to subtract",
             "default": "",
             "computed": false
-          }
-        ],
-        "outputFields": [
+          },
           {
-            "key": "transactionHash",
-            "label": "Transaction hash",
+            "key": "_grinderyUnitConversion__subtractedValue",
             "type": "string",
-            "placeholder": "Transaction hash",
+            "default": "erc20Decimals[@]",
             "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
+            "computed": true
           }
         ],
+        "outputFields": [],
         "sample": {
           
         }
@@ -424,77 +367,227 @@
     },
     {
       "key": "balanceOfActionERC20",
-      "name": "Balance Of ERC20",
+      "name": "Balance Of",
       "display": {
-        "label": "Balance Of ERC20",
-        "description": "Balance Of ERC20",
+        "label": "Balance Of",
+        "description": "Get owner's token balance",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
         "signature": "getBalanceERC20Token",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
         "inputFields": [
           {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
-          },
-          {
             "key": "address",
-            "label": "Token holder address",
-            "type": "string",
-            "placeholder": "Enter a token holder address",
-            "required": true,
+            "label": "Holder's Address",
+            "type": "address",
+            "placeholder": "0x...",
             "list": false,
-            "default": "0xaf0b0000f0210d0f421f0009c72406703b50506b"
+            "required": true,
+            "helpText": "Enter the token holder's address",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [
           {
             "key": "balance",
             "label": "balance",
-            "type": "string",
-            "placeholder": "balance",
-            "list": false
+            "type": "string"
           }
         ],
-        "sample": {}
+        "sample": {
+          "returnValue": "741",
+          "balance": "10000"
+        }
       }
     },
     {
-      "key": "InformationERC20TokenAction",
-      "name": "Information of ERC20 token",
+      "key": "transferAction",
+      "name": "Transfer",
       "display": {
-        "label": "Information of ERC20 token",
-        "description": "Information of ERC20 token",
+        "label": "Transfer",
+        "description": "Transfer a specific amount of tokens",
         "instructions": "",
-        "featured": false
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "getInformationERC20Token",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "signature": "function transfer(address _to, uint256 _value) returns bool",
+        "inputFields": [
+          {
+            "key": "_to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "0x...",
+            "list": false,
+            "required": true,
+            "helpText": "Enter recipient's wallet address",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter token amount",
+            "list": false,
+            "required": true,
+            "helpText": "Enter the amount you want to transfer",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyUnitConversion__value",
+            "type": "string",
+            "default": "erc20Decimals[@]",
+            "list": false,
+            "computed": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "increaseApprovalAction",
+      "name": "Increase Approval",
+      "display": {
+        "label": "Increase Approval",
+        "description": "Approve the increment of a specific amount of tokens",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function increaseApproval(address _spender, uint256 _addedValue) returns bool",
+        "inputFields": [
+          {
+            "key": "_spender",
+            "label": "Spender's Address",
+            "type": "address",
+            "placeholder": "0x...",
+            "list": false,
+            "required": true,
+            "helpText": "Enter spender's wallet address",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_addedValue",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter token amount",
+            "list": false,
+            "required": true,
+            "helpText": "Specify the amount of tokens to add",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyUnitConversion__addedValue",
+            "type": "string",
+            "default": "erc20Decimals[@]",
+            "list": false,
+            "computed": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "allowanceAction",
+      "name": "Allowance",
+      "display": {
+        "label": "Allowance",
+        "description": "View the amount of tokens approved for a spender by a specific owner",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "getAllowanceERC20Token",
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
             "label": "Token contract address",
-            "type": "string",
+            "type": "address",
             "placeholder": "Enter a token contract address",
-            "required": true,
             "list": false,
-            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+            "required": true,
+            "helpText": "Enter a token contract address",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender's Address",
+            "type": "address",
+            "placeholder": "0x...",
+            "list": false,
+            "required": true,
+            "helpText": "Enter spender's wallet address",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false,
+            "type": "string",
+            "placeholder": "Enter owner's blockchain address"
           }
         ],
+        "outputFields": [
+          {
+            "key": "allowance",
+            "label": "Return value of Allowance",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          "returnValue": "458"
+        }
+      }
+    },
+    {
+      "key": "InformationERC20TokenAction",
+      "name": "Token Information",
+      "display": {
+        "label": "Token Information",
+        "description": "Get details of an ERC20 token",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
+      },
+      "operation": {
+        "inputFields": [
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Token Contract Address",
+            "helpText": "Enter a token contract address",
+            "default": "",
+            "required": true,
+            "computed": false,
+            "type": "evmAddress",
+            "placeholder": "0x..."
+          }
+        ],
+        "type": "blockchain:call",
+        "signature": "getInformationERC20Token",
         "outputFields": [
           {
             "key": "symbol",
@@ -513,194 +606,9 @@
           }
         ],
         "sample": {
-          
-        }
-      }
-    },
-    {
-      "key": "transferAction",
-      "name": "Transfer",
-      "display": {
-        "label": "Transfer",
-        "description": "Transfer"
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "function transfer(address _to, uint256 _value) returns (bool)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
-        "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
-          },
-          {
-            "key": "_to",
-            "label": "Recipient",
-            "type": "address",
-            "placeholder": "Enter recipient's blockchain address",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          },
-          {
-            "key": "_value",
-            "label": "Amount",
-            "type": "string",
-            "placeholder": "Enter the amount you want to transfer",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "transactionHash",
-            "label": "Transaction hash",
-            "type": "string",
-            "placeholder": "Transaction hash",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          }
-        ],
-        "sample": {
-          
-        }
-      }
-    },
-    {
-      "key": "increaseAllowanceAction",
-      "name": "Increase Allowance",
-      "display": {
-        "label": "Increase Allowance",
-        "description": "Increase Allowance"
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "function increaseAllowance(address _spender, uint256 _addedValue) returns (bool)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
-        "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
-          },
-          {
-            "key": "_spender",
-            "label": "Spender",
-            "type": "address",
-            "placeholder": "Enter spender's blockchain address",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          },
-          {
-            "key": "_addedValue",
-            "label": "Added Amount",
-            "type": "string",
-            "placeholder": "",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "transactionHash",
-            "label": "Transaction hash",
-            "type": "string",
-            "placeholder": "Transaction hash",
-            "list": false,
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false
-          }
-        ],
-        "sample": {
-          
-        }
-      }
-    },
-    {
-      "key": "allowanceAction",
-      "name": "Allowance",
-      "display": {
-        "label": "Allowance",
-        "description": "Allowance",
-        "instructions": "",
-        "featured": false
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "getAllowanceERC20Token",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
-        "inputFields": [
-          {
-            "key": "_grinderyContractAddress",
-            "label": "Token contract address",
-            "type": "string",
-            "placeholder": "Enter a token contract address",
-            "required": true,
-            "list": false,
-            "default": ""
-          },
-          {
-            "key": "owner",
-            "label": "Owner",
-            "type": "address",
-            "placeholder": "Enter owner's blockchain address",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          },
-          {
-            "key": "spender",
-            "label": "Spender",
-            "type": "address",
-            "placeholder": "Enter spender's blockchain address",
-            "list": false,
-            "required": true,
-            "helpText": "",
-            "default": "",
-            "computed": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "allowance",
-            "label": "Return value of Allowance",
-            "type": "string"
-          }
-        ],
-        "sample": {
+          "symbol": "ETH",
+          "decimals": "10",
+          "name": "ETH token"
         }
       }
     }
@@ -709,5 +617,6 @@
   "type": "web3",
   "access": "Public",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
-  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d"
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "description": ""
 }
