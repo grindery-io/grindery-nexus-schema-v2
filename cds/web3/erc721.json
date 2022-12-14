@@ -54,11 +54,6 @@
         ],
         "outputFields": [
           {
-            "key": "__transactionHash",
-            "label": "Transaction hash",
-            "type": "string"
-          },
-          {
             "key": "owner",
             "label": "Owner",
             "type": "address",
@@ -78,12 +73,32 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyChain",
+            "label": "Chain ID (in eip155 format)",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
           }
         ],
         "sample": {
           "owner": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
           "approved": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-          "tokenId": "15073"
+          "tokenId": "15073",
+          "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
+          "_grinderyChain": "eip155:1",
+          "__transactionHash": "0x9da1ceb2da5c334df7a746480250cc58a32ad4941887129493d3fa344d90b30e"
         }
       }
     },
@@ -137,11 +152,6 @@
         ],
         "outputFields": [
           {
-            "key": "__transactionHash",
-            "label": "Transaction hash",
-            "type": "string"
-          },
-          {
             "key": "owner",
             "label": "Owner",
             "type": "address",
@@ -161,12 +171,32 @@
             "type": "boolean",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyChain",
+            "label": "Chain ID (in eip155 format)",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
           }
         ],
         "sample": {
           "owner": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
           "operator": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-          "approved": "False"
+          "approved": "False",
+          "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
+          "_grinderyChain": "eip155:1",
+          "__transactionHash": "0x9da1ceb2da5c334df7a746480250cc58a32ad4941887129493d3fa344d90b30e"
         }
       }
     },
@@ -184,11 +214,6 @@
         "type": "blockchain:event",
         "signature": "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)",
         "inputFields": [
-          {
-            "key": "__transactionHash",
-            "label": "Transaction hash",
-            "type": "string"
-          },
           {
             "key": "from",
             "label": "Sender",
@@ -244,12 +269,32 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyChain",
+            "label": "Chain ID (in eip155 format)",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
           }
         ],
         "sample": {
           "from": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
           "to": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-          "tokenId": "4958"
+          "tokenId": "4958",
+          "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
+          "_grinderyChain": "eip155:1",
+          "__transactionHash": "0x9da1ceb2da5c334df7a746480250cc58a32ad4941887129493d3fa344d90b30e"
         }
       }
     },
@@ -300,11 +345,6 @@
         ],
         "outputFields": [
           {
-            "key": "__transactionHash",
-            "label": "Transaction hash",
-            "type": "string"
-          },
-          {
             "key": "recipient",
             "label": "Recipient",
             "type": "address",
@@ -324,12 +364,32 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyChain",
+            "label": "Chain ID (in eip155 format)",
+            "type": "string"
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
           }
         ],
         "sample": {
           "recipient": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
           "itemId": "3039",
-          "timestamp": "1623137600"
+          "timestamp": "1623137600",
+          "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
+          "_grinderyChain": "eip155:1",
+          "__transactionHash": "0x9da1ceb2da5c334df7a746480250cc58a32ad4941887129493d3fa344d90b30e"
         }
       }
     }

@@ -100,7 +100,8 @@
           "to": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
           "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
           "value": "137",
-          "_grinderyChain": "eip155:1"
+          "_grinderyChain": "eip155:1",
+          "__transactionHash": "0x9da1ceb2da5c334df7a746480250cc58a32ad4941887129493d3fa344d90b30e"
         }
       }
     },
@@ -180,6 +181,13 @@
             "list": false
           },
           {
+            "key": "_grinderyContractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
             "key": "_grinderyChain",
             "label": "Chain ID (in eip155 format)",
             "type": "string"
@@ -189,7 +197,9 @@
           "owner": "0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
           "spender": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
           "value": "374",
-          "_grinderyChain": "eip155:1"
+          "_grinderyContractAddress": "0x6f53bF7fB8C8F6f7ccc1719b72E7b9Be57b6B7E6",
+          "_grinderyChain": "eip155:1",
+          "__transactionHash": "0x9da1ceb2da5c334df7a746480250cc58a32ad4941887129493d3fa344d90b30e"
         }
       }
     }
