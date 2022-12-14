@@ -54,6 +54,11 @@
         ],
         "outputFields": [
           {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
             "key": "from",
             "label": "From",
             "type": "address",
@@ -138,6 +143,11 @@
           }
         ],
         "outputFields": [
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
           {
             "key": "owner",
             "label": "Owner",
