@@ -54,6 +54,11 @@
         ],
         "outputFields": [
           {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
             "key": "owner",
             "label": "Owner",
             "type": "address",
@@ -132,6 +137,11 @@
         ],
         "outputFields": [
           {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
+          {
             "key": "owner",
             "label": "Owner",
             "type": "address",
@@ -174,6 +184,11 @@
         "type": "blockchain:event",
         "signature": "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)",
         "inputFields": [
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
           {
             "key": "from",
             "label": "Sender",
@@ -284,6 +299,11 @@
           }
         ],
         "outputFields": [
+          {
+            "key": "__transactionHash",
+            "label": "Transaction hash",
+            "type": "string"
+          },
           {
             "key": "recipient",
             "label": "Recipient",
