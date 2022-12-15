@@ -29,9 +29,9 @@
             "key": "from",
             "label": "Sender",
             "type": "string",
-            "placeholder": "sender.near",
+            "placeholder": "Enter sender's NEAR wallet ID",
             "list": false,
-            "helpText": "Enter sender's NEAR wallet ID",
+            "helpText": "",
             "default": "",
             "required": false,
             "computed": false
@@ -40,9 +40,9 @@
             "key": "to",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "recipient.near",
+            "placeholder": "Enter recipient's NEAR wallet ID",
             "list": false,
-            "helpText": "Enter recipient's NEAR wallet ID",
+            "helpText": "",
             "default": "",
             "required": false,
             "computed": false
@@ -71,11 +71,7 @@
             "list": false
           }
         ],
-        "sample": {
-          "from": "jamiu.near",
-          "to": "tboy.near",
-          "amount": "391"
-        }
+        "sample": {}
       }
     },
     {
@@ -89,10 +85,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "ft_transfer",
-          "ft_transfer_call"
-        ],
+        "signature": ["ft_transfer", "ft_transfer_call"],
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -114,9 +107,9 @@
             "key": "_from",
             "label": "Sender",
             "type": "string",
-            "placeholder": "sender.near",
+            "placeholder": "Enter sender's NEAR wallet ID",
             "list": false,
-            "helpText": "Enter sender's NEAR wallet ID",
+            "helpText": "",
             "default": "",
             "required": false,
             "computed": false
@@ -125,9 +118,9 @@
             "key": "receiver_id",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "recipient.near",
+            "placeholder": "Enter recipient's NEAR wallet ID",
             "list": false,
-            "helpText": "Enter recipient's NEAR wallet ID",
+            "helpText": "",
             "default": "",
             "required": false,
             "computed": false
@@ -163,12 +156,7 @@
             "list": false
           }
         ],
-        "sample": {
-          "_from": "jamiu.near",
-          "receiver_id": "tboy.near",
-          "amount": "674",
-          "_grinderyContractAddress": "0xA6Ec2Fe4F6040b188A929048f44c9A59Fca189d4"
-        }
+        "sample": {}
       }
     },
     {
@@ -182,10 +170,7 @@
       },
       "operation": {
         "type": "blockchain:event",
-        "signature": [
-          "nft_transfer",
-          "nft_transfer_call"
-        ],
+        "signature": ["nft_transfer", "nft_transfer_call"],
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -201,7 +186,7 @@
             "key": "_grinderyContractAddress",
             "type": "string",
             "default": "",
-            "label": "NFT Contract ID",
+            "label": "Contract Address",
             "helpText": "",
             "required": false,
             "computed": false,
@@ -211,9 +196,9 @@
             "key": "_from",
             "label": "Sender",
             "type": "string",
-            "placeholder": "sender.near",
+            "placeholder": "Enter sender's NEAR wallet ID",
             "list": false,
-            "helpText": "Enter sender's NEAR wallet ID",
+            "helpText": "",
             "default": "",
             "required": false,
             "computed": false
@@ -222,9 +207,9 @@
             "key": "receiver_id",
             "label": "Recipient",
             "type": "string",
-            "placeholder": "recipient.near",
+            "placeholder": "Enter recipient's NEAR wallet ID",
             "list": false,
-            "helpText": "Enter recipient's NEAR wallet ID",
+            "helpText": "",
             "default": "",
             "required": false,
             "computed": false
@@ -271,12 +256,7 @@
             "list": false
           }
         ],
-        "sample": {
-          "_from": "jamiu.near",
-          "receiver_id": "tboy.near",
-          "token_id": "3481",
-          "_grinderyContractAddress": "0xA6Ec2Fe4F6040b188A929048f44c9A59Fca189d4"
-        }
+        "sample": {}
       }
     }
   ],
@@ -286,10 +266,7 @@
       "name": "Mint NFT",
       "display": {
         "label": "Mint NFT",
-        "description": "Mint an NFT",
-        "instructions": "",
-        "featured": false,
-        "hidden": false
+        "description": ""
       },
       "operation": {
         "type": "blockchain:call",
@@ -299,78 +276,69 @@
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
-            "label": "NFT Contract ID",
+            "label": "Contract Address",
             "type": "string",
-            "placeholder": "nft-example.testnet",
-            "required": true,
-            "list": false,
-            "default": "nft-example.tcoratger.testnet",
-            "helpText": "",
-            "computed": false
+            "placeholder": "Enter Contract address",
+            "computed": true,
+            "default": "nft.grindery.near"
           },
           {
             "key": "to",
             "label": "To",
             "type": "string",
-            "placeholder": "example.testnet",
+            "placeholder": "Enter a Near Wallet",
             "required": true,
             "list": false,
-            "default": "tcoratger.testnet",
-            "helpText": "",
-            "computed": false
+            "default": "grindery.near"
           },
           {
             "key": "title",
             "label": "Title",
             "type": "string",
-            "placeholder": "Enter text...",
+            "placeholder": "Enter a title",
             "required": true,
             "list": false,
-            "default": "My Non Fungible Token",
-            "helpText": "Specify the title of the NFT",
-            "computed": false
+            "default": "My Non Fungible Token"
           },
           {
             "key": "description",
             "label": "Description",
             "type": "string",
-            "placeholder": "Enter text...",
+            "placeholder": "Enter a description",
             "required": true,
             "list": false,
-            "default": "Streetlife movie NFT",
-            "helpText": "Provide a description for the NFT",
-            "computed": false
+            "default": "Streetlife Movie NFT"
           },
           {
             "key": "media",
-            "label": "URL to Image or Video",
+            "label": "Media",
             "type": "string",
-            "placeholder": "https://example.ipfs/example-gif.gif",
+            "placeholder": "Enter a link to a media",
             "required": true,
             "list": false,
-            "default": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif",
-            "helpText": "",
-            "computed": false
+            "default": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"
           },
           {
             "key": "_grinderyChain",
             "type": "string",
             "computed": true,
-            "default": "near:testnet"
+            "default": "near:mainnet"
           }
         ],
         "outputFields": [
           {
-            "key": "NFTAddress",
-            "label": "NFT Address",
+            "key": "transactionHash",
+            "label": "Transaction hash",
             "type": "string",
-            "placeholder": "NFT Address",
-            "list": false
+            "placeholder": "Transaction hash",
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false
           }
         ],
-        "sample": {
-          "NFTAddress": "nft-example.tcoratger.testnet"
-        }
+        "sample": {}
       }
     }
   ],
@@ -379,5 +347,5 @@
   "description": "",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Workspace"
+  "access": "Public"
 }
