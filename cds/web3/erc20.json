@@ -22,6 +22,17 @@
         ],
         "inputFields": [
           {
+            "key": "_grinderyContractAddress",
+            "label": "Token Contract Address",
+            "type": "address",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Enter the smart contract address of the token (0x0...)",
+            "default": "",
+            "computed": false
+          },
+          {
             "key": "from",
             "label": "Sender",
             "type": "address",
@@ -243,9 +254,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -330,9 +339,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -380,9 +387,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -469,9 +474,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -519,9 +522,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
