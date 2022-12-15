@@ -52,7 +52,7 @@
             "helpText": "",
             "default": "",
             "required": false,
-            "computed": false
+            "computed": true
           }
         ],
         "outputFields": [
