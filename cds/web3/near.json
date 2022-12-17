@@ -69,6 +69,27 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "txHash",
+            "label": "txHash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "blockHash",
+            "label": "blockHash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "blockHeight",
+            "label": "blockHeight",
+            "type": "string",
+            "placeholder": "",
+            "list": false
           }
         ],
         "sample": {}
