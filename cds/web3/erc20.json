@@ -69,19 +69,19 @@
         "outputFields": [
           {
             "key": "__transactionHash",
-            "label": "Transaction hash",
+            "label": "Transaction ID",
             "type": "string"
           },
           {
             "key": "from",
-            "label": "From",
+            "label": "Sender",
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false
           },
           {
             "key": "to",
-            "label": "To",
+            "label": "Recipient",
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false

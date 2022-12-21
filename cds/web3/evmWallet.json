@@ -53,7 +53,7 @@
         "outputFields": [
           {
             "key": "hash",
-            "label": "Transaction hash",
+            "label": "Transaction ID",
             "type": "string"
           },
           {
@@ -73,12 +73,12 @@
           },
           {
             "key": "to",
-            "label": "To address",
+            "label": "Recipient",
             "type": "string"
           },
           {
             "key": "value",
-            "label": "Amount transferred in wei",
+            "label": "Amount (in WEI)",
             "type": "string"
           },
           {
@@ -128,7 +128,7 @@
         "outputFields": [
           {
             "key": "balance",
-            "label": "balance",
+            "label": "Balance",
             "type": "string"
           }
         ],
