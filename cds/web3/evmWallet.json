@@ -84,6 +84,11 @@
             "key": "_grinderyChain",
             "label": "Chain ID (in eip155 format)",
             "type": "string"
+          },
+          {
+            "key": "gas",
+            "label": "Gas fees in wei",
+            "type": "string"
           }
         ],
         "sample": {
