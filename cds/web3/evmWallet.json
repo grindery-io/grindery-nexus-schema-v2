@@ -86,7 +86,7 @@
             "type": "string"
           },
           {
-            "key": "gas",
+            "key": "txfees",
             "label": "Gas fees in wei",
             "type": "string"
           }
@@ -98,6 +98,7 @@
           "hash": "0x693b3127773e1b37552a32f1b2aa075a5b874fafc5881c8d517972530cdddace",
           "to": "0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
           "value": "22000000000000000000",
+          "txfees": "10763581871",
           "_grinderyChain": "eip155:1"
         }
       }
