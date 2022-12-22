@@ -168,6 +168,12 @@
       "operation": {
         "inputFields": [
           {
+            "key": "_grinderyChain",
+            "type": "string",
+            "computed": true,
+            "default": "algorand:mainnet"
+          },
+          {
             "key": "_grinderyContractAddress",
             "label": "Contract Address",
             "helpText": "Enter a contract address",
