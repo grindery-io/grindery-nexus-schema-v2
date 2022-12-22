@@ -178,9 +178,10 @@
             "label": "Contract Address",
             "helpText": "Enter a contract address",
             "type": "string",
-            "placeholder": "0x...",
+            "placeholder": "",
             "computed": true,
-            "default": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4"
+            "default": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+            "required": false
           },
           {
             "key": "assetid",
@@ -190,7 +191,7 @@
             "list": false,
             "required": true,
             "helpText": "Enter an asset ID",
-            "default": "",
+            "default": "312769",
             "computed": false
           }
         ],
