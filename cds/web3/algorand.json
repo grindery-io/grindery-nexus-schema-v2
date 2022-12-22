@@ -262,7 +262,7 @@
           "name": "Tether USDt",
           "reserve": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
           "total": "18446744073709552000",
-          "unit-name": "USDt"
+          "unitname": "USDt"
         }
       }
     },
