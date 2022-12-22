@@ -419,7 +419,7 @@
         "outputFields": [
           {
             "key": "balance",
-            "label": "balance",
+            "label": "Balance",
             "type": "string"
           }
         ],
@@ -612,17 +612,17 @@
         "outputFields": [
           {
             "key": "symbol",
-            "label": "symbol",
+            "label": "Symbol",
             "type": "string"
           },
           {
             "key": "decimals",
-            "label": "decimals",
+            "label": "Decimals",
             "type": "string"
           },
           {
             "key": "name",
-            "label": "name",
+            "label": "Name",
             "type": "string"
           }
         ],
