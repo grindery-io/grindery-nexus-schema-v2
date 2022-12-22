@@ -207,7 +207,7 @@
             "type": "string"
           },
           {
-            "key": "unit-name",
+            "key": "unitname",
             "label": "symbol",
             "type": "string"
           },
@@ -255,7 +255,7 @@
         "sample": {
           "index": "312769",
           "clawback": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
-          "creator:": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+          "creator": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
           "decimals": "6",
           "freeze": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
           "manager": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
