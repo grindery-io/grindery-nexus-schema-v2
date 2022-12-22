@@ -180,7 +180,7 @@
             "type": "string",
             "placeholder": "0x...",
             "computed": true,
-            "default": "0x"
+            "default": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4"
           },
           {
             "key": "assetid",
