@@ -205,10 +205,64 @@
             "key": "index",
             "label": "index",
             "type": "string"
+          },
+          {
+            "key": "unit-name",
+            "label": "symbol",
+            "type": "string"
+          },
+          {
+            "key": "decimals",
+            "label": "decimals",
+            "type": "string"
+          },
+          {
+            "key": "name",
+            "label": "name",
+            "type": "string"
+          },
+          {
+            "key": "clawback",
+            "label": "clawback",
+            "type": "string"
+          },
+          {
+            "key": "creator",
+            "label": "creator",
+            "type": "string"
+          },
+          {
+            "key": "freeze",
+            "label": "freeze",
+            "type": "string"
+          },
+          {
+            "key": "manager",
+            "label": "manager",
+            "type": "string"
+          },
+          {
+            "key": "reserve",
+            "label": "reserve",
+            "type": "string"
+          },
+          {
+            "key": "total",
+            "label": "total",
+            "type": "string"
           }
         ],
         "sample": {
-          "index": "312769"
+          "index": "312769",
+          "clawback": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+          "creator:": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+          "decimals": "6",
+          "freeze": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+          "manager": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+          "name": "Tether USDt",
+          "reserve": "XIU7HGGAJ3QOTATPDSIIHPFVKMICXKHMOR2FJKHTVLII4FAOA3CYZQDLG4",
+          "total": "18446744073709552000",
+          "unit-name": "USDt"
         }
       }
     },
