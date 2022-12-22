@@ -169,10 +169,9 @@
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
-            "label": "Token Contract Address",
-            "helpText": "Enter a token contract address",
-            "required": false,
-            "type": "evmAddress",
+            "label": "Contract Address",
+            "helpText": "Enter a contract address",
+            "type": "string",
             "placeholder": "0x...",
             "computed": true,
             "default": "0x"
