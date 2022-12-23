@@ -14,7 +14,7 @@
         },
         "operation": {
           "type": "blockchain:call",
-          "signature": "mintNFT(address recipient, string tokenURI) returns (uint256)",
+          "signature": "mintNFTs(address recipient, string tokenURI) returns (uint256)",
           "operation": {
             "url": "ws://grindery-nexus-connector-web3:3000/"
           },
