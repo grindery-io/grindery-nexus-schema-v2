@@ -20,7 +20,8 @@
           "url": "ws://grindery-nexus-connector-web3:3000/"
         },
         "inputFieldProviderUrl": "http://grindery-nexus-connector-web3:3000/",
-        "inputFields": []
+        "inputFields": [],
+        "requiresUserToken": true
       }
     }
   ],
