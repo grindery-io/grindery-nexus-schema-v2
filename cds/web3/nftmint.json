@@ -1,6 +1,6 @@
 {
   "key": "nftmint",
-  "name": "EVM Mint",
+  "name": "EVM Mint-721",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
