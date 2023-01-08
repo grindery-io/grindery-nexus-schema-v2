@@ -113,6 +113,7 @@
             }
           ],
           "sample": {
+            "__transactionHash": "0x01f82c69e6791582de1641eef6ebb85e9f71d95812ab8d3bb3fd45048f529227",
             "_grinderyChain": "eip155:5",
             "_grinderyContractAddress": "0x6ec6a7814cc9E32Fb3593988D6e0e4f973aCe75e",
             "from": "0x0000000000000000000000000000000000000000",
@@ -199,6 +200,7 @@
             }
           ],
           "sample": {
+            "__transactionHash": "0xf4307679004ec24d191c6931c7648387185de23578356885c62062358ba5a9bd",
             "_grinderyChain": "eip155:5",
             "_grinderyContractAddress": "0x6ec6a7814cc9E32Fb3593988D6e0e4f973aCe75e",
             "member": "0xB201fDd90b14cc930bEc2c4E9f432bC1CA5Ad7C5"
