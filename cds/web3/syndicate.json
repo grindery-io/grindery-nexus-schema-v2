@@ -77,6 +77,13 @@
               "list": false
             },
             {
+              "key": "__transactionHash",
+              "label": "Transaction Hash",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
               "key": "_grinderyContractAddress",
               "label": "Club address",
               "type": "string",
@@ -165,6 +172,13 @@
             {
               "key": "_grinderyChain",
               "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "__transactionHash",
+              "label": "Transaction Hash",
               "type": "string",
               "placeholder": "",
               "list": false
