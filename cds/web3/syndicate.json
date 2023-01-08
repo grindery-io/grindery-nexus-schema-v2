@@ -113,6 +113,83 @@
             "token": "10000000000000000"
           }
         }
+      },
+      {
+        "key": "newEvent",
+        "name": "New Member",
+        "display": {
+          "label": "New Member",
+          "description": "New Member",
+          "instructions": "",
+          "featured": false,
+          "hidden": false
+        },
+        "operation": {
+          "type": "polling",
+          "signature": "event MemberJoined(address indexed member)",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-web3:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Choose Blockchain",
+              "type": "string",
+              "required": true,
+              "default": "eth",
+              "helpText": "",
+              "computed": false
+            },
+            {
+              "key": "_grinderyContractAddress",
+              "label": "Investment club Contract Address",
+              "helpText": "Enter a contract address",
+              "type": "string",
+              "placeholder": "",
+              "computed": false,
+              "default": "",
+              "required": true
+            },
+            {
+              "key": "member",
+              "label": "member",
+              "type": "address",
+              "placeholder": "Enter member address",
+              "default": "",
+              "computed": false,
+              "list": false,
+              "required": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "_grinderyChain",
+              "label": "Chain",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "_grinderyContractAddress",
+              "label": "Club address",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "member",
+              "label": "member",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            }
+          ],
+          "sample": {
+            "_grinderyChain": "eip155:5",
+            "_grinderyContractAddress": "0x6ec6a7814cc9E32Fb3593988D6e0e4f973aCe75e",
+            "member": "0xB201fDd90b14cc930bEc2c4E9f432bC1CA5Ad7C5"
+          }
+        }
       }
     ],
     "actions": [
