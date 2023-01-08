@@ -16,7 +16,7 @@
           "hidden": false
         },
         "operation": {
-          "type": "polling",
+          "type": "blockchain:event",
           "signature": "event Transfer(address indexed from, address indexed to, uint256 token)",
           "operation": {
             "url": "ws://grindery-nexus-connector-web3:3000/"
@@ -132,7 +132,7 @@
           "hidden": false
         },
         "operation": {
-          "type": "polling",
+          "type": "blockchain:event",
           "signature": "event MemberJoined(address indexed member)",
           "operation": {
             "url": "ws://grindery-nexus-connector-web3:3000/"
