@@ -10,7 +10,10 @@
         "name": "New Deposit",
         "display": {
           "label": "New Deposit",
-          "description": "New Deposit"
+          "description": "New Deposit",
+          "instructions": "",
+          "featured": false,
+          "hidden": false
         },
         "operation": {
           "type": "polling",
