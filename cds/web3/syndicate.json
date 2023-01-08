@@ -6,7 +6,7 @@
     "type": "web3",
     "triggers": [
       {
-        "key": "newDeposit",
+        "key": "newEvent",
         "name": "New Deposit",
         "display": {
           "label": "New Deposit",
@@ -14,44 +14,55 @@
         },
         "operation": {
           "type": "polling",
+          "signature": "event Transfer(address indexed from, address indexed to, uint256 token)",
           "operation": {
-            "url": "wss://www.example.com"
+            "url": "ws://grindery-nexus-connector-web3:3000/"
           },
           "inputFields": [
             {
               "key": "_grinderyChain",
-              "label": "Chain",
+              "label": "Choose Blockchain",
+              "type": "string",
+              "required": true,
+              "default": "eth",
+              "helpText": "",
+              "computed": false
+            },
+            {
+              "key": "_grinderyContractAddress",
+              "label": "Investment club Contract Address",
+              "helpText": "Enter a contract address",
               "type": "string",
               "placeholder": "",
-              "list": false
+              "computed": false,
+              "default": "",
+              "required": true
             },
             {
-              "key": "clubAddress",
-              "label": "Club address",
-              "type": "address",
-              "placeholder": "Enter address of the club",
-              "list": false
-            },
-            {
-              "key": "token",
-              "label": "Token",
-              "type": "address",
-              "placeholder": "Enter address of the token contract",
-              "list": false
-            },
-            {
-              "key": "sender",
+              "key": "from",
               "label": "Sender",
               "type": "address",
               "placeholder": "Enter sender address",
-              "list": false
+              "default": "0x0000000000000000000000000000000000000000",
+              "computed": true,
+              "list": false,
+              "required": false
             },
             {
-              "key": "amount",
+              "key": "to",
+              "label": "receiver",
+              "type": "string",
+              "placeholder": "Enter sender address",
+              "list": false,
+              "required": false
+            },
+            {
+              "key": "token",
               "label": "Amount",
               "type": "string",
               "placeholder": "Amount in wei",
-              "list": false
+              "list": false,
+              "required": false
             }
           ],
           "outputFields": [
@@ -63,35 +74,41 @@
               "list": false
             },
             {
-              "key": "clubAddress",
+              "key": "_grinderyContractAddress",
               "label": "Club address",
-              "type": "address",
-              "placeholder": "Enter address of the club",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "from",
+              "label": "Sender",
+              "type": "string",
+              "placeholder": "",
+              "list": false
+            },
+            {
+              "key": "to",
+              "label": "Receiver",
+              "type": "string",
+              "placeholder": "",
               "list": false
             },
             {
               "key": "token",
-              "label": "Token",
-              "type": "address",
-              "placeholder": "Enter address of the token contract",
-              "list": false
-            },
-            {
-              "key": "sender",
-              "label": "Sender",
-              "type": "address",
-              "placeholder": "Enter sender address",
-              "list": false
-            },
-            {
-              "key": "amount",
               "label": "Amount",
               "type": "string",
               "placeholder": "Amount in wei",
               "list": false
             }
           ],
-          "sample": {}
+          "sample": {
+            "_grinderyChain": "eip155:5",
+            "_grinderyContractAddress": "0x6ec6a7814cc9E32Fb3593988D6e0e4f973aCe75e",
+            "from": "0x0000000000000000000000000000000000000000",
+            "to": "0xB201fDd90b14cc930bEc2c4E9f432bC1CA5Ad7C5",
+            "token": "10000000000000000"
+          }
         }
       }
     ],
