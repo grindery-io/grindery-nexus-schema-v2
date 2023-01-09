@@ -489,6 +489,76 @@
       }
     },
     {
+      "key": "burnAction",
+      "name": "Burn",
+      "display": {
+        "label": "Burn",
+        "description": "Burn tokens from an account",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function burn(address _to, uint256 _value)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eth",
+            "helpText": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "string",
+            "required": true,
+            "default": "",
+            "label": "Contract Address",
+            "helpText": "",
+            "computed": false,
+            "placeholder": "Enter the ERC20 token contract address"
+          },
+          {
+            "key": "_to",
+            "label": "Recipient",
+            "type": "address",
+            "placeholder": "0x...",
+            "list": false,
+            "required": true,
+            "helpText": "Enter recipient's wallet address",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "_value",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "Enter token amount",
+            "list": false,
+            "required": true,
+            "helpText": "Enter the amount you want to transfer",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          "transactionHash": "0x0f820c9384a7fe016cbdc598fd5d07dbad3676d2053e471914a760dea0e62a17"
+        }
+      }
+    },
+    {
       "key": "transferAction",
       "name": "Transfer",
       "display": {
