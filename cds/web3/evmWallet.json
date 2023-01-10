@@ -119,16 +119,6 @@
       "operation": {
         "inputFields": [
           {
-            "key": "_grinderyContractAddress",
-            "type": "string",
-            "label": "Contract Address",
-            "placeholder": "Enter your contract address",
-            "required": true,
-            "default": "",
-            "helpText": "",
-            "computed": true
-          },
-          {
             "key": "address",
             "label": "Holder's Wallet Address",
             "helpText": "Enter holder's wallet address",
