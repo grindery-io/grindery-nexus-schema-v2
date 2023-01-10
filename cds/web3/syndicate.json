@@ -23,15 +23,6 @@
         },
         "inputFields": [
           {
-            "key": "_grinderyChain",
-            "label": "Choose Blockchain",
-            "type": "string",
-            "required": true,
-            "default": "eth",
-            "helpText": "",
-            "computed": false
-          },
-          {
             "key": "_grinderyContractAddress",
             "label": "Investment club Contract Address",
             "helpText": "Enter a contract address",
@@ -139,15 +130,6 @@
           "url": "ws://grindery-nexus-connector-web3:3000/"
         },
         "inputFields": [
-          {
-            "key": "_grinderyChain",
-            "label": "Choose Blockchain",
-            "type": "string",
-            "required": true,
-            "default": "eth",
-            "helpText": "",
-            "computed": false
-          },
           {
             "key": "_grinderyContractAddress",
             "label": "Investment club Contract Address",
