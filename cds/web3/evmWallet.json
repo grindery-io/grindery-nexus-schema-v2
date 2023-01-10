@@ -137,6 +137,14 @@
             "computed": false,
             "type": "string",
             "placeholder": "0x..."
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "string",
+            "label": "Contract address",
+            "default": "0x",
+            "required": false,
+            "computed": true
           }
         ],
         "type": "blockchain:call",

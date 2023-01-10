@@ -1,0 +1,142 @@
+{
+  "key": "web3",
+  "name": "Web3 connector",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "triggers": [
+    {
+      "key": "newEvent",
+      "name": "New smart contract event",
+      "display": {
+        "label": "New smart contract event",
+        "description": "Trigger when a new event on specified smart contract is received"
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "chain",
+            "label": "Name of the blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eth"
+          },
+          {
+            "key": "contractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "0x...",
+            "required": true
+          },
+          {
+            "key": "eventDeclaration",
+            "label": "Event declaration",
+            "type": "string",
+            "placeholder": "event EventName(address indexed param1, uint256 param2)",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {},
+        "requiresUserToken": true
+      }
+    },
+    {
+      "key": "newTransaction",
+      "name": "New transaction",
+      "display": {
+        "label": "New transaction",
+        "description": "Trigger when a new transaction is received"
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "chain",
+            "label": "Name of the blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eth"
+          },
+          {
+            "key": "from",
+            "label": "From address",
+            "type": "string",
+            "placeholder": "0x...",
+            "required": false
+          },
+          {
+            "key": "to",
+            "label": "To address",
+            "type": "string",
+            "placeholder": "0x...",
+            "required": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {},
+        "requiresUserToken": true
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "callSmartContract",
+      "name": "Call smart contract function",
+      "display": {
+        "label": "Call smart contract function",
+        "description": "Call a function on a smart contract"
+      },
+      "operation": {
+        "type": "api",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "chain",
+            "label": "Name of the blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eth"
+          },
+          {
+            "key": "contractAddress",
+            "label": "Contract address",
+            "type": "string",
+            "placeholder": "0x...",
+            "required": true
+          },
+          {
+            "key": "functionDeclaration",
+            "label": "Function declaration",
+            "type": "string",
+            "placeholder": "function functionName(address param1, uint256 param2)",
+            "required": true
+          },
+          {
+            "key": "maxFeePerGas",
+            "label": "Max fee per gas",
+            "type": "number",
+            "required": false
+          },
+          {
+            "key": "maxPriorityFeePerGas",
+            "label": "Max priority fee per gas",
+            "type": "number",
+            "required": false
+          }
+        ],
+        "outputFields": [],
+        "sample": {},
+        "requiresUserToken": true
+      }
+    }
+  ]
+}
