@@ -3,7 +3,27 @@
   "name": "Custom Smart Contract (EVM)",
   "version": "1.0.0",
   "platformVersion": "1",
-  "triggers": [],
+  "triggers": [
+    {
+      "key": "genericAbiTrigger",
+      "name": "Listen For Smart Contract Event",
+      "display": {
+        "label": "Listen For Smart Contract Event",
+        "description": "Listen For Smart Contract Event",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3:3000/"
+        },
+        "inputFieldProviderUrl": "http://grindery-nexus-connector-web3:3000/",
+        "inputFields": [],
+        "requiresUserToken": true
+      }
+    }
+  ],
   "actions": [
     {
       "key": "genericAbiAction",
