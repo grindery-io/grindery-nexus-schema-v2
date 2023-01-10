@@ -265,15 +265,15 @@
         "description": "View the total token supply",
         "instructions": "",
         "featured": false,
-        "hidden": true
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "getTotalSupplyERC20Token",
+        "signature": "function totalSupply() view returns (uint256)",
         "inputFields": [],
         "outputFields": [
           {
-            "key": "totalSupply",
+            "key": "returnValue",
             "label": "Return value of Total Supply",
             "type": "string"
           }
