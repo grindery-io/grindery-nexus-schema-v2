@@ -9,25 +9,19 @@
         "key": "lookup",
         "name": "Address Lookup",
         "display": {
-          "label": "Decimal",
-          "description": "Get "
+          "label": "Address Lookup",
+          "description": "Address Lookup "
         },
         "operation": {
           "type": "blockchain:call",
-          "signature": "event resolve(bytes32 node) public view returns (address)",
+          "signature": "function resolve(bytes32 node) public view returns (address)",
           "inputFields": [
             {
-              "key": "contractAddress",
-              "label": "Contract address",
+              "key": "exchange",
+              "label": "Exchange",
               "type": "string",
-              "placeholder": "0x...",
-              "required": true
-            },
-            {
-              "key": "_address",
-              "label": "Address",
-              "type": "address",
-              "placeholder": "Enter a blockchain address",
+              "required": true,
+              "placeholder": "Select Exchange Pair",
               "choices": [
                 {
                   "value": "AAVE / ETH",
@@ -258,6 +252,27 @@
               "key": "_operator",
               "label": "Operator",
               "type": "address"
+            }
+          ],
+          "sample": {}
+        }
+      },
+      {
+        "key": "priceFeed",
+        "name": "Price Feed",
+        "display": {
+          "label": "Price Feed",
+          "description": "Get Latest Price Feed"
+        },
+        "operation": {
+          "type": "blockchain:call",
+          "signature": "function getLatestPrice() public view returns (int)",
+          "outputFields": [
+            {
+              "key": "price",
+              "label": "Price",
+              "type": "integer",
+              "defaultValue": "1234"
             }
           ],
           "sample": {}
