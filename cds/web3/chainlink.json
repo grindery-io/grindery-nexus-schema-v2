@@ -1,6 +1,6 @@
 {
     "key": "chainlink",
-    "name": "Custom Smart Contract (EVM)",
+    "name": "Chainlink Oracle",
     "version": "1.0.0",
     "platformVersion": "1",
     "triggers": [],
