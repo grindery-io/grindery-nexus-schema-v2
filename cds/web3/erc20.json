@@ -1,6 +1,6 @@
 {
   "key": "erc20",
-  "name": "Tokens on EVM Chains",
+  "name": "ERC20 Tokens on EVM Chains",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
