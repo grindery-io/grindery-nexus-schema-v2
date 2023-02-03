@@ -1,6 +1,6 @@
 {
   "key": "syndicate",
-  "name": "Syndicate",
+  "name": "Syndicate (1.0.0)",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
@@ -10,7 +10,7 @@
       "name": "New Deposit",
       "display": {
         "label": "New Deposit",
-        "description": "New Deposit",
+        "description": "Detect a new deposit in an Investment Club.",
         "instructions": "",
         "featured": false,
         "hidden": false
@@ -18,14 +18,12 @@
       "operation": {
         "type": "blockchain:event",
         "signature": "event Transfer(address indexed from, address indexed to, uint256 token)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "operation": { "url": "ws://grindery-nexus-connector-web3:3000/" },
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
-            "label": "Investment club Contract Address",
-            "helpText": "Enter a contract address",
+            "label": "Investment Club Contract Address",
+            "helpText": "Enter the token contract address of the Investment Club.",
             "type": "string",
             "placeholder": "",
             "computed": false,
@@ -36,27 +34,34 @@
             "key": "from",
             "label": "Sender",
             "type": "address",
-            "placeholder": "Enter sender address",
+            "placeholder": "",
             "default": "0x0000000000000000000000000000000000000000",
             "computed": true,
             "list": false,
-            "required": false
+            "required": false,
+            "helpText": "Enter sender's wallet address"
           },
           {
             "key": "to",
-            "label": "receiver",
+            "label": "Recipient",
             "type": "string",
-            "placeholder": "Enter sender address",
+            "placeholder": "",
             "list": false,
-            "required": false
+            "required": false,
+            "helpText": "Enter recipient's wallet address.",
+            "default": "",
+            "computed": false
           },
           {
             "key": "token",
             "label": "Amount",
             "type": "string",
-            "placeholder": "Amount in wei",
+            "placeholder": "Amount in WEI",
             "list": false,
-            "required": false
+            "required": false,
+            "helpText": "",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [
@@ -108,7 +113,7 @@
           "_grinderyChain": "eip155:5",
           "_grinderyContractAddress": "0x6ec6a7814cc9E32Fb3593988D6e0e4f973aCe75e",
           "from": "0x0000000000000000000000000000000000000000",
-          "to": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1",
+          "to": "0xB201fDd90b14cc930bEc2c4E9f432bC1CA5Ad7C5",
           "token": "10000000000000000"
         }
       }
@@ -118,7 +123,7 @@
       "name": "New Member",
       "display": {
         "label": "New Member",
-        "description": "New Member",
+        "description": "Detect a new member in an Investment Club.",
         "instructions": "",
         "featured": false,
         "hidden": false
@@ -126,14 +131,12 @@
       "operation": {
         "type": "blockchain:event",
         "signature": "event MemberJoined(address indexed member)",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "operation": { "url": "ws://grindery-nexus-connector-web3:3000/" },
         "inputFields": [
           {
             "key": "_grinderyContractAddress",
-            "label": "Investment club Contract Address",
-            "helpText": "Enter a contract address",
+            "label": "Investment Club Contract Address",
+            "helpText": "Enter the token contract address of the Investment Club.",
             "type": "string",
             "placeholder": "",
             "computed": false,
@@ -142,13 +145,14 @@
           },
           {
             "key": "member",
-            "label": "member",
+            "label": "Member",
             "type": "address",
-            "placeholder": "Enter member address",
+            "placeholder": "",
             "default": "",
             "computed": false,
             "list": false,
-            "required": false
+            "required": false,
+            "helpText": "Enter member's wallet address."
           }
         ],
         "outputFields": [
@@ -185,7 +189,7 @@
           "__transactionHash": "0xf4307679004ec24d191c6931c7648387185de23578356885c62062358ba5a9bd",
           "_grinderyChain": "eip155:5",
           "_grinderyContractAddress": "0x6ec6a7814cc9E32Fb3593988D6e0e4f973aCe75e",
-          "member": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1"
+          "member": "0xB201fDd90b14cc930bEc2c4E9f432bC1CA5Ad7C5"
         }
       }
     }
@@ -193,10 +197,10 @@
   "actions": [
     {
       "key": "InformationInvestmentClub",
-      "name": "Information Investment Club",
+      "name": "Investment Club Information",
       "display": {
-        "label": "Information Investment Club",
-        "description": "Get details of an investment club",
+        "label": "Investment Club Information",
+        "description": "Get details of an Investment Club.",
         "instructions": "",
         "featured": false,
         "hidden": false
@@ -206,7 +210,7 @@
           {
             "key": "_grinderyContractAddress",
             "label": "Investment Club Contract Address",
-            "helpText": "Enter an Investment Club contract address",
+            "helpText": "Enter the token contract address of the Investment Club.",
             "default": "",
             "required": true,
             "computed": false,
@@ -217,26 +221,10 @@
         "type": "blockchain:call",
         "signature": "getSyndicateInvestmentClubInformation",
         "outputFields": [
-          {
-            "key": "owner",
-            "label": "owner",
-            "type": "string"
-          },
-          {
-            "key": "name",
-            "label": "name",
-            "type": "string"
-          },
-          {
-            "key": "symbol",
-            "label": "symbol",
-            "type": "string"
-          },
-          {
-            "key": "totalSupply",
-            "label": "totalSupply",
-            "type": "string"
-          }
+          { "key": "owner", "label": "owner", "type": "string" },
+          { "key": "name", "label": "name", "type": "string" },
+          { "key": "symbol", "label": "symbol", "type": "string" },
+          { "key": "totalSupply", "label": "totalSupply", "type": "string" }
         ],
         "sample": {
           "owner": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1",
@@ -251,7 +239,7 @@
       "name": "getBalanceOf",
       "display": {
         "label": "Balance of",
-        "description": "Get balance of a holder within an investment club",
+        "description": "Get the balance of a holder within an Investment Club.",
         "instructions": "",
         "featured": false,
         "hidden": false
@@ -261,7 +249,7 @@
           {
             "key": "_grinderyContractAddress",
             "label": "Investment Club Contract Address",
-            "helpText": "Enter an Investment Club contract address",
+            "helpText": "Enter the token contract address of the Investment Club.",
             "default": "",
             "required": true,
             "computed": false,
@@ -270,12 +258,12 @@
           },
           {
             "key": "holder",
-            "label": "holder",
+            "label": "Holder",
             "type": "address",
             "placeholder": "0x...",
             "list": false,
             "required": true,
-            "helpText": "Enter a holder address",
+            "helpText": "Enter holder's wallet address.",
             "default": "",
             "computed": false
           }
@@ -289,14 +277,13 @@
             "type": "string"
           }
         ],
-        "sample": {
-          "returnValue": "10000000000000000"
-        }
+        "sample": { "returnValue": "10000000000000000" }
       }
     }
   ],
   "icon": "data:image/png;base64,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",
   "access": "Workspace",
-  "user": "eip155:1:0x5879C017729336B3Cfb6Da7df90BB712640f49dC",
-  "workspace": "ws-38b493d8-3714-49f5-bd01-a3298509d46d"
+  "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
+  "workspace": "ws-38b493d8-3714-49f5-bd01-a3298509d46d",
+  "description": "Triggers when a new member or deposit is detected in an Investment Club."
 }

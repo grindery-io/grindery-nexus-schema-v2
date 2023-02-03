@@ -1,6 +1,6 @@
 {
   "key": "evmWallet",
-  "name": "Native Tokens on EVM Chains",
+  "name": "Native Tokens on EVM Chains (1.0.0)",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "triggers": [
@@ -9,16 +9,14 @@
       "name": "New Transaction",
       "display": {
         "label": "New Transaction",
-        "description": "Triggers when a new transaction occurs",
+        "description": "Detect a new native token transaction.",
         "instructions": "",
         "featured": false,
         "hidden": false
       },
       "operation": {
         "type": "polling",
-        "operation": {
-          "url": "ws://grindery-nexus-connector-web3:3000/"
-        },
+        "operation": { "url": "ws://grindery-nexus-connector-web3:3000/" },
         "inputFields": [
           {
             "key": "_grinderyChain",
@@ -35,7 +33,7 @@
             "type": "string",
             "placeholder": "0x...",
             "required": false,
-            "helpText": "Sender's EVM wallet address",
+            "helpText": "Enter Sender's EVM wallet address. ",
             "default": "",
             "computed": false
           },
@@ -45,52 +43,24 @@
             "type": "string",
             "placeholder": "0x...",
             "required": false,
-            "helpText": "Recipient's EVM wallet address",
+            "helpText": "Enter recipient's EVM wallet address.",
             "default": "",
             "computed": false
           }
         ],
         "outputFields": [
-          {
-            "key": "hash",
-            "label": "Transaction ID",
-            "type": "string"
-          },
-          {
-            "key": "blockHash",
-            "label": "Block hash",
-            "type": "string"
-          },
-          {
-            "key": "blockNumber",
-            "label": "Block number",
-            "type": "string"
-          },
-          {
-            "key": "from",
-            "label": "Sender",
-            "type": "string"
-          },
-          {
-            "key": "to",
-            "label": "Recipient",
-            "type": "string"
-          },
-          {
-            "key": "value",
-            "label": "Amount (in WEI)",
-            "type": "string"
-          },
+          { "key": "hash", "label": "Transaction ID", "type": "string" },
+          { "key": "blockHash", "label": "Block hash", "type": "string" },
+          { "key": "blockNumber", "label": "Block number", "type": "string" },
+          { "key": "from", "label": "Sender", "type": "string" },
+          { "key": "to", "label": "Recipient", "type": "string" },
+          { "key": "value", "label": "Amount (in WEI)", "type": "string" },
           {
             "key": "_grinderyChain",
             "label": "Chain ID (in eip155 format)",
             "type": "string"
           },
-          {
-            "key": "txfees",
-            "label": "Gas fees (in WEI)",
-            "type": "string"
-          }
+          { "key": "txfees", "label": "Gas fees (in WEI)", "type": "string" }
         ],
         "sample": {
           "blockHash": "0x71401089b93a49b6695b6cd30fbb0541d7cb3c2c32a1fe9fba0c718edebb7fc0",
@@ -111,7 +81,7 @@
       "name": "Balance Of",
       "display": {
         "label": "Balance Of",
-        "description": "Get the balance of a specified token holder",
+        "description": "Get an owner's native token balance.",
         "instructions": "",
         "featured": false,
         "hidden": false
@@ -121,7 +91,7 @@
           {
             "key": "address",
             "label": "Holder's Wallet Address",
-            "helpText": "Enter holder's wallet address",
+            "helpText": "Enter the holder's wallet address.",
             "default": "",
             "required": true,
             "computed": false,
@@ -140,15 +110,9 @@
         "type": "blockchain:call",
         "signature": "getBalanceNative",
         "outputFields": [
-          {
-            "key": "balance",
-            "label": "Balance",
-            "type": "string"
-          }
+          { "key": "balance", "label": "Balance", "type": "string" }
         ],
-        "sample": {
-          "balance": "10000"
-        }
+        "sample": { "balance": "10000" }
       }
     }
   ],
@@ -157,5 +121,5 @@
   "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
   "access": "Public",
-  "description": ""
+  "description": "Triggers when a native token transaction occurs on Ethereum, Binance, or any other EVM Chain (connector created by Grindery)."
 }
