@@ -174,32 +174,6 @@
       }
     },
     {
-      "key": "changeAdminAction",
-      "name": "Change Admin",
-      "display": {
-        "label": "Change Admin",
-        "description": "Change Admin"
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "function changeAdmin(address newAdmin)",
-        "inputFields": [
-          {
-            "key": "newAdmin",
-            "label": "New Admin",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "required": true
-          }
-        ],
-        "outputFields": [],
-        "sample": {
-          
-        }
-      }
-    },
-    {
       "key": "adminAction",
       "name": "Admin (View function)",
       "display": {
