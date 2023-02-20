@@ -1686,5 +1686,6 @@
   "workspace": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "access": "Private",
   "contributor": "milukove",
-  "description": "Uniswap v3 contract: 0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
+  "description": "Uniswap v3 contract: 0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+  "submitted": true
 }
