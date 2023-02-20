@@ -64,12 +64,13 @@ An `object` that represents a connector app.
 
 An `object` that defines a trigger for a workflow.
 
-| Key         | Type                                                                                                                                                           | Required | Description                                     |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------- |
-| `key`       | `string`                                                                                                                                                       | yes      | A key to uniquely identify this trigger.        |
-| `name`      | `string`                                                                                                                                                       | yes      | A short name to uniquely identify this trigger. |
-| `display`   | [DisplaySchema](#displayschema)                                                                                                                                | yes      | Defines UI representation this trigger.         |
-| `operation` | anyOf([ChainEventOperationSchema](#chaineventoperationschema), [HookOperationSchema](#hookoperationschema), [PollingOperationSchema](#pollingoperationschema)) | yes      | Defines the functionality for this trigger.     |
+| Key              | Type                                                                                                                                                           | Required | Description                                               |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------- |
+| `key`            | `string`                                                                                                                                                       | yes      | A key to uniquely identify this trigger.                  |
+| `name`           | `string`                                                                                                                                                       | yes      | A short name to uniquely identify this trigger.           |
+| `authentication` | `string` in (`default`, `none`)                                                                                                                                | no       | Set to `none` to disable authentication for this trigger. |
+| `display`        | [DisplaySchema](#displayschema)                                                                                                                                | yes      | Defines UI representation this trigger.                   |
+| `operation`      | anyOf([ChainEventOperationSchema](#chaineventoperationschema), [HookOperationSchema](#hookoperationschema), [PollingOperationSchema](#pollingoperationschema)) | yes      | Defines the functionality for this trigger.               |
 
 #### ChainEventOperationSchema
 
@@ -116,12 +117,13 @@ An `object` that defines the mechanics of a polling operation.
 
 An `object` that defines an action for a workflow.
 
-| Key         | Type                                                                                                            | Required | Description                                    |
-| ----------- | --------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------- |
-| `key`       | `string`                                                                                                        | yes      | A key to uniquely identify this action.        |
-| `name`      | `string`                                                                                                        | yes      | A short name to uniquely identify this action. |
-| `display`   | [DisplaySchema](#displayschema)                                                                                 | yes      | Defines UI representation this action.         |
-| `operation` | anyOf([ChainCallOperationSchema](#chaincalloperationschema), [APICallOperationSchema](#apicalloperationschema)) | yes      | Defines the functionality for this action.     |
+| Key              | Type                                                                                                            | Required | Description                                              |
+| ---------------- | --------------------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------- |
+| `key`            | `string`                                                                                                        | yes      | A key to uniquely identify this action.                  |
+| `name`           | `string`                                                                                                        | yes      | A short name to uniquely identify this action.           |
+| `authentication` | `string` in (`default`, `none`)                                                                                 | no       | Set to `none` to disable authentication for this action. |
+| `display`        | [DisplaySchema](#displayschema)                                                                                 | yes      | Defines UI representation this action.                   |
+| `operation`      | anyOf([ChainCallOperationSchema](#chaincalloperationschema), [APICallOperationSchema](#apicalloperationschema)) | yes      | Defines the functionality for this action.               |
 
 #### APICallOperationSchema
 
