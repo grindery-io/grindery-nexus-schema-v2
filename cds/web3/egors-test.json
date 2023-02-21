@@ -6,56 +6,6 @@
   "type": "web3",
   "triggers": [
     {
-      "key": "AdminChangedTrigger",
-      "name": "Admin Changed",
-      "display": {
-        "label": "Admin Changed",
-        "description": "Admin Changed Event",
-        "instructions": "",
-        "featured": false,
-        "hidden": false
-      },
-      "operation": {
-        "type": "blockchain:event",
-        "signature": "event AdminChanged(address previousAdmin, address newAdmin)",
-        "inputFields": [
-          {
-            "key": "previousAdmin",
-            "label": "Previous Admin",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "newAdmin",
-            "label": "New Admin",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "previousAdmin",
-            "label": "Previous Admin",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "newAdmin",
-            "label": "New Admin",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          }
-        ],
-        "sample": {
-          
-        }
-      }
-    },
-    {
       "key": "UpgradedTrigger",
       "name": "Upgraded",
       "display": {
