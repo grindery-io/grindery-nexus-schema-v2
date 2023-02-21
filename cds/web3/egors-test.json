@@ -4,41 +4,7 @@
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
-  "triggers": [
-    {
-      "key": "UpgradedTrigger",
-      "name": "Upgraded",
-      "display": {
-        "label": "Upgraded",
-        "description": "Upgraded"
-      },
-      "operation": {
-        "type": "blockchain:event",
-        "signature": "event Upgraded(address implementation)",
-        "inputFields": [
-          {
-            "key": "implementation",
-            "label": "Implementation",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "implementation",
-            "label": "Implementation",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          }
-        ],
-        "sample": {
-          
-        }
-      }
-    }
-  ],
+  "triggers": [],
   "actions": [
     {
       "key": "upgradeToAction",
