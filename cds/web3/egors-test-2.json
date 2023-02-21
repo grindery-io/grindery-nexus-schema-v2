@@ -993,48 +993,6 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function safeTransferFrom(address from, address to, uint256 tokenId)",
-        "inputFields": [
-          {
-            "key": "from",
-            "label": "From",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "required": true
-          },
-          {
-            "key": "to",
-            "label": "To",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "required": true
-          },
-          {
-            "key": "tokenId",
-            "label": "Token Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false,
-            "required": true
-          }
-        ],
-        "outputFields": [],
-        "sample": {
-          
-        }
-      }
-    },
-    {
-      "key": "safeTransferFromAction",
-      "name": "Safe Transfer From",
-      "display": {
-        "label": "Safe Transfer From",
-        "description": "Safe Transfer From"
-      },
-      "operation": {
-        "type": "blockchain:call",
         "signature": "function safeTransferFrom(address from, address to, uint256 tokenId, bytes _data)",
         "inputFields": [
           {
