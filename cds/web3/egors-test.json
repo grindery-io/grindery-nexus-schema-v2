@@ -7,32 +7,6 @@
   "triggers": [],
   "actions": [
     {
-      "key": "upgradeToAction",
-      "name": "Upgrade To",
-      "display": {
-        "label": "Upgrade To",
-        "description": "Upgrade To"
-      },
-      "operation": {
-        "type": "blockchain:call",
-        "signature": "function upgradeTo(address newImplementation)",
-        "inputFields": [
-          {
-            "key": "newImplementation",
-            "label": "New Implementation",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "required": true
-          }
-        ],
-        "outputFields": [],
-        "sample": {
-          
-        }
-      }
-    },
-    {
       "key": "upgradeToAndCallAction",
       "name": "Upgrade To And Call",
       "display": {
