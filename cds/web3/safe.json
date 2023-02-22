@@ -102,11 +102,13 @@
           "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
           "confirmationsRequired": 1,
           "trusted": true,
-          "value": "10000000000000000",
-          "valueFormatted": "0.01",
+          "value": "1000000",
+          "valueFormatted": "1.0",
           "sender": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
           "recipient": "0x8c17e35218dC6d17Ce7EBf3532B4AEDBC88e98f9",
           "direction": "OUTGOING",
+          "logoUri": "https://safe-transaction-assets.safe.global/tokens/logos/0x07865c6E87B9F70255377e024ace6630C1Eaa37F.png",
+          "decimals": 6,
           "tokenAddress": "0x07865c6E87B9F70255377e024ace6630C1Eaa37F",
           "tokenName": "USD Coin",
           "tokenSymbol": "USDC"
@@ -293,6 +295,93 @@
           "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
           "confirmationsRequired": 1,
           "trusted": true
+        }
+      }
+    },
+    {
+      "key": "safeDepositReceivedNative",
+      "name": "Deposit received - Native token",
+      "display": {
+        "label": "Deposit received - Native token",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x76992d8df4ef20c9b5a6da80e9a95c5e8882f610b2794ecb1fbec8ee715d5402",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "sender": "0x8c17e35218dC6d17Ce7EBf3532B4AEDBC88e98f9",
+          "value": "10000000000000000",
+          "valueFormatted": "0.01"
+        }
+      }
+    },
+    {
+      "key": "safeDepositReceivedERC20",
+      "name": "Deposit received - ERC20 token",
+      "display": {
+        "label": "Deposit received - ERC20 token",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x76992d8df4ef20c9b5a6da80e9a95c5e8882f610b2794ecb1fbec8ee715d5402",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "sender": "0x8c17e35218dC6d17Ce7EBf3532B4AEDBC88e98f9",
+          "value": "1000000",
+          "tokenAddress": "0x07865c6E87B9F70255377e024ace6630C1Eaa37F",
+          "tokenName": "USD Coin",
+          "tokenSymbol": "USDC",
+          "logoUri": "https://safe-transaction-assets.safe.global/tokens/logos/0x07865c6E87B9F70255377e024ace6630C1Eaa37F.png",
+          "decimals": 6,
+          "valueFormatted": "1.0"
         }
       }
     }
