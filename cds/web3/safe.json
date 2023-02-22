@@ -212,6 +212,43 @@
       }
     },
     {
+      "key": "safeTransactionExecutedThresholdChanged",
+      "name": "Transaction executed - Threshold changed",
+      "display": {
+        "label": "Transaction executed - Threshold changed",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ChangedThreshold(uint256 threshold)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x1df651e07a2af1b2b21bd93815786ab563bbe2246899c7f19c69d63cc3f12450",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "threshold": "2"
+        }
+      }
+    },
+    {
       "key": "safeTransactionExecutedOther",
       "name": "Transaction executed - Other",
       "display": {
