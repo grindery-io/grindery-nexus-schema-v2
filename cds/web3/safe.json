@@ -3,7 +3,40 @@
   "name": "Safe",
   "version": "2.0.0",
   "platformVersion": "1.0.0",
-  "triggers": [],
+  "triggers": [
+    {
+      "key": "safeTransactionExecutedTransferNative",
+      "name": "Transaction executed - Transfer native token",
+      "display": {
+        "label": "Transaction executed - Transfer native token",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "string",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    }],
   "actions": [
     {
       "key": "gnosisSafeSimpleTransfer",
