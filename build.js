@@ -42,14 +42,17 @@ for (const path of ["web2", "web3"]) {
       }
       for (const key of ["triggers", "actions"]) {
         for (const item of data[key] || []) {
-          item.outputFields = item.outputFields || [];
-          if (!item.outputFields.length) {
-            for (const [key, value] of Object.entries(item.sample || {})) {
+          if (!item.operation) {
+            continue;
+          }
+          item.operation.outputFields = item.operation.outputFields || [];
+          if (!item.operation.outputFields.length) {
+            for (const [key, value] of Object.entries(item.operation.sample || {})) {
               const type = typeof value;
               if (["string", "number", "boolean"].indexOf(type) === -1) {
                 continue;
               }
-              item.outputFields.push({
+              item.operation.outputFields.push({
                 key,
                 label: humanize(key),
                 type,
