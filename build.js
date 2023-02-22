@@ -54,7 +54,7 @@ for (const path of ["web2", "web3"]) {
               }
               item.operation.outputFields.push({
                 key,
-                label: humanize(key),
+                label: humanize(key.replace(/^_grindery/, "")),
                 type,
               });
             }
