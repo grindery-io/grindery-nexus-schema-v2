@@ -106,7 +106,10 @@
           "valueFormatted": "0.01",
           "sender": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
           "recipient": "0x8c17e35218dC6d17Ce7EBf3532B4AEDBC88e98f9",
-          "direction": "OUTGOING"
+          "direction": "OUTGOING",
+          "tokenAddress": "0x07865c6E87B9F70255377e024ace6630C1Eaa37F",
+          "tokenName": "USD Coin",
+          "tokenSymbol": "USDC"
         }
       }
     },
