@@ -27,7 +27,7 @@
           },
           {
             "key": "_grinderyContractAddress",
-            "type": "string",
+            "type": "address",
             "label": "Safe Address",
             "placeholder": "Enter your safe address",
             "required": true
