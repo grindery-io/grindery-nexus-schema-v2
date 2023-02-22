@@ -56,7 +56,207 @@
           "direction": "OUTGOING"
         }
       }
-    }],
+    },
+    {
+      "key": "safeTransactionExecutedTransferERC20",
+      "name": "Transaction executed - Transfer ERC20 token",
+      "display": {
+        "label": "Transaction executed - Transfer ERC20 token",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x1df651e07a2af1b2b21bd93815786ab563bbe2246899c7f19c69d63cc3f12450",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "type": "transfer_erc20",
+          "submittedAt": 1677059469747,
+          "nonce": 28,
+          "safeTxGas": "0",
+          "baseGas": "0",
+          "gasPrice": "0",
+          "gasToken": "0x0000000000000000000000000000000000000000",
+          "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
+          "confirmationsRequired": 1,
+          "trusted": true,
+          "value": "10000000000000000",
+          "valueFormatted": "0.01",
+          "sender": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "recipient": "0x8c17e35218dC6d17Ce7EBf3532B4AEDBC88e98f9",
+          "direction": "OUTGOING"
+        }
+      }
+    },
+    {
+      "key": "safeTransactionExecutedAddOwner",
+      "name": "Transaction executed - Add owner",
+      "display": {
+        "label": "Transaction executed - Add owner",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x1df651e07a2af1b2b21bd93815786ab563bbe2246899c7f19c69d63cc3f12450",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "type": "add_owner",
+          "submittedAt": 1677059469747,
+          "nonce": 28,
+          "safeTxGas": "0",
+          "baseGas": "0",
+          "gasPrice": "0",
+          "gasToken": "0x0000000000000000000000000000000000000000",
+          "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
+          "confirmationsRequired": 1,
+          "trusted": true,
+          "owner": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6"
+        }
+      }
+    },
+    {
+      "key": "safeTransactionExecutedRemoveOwner",
+      "name": "Transaction executed - Remove owner",
+      "display": {
+        "label": "Transaction executed - Remove owner",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x1df651e07a2af1b2b21bd93815786ab563bbe2246899c7f19c69d63cc3f12450",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "type": "remove_owner",
+          "submittedAt": 1677059469747,
+          "nonce": 28,
+          "safeTxGas": "0",
+          "baseGas": "0",
+          "gasPrice": "0",
+          "gasToken": "0x0000000000000000000000000000000000000000",
+          "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
+          "confirmationsRequired": 1,
+          "trusted": true,
+          "owner": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6"
+        }
+      }
+    },
+    {
+      "key": "safeTransactionExecutedOther",
+      "name": "Transaction executed - Other",
+      "display": {
+        "label": "Transaction executed - Other",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "polling",
+        "operation": {
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
+        },
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "type": "string",
+            "label": "Chain",
+            "required": true
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "address",
+            "label": "Safe Address",
+            "placeholder": "Enter your safe address",
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          "_grinderyTransactionHash": "0x1df651e07a2af1b2b21bd93815786ab563bbe2246899c7f19c69d63cc3f12450",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "type": "remove_owner",
+          "submittedAt": 1677059469747,
+          "nonce": 28,
+          "safeTxGas": "0",
+          "baseGas": "0",
+          "gasPrice": "0",
+          "gasToken": "0x0000000000000000000000000000000000000000",
+          "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
+          "confirmationsRequired": 1,
+          "trusted": true
+        }
+      }
+    }
+  ],
   "actions": [
     {
       "key": "gnosisSafeSimpleTransfer",
