@@ -34,7 +34,27 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          "_grinderyTransactionHash": "0x1df651e07a2af1b2b21bd93815786ab563bbe2246899c7f19c69d63cc3f12450",
+          "_grinderyChainId": "5",
+          "_grinderyContractAddress": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "_grinderyChain": "eip155:5",
+          "type": "transfer_native_coin",
+          "submittedAt": 1677059469747,
+          "nonce": 28,
+          "safeTxGas": "0",
+          "baseGas": "0",
+          "gasPrice": "0",
+          "gasToken": "0x0000000000000000000000000000000000000000",
+          "safeTxHash": "0x734273d8a0fd2995548d208e2dbd53ec1daaec3d9adff1f3a39be6acd2929477",
+          "confirmationsRequired": 1,
+          "trusted": true,
+          "value": "10000000000000000",
+          "valueFormatted": "0.01",
+          "sender": "0xb6D3145b1Fd6fDa048A39BE5D82EB76a00706DC6",
+          "recipient": "0x8c17e35218dC6d17Ce7EBf3532B4AEDBC88e98f9",
+          "direction": "OUTGOING"
+        }
       }
     }],
   "actions": [
