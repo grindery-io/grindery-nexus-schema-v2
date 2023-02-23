@@ -13,6 +13,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
@@ -66,6 +67,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
@@ -124,6 +126,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
@@ -173,6 +176,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
@@ -222,6 +226,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "blockchain:event",
         "signature": "event ChangedThreshold(uint256 threshold)",
@@ -259,6 +264,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
@@ -307,6 +313,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
@@ -348,6 +355,7 @@
         "instructions": "",
         "featured": false
       },
+      "authentication": "none",
       "operation": {
         "type": "polling",
         "operation": {
