@@ -285,5 +285,6 @@
   "access": "Beta",
   "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
   "workspace": "ws-38b493d8-3714-49f5-bd01-a3298509d46d",
-  "description": "Triggers when a new member or deposit is detected in an Investment Club."
+  "description": "Triggers when a new member or deposit is detected in an Investment Club.",
+  "contributor": "tcoratger"
 }
