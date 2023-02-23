@@ -338,6 +338,6 @@
   "type": "web3",
   "user": "eip155:1:0x2c0015A367eb73f575e48F9dC46dE0b8e497EAAC",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Workspace",
+  "access": "Beta",
   "description": "Triggers when a Safe transaction is initiated."
 }
