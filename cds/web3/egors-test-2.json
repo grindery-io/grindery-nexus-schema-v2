@@ -1645,5 +1645,17 @@
   "access": "Beta",
   "contributor": "milukove",
   "description": "Uniswap v3 contract: 0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
-  "submitted": true
+  "submitted": true,
+  "authentication": {
+    "type": "oauth2",
+    "test": "",
+    "defaultDisplayName": "",
+    "authenticatedRequestTemplate": "",
+    "allowedHosts": "",
+    "fields": "",
+    "label": "",
+    "oauth1Config": "",
+    "oauth2Config": "",
+    "sessionConfig": ""
+  }
 }
