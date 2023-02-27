@@ -1645,6 +1645,5 @@
   "access": "Beta",
   "contributor": "milukove",
   "description": "Uniswap v3 contract: 0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
-  "submitted": true,
-  "sessionConfig": ""
+  "submitted": true
 }
