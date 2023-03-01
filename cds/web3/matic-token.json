@@ -61,9 +61,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -150,9 +148,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -239,9 +235,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -370,9 +364,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -501,9 +493,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -548,9 +538,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
@@ -573,9 +561,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -599,9 +585,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -622,9 +606,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -680,9 +662,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -706,9 +686,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -729,9 +707,7 @@
             "type": "number"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -763,9 +739,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -797,9 +771,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -820,9 +792,7 @@
             "type": "address"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -843,9 +813,7 @@
             "type": "address"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -875,9 +843,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -892,9 +858,7 @@
         "signature": "function renounceOwnership()",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -915,9 +879,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -955,9 +917,7 @@
             "type": "address"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -978,9 +938,7 @@
             "type": "address"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1001,9 +959,7 @@
             "type": "boolean"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1024,9 +980,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1047,9 +1001,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1081,9 +1033,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1104,9 +1054,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1136,9 +1084,7 @@
             "type": "boolean"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1192,9 +1138,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1215,9 +1159,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1238,9 +1180,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1261,9 +1201,7 @@
             "type": "string"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1287,9 +1225,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1310,9 +1246,7 @@
             "type": "address"
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
@@ -1320,5 +1254,6 @@
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-c7d1c86d-818c-48f0-996b-75c0e2ba75b1",
   "description": "MATIC Token on Polygon chain",
-  "access": "Workspace"
+  "access": "Private",
+  "contributor": "milukove"
 }

@@ -1,6 +1,6 @@
 {
-  "key": "nftmint",
-  "name": "EVM Mint",
+  "key": "nftmints",
+  "name": "EVM Mint-1155",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
@@ -14,7 +14,7 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "mintNFT(address recipient, string tokenURI) returns (uint256)",
+        "signature": "mintNFTs(address recipient, string tokenURI) returns (uint256)",
         "operation": {
           "url": "ws://grindery-nexus-connector-web3:3000/"
         },
@@ -26,7 +26,7 @@
             "placeholder": "Enter Contract address",
             "required": true,
             "list": false,
-            "default": "0xDa378d4D5D0c8Bf62c0bdFd44fF8E00574B59Fe7"
+            "default": "0xd3577853504823DfFE231534bE22bfD55939A559"
           },
           {
             "key": "recipient",
@@ -35,7 +35,7 @@
             "placeholder": "Enter Recipient Address",
             "list": false,
             "helpText": "",
-            "default": "0x710f35C7c7CEC6B4f80D63ED506c356160eB58d1",
+            "default": "0xFd59c38a4ce323062b75B3fb35C1d146F445c1Ec",
             "required": true,
             "computed": false
           },
@@ -94,5 +94,5 @@
   "description": "",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Private"
+  "access": "Beta"
 }

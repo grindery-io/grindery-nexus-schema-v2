@@ -433,9 +433,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -465,9 +463,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -496,9 +492,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -547,9 +541,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -609,9 +601,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -652,9 +642,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -706,9 +694,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
@@ -717,5 +703,6 @@
   "description": "",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Workspace"
+  "access": "Private",
+  "contributor": "SAPikachu"
 }
