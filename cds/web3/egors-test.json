@@ -1,7 +1,7 @@
 {
   "key": "egors-test",
   "name": "Egor's test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "platformVersion": "1.0.0",
   "type": "web3",
   "triggers": [],
