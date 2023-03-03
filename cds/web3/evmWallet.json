@@ -122,5 +122,7 @@
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
   "access": "Public",
   "description": "Triggers when a native token transaction occurs on Ethereum, Binance, or any other EVM Chain (connector created by Grindery).",
+  "triggersDescription": "Triggers when a native token transaction occurs on Ethereum, Binance, or any other EVM Chain (connector created by Grindery).",
+  "actionsDescription": "Interact with native tokens on EVM Chains.",
   "contributor": "SAPikachu"
 }
