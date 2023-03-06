@@ -1,0 +1,186 @@
+{
+  "key": "daostar-one-connector",
+  "name": "DAOStar One connector",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "NewRegistrationTrigger",
+      "name": "New Registration",
+      "display": {
+        "label": "New Registration",
+        "description": "New Registration"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event NewRegistration(address indexed daoAddress, string daoURI, address registration)",
+        "inputFields": [
+          {
+            "key": "daoAddress",
+            "label": "Dao Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "daoURI",
+            "label": "Dao URI",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "registration",
+            "label": "Registration",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "daoAddress",
+            "label": "Dao Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "daoURI",
+            "label": "Dao URI",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "registration",
+            "label": "Registration",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "registrationAddressAction",
+      "name": "Registration Address",
+      "display": {
+        "label": "Registration Address",
+        "description": "Registration Address"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function registrationAddress(address by, bytes32 salt) returns (address, bool)",
+        "inputFields": [
+          {
+            "key": "by",
+            "label": "By",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "salt",
+            "label": "Salt",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "summonRegistrationAction",
+      "name": "Summon Registration",
+      "display": {
+        "label": "Summon Registration",
+        "description": "Summon Registration"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function summonRegistration(bytes32 salt, string daoURI_, address manager, address[] contracts, bytes[] data) returns (address, bytes[])",
+        "inputFields": [
+          {
+            "key": "salt",
+            "label": "Salt",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "daoURI_",
+            "label": "Dao URI",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "manager",
+            "label": "Manager",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "contracts",
+            "label": "Contracts",
+            "type": "address",
+            "placeholder": "",
+            "list": true,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "templateAction",
+      "name": "Template",
+      "display": {
+        "label": "Template",
+        "description": "Template"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function template() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAARCAYAAACb8i8UAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAB3RJTUUH5wMGCS4rDTRvdQAAAw1JREFUSMetl1toz2EYxz/Pf8s2axhKmVPIBQ3NEiGUFIp2oUijJMWVGndu5FBcSCiFcrh0mlIuUA7Z2N8hh82y2IUaF3NmljW+Ljy/evf3+23//eept/f3e5/nfd73OT+vSboNFNATBHwFGoFaIA10mRlxIGkocAN4CGw3s44MPGaGJIBpwDZgEVAGDAK+AS+BC8AJM/tCtqC/0CnprqT7PtKSnklqd/xJSSUxe6N5s9O1SVoY4jLo1zpdh6Q653tY0jlJTY57JmlcEo8kAeoTcLMkXXWaFZkMAwHuSvou6a2kmgReRZIaJf2SVJWAP+pn7crWACmf8+MuZmaPgGPAL2A20MOH3C2GA3OAe0ALMFfSkJizxgElwBMzq81QAGbWCex22rL+CkDMxaLfH0CH+2ocVAF5wBXgKTA/4QIpV8DnMC6i8xx+RleIU2icW6WSJIsJWCUwXePzGaAeGAVM6ktzCQnBelHoeElzM/elyBGc6QigAqjzzPEK+AAsl1SYVRD2HaOlkoqBqcBKSXmShkS8UzkyjT6XAaXAKf9vBe4Dq4BC/g9sBfZ4DI0E9gHrB2SBwIxL3ey1vv4JaABGA1OS6kZ/FGVme4HXwEF313YzOxrxTg2A+ShgJnDdzD4GqFseqKuzzuW9u+kGYAlwCLgJVEhaE/HNz1ErAJXABOCxpNVBoA/zyroO2PEfXKjZq/x0t/YRd6XcBAjcosLzenXok4EgKUnlZvZ8ILc3s7QrrgxoMbN3wLs+YyDG9BbgRgLzvPeZBUwOxligxotfdT/4/5OqM6yeNrPTWdWBsMgAg4FioCsgGQMsAC4DT82sNRhtXhO+RHHg8DtwsR7FMrhUQZwgYTJIqgPdcRskVQJbvNKmvXUyoNwFu2dmijH7J+AxMF7SDF9+47ExI+qFwkosqQjY6bRtA+1GG7wrfJ/ZjUoq9u7xhaSJvXSoG33v/iy60fO5dqMm6U5MnyN3gSbgEvAgeg9473/W8/0BM+tOUEwxcA1oNrNNwXr0Hljs9SJ8D1wEjvfnPfAHz1ktIcu+anQAAAAASUVORK5CYII=",
+  "user": "eip155:1:0x5879C017729336B3Cfb6Da7df90BB712640f49dC",
+  "workspace": "eip155:1:0x5879C017729336B3Cfb6Da7df90BB712640f49dC",
+  "access": "Private",
+  "contributor": "mdangear"
+}
