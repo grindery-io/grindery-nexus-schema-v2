@@ -182,6 +182,8 @@
   "description": "DAOStar One registration",
   "user": "eip155:1:0x5879C017729336B3Cfb6Da7df90BB712640f49dC",
   "workspace": "ws-1e8c6dd8-29c2-4784-8087-3da6d5e82df3",
-  "access": "Private",
-  "contributor": "mdangear"
+  "access": "Beta",
+  "contributor": "mdangear",
+  "triggersDescription": "",
+  "actionsDescription": ""
 }
