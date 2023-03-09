@@ -530,7 +530,10 @@
       "name": "Balance",
       "display": {
         "label": "Balance",
-        "description": "Balance"
+        "description": "Balance",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
