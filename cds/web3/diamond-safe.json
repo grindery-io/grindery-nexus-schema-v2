@@ -1563,9 +1563,15 @@
         "type": "blockchain:call",
         "signature": "function totalBalance() returns (uint256)",
         "inputFields": [],
-        "outputFields": [],
+        "outputFields": [
+          {
+            "key": "total_balance",
+            "label": "Balance",
+            "type": "number"
+          }
+        ],
         "sample": {
-          
+          "total_balance": "10000000000000000000000000"
         }
       }
     },
