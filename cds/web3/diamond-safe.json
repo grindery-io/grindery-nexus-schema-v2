@@ -664,10 +664,15 @@
             "type": "string",
             "placeholder": "",
             "list": false
+          },
+          {
+            "key": "balance",
+            "label": "Safe total balance",
+            "type": "number"
           }
         ],
         "sample": {
-          
+          "balance": "100000000000000000000000"
         }
       }
     },
