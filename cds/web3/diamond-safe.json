@@ -1557,7 +1557,10 @@
       "name": "Total Balance",
       "display": {
         "label": "Total Balance",
-        "description": "Total Balance"
+        "description": "Total Balance",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
