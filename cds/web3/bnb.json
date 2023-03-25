@@ -1,0 +1,652 @@
+{
+  "key": "bnb",
+  "name": "BNB",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "TransferTrigger",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Transfer(address indexed from, address indexed to, uint256 value)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "BurnTrigger",
+      "name": "Burn",
+      "display": {
+        "label": "Burn",
+        "description": "Burn"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Burn(address indexed from, uint256 value)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "FreezeTrigger",
+      "name": "Freeze",
+      "display": {
+        "label": "Freeze",
+        "description": "Freeze"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Freeze(address indexed from, uint256 value)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "UnfreezeTrigger",
+      "name": "Unfreeze",
+      "display": {
+        "label": "Unfreeze",
+        "description": "Unfreeze"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Unfreeze(address indexed from, uint256 value)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "nameAction",
+      "name": "Name (View function)",
+      "display": {
+        "label": "Name (View function)",
+        "description": "Name (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function name() view returns (string)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Name",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "approveAction",
+      "name": "Approve",
+      "display": {
+        "label": "Approve",
+        "description": "Approve"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approve(address _spender, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "totalSupplyAction",
+      "name": "Total Supply (View function)",
+      "display": {
+        "label": "Total Supply (View function)",
+        "description": "Total Supply (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function totalSupply() view returns (uint256)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Total Supply",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferFromAction",
+      "name": "Transfer From",
+      "display": {
+        "label": "Transfer From",
+        "description": "Transfer From"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferFrom(address _from, address _to, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "decimalsAction",
+      "name": "Decimals (View function)",
+      "display": {
+        "label": "Decimals (View function)",
+        "description": "Decimals (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decimals() view returns (uint8)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Decimals",
+            "type": "number"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "withdrawEtherAction",
+      "name": "Withdraw Ether",
+      "display": {
+        "label": "Withdraw Ether",
+        "description": "Withdraw Ether"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function withdrawEther(uint256 amount)",
+        "inputFields": [
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "burnAction",
+      "name": "Burn",
+      "display": {
+        "label": "Burn",
+        "description": "Burn"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function burn(uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "unfreezeAction",
+      "name": "Unfreeze",
+      "display": {
+        "label": "Unfreeze",
+        "description": "Unfreeze"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function unfreeze(uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "balanceOfAction",
+      "name": "Balance Of (View function)",
+      "display": {
+        "label": "Balance Of (View function)",
+        "description": "Balance Of (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address param0) view returns (uint256)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Balance Of",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ownerAction",
+      "name": "Owner (View function)",
+      "display": {
+        "label": "Owner (View function)",
+        "description": "Owner (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function owner() view returns (address)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Owner",
+            "type": "address"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "symbolAction",
+      "name": "Symbol (View function)",
+      "display": {
+        "label": "Symbol (View function)",
+        "description": "Symbol (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function symbol() view returns (string)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Symbol",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferAction",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transfer(address _to, uint256 _value)",
+        "inputFields": [
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "freezeOfAction",
+      "name": "Freeze Of (View function)",
+      "display": {
+        "label": "Freeze Of (View function)",
+        "description": "Freeze Of (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function freezeOf(address param0) view returns (uint256)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Freeze Of",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "freezeAction",
+      "name": "Freeze",
+      "display": {
+        "label": "Freeze",
+        "description": "Freeze"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function freeze(uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "allowanceAction",
+      "name": "Allowance (View function)",
+      "display": {
+        "label": "Allowance (View function)",
+        "description": "Allowance (View function)"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function allowance(address param0, address param1) view returns (uint256)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "param1",
+            "label": "Param 1",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Allowance",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,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",
+  "description": "BNB",
+  "user": "eip155:1:0x1D643FAc9a463c9d544506006a6348c234dA485f",
+  "workspace": "eip155:1:0x1D643FAc9a463c9d544506006a6348c234dA485f",
+  "access": "Private",
+  "contributor": "zgayjjf"
+}
