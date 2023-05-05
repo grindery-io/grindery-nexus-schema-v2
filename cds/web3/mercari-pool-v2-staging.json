@@ -422,7 +422,10 @@
       "name": "Log Trade",
       "display": {
         "label": "Log Trade",
-        "description": "Log Trade"
+        "description": "Log Trade",
+        "instructions": "",
+        "featured": true,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
