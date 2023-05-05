@@ -1,0 +1,1495 @@
+{
+  "key": "mercari-pool-v2-staging",
+  "name": "Mercari Pool v2 (staging)",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "AdminChangedTrigger",
+      "name": "Admin Changed",
+      "display": {
+        "label": "Admin Changed",
+        "description": "Admin Changed"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event AdminChanged(address previousAdmin, address newAdmin)",
+        "inputFields": [
+          {
+            "key": "previousAdmin",
+            "label": "Previous Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "previousAdmin",
+            "label": "Previous Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "BeaconUpgradedTrigger",
+      "name": "Beacon Upgraded",
+      "display": {
+        "label": "Beacon Upgraded",
+        "description": "Beacon Upgraded"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event BeaconUpgraded(address indexed beacon)",
+        "inputFields": [
+          {
+            "key": "beacon",
+            "label": "Beacon",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "beacon",
+            "label": "Beacon",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "InitializedTrigger",
+      "name": "Initialized",
+      "display": {
+        "label": "Initialized",
+        "description": "Initialized"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Initialized(uint8 version)",
+        "inputFields": [
+          {
+            "key": "version",
+            "label": "Version",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "version",
+            "label": "Version",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogNewOfferTrigger",
+      "name": "Log New Offer",
+      "display": {
+        "label": "Log New Offer",
+        "description": "Log New Offer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogNewOffer(bytes32 indexed _idOffer, address indexed _token, uint256 _chainId)",
+        "inputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetChainIdOfferTrigger",
+      "name": "Log Set Chain Id Offer",
+      "display": {
+        "label": "Log Set Chain Id Offer",
+        "description": "Log Set Chain Id Offer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetChainIdOffer(bytes32 indexed _idOffer, uint256 indexed _chainId)",
+        "inputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetMaxPriceLimitTrigger",
+      "name": "Log Set Max Price Limit",
+      "display": {
+        "label": "Log Set Max Price Limit",
+        "description": "Log Set Max Price Limit"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetMaxPriceLimit(bytes32 indexed _idOffer, bytes32 indexed _upperLimitFn)",
+        "inputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_upperLimitFn",
+            "label": "Upper Limit Fn",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_upperLimitFn",
+            "label": "Upper Limit Fn",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetMinPriceLimitTrigger",
+      "name": "Log Set Min Price Limit",
+      "display": {
+        "label": "Log Set Min Price Limit",
+        "description": "Log Set Min Price Limit"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetMinPriceLimit(bytes32 indexed _idOffer, bytes32 indexed _lowerLimitFn)",
+        "inputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_lowerLimitFn",
+            "label": "Lower Limit Fn",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_lowerLimitFn",
+            "label": "Lower Limit Fn",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetStatusOfferTrigger",
+      "name": "Log Set Status Offer",
+      "display": {
+        "label": "Log Set Status Offer",
+        "description": "Log Set Status Offer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetStatusOffer(bytes32 indexed _idOffer, bool indexed _isActive)",
+        "inputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_isActive",
+            "label": "Is Active",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_isActive",
+            "label": "Is Active",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetTokenOfferTrigger",
+      "name": "Log Set Token Offer",
+      "display": {
+        "label": "Log Set Token Offer",
+        "description": "Log Set Token Offer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetTokenOffer(bytes32 indexed _idOffer, address indexed _token)",
+        "inputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogTradeTrigger",
+      "name": "Log Trade",
+      "display": {
+        "label": "Log Trade",
+        "description": "Log Trade"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogTrade(address indexed _offerer, bytes32 indexed _idTrade, address indexed _token, uint256 _amount, bytes32 _idOffer)",
+        "inputFields": [
+          {
+            "key": "_offerer",
+            "label": "Offerer",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_idTrade",
+            "label": "Id Trade",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerer",
+            "label": "Offerer",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_idTrade",
+            "label": "Id Trade",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "OwnershipTransferredTrigger",
+      "name": "Ownership Transferred",
+      "display": {
+        "label": "Ownership Transferred",
+        "description": "Ownership Transferred"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)",
+        "inputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "UpgradedTrigger",
+      "name": "Upgraded",
+      "display": {
+        "label": "Upgraded",
+        "description": "Upgraded"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Upgraded(address indexed implementation)",
+        "inputFields": [
+          {
+            "key": "implementation",
+            "label": "Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "implementation",
+            "label": "Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "checkMaxPriceLimitOfferAction",
+      "name": "Check Max Price Limit Offer",
+      "display": {
+        "label": "Check Max Price Limit Offer",
+        "description": "Check Max Price Limit Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function checkMaxPriceLimitOffer(bytes32 offerId, bytes maxPriceLimit) returns (bool)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "maxPriceLimit",
+            "label": "Max Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "checkMinPriceLimitOfferAction",
+      "name": "Check Min Price Limit Offer",
+      "display": {
+        "label": "Check Min Price Limit Offer",
+        "description": "Check Min Price Limit Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function checkMinPriceLimitOffer(bytes32 offerId, bytes minPriceLimit) returns (bool)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "minPriceLimit",
+            "label": "Min Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "depositETHAndAcceptOfferAction",
+      "name": "Deposit ETH And Accept Offer",
+      "display": {
+        "label": "Deposit ETH And Accept Offer",
+        "description": "Deposit ETH And Accept Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function depositETHAndAcceptOffer(bytes32 offerId, address destAddr, uint256 amountOffer) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "destAddr",
+            "label": "Dest Addr",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amountOffer",
+            "label": "Amount Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getAmountOfferAction",
+      "name": "Get Amount Offer",
+      "display": {
+        "label": "Get Amount Offer",
+        "description": "Get Amount Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getAmountOffer(bytes32 tradeId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getChainIdOfferAction",
+      "name": "Get Chain Id Offer",
+      "display": {
+        "label": "Get Chain Id Offer",
+        "description": "Get Chain Id Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getChainIdOffer(bytes32 offerId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDepositAmountAction",
+      "name": "Get Deposit Amount",
+      "display": {
+        "label": "Get Deposit Amount",
+        "description": "Get Deposit Amount"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDepositAmount(bytes32 tradeId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDepositChainIdAction",
+      "name": "Get Deposit Chain Id",
+      "display": {
+        "label": "Get Deposit Chain Id",
+        "description": "Get Deposit Chain Id"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDepositChainId(bytes32 tradeId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDepositTokenAction",
+      "name": "Get Deposit Token",
+      "display": {
+        "label": "Get Deposit Token",
+        "description": "Get Deposit Token"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDepositToken(bytes32 tradeId) returns (address)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getIdOfferAction",
+      "name": "Get Id Offer",
+      "display": {
+        "label": "Get Id Offer",
+        "description": "Get Id Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getIdOffer(bytes32 tradeId) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getMaxPriceLimitHashOfferAction",
+      "name": "Get Max Price Limit Hash Offer",
+      "display": {
+        "label": "Get Max Price Limit Hash Offer",
+        "description": "Get Max Price Limit Hash Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getMaxPriceLimitHashOffer(bytes32 offerId) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getMinPriceLimitHashOfferAction",
+      "name": "Get Min Price Limit Hash Offer",
+      "display": {
+        "label": "Get Min Price Limit Hash Offer",
+        "description": "Get Min Price Limit Hash Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getMinPriceLimitHashOffer(bytes32 offerId) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getNonceDepositAction",
+      "name": "Get Nonce Deposit",
+      "display": {
+        "label": "Get Nonce Deposit",
+        "description": "Get Nonce Deposit"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getNonceDeposit(address user) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getNonceOfferAction",
+      "name": "Get Nonce Offer",
+      "display": {
+        "label": "Get Nonce Offer",
+        "description": "Get Nonce Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getNonceOffer(address user) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getOffererAction",
+      "name": "Get Offerer",
+      "display": {
+        "label": "Get Offerer",
+        "description": "Get Offerer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getOfferer(bytes32 offerId) returns (address)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getRecipientAction",
+      "name": "Get Recipient",
+      "display": {
+        "label": "Get Recipient",
+        "description": "Get Recipient"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getRecipient(bytes32 tradeId) returns (address)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getRequesterAction",
+      "name": "Get Requester",
+      "display": {
+        "label": "Get Requester",
+        "description": "Get Requester"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getRequester(bytes32 tradeId) returns (address)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getStatusOfferAction",
+      "name": "Get Status Offer",
+      "display": {
+        "label": "Get Status Offer",
+        "description": "Get Status Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getStatusOffer(bytes32 offerId) returns (bool)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getTokenOfferAction",
+      "name": "Get Token Offer",
+      "display": {
+        "label": "Get Token Offer",
+        "description": "Get Token Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getTokenOffer(bytes32 offerId) returns (address)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "initializeAction",
+      "name": "Initialize",
+      "display": {
+        "label": "Initialize",
+        "description": "Initialize"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function initialize()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ownerAction",
+      "name": "Owner",
+      "display": {
+        "label": "Owner",
+        "description": "Owner"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function owner() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "proxiableUUIDAction",
+      "name": "Proxiable UUID",
+      "display": {
+        "label": "Proxiable UUID",
+        "description": "Proxiable UUID"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function proxiableUUID() returns (bytes32)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "renounceOwnershipAction",
+      "name": "Renounce Ownership",
+      "display": {
+        "label": "Renounce Ownership",
+        "description": "Renounce Ownership"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function renounceOwnership()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setChainIdOfferAction",
+      "name": "Set Chain Id Offer",
+      "display": {
+        "label": "Set Chain Id Offer",
+        "description": "Set Chain Id Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setChainIdOffer(bytes32 offerId, uint256 chainId)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setIsActiveAction",
+      "name": "Set Is Active",
+      "display": {
+        "label": "Set Is Active",
+        "description": "Set Is Active"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setIsActive(bytes32 offerId, bool isActive)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "isActive",
+            "label": "Is Active",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setMaxPriceLimitAction",
+      "name": "Set Max Price Limit",
+      "display": {
+        "label": "Set Max Price Limit",
+        "description": "Set Max Price Limit"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setMaxPriceLimit(bytes32 offerId, bytes maxPriceLimit)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "maxPriceLimit",
+            "label": "Max Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setMinPriceLimitAction",
+      "name": "Set Min Price Limit",
+      "display": {
+        "label": "Set Min Price Limit",
+        "description": "Set Min Price Limit"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setMinPriceLimit(bytes32 offerId, bytes minPriceLimit)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "minPriceLimit",
+            "label": "Min Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setOfferAction",
+      "name": "Set Offer",
+      "display": {
+        "label": "Set Offer",
+        "description": "Set Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setOffer(address token, uint256 chainId, bytes minPriceLimit, bytes maxPriceLimit) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "minPriceLimit",
+            "label": "Min Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "maxPriceLimit",
+            "label": "Max Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setTokenOfferAction",
+      "name": "Set Token Offer",
+      "display": {
+        "label": "Set Token Offer",
+        "description": "Set Token Offer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setTokenOffer(bytes32 offerId, address token)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferOwnershipAction",
+      "name": "Transfer Ownership",
+      "display": {
+        "label": "Transfer Ownership",
+        "description": "Transfer Ownership"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferOwnership(address newOwner)",
+        "inputFields": [
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "upgradeToAction",
+      "name": "Upgrade To",
+      "display": {
+        "label": "Upgrade To",
+        "description": "Upgrade To"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function upgradeTo(address newImplementation)",
+        "inputFields": [
+          {
+            "key": "newImplementation",
+            "label": "New Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "upgradeToAndCallAction",
+      "name": "Upgrade To And Call",
+      "display": {
+        "label": "Upgrade To And Call",
+        "description": "Upgrade To And Call"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function upgradeToAndCall(address newImplementation, bytes data)",
+        "inputFields": [
+          {
+            "key": "newImplementation",
+            "label": "New Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "withdrawAction",
+      "name": "Withdraw",
+      "display": {
+        "label": "Withdraw",
+        "description": "Withdraw"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function withdraw(uint256 amount)",
+        "inputFields": [
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,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",
+  "description": "For staging version only",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-2f63565f-ed47-4d31-85a3-784d7d3786c3",
+  "access": "Private",
+  "contributor": "milukove"
+}
