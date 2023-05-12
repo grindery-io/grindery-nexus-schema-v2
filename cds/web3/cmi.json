@@ -151,7 +151,10 @@
       "name": "Stake",
       "display": {
         "label": "Stake",
-        "description": "Stake"
+        "description": "Stake",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
