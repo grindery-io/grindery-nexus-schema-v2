@@ -195,7 +195,10 @@
       "name": "Create Pool",
       "display": {
         "label": "Create Pool",
-        "description": "Create Pool"
+        "description": "Create Pool",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:call",
