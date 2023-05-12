@@ -1,0 +1,552 @@
+{
+  "key": "cmi",
+  "name": "CMI",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "AdminWithdrawTrigger",
+      "name": "Admin Withdraw",
+      "display": {
+        "label": "Admin Withdraw",
+        "description": "Admin Withdraw"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event AdminWithdraw(address indexed user, uint256 amount)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "OwnershipTransferredTrigger",
+      "name": "Ownership Transferred",
+      "display": {
+        "label": "Ownership Transferred",
+        "description": "Ownership Transferred"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)",
+        "inputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "RegistrationTrigger",
+      "name": "Registration",
+      "display": {
+        "label": "Registration",
+        "description": "Registration"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Registration(address indexed assistant, uint256 date)",
+        "inputFields": [
+          {
+            "key": "assistant",
+            "label": "Assistant",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "date",
+            "label": "Date",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "assistant",
+            "label": "Assistant",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "date",
+            "label": "Date",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "StakeTrigger",
+      "name": "Stake",
+      "display": {
+        "label": "Stake",
+        "description": "Stake"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Stake(address indexed user, uint256 amount)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "UnstakeTrigger",
+      "name": "Unstake",
+      "display": {
+        "label": "Unstake",
+        "description": "Unstake"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Unstake(address indexed user, uint256 amount)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "WITHDRAW_DELAYAction",
+      "name": "WITHDRAW DELAY",
+      "display": {
+        "label": "WITHDRAW DELAY",
+        "description": "WITHDRAW DELAY"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function WITHDRAW_DELAY() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "batchRegisterToEventAction",
+      "name": "Batch Register To Event",
+      "display": {
+        "label": "Batch Register To Event",
+        "description": "Batch Register To Event"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function batchRegisterToEvent(address[] _assistants)",
+        "inputFields": [
+          {
+            "key": "_assistants",
+            "label": "Assistants",
+            "type": "address",
+            "placeholder": "",
+            "list": true,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "eventStartTimeStampAction",
+      "name": "Event Start Time Stamp",
+      "display": {
+        "label": "Event Start Time Stamp",
+        "description": "Event Start Time Stamp"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function eventStartTimeStamp() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "minStakeAction",
+      "name": "Min Stake",
+      "display": {
+        "label": "Min Stake",
+        "description": "Min Stake"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function minStake() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ownerAction",
+      "name": "Owner",
+      "display": {
+        "label": "Owner",
+        "description": "Owner"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function owner() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "registerToEventAction",
+      "name": "Register To Event",
+      "display": {
+        "label": "Register To Event",
+        "description": "Register To Event"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function registerToEvent(address _assistant)",
+        "inputFields": [
+          {
+            "key": "_assistant",
+            "label": "Assistant",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "registeredAction",
+      "name": "Registered",
+      "display": {
+        "label": "Registered",
+        "description": "Registered"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function registered(address param0) returns (bool)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "renounceOwnershipAction",
+      "name": "Renounce Ownership",
+      "display": {
+        "label": "Renounce Ownership",
+        "description": "Renounce Ownership"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function renounceOwnership()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setEventStartDateAction",
+      "name": "Set Event Start Date",
+      "display": {
+        "label": "Set Event Start Date",
+        "description": "Set Event Start Date"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setEventStartDate(uint256 _eventStart)",
+        "inputFields": [
+          {
+            "key": "_eventStart",
+            "label": "Event Start",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "stakeAction",
+      "name": "Stake",
+      "display": {
+        "label": "Stake",
+        "description": "Stake"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function stake(uint256 _amount)",
+        "inputFields": [
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "stakersAction",
+      "name": "Stakers",
+      "display": {
+        "label": "Stakers",
+        "description": "Stakers"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function stakers(address param0) returns (bool)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferOwnershipAction",
+      "name": "Transfer Ownership",
+      "display": {
+        "label": "Transfer Ownership",
+        "description": "Transfer Ownership"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferOwnership(address newOwner)",
+        "inputFields": [
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "usdcTokenAction",
+      "name": "Usdc Token",
+      "display": {
+        "label": "Usdc Token",
+        "description": "Usdc Token"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function usdcToken() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "withdrawAction",
+      "name": "Withdraw",
+      "display": {
+        "label": "Withdraw",
+        "description": "Withdraw"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function withdraw()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,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",
+  "user": "eip155:1:0x85507F41EfEbDE612E359C8229ee06F3dF3DA6b3",
+  "workspace": "eip155:1:0x85507F41EfEbDE612E359C8229ee06F3dF3DA6b3",
+  "access": "Private",
+  "contributor": "termozad"
+}
