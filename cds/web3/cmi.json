@@ -551,5 +551,6 @@
   "user": "eip155:1:0x85507F41EfEbDE612E359C8229ee06F3dF3DA6b3",
   "workspace": "eip155:1:0x85507F41EfEbDE612E359C8229ee06F3dF3DA6b3",
   "access": "Private",
-  "contributor": "termozad"
+  "contributor": "termozad",
+  "submitted": true
 }
