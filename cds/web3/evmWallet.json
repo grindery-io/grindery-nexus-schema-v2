@@ -123,6 +123,6 @@
   "access": "Public",
   "description": "Triggers when a native token transaction occurs on Ethereum, Binance, or any other EVM Chain (connector created by Grindery).",
   "triggersDescription": "Triggers when a native token transaction occurs on Ethereum, Binance, or any other EVM Chain (connector created by Grindery).",
-  "actionsDescription": "Interact with native tokens on EVM Chains.",
+  "actionsDescription": "Interact with native tokens on EVM Chains (connector created by Grindery).",
   "contributor": "SAPikachu"
 }
