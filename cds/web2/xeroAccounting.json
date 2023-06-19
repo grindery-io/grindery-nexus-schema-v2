@@ -34599,7 +34599,7 @@
         "api.xero.com"
       ],
       "oauth2Config": {
-        "authorizeUrl": "https://login.xero.com/identity/connect/authorize?response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=email+openid+profile+offline_access+accounting.attachments+accounting.contacts+accounting.journals.read+accounting.reports.read+accounting.reports.tenninetynine.read+accounting.settings+accounting.transactions+paymentservices",
+        "authorizeUrl": "https://login.xero.com/identity/connect/authorize?response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=email+openid+profile+offline_access+accounting.attachments+accounting.contacts+accounting.journals.read+accounting.reports.read+accounting.settings+accounting.transactions+paymentservices",
         "getAccessToken": {
           "method": "POST",
           "url": "https://identity.xero.com/connect/token",
