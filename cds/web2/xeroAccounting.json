@@ -34595,6 +34595,11 @@
           "Authorization": "Bearer {{ auth.access_token }}"
         }
       },
+      "test": {
+        "method": "GET",
+        "url": "https://api.xero.com/connections"
+      },
+      "defaultDisplayName": "{{ data[0].tenantName }} ({{ data[0].tenantId }})",
       "allowedHosts": [
         "api.xero.com"
       ],
