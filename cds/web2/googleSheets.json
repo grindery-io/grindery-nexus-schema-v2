@@ -41,6 +41,24 @@
         "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/getFirstRow/",
         "inputFields": []
       }
+    },
+    {
+      "key": "getAllRows",
+      "name": "Get Spreadsheet Rows",
+      "display": {
+        "label": "Get Spreadsheet Rows",
+        "description": "",
+        "instructions": "",
+        "featured": false
+      },
+      "operation": {
+        "type": "api",
+        "operation": {
+          "url": "ws://gsheet-connector-staging:3000/ws/"
+        },
+        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/file-list/",
+        "inputFields": []
+      }
     }
   ],
   "authentication": {
