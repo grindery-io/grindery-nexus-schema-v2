@@ -56,7 +56,7 @@
         "operation": {
           "url": "ws://gsheet-connector-staging:3000/ws/"
         },
-        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/file-list/",
+        "inputFieldProviderUrl": "http://gsheet-connector-staging:3000/row-list/",
         "inputFields": []
       }
     }
