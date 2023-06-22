@@ -4,7 +4,31 @@
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
-  "triggers": [],
+  "triggers": [
+    {
+      "key": "Release",
+      "name": "Release",
+      "display": {
+        "label": "Release",
+        "description": "",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
+      },
+      "operation": {
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "",
+            "computed": true
+          }
+        ]
+      }
+    }
+  ],
   "actions": [
     {
       "key": "releaseAction",
