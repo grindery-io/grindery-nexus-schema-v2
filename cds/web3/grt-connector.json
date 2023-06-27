@@ -1,0 +1,478 @@
+{
+  "key": "grt-connector",
+  "name": "GRT Connector",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "ApprovalTrigger",
+      "name": "Approval",
+      "display": {
+        "label": "Approval",
+        "description": "Approval"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Approval(address indexed owner, address indexed spender, uint256 value)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "TransferTrigger",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Transfer(address indexed from, address indexed to, uint256 value)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "allowanceAction",
+      "name": "Allowance",
+      "display": {
+        "label": "Allowance",
+        "description": "Allowance"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function allowance(address owner, address spender) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "approveAction",
+      "name": "Approve",
+      "display": {
+        "label": "Approve",
+        "description": "Approve"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approve(address spender, uint256 amount) returns (bool)",
+        "inputFields": [
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "balanceOfAction",
+      "name": "Balance Of",
+      "display": {
+        "label": "Balance Of",
+        "description": "Balance Of"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address account) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "decimalsAction",
+      "name": "Decimals",
+      "display": {
+        "label": "Decimals",
+        "description": "Decimals"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decimals() returns (uint8)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "decreaseAllowanceAction",
+      "name": "Decrease Allowance",
+      "display": {
+        "label": "Decrease Allowance",
+        "description": "Decrease Allowance"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decreaseAllowance(address spender, uint256 subtractedValue) returns (bool)",
+        "inputFields": [
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "subtractedValue",
+            "label": "Subtracted Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "increaseAllowanceAction",
+      "name": "Increase Allowance",
+      "display": {
+        "label": "Increase Allowance",
+        "description": "Increase Allowance"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function increaseAllowance(address spender, uint256 addedValue) returns (bool)",
+        "inputFields": [
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "addedValue",
+            "label": "Added Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "mintAction",
+      "name": "Mint",
+      "display": {
+        "label": "Mint",
+        "description": "Mint"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function mint(address to, uint256 amount)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "nameAction",
+      "name": "Name",
+      "display": {
+        "label": "Name",
+        "description": "Name"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function name() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "symbolAction",
+      "name": "Symbol",
+      "display": {
+        "label": "Symbol",
+        "description": "Symbol"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function symbol() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "totalSupplyAction",
+      "name": "Total Supply",
+      "display": {
+        "label": "Total Supply",
+        "description": "Total Supply"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function totalSupply() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferAction",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transfer(address to, uint256 amount) returns (bool)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferFromAction",
+      "name": "Transfer From",
+      "display": {
+        "label": "Transfer From",
+        "description": "Transfer From"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferFrom(address from, address to, uint256 amount) returns (bool)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAADAFBMVEX+/v62Gi6zGCv9+PnAJDyzGCy+ITlHcEy/Izu0GCzAJT67HDK1GS2vFim8HjS4GjC0GS2yGCuwFiq5GzG/JDy3Gi/AJT2xFyq5GzDAJD2ZFCS2GS61GS6/Ijq6ITe6HDK5HDG9HjW3HjO5HzS8ITi2IDS+IDi4GzCqGy6tFiitFSe/JD26GzG9IzuuHTCcESGZESCpFCW+IjqnFCSiEyO0HzOuHDC7IjmXECC9IjqsFSapFCaxHzOlEySnGSyUEB+cESG9IDecESG4IDWhFSaSEB7hmqTfmaL35efLVWWtHTDjoaqsHC+qFCaxHjGqGi22ITW/JDubESG8HDOtFyqfEiKtFymyHzS7HzWzHTG1IDXptr20IDStGy61ITWkEyOhEyOzIDSzHzSyHDC4HDGzHzSrFiirGCqqFSeoFSaoFymmFCWmFCWuGi2iEyOhEyOyGy6rGSusGCqhEyOmEySZESCfEiKYEB+gEiLSY3PKUWH57/CsHC+tHC+5JDibESDkrLO5IDa8LkH14eTPXG3SZHWgEySwHzKvHjKvHjGuHjGhEyTy1Nj+/PzEQVLITl7ZhZDXf4vXeYbvys++KT7mqrPTa3nJSVvfk53AKT714OPuyM3////AJDy2Gi61Gi61GS20GS2yGCu/Izu9HzW0GCy9Hze9Izq+IDizGSzBJT2/Ijq8HTO4GzC+Ijq3Gi+8HzXBJT67ITi7HDK5GzG5HDC8HTTAJD26HDK/JDytFiewFyqvFimxFyq5IDa2HDG+JDv45+nAJT64HzS5HjO9ITnejpq/ITm7t762Gi+rFSasFSe5IDXjoqu6IDbquL/pt77joar78/S+Izu7HTO8Hza7HjSzGCzx0dbpt73ioKm6HDHko6y9Izjci5bNWWn89vf57O7DM0fz2Nzsv8XmrrXIRFj9+fm7KT3rvMP78vPTb3z56+3ekp3EPU/Vc4HYg4/EOEzkp7DYfYrFOU+/NUjSZXbciJXbhJHinKbCL0b+/v703N/ALEDos7v9JCxNKuD+AAABAHRSTlP+/v7+/v7+AP7+/v7+/v7+/v7+/v7+/v7+/gb+/v7//v7+/v7+/f7+Gv3+/v7+bW0q/P7zz/N7/hr+/vST9BMTk/5T/hsb/v7+/lP+Kv7PKvT+e/7de/LP/vTz//2T9P2Tyrz0/t3ykt28W5LKyvJw/XC83f1wylu8/v7+U1P+U/7+/v7+/ltwcFtbW/7+/v7+/v7+/v7+/v7+/v7////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+8m0ZfAAABP1JREFUSMeFVgdYE0kYneCtgMmGJBISqQHCEUDpLfSIBVRsZ0GxG3vv5YqX6716HRISwkGAEAyRkCacEPjEoJ6gcOqpZ7sTsV9v381md00I5d68/XZm/vfy/99mdmaBuysEb2WsWpO0ZEnSmlUZbwoGhcHAYdYbK8OO2SSBgSmBgZJjttywla9njWAQZCzLlaSkCCcQEKakSHKXZQiGMfgmz7YFaivmNBui9HofSIPBu7lCG2ibnew7lGHGwhaJVljRHGU4PuY4wShDc4VQeyx34YzBhmmLc2Et3lFjXBDlDSvLXTzN1RAdZoPVGHz0R3yODCCsrFmotYVFDzREh0isXYZx+nFVVS6sGqfXe3dZJSHRzobnwkL58XOeGhZz4vmhYc87DLOSWrTCLvhQSrxLXGm/GbqE2pakWaTBd2bIKWt8WUmJB2yuxG9l8dZTITN9CUNyCCzI438AiwpJxg2CRa2F1tqAsrKyANjKAm7dyPsGR+8B+6SdtdbC1kUCu2FpUwvfWhtfXV0dD1u1x/ViUExw1M/YpJ21Vn5L01LMkLVaXCga7cCrwAlTnAKiQvHqLGjY0dR6jm9tH93eXv3Kb21tbdeLHRnAWThx+Vefdhi28s+1Nu2Ahi3QIKqsfLry+G3gJCWJXb1/wnClCBq2uINJ28Xn66BBVPl78XAG8Eclpqg7L94+CWykiOnBIgyXnIs/2+c8Om0XBNPFlI1gnQxmCFYqg5WdTzLkPX4o+vra/b+fZDitxBQwg2wd2CnjddfRlUq6w/DvF9hQSW++RBrO2Md13TzZTjCPwqPS7egk8t8W0a99/tXHUx7Sgz8hps7gCiqPMg8skPK6G55pgCQyXL3W8Fk/1um70nC4n8iAK7p50gUgQsatr6HWQBKGRzXff4nLfviHepcw4Ip6riwCRPhzg6h2TMfTf0o9QD6cj6j5REm4IojrHwHWytkX64PqIb/FMxysv0z+CReC7uG973DFRbZ8LVhfztY1jm+EJAxXGh+Thrvjb+G9IlyhY5evBxsQSvhYO4iSPhh7712ipINj7+CdIlwRTkE2gE0KmvooV6fj6ogM71zUTcV/96aOe4PIoMMUR9U0xSbwmomhUYfrdOGkAdzR8S5fBcU/Tj2lu/IXacAUag3D9DaYHIH4edkxnVxG73t5TcjPP+zl9V4/MVWEK/yQiEnAfTNHfoKtVrPVF8ilcfVDGxyqQ+/3kUujCBuzT8g5m+H7sA1VSdkaDVtzwbG8+x89eNCZ51jeRRpMIVWh26AhO53j6U+BmAqGxU0s7u/JSc/GNoEVZgVNqqFofuod7gV6+RcYltIU5hX2XSM1nYUw/P38/F6Y8uyoIdD34ksw6M9AWOmp+EY238jpKaVJpVKalCJ1JXbBGK20h2OcT26ViahFxZDJZDTYXEncGCoLmkhule6xCWYLIi8tZcDmSvwmRyzmhFjHdj8xDuW4eY4ANw4aN9H5QIkpQE2KHkSOyF0JLxWiMKEFMQOPrJg4o0nBVCHl5S4sR1QKpskYF+N6KB5KSENZTKbbIDCZLDQt4dDgYzc2sSPSzLIomAoVU0VSobCwzMaCxNghD/a5mdBi4mAeghyLyRzZkTnXd5hPh9SczLRIFEVZBGA3Mi0zJ3WEj5PsPXt3d3SknTRGGo1pJzsKdu/dkz3i1wzE5H05+3dtXb586679OfsmDwr/B4pAt3Cnh+f6AAAAAElFTkSuQmCC",
+  "user": "eip155:1:0x10A2C306cCc87938B1fe3c63DBb1457A9c810df5",
+  "workspace": "eip155:1:0x10A2C306cCc87938B1fe3c63DBb1457A9c810df5",
+  "access": "Private",
+  "contributor": ""
+}
