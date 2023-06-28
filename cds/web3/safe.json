@@ -433,7 +433,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -493,7 +495,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
@@ -514,7 +518,9 @@
       },
       "body": "{\"safe\":\"{{ auth.safe }}\",\"owner\":\"{{ auth.owner }}\",\"chainId\":\"{{ auth.chainId }}\"}"
     },
-    "allowedHosts": ["grindery-nexus-orchestrator:3000"],
+    "allowedHosts": [
+      "grindery-nexus-orchestrator:3000"
+    ],
     "oauth2Config": {
       "authorizeUrl": "https://microsites.grindery.org/grindery-nexus-connector-web3-microsite/?path=safe&_grinderyEnvironment=staging",
       "getAccessToken": {
@@ -531,6 +537,9 @@
   "type": "web3",
   "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
   "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
-  "access": "Beta",
-  "contributor": "SAPikachu"
+  "access": "Private",
+  "contributor": "SAPikachu",
+  "description": "",
+  "triggersDescription": "",
+  "actionsDescription": ""
 }
