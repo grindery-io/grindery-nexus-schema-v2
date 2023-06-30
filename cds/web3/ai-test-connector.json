@@ -1,0 +1,2102 @@
+{
+  "key": "ai-test-connector",
+  "name": "AI test connector",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "AddedOwnerTrigger",
+      "name": "Added Owner",
+      "display": {
+        "label": "Added Owner",
+        "description": "Added Owner"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event AddedOwner(address owner)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ApproveHashTrigger",
+      "name": "Approve Hash",
+      "display": {
+        "label": "Approve Hash",
+        "description": "Approve Hash"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ApproveHash(bytes32 indexed approvedHash, address indexed owner)",
+        "inputFields": [
+          {
+            "key": "approvedHash",
+            "label": "Approved Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "approvedHash",
+            "label": "Approved Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ChangedFallbackHandlerTrigger",
+      "name": "Changed Fallback Handler",
+      "display": {
+        "label": "Changed Fallback Handler",
+        "description": "Changed Fallback Handler"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ChangedFallbackHandler(address handler)",
+        "inputFields": [
+          {
+            "key": "handler",
+            "label": "Handler",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "handler",
+            "label": "Handler",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ChangedGuardTrigger",
+      "name": "Changed Guard",
+      "display": {
+        "label": "Changed Guard",
+        "description": "Changed Guard"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ChangedGuard(address guard)",
+        "inputFields": [
+          {
+            "key": "guard",
+            "label": "Guard",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "guard",
+            "label": "Guard",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ChangedThresholdTrigger",
+      "name": "Changed Threshold",
+      "display": {
+        "label": "Changed Threshold",
+        "description": "Changed Threshold"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ChangedThreshold(uint256 threshold)",
+        "inputFields": [
+          {
+            "key": "threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "DisabledModuleTrigger",
+      "name": "Disabled Module",
+      "display": {
+        "label": "Disabled Module",
+        "description": "Disabled Module"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event DisabledModule(address module)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "EnabledModuleTrigger",
+      "name": "Enabled Module",
+      "display": {
+        "label": "Enabled Module",
+        "description": "Enabled Module"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event EnabledModule(address module)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ExecutionFailureTrigger",
+      "name": "Execution Failure",
+      "display": {
+        "label": "Execution Failure",
+        "description": "Execution Failure"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ExecutionFailure(bytes32 txHash, uint256 payment)",
+        "inputFields": [
+          {
+            "key": "txHash",
+            "label": "Tx Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "payment",
+            "label": "Payment",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "txHash",
+            "label": "Tx Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "payment",
+            "label": "Payment",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ExecutionFromModuleFailureTrigger",
+      "name": "Execution From Module Failure",
+      "display": {
+        "label": "Execution From Module Failure",
+        "description": "Execution From Module Failure"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ExecutionFromModuleFailure(address indexed module)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ExecutionFromModuleSuccessTrigger",
+      "name": "Execution From Module Success",
+      "display": {
+        "label": "Execution From Module Success",
+        "description": "Execution From Module Success"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ExecutionFromModuleSuccess(address indexed module)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ExecutionSuccessTrigger",
+      "name": "Execution Success",
+      "display": {
+        "label": "Execution Success",
+        "description": "Execution Success"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ExecutionSuccess(bytes32 txHash, uint256 payment)",
+        "inputFields": [
+          {
+            "key": "txHash",
+            "label": "Tx Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "payment",
+            "label": "Payment",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "txHash",
+            "label": "Tx Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "payment",
+            "label": "Payment",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "RemovedOwnerTrigger",
+      "name": "Removed Owner",
+      "display": {
+        "label": "Removed Owner",
+        "description": "Removed Owner"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event RemovedOwner(address owner)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "SafeModuleTransactionTrigger",
+      "name": "Safe Module Transaction",
+      "display": {
+        "label": "Safe Module Transaction",
+        "description": "Safe Module Transaction"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event SafeModuleTransaction(address module, address to, uint256 value, bytes data, uint8 operation)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "SafeMultiSigTransactionTrigger",
+      "name": "Safe Multi Sig Transaction",
+      "display": {
+        "label": "Safe Multi Sig Transaction",
+        "description": "Safe Multi Sig Transaction"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event SafeMultiSigTransaction(address to, uint256 value, bytes data, uint8 operation, uint256 safeTxGas, uint256 baseGas, uint256 gasPrice, address gasToken, address refundReceiver, bytes signatures, bytes additionalInfo)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "safeTxGas",
+            "label": "Safe Tx Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "baseGas",
+            "label": "Base Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "gasPrice",
+            "label": "Gas Price",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "gasToken",
+            "label": "Gas Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "refundReceiver",
+            "label": "Refund Receiver",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "signatures",
+            "label": "Signatures",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "additionalInfo",
+            "label": "Additional Info",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "safeTxGas",
+            "label": "Safe Tx Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "baseGas",
+            "label": "Base Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "gasPrice",
+            "label": "Gas Price",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "gasToken",
+            "label": "Gas Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "refundReceiver",
+            "label": "Refund Receiver",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "signatures",
+            "label": "Signatures",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "additionalInfo",
+            "label": "Additional Info",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "SafeReceivedTrigger",
+      "name": "Safe Received",
+      "display": {
+        "label": "Safe Received",
+        "description": "Safe Received"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event SafeReceived(address indexed sender, uint256 value)",
+        "inputFields": [
+          {
+            "key": "sender",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "sender",
+            "label": "Sender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "SafeSetupTrigger",
+      "name": "Safe Setup",
+      "display": {
+        "label": "Safe Setup",
+        "description": "Safe Setup"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event SafeSetup(address indexed initiator, address[] owners, uint256 threshold, address initializer, address fallbackHandler)",
+        "inputFields": [
+          {
+            "key": "initiator",
+            "label": "Initiator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "owners",
+            "label": "Owners",
+            "type": "address",
+            "placeholder": "",
+            "list": true
+          },
+          {
+            "key": "threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "initializer",
+            "label": "Initializer",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "fallbackHandler",
+            "label": "Fallback Handler",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "initiator",
+            "label": "Initiator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "owners",
+            "label": "Owners",
+            "type": "address",
+            "placeholder": "",
+            "list": true
+          },
+          {
+            "key": "threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "initializer",
+            "label": "Initializer",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "fallbackHandler",
+            "label": "Fallback Handler",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "SignMsgTrigger",
+      "name": "Sign Msg",
+      "display": {
+        "label": "Sign Msg",
+        "description": "Sign Msg"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event SignMsg(bytes32 indexed msgHash)",
+        "inputFields": [
+          {
+            "key": "msgHash",
+            "label": "Msg Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "msgHash",
+            "label": "Msg Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "VERSIONAction",
+      "name": "VERSION",
+      "display": {
+        "label": "VERSION",
+        "description": "VERSION"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function VERSION() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "addOwnerWithThresholdAction",
+      "name": "Add Owner With Threshold",
+      "display": {
+        "label": "Add Owner With Threshold",
+        "description": "Add Owner With Threshold"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function addOwnerWithThreshold(address owner, uint256 _threshold)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "approveHashAction",
+      "name": "Approve Hash",
+      "display": {
+        "label": "Approve Hash",
+        "description": "Approve Hash"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approveHash(bytes32 hashToApprove)",
+        "inputFields": [
+          {
+            "key": "hashToApprove",
+            "label": "Hash To Approve",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "approvedHashesAction",
+      "name": "Approved Hashes",
+      "display": {
+        "label": "Approved Hashes",
+        "description": "Approved Hashes"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approvedHashes(address param0, bytes32 param1) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "param1",
+            "label": "Param 1",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "changeThresholdAction",
+      "name": "Change Threshold",
+      "display": {
+        "label": "Change Threshold",
+        "description": "Change Threshold"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function changeThreshold(uint256 _threshold)",
+        "inputFields": [
+          {
+            "key": "_threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "checkNSignaturesAction",
+      "name": "Check N Signatures",
+      "display": {
+        "label": "Check N Signatures",
+        "description": "Check N Signatures"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function checkNSignatures(bytes32 dataHash, bytes data, bytes signatures, uint256 requiredSignatures)",
+        "inputFields": [
+          {
+            "key": "dataHash",
+            "label": "Data Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "signatures",
+            "label": "Signatures",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "requiredSignatures",
+            "label": "Required Signatures",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "checkSignaturesAction",
+      "name": "Check Signatures",
+      "display": {
+        "label": "Check Signatures",
+        "description": "Check Signatures"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function checkSignatures(bytes32 dataHash, bytes data, bytes signatures)",
+        "inputFields": [
+          {
+            "key": "dataHash",
+            "label": "Data Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "signatures",
+            "label": "Signatures",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "disableModuleAction",
+      "name": "Disable Module",
+      "display": {
+        "label": "Disable Module",
+        "description": "Disable Module"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function disableModule(address prevModule, address module)",
+        "inputFields": [
+          {
+            "key": "prevModule",
+            "label": "Prev Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "domainSeparatorAction",
+      "name": "Domain Separator",
+      "display": {
+        "label": "Domain Separator",
+        "description": "Domain Separator"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function domainSeparator() returns (bytes32)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "enableModuleAction",
+      "name": "Enable Module",
+      "display": {
+        "label": "Enable Module",
+        "description": "Enable Module"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function enableModule(address module)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "encodeTransactionDataAction",
+      "name": "Encode Transaction Data",
+      "display": {
+        "label": "Encode Transaction Data",
+        "description": "Encode Transaction Data"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function encodeTransactionData(address to, uint256 value, bytes data, uint8 operation, uint256 safeTxGas, uint256 baseGas, uint256 gasPrice, address gasToken, address refundReceiver, uint256 _nonce) returns (bytes)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "safeTxGas",
+            "label": "Safe Tx Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "baseGas",
+            "label": "Base Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "gasPrice",
+            "label": "Gas Price",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "gasToken",
+            "label": "Gas Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "refundReceiver",
+            "label": "Refund Receiver",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_nonce",
+            "label": "Nonce",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "execTransactionAction",
+      "name": "Exec Transaction",
+      "display": {
+        "label": "Exec Transaction",
+        "description": "Exec Transaction"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function execTransaction(address to, uint256 value, bytes data, uint8 operation, uint256 safeTxGas, uint256 baseGas, uint256 gasPrice, address gasToken, address refundReceiver, bytes signatures) returns (bool)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "safeTxGas",
+            "label": "Safe Tx Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "baseGas",
+            "label": "Base Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "gasPrice",
+            "label": "Gas Price",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "gasToken",
+            "label": "Gas Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "refundReceiver",
+            "label": "Refund Receiver",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "signatures",
+            "label": "Signatures",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "execTransactionFromModuleAction",
+      "name": "Exec Transaction From Module",
+      "display": {
+        "label": "Exec Transaction From Module",
+        "description": "Exec Transaction From Module"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function execTransactionFromModule(address to, uint256 value, bytes data, uint8 operation) returns (bool)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "execTransactionFromModuleReturnDataAction",
+      "name": "Exec Transaction From Module Return Data",
+      "display": {
+        "label": "Exec Transaction From Module Return Data",
+        "description": "Exec Transaction From Module Return Data"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function execTransactionFromModuleReturnData(address to, uint256 value, bytes data, uint8 operation) returns (bool, bytes)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getChainIdAction",
+      "name": "Get Chain Id",
+      "display": {
+        "label": "Get Chain Id",
+        "description": "Get Chain Id"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getChainId() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getModulesPaginatedAction",
+      "name": "Get Modules Paginated",
+      "display": {
+        "label": "Get Modules Paginated",
+        "description": "Get Modules Paginated"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getModulesPaginated(address start, uint256 pageSize) returns (address[], address)",
+        "inputFields": [
+          {
+            "key": "start",
+            "label": "Start",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "pageSize",
+            "label": "Page Size",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getOwnersAction",
+      "name": "Get Owners",
+      "display": {
+        "label": "Get Owners",
+        "description": "Get Owners"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getOwners() returns (address[])",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getStorageAtAction",
+      "name": "Get Storage At",
+      "display": {
+        "label": "Get Storage At",
+        "description": "Get Storage At"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getStorageAt(uint256 offset, uint256 length) returns (bytes)",
+        "inputFields": [
+          {
+            "key": "offset",
+            "label": "Offset",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "length",
+            "label": "Length",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getThresholdAction",
+      "name": "Get Threshold",
+      "display": {
+        "label": "Get Threshold",
+        "description": "Get Threshold"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getThreshold() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getTransactionHashAction",
+      "name": "Get Transaction Hash",
+      "display": {
+        "label": "Get Transaction Hash",
+        "description": "Get Transaction Hash"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getTransactionHash(address to, uint256 value, bytes data, uint8 operation, uint256 safeTxGas, uint256 baseGas, uint256 gasPrice, address gasToken, address refundReceiver, uint256 _nonce) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "safeTxGas",
+            "label": "Safe Tx Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "baseGas",
+            "label": "Base Gas",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "gasPrice",
+            "label": "Gas Price",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "gasToken",
+            "label": "Gas Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "refundReceiver",
+            "label": "Refund Receiver",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_nonce",
+            "label": "Nonce",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "isModuleEnabledAction",
+      "name": "Is Module Enabled",
+      "display": {
+        "label": "Is Module Enabled",
+        "description": "Is Module Enabled"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isModuleEnabled(address module) returns (bool)",
+        "inputFields": [
+          {
+            "key": "module",
+            "label": "Module",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "isOwnerAction",
+      "name": "Is Owner",
+      "display": {
+        "label": "Is Owner",
+        "description": "Is Owner"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isOwner(address owner) returns (bool)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "nonceAction",
+      "name": "Nonce",
+      "display": {
+        "label": "Nonce",
+        "description": "Nonce"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function nonce() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "removeOwnerAction",
+      "name": "Remove Owner",
+      "display": {
+        "label": "Remove Owner",
+        "description": "Remove Owner"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function removeOwner(address prevOwner, address owner, uint256 _threshold)",
+        "inputFields": [
+          {
+            "key": "prevOwner",
+            "label": "Prev Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "_threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "requiredTxGasAction",
+      "name": "Required Tx Gas",
+      "display": {
+        "label": "Required Tx Gas",
+        "description": "Required Tx Gas"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function requiredTxGas(address to, uint256 value, bytes data, uint8 operation) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "operation",
+            "label": "Operation",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setFallbackHandlerAction",
+      "name": "Set Fallback Handler",
+      "display": {
+        "label": "Set Fallback Handler",
+        "description": "Set Fallback Handler"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setFallbackHandler(address handler)",
+        "inputFields": [
+          {
+            "key": "handler",
+            "label": "Handler",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setGuardAction",
+      "name": "Set Guard",
+      "display": {
+        "label": "Set Guard",
+        "description": "Set Guard"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setGuard(address guard)",
+        "inputFields": [
+          {
+            "key": "guard",
+            "label": "Guard",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setupAction",
+      "name": "Setup",
+      "display": {
+        "label": "Setup",
+        "description": "Setup"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setup(address[] _owners, uint256 _threshold, address to, bytes data, address fallbackHandler, address paymentToken, uint256 payment, address paymentReceiver)",
+        "inputFields": [
+          {
+            "key": "_owners",
+            "label": "Owners",
+            "type": "address",
+            "placeholder": "",
+            "list": true,
+            "required": true
+          },
+          {
+            "key": "_threshold",
+            "label": "Threshold",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "fallbackHandler",
+            "label": "Fallback Handler",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "paymentToken",
+            "label": "Payment Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "payment",
+            "label": "Payment",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "paymentReceiver",
+            "label": "Payment Receiver",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "signedMessagesAction",
+      "name": "Signed Messages",
+      "display": {
+        "label": "Signed Messages",
+        "description": "Signed Messages"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function signedMessages(bytes32 param0) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "simulateAndRevertAction",
+      "name": "Simulate And Revert",
+      "display": {
+        "label": "Simulate And Revert",
+        "description": "Simulate And Revert"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function simulateAndRevert(address targetContract, bytes calldataPayload)",
+        "inputFields": [
+          {
+            "key": "targetContract",
+            "label": "Target Contract",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "calldataPayload",
+            "label": "Calldata Payload",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "swapOwnerAction",
+      "name": "Swap Owner",
+      "display": {
+        "label": "Swap Owner",
+        "description": "Swap Owner"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function swapOwner(address prevOwner, address oldOwner, address newOwner)",
+        "inputFields": [
+          {
+            "key": "prevOwner",
+            "label": "Prev Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "oldOwner",
+            "label": "Old Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "description": "",
+  "icon": "data:image/png;base64,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",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Private",
+  "contributor": "milukove"
+}
