@@ -17,7 +17,7 @@
       },
       "operation": {
         "type": "blockchain:call",
-        "signature": "function isValidSignature(bytes32 hash, bytes signature)",
+        "signature": "function isValidSignature(bytes32 hash, bytes signature) view returns bytes4",
         "inputFields": [
           {
             "key": "_grinderyChain",
