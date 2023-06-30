@@ -1,0 +1,82 @@
+{
+  "key": "eip1271",
+  "name": "EIP1271",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "triggers": [],
+  "actions": [
+    {
+      "key": "isValidSignature",
+      "name": "isValidSignature",
+      "display": {
+        "label": "isValidSignature",
+        "description": "isValidSignature",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isValidSignature(bytes32 hash, bytes signature)",
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Choose Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "eth",
+            "helpText": "",
+            "computed": false
+          },
+          {
+            "key": "_grinderyContractAddress",
+            "type": "string",
+            "required": true,
+            "default": "",
+            "label": "Contract Address",
+            "helpText": "",
+            "computed": false,
+            "placeholder": "Enter the ERC20 token contract address"
+          },
+          {
+            "key": "hash",
+            "label": "Hash",
+            "type": "string",
+            "placeholder": "0x...",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          },
+          {
+            "key": "signature",
+            "label": "Signature",
+            "type": "string",
+            "placeholder": "0x...",
+            "list": false,
+            "required": true,
+            "helpText": "",
+            "default": "",
+            "computed": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "transactionHash",
+            "label": "Transaction Hash",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          "transactionHash": "0x0f820c9384a7fe016cbdc598fd5d07dbad3676d2053e471914a760dea0e62a17"
+        }
+      }
+    }
+  ],
+  "type": "web3",
+  "access": "Public",
+  "description": ""
+}
