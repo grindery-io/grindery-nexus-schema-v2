@@ -393,7 +393,7 @@
     "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
     "access": "Public",
     "contributor": "SAPikachu",
-    "description": "",
+    "description": "Triggers when new Safe wallet event occurs",
     "triggersDescription": "Triggers when new Safe wallet event occurs (connector created by Grindery).",
     "actionsDescription": ""
   }
