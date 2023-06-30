@@ -1,0 +1,233 @@
+{
+  "key": "snapshot-delegation",
+  "name": "Snapshot: Delegation",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "ClearDelegateTrigger",
+      "name": "Clear Delegate",
+      "display": {
+        "label": "Clear Delegate",
+        "description": "Clear Delegate"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ClearDelegate(address indexed delegator, bytes32 indexed id, address indexed delegate)",
+        "inputFields": [
+          {
+            "key": "delegator",
+            "label": "Delegator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "delegate",
+            "label": "Delegate",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "delegator",
+            "label": "Delegator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "delegate",
+            "label": "Delegate",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "SetDelegateTrigger",
+      "name": "Set Delegate",
+      "display": {
+        "label": "Set Delegate",
+        "description": "Set Delegate"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event SetDelegate(address indexed delegator, bytes32 indexed id, address indexed delegate)",
+        "inputFields": [
+          {
+            "key": "delegator",
+            "label": "Delegator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "delegate",
+            "label": "Delegate",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "delegator",
+            "label": "Delegator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "delegate",
+            "label": "Delegate",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "clearDelegateAction",
+      "name": "Clear Delegate",
+      "display": {
+        "label": "Clear Delegate",
+        "description": "Clear Delegate"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function clearDelegate(bytes32 id)",
+        "inputFields": [
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "delegationAction",
+      "name": "Delegation",
+      "display": {
+        "label": "Delegation",
+        "description": "Delegation"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function delegation(address param0, bytes32 param1) returns (address)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "param1",
+            "label": "Param 1",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setDelegateAction",
+      "name": "Set Delegate",
+      "display": {
+        "label": "Set Delegate",
+        "description": "Set Delegate"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setDelegate(bytes32 id, address delegate)",
+        "inputFields": [
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "delegate",
+            "label": "Delegate",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "description": "Snapshot: Delegation Smart-Contract",
+  "icon": "data:image/png;base64,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",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+  "access": "Private",
+  "contributor": "milukove"
+}
