@@ -288,7 +288,10 @@
       "name": "Log Set Chain Id Offer",
       "display": {
         "label": "Log Set Chain Id Offer",
-        "description": "Log Set Chain Id Offer"
+        "description": "Log Set Chain Id Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
