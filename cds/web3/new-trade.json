@@ -893,7 +893,10 @@
       "name": "Get Deposit Amount Trade",
       "display": {
         "label": "Get Deposit Amount Trade",
-        "description": "Get Deposit Amount Trade"
+        "description": "Get Deposit Amount Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
