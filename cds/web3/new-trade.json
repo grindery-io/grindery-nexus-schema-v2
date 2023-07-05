@@ -1909,7 +1909,17 @@
     "fields": "",
     "label": "",
     "oauth1Config": "",
-    "oauth2Config": "",
+    "oauth2Config": {
+      "authorizeUrl": "https://microsites.grindery.org/grindery-nexus-connector-web3-microsite/?path=flow",
+      "getAccessToken": {
+        "method": "POST",
+        "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/flowCreateAccountComplete",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": "{\"code\":\"{{ code }}\"}"
+      }
+    },
     "sessionConfig": ""
   }
 }
