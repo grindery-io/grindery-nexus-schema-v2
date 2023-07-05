@@ -700,7 +700,10 @@
       "name": "Deposit ETH And Accept Offer",
       "display": {
         "label": "Deposit ETH And Accept Offer",
-        "description": "Deposit ETH And Accept Offer"
+        "description": "Deposit ETH And Accept Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
