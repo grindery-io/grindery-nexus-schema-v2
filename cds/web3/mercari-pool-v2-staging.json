@@ -774,7 +774,10 @@
       "name": "Get Chain Id Offer",
       "display": {
         "label": "Get Chain Id Offer",
-        "description": "Get Chain Id Offer"
+        "description": "Get Chain Id Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
