@@ -1445,7 +1445,10 @@
       "name": "Set Complete Trade",
       "display": {
         "label": "Set Complete Trade",
-        "description": "Set Complete Trade"
+        "description": "Set Complete Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
