@@ -471,7 +471,11 @@
             "label": "Id Trade",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": true
           },
           {
             "key": "_token",
