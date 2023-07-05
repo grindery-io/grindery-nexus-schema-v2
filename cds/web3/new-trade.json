@@ -663,7 +663,10 @@
       "name": "Check Min Price Limit Offer",
       "display": {
         "label": "Check Min Price Limit Offer",
-        "description": "Check Min Price Limit Offer"
+        "description": "Check Min Price Limit Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
