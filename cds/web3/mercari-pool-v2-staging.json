@@ -1461,7 +1461,10 @@
       "name": "Set Token Offer",
       "display": {
         "label": "Set Token Offer",
-        "description": "Set Token Offer"
+        "description": "Set Token Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
