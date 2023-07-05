@@ -1919,7 +1919,7 @@
         "operation": {
           "method": "POST",
           "url": "ws://grindery-nexus-connector-web3-staging:3000/",
-          "body": "{\n \"_grinderyChain\": {{ _grinderyChain }}\n}"
+          "body": ""
         }
       }
     }
