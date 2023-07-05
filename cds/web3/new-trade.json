@@ -1145,7 +1145,10 @@
       "name": "Get Offer Id For Trade",
       "display": {
         "label": "Get Offer Id For Trade",
-        "description": "Get Offer Id For Trade"
+        "description": "Get Offer Id For Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
