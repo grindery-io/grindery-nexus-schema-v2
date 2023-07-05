@@ -10,7 +10,10 @@
       "name": "Admin Changed",
       "display": {
         "label": "Admin Changed",
-        "description": "Admin Changed"
+        "description": "Admin Changed",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
