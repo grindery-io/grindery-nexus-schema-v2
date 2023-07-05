@@ -1844,7 +1844,10 @@
       "name": "Withdraw Native",
       "display": {
         "label": "Withdraw Native",
-        "description": "Withdraw Native"
+        "description": "Withdraw Native",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
