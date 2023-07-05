@@ -1319,7 +1319,10 @@
       "name": "Is Complete Trade",
       "display": {
         "label": "Is Complete Trade",
-        "description": "Is Complete Trade"
+        "description": "Is Complete Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
