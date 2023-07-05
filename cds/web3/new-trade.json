@@ -338,7 +338,10 @@
       "name": "Log Set Max Price Limit Offer",
       "display": {
         "label": "Log Set Max Price Limit Offer",
-        "description": "Log Set Max Price Limit Offer"
+        "description": "Log Set Max Price Limit Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
