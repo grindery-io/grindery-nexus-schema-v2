@@ -388,7 +388,10 @@
       "name": "Log Set Min Price Limit Offer",
       "display": {
         "label": "Log Set Min Price Limit Offer",
-        "description": "Log Set Min Price Limit Offer"
+        "description": "Log Set Min Price Limit Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
