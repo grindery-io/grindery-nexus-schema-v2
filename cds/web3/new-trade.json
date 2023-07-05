@@ -1875,6 +1875,29 @@
           
         }
       }
+    },
+    {
+      "key": "GetMasterContractAddress",
+      "name": "Get Master Contract Address",
+      "display": {
+        "label": "Get Master Contract Address",
+        "description": "Get Master Contract Address",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
+      },
+      "operation": {
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Blockchain",
+            "type": "string",
+            "required": true,
+            "default": "",
+            "computed": true
+          }
+        ]
+      }
     }
   ],
   "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMwQjBEMTciLz4KPHBhdGggZD0iTTE2LjMyIDE2LjE5MTVMMTMuNzEwOCAxNy44NTQyQzEzLjMxNTUgMTguMTA2MSAxMy4yMDMyIDE4LjYyNDcgMTMuNDU5OSAxOS4wMTI1QzEzLjcxMzQgMTkuMzk1NiAxNC4yMzIyIDE5LjUwNzkgMTQuNjI1OCAxOS4yNjc3TDE2LjI0NjkgMTguMTgwOEwxNy42Nzg3IDE3LjIxODlDMTcuNzAxNSAxNy4yMDQgMTcuNzI0MyAxNy4xODkzIDE3Ljc0NyAxNy4xNzVMMTcuODE5MiAxNy4xMjY1QzE3Ljg2MDUgMTcuMDk4OCAxNy45MDMzIDE3LjA3NDkgMTcuOTQ3MSAxNy4wNTQ2QzE3Ljk4MjUgMTcuMDM0NCAxOC4wMTc4IDE3LjAxNDkgMTguMDUzIDE2Ljk5NjFDMTguOTEwMSAxNi41Mzc2IDE5Ljk4MzggMTYuODQ3NyAyMC40NTEgMTcuNjg4OEMyMC44NjAzIDE4LjQyNTYgMjAuNjczNCAxOS4zNDQyIDIwLjAwNzIgMTkuODcwM0MyMC4xMTE5IDE5LjYyMzcgMjAuMDk0OSAxOS4zMzIzIDE5LjkzNTQgMTkuMDkxNEMxOS42ODE5IDE4LjcwODIgMTkuMTYzMSAxOC41OTYgMTguNzY5NSAxOC44MzYxTDE3LjE0ODQgMTkuOTIzMUwxNS43MTY1IDIwLjg4NUMxNS43MDMgMjAuODkzNiAxNS42ODk0IDIwLjkwMjEgMTUuNjc1NyAyMC45MTA1TDE1LjU3NiAyMC45Nzc0QzE1LjQ5MjIgMjEuMDMzNiAxNS40MDIyIDIxLjA3NDUgMTUuMzA5NyAyMS4xMDA2QzE0LjA2MzEgMjEuNjM3NSAxMi41NjgyIDIxLjIyNTUgMTEuODAyNiAyMC4wNjg2QzExLjAwNjMgMTguODY1NSAxMS4yODEgMTcuMjgyOSAxMi4zOTI5IDE2LjRDMTEuODY0NyAxNi4xOTk0IDExLjM2MzkgMTUuOTAyOCAxMC45MTc5IDE1LjUwODZDOC45NTQyNSAxMy43NzM3IDguNzkzNzIgMTAuODA3MyAxMC41NTkzIDguODgzMDhDMTIuMzI1IDYuOTU4ODYgMTUuMzQ4MSA2LjgwNTQ1IDE3LjMxMTggOC41NDA0MkMxOS4yNzU0IDEwLjI3NTQgMTkuNDM1OSAxMy4yNDE4IDE3LjY3MDMgMTUuMTY2QzE3LjI3NDcgMTUuNTk3MiAxNi44MTU5IDE1LjkzOTQgMTYuMzIgMTYuMTkxNVpNMTYuMDY3MSAxMy43ODcxQzE3LjA4MDcgMTIuNjc0NiAxNi45ODg1IDEwLjk1OTQgMTUuODYxMyA5Ljk1NjI0QzE0LjczNDEgOC45NTMwNyAxMi45OTg2IDkuMDQxNzggMTEuOTg1MSAxMC4xNTQ0QzEwLjk3MTUgMTEuMjY2OSAxMS4wNjM3IDEyLjk4MjEgMTIuMTkwOSAxMy45ODUzQzEzLjMxODEgMTQuOTg4NCAxNS4wNTM2IDE0Ljg5OTcgMTYuMDY3MSAxMy43ODcxWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==",
