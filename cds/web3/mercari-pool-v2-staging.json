@@ -1334,7 +1334,10 @@
       "name": "Set Max Price Limit",
       "display": {
         "label": "Set Max Price Limit",
-        "description": "Set Max Price Limit"
+        "description": "Set Max Price Limit",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
@@ -1368,7 +1371,10 @@
       "name": "Set Min Price Limit",
       "display": {
         "label": "Set Min Price Limit",
-        "description": "Set Min Price Limit"
+        "description": "Set Min Price Limit",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
