@@ -806,7 +806,10 @@
       "name": "Get Amount Offer For Trade",
       "display": {
         "label": "Get Amount Offer For Trade",
-        "description": "Get Amount Offer For Trade"
+        "description": "Get Amount Offer For Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
