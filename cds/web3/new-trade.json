@@ -1897,7 +1897,12 @@
       "body": "{\"address\":\"{{ auth.address }}\"}"
     },
     "defaultDisplayName": "{{ auth.address }}",
-    "authenticatedRequestTemplate": "",
+    "authenticatedRequestTemplate": {
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": "{\"address\":\"{{ auth.address }}\"}"
+    },
     "allowedHosts": [
       "grindery-nexus-orchestrator:3000"
     ],
