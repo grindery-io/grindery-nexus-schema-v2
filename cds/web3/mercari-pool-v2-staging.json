@@ -1151,7 +1151,10 @@
       "name": "Get Token Offer",
       "display": {
         "label": "Get Token Offer",
-        "description": "Get Token Offer"
+        "description": "Get Token Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
