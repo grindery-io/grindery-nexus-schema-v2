@@ -1762,7 +1762,10 @@
       "name": "Upgrade To And Call",
       "display": {
         "label": "Upgrade To And Call",
-        "description": "Upgrade To And Call"
+        "description": "Upgrade To And Call",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
