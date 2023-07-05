@@ -1614,7 +1614,10 @@
       "name": "Set Offer",
       "display": {
         "label": "Set Offer",
-        "description": "Set Offer"
+        "description": "Set Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
