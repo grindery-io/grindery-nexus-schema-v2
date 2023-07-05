@@ -1895,7 +1895,7 @@
             "default": "",
             "required": true,
             "computed": false,
-            "type": "url",
+            "type": "string",
             "placeholder": "Blockchain"
           }
         ],
