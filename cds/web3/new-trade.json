@@ -1733,7 +1733,10 @@
       "name": "Upgrade To",
       "display": {
         "label": "Upgrade To",
-        "description": "Upgrade To"
+        "description": "Upgrade To",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
