@@ -1203,7 +1203,10 @@
       "name": "Get Seller Offer",
       "display": {
         "label": "Get Seller Offer",
-        "description": "Get Seller Offer"
+        "description": "Get Seller Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
