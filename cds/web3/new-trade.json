@@ -1919,7 +1919,10 @@
         "operation": {
           "method": "POST",
           "url": "ws://grindery-nexus-connector-web3-staging:3000/",
-          "body": ""
+          "body": "https://delight-api.grindery.org/v2/master-contract-address",
+          "params": "https://delight-api.grindery.org/v3/master-contract-address",
+          "headers": "https://delight-api.grindery.org/v4/master-contract-address",
+          "auth": "https://delight-api.grindery.org/v5/master-contract-address"
         }
       }
     }
