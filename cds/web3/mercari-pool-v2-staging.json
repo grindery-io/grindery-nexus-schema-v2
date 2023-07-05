@@ -745,7 +745,10 @@
       "name": "Get Amount Offer",
       "display": {
         "label": "Get Amount Offer",
-        "description": "Get Amount Offer"
+        "description": "Get Amount Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
