@@ -1593,7 +1593,10 @@
       "name": "Withdraw",
       "display": {
         "label": "Withdraw",
-        "description": "Withdraw"
+        "description": "Withdraw",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
