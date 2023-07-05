@@ -460,7 +460,11 @@
             "label": "Offerer",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": true
           },
           {
             "key": "_idTrade",
