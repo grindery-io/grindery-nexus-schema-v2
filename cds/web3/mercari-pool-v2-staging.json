@@ -1006,7 +1006,10 @@
       "name": "Get Nonce Offer",
       "display": {
         "label": "Get Nonce Offer",
-        "description": "Get Nonce Offer"
+        "description": "Get Nonce Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
