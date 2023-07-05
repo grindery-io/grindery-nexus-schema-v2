@@ -1918,7 +1918,7 @@
         "type": "api",
         "operation": {
           "method": "POST",
-          "url": "",
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/",
           "body": "",
           "params": "",
           "headers": "",
