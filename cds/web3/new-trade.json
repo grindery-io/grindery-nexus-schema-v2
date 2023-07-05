@@ -951,7 +951,10 @@
       "name": "Get Deposit Token Trade",
       "display": {
         "label": "Get Deposit Token Trade",
-        "description": "Get Deposit Token Trade"
+        "description": "Get Deposit Token Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
