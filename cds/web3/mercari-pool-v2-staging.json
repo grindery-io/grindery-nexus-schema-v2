@@ -1122,7 +1122,10 @@
       "name": "Get Status Offer",
       "display": {
         "label": "Get Status Offer",
-        "description": "Get Status Offer"
+        "description": "Get Status Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
