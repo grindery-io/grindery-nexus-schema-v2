@@ -1240,7 +1240,10 @@
       "name": "Renounce Ownership",
       "display": {
         "label": "Renounce Ownership",
-        "description": "Renounce Ownership"
+        "description": "Renounce Ownership",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
