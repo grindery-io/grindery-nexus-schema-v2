@@ -588,7 +588,10 @@
       "name": "Upgraded",
       "display": {
         "label": "Upgraded",
-        "description": "Upgraded"
+        "description": "Upgraded",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
