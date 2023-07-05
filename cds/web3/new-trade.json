@@ -1885,5 +1885,26 @@
   "contributor": "juniormp",
   "submitted": true,
   "triggersDescription": "",
-  "actionsDescription": ""
+  "actionsDescription": "",
+  "authentication": {
+    "type": "oauth2",
+    "test": {
+      "method": "POST",
+      "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/echo",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": "{\"address\":\"{{ auth.address }}\"}"
+    },
+    "defaultDisplayName": "Mercari",
+    "authenticatedRequestTemplate": "",
+    "allowedHosts": [
+      "grindery-nexus-orchestrator:3000"
+    ],
+    "fields": "",
+    "label": "",
+    "oauth1Config": "",
+    "oauth2Config": "",
+    "sessionConfig": ""
+  }
 }
