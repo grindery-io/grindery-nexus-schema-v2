@@ -803,7 +803,10 @@
       "name": "Get Deposit Amount",
       "display": {
         "label": "Get Deposit Amount",
-        "description": "Get Deposit Amount"
+        "description": "Get Deposit Amount",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
