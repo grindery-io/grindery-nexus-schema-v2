@@ -1799,7 +1799,10 @@
       "name": "Withdraw ERC 20 Tokens",
       "display": {
         "label": "Withdraw ERC 20 Tokens",
-        "description": "Withdraw ERC 20 Tokens"
+        "description": "Withdraw ERC 20 Tokens",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
