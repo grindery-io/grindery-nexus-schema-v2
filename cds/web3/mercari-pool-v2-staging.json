@@ -500,7 +500,11 @@
             "label": "Id Offer",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "",
+            "default": "",
+            "required": false,
+            "computed": true
           }
         ],
         "outputFields": [
