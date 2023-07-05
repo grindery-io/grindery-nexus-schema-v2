@@ -96,7 +96,10 @@
       "name": "Initialized",
       "display": {
         "label": "Initialized",
-        "description": "Initialized"
+        "description": "Initialized",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
