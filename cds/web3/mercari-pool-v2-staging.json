@@ -832,7 +832,10 @@
       "name": "Get Deposit Chain Id",
       "display": {
         "label": "Get Deposit Chain Id",
-        "description": "Get Deposit Chain Id"
+        "description": "Get Deposit Chain Id",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
