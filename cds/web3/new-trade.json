@@ -1026,7 +1026,10 @@
       "name": "Get Max Price Limit Hash Offer",
       "display": {
         "label": "Get Max Price Limit Hash Offer",
-        "description": "Get Max Price Limit Hash Offer"
+        "description": "Get Max Price Limit Hash Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
