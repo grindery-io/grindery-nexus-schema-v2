@@ -1902,7 +1902,7 @@
             "key": "_mercariMasterContractAddress",
             "label": "Mercari master contract address",
             "helpText": "",
-            "default": "",
+            "default": "{{ _mercariMasterContractAddress }}",
             "required": true,
             "computed": false,
             "type": "string",
