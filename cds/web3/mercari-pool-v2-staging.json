@@ -861,7 +861,10 @@
       "name": "Get Deposit Token",
       "display": {
         "label": "Get Deposit Token",
-        "description": "Get Deposit Token"
+        "description": "Get Deposit Token",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
