@@ -1537,7 +1537,10 @@
       "name": "Set Max Price Limit Offer",
       "display": {
         "label": "Set Max Price Limit Offer",
-        "description": "Set Max Price Limit Offer"
+        "description": "Set Max Price Limit Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
