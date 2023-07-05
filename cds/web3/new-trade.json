@@ -132,7 +132,10 @@
       "name": "Log New Offer",
       "display": {
         "label": "Log New Offer",
-        "description": "Log New Offer"
+        "description": "Log New Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
