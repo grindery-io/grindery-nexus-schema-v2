@@ -1498,7 +1498,10 @@
       "name": "Transfer Ownership",
       "display": {
         "label": "Transfer Ownership",
-        "description": "Transfer Ownership"
+        "description": "Transfer Ownership",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
