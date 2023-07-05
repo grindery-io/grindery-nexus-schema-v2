@@ -1574,7 +1574,10 @@
       "name": "Set Min Price Limit Offer",
       "display": {
         "label": "Set Min Price Limit Offer",
-        "description": "Set Min Price Limit Offer"
+        "description": "Set Min Price Limit Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
