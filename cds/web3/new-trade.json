@@ -1055,7 +1055,10 @@
       "name": "Get Min Price Limit Hash Offer",
       "display": {
         "label": "Get Min Price Limit Hash Offer",
-        "description": "Get Min Price Limit Hash Offer"
+        "description": "Get Min Price Limit Hash Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
