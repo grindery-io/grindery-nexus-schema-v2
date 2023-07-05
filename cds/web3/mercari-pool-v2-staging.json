@@ -890,7 +890,10 @@
       "name": "Get Id Offer",
       "display": {
         "label": "Get Id Offer",
-        "description": "Get Id Offer"
+        "description": "Get Id Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
