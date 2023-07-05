@@ -835,7 +835,10 @@
       "name": "Get Buyer Trade",
       "display": {
         "label": "Get Buyer Trade",
-        "description": "Get Buyer Trade"
+        "description": "Get Buyer Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
