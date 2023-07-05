@@ -1408,7 +1408,10 @@
       "name": "Set Chain Id Offer",
       "display": {
         "label": "Set Chain Id Offer",
-        "description": "Set Chain Id Offer"
+        "description": "Set Chain Id Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
