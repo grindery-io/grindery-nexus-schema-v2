@@ -396,7 +396,10 @@
       "name": "Log Set Token Offer",
       "display": {
         "label": "Log Set Token Offer",
-        "description": "Log Set Token Offer"
+        "description": "Log Set Token Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
