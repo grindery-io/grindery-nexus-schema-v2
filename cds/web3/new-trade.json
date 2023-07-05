@@ -1009,7 +1009,10 @@
       "name": "Get MRI Token",
       "display": {
         "label": "Get MRI Token",
-        "description": "Get MRI Token"
+        "description": "Get MRI Token",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
