@@ -1914,6 +1914,11 @@
         "sample": {
           "_grinderyChain": "eip155:5",
           "_mercariMasterContractAddress": "0xe36BD65609c08Cd17b53520293523CF4560533d0"
+        },
+        "type": "api",
+        "operation": {
+          "method": "POST",
+          "url": "ws://grindery-nexus-connector-web3-staging:3000/"
         }
       }
     }
