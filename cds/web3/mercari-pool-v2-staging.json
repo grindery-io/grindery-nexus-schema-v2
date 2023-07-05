@@ -538,7 +538,10 @@
       "name": "Ownership Transferred",
       "display": {
         "label": "Ownership Transferred",
-        "description": "Ownership Transferred"
+        "description": "Ownership Transferred",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
