@@ -1887,7 +1887,18 @@
         "hidden": false
       },
       "operation": {
-        "inputFields": [],
+        "inputFields": [
+          {
+            "key": "_grinderyChain",
+            "label": "Blockchain",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false,
+            "type": "string",
+            "placeholder": "Blockchain"
+          }
+        ],
         "outputFields": [
           {
             "key": "_grinderyChain",
