@@ -1893,10 +1893,16 @@
             "key": "_grinderyChain",
             "label": "Blockchain",
             "type": "string"
+          },
+          {
+            "key": "_mercariMasterContractAddress",
+            "label": "Mercari master contract address",
+            "type": "string"
           }
         ],
         "sample": {
-          "_grinderyChain": "eip155:5"
+          "_grinderyChain": "eip155:5",
+          "_mercariMasterContractAddress": "0xe36BD65609c08Cd17b53520293523CF4560533d0"
         }
       }
     }
