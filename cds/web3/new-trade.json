@@ -1896,7 +1896,7 @@
       },
       "body": "{\"address\":\"{{ auth.address }}\"}"
     },
-    "defaultDisplayName": "Mercari",
+    "defaultDisplayName": "{{ auth.address }}",
     "authenticatedRequestTemplate": "",
     "allowedHosts": [
       "grindery-nexus-orchestrator:3000"
