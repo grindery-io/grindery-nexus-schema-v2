@@ -626,7 +626,10 @@
       "name": "Check Max Price Limit Offer",
       "display": {
         "label": "Check Max Price Limit Offer",
-        "description": "Check Max Price Limit Offer"
+        "description": "Check Max Price Limit Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
