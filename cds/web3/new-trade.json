@@ -438,7 +438,10 @@
       "name": "Log Set Status Offer",
       "display": {
         "label": "Log Set Status Offer",
-        "description": "Log Set Status Offer"
+        "description": "Log Set Status Offer",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
