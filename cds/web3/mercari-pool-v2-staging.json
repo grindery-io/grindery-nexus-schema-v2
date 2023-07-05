@@ -497,7 +497,7 @@
             "helpText": "",
             "default": "",
             "required": false,
-            "computed": true
+            "computed": false
           },
           {
             "key": "_idOffer",
