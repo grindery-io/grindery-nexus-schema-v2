@@ -1064,7 +1064,10 @@
       "name": "Get Recipient",
       "display": {
         "label": "Get Recipient",
-        "description": "Get Recipient"
+        "description": "Get Recipient",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
