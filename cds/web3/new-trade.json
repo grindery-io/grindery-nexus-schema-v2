@@ -1348,7 +1348,10 @@
       "name": "Owner",
       "display": {
         "label": "Owner",
-        "description": "Owner"
+        "description": "Owner",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
