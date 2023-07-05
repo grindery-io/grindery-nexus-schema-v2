@@ -1,6 +1,6 @@
 {
   "key": "new-trade",
-  "name": "Mercari 2",
+  "name": "Mercari",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
@@ -50,7 +50,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -84,7 +86,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -118,7 +122,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -180,7 +186,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -270,7 +278,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -318,7 +328,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -366,7 +378,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -414,7 +428,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -462,7 +478,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -510,7 +528,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -558,7 +578,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -592,7 +614,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
@@ -629,7 +653,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -664,7 +690,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -723,7 +751,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -766,7 +796,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -793,7 +825,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -820,7 +854,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -847,7 +883,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -874,7 +912,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -901,7 +941,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -928,7 +970,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -955,7 +999,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -973,7 +1019,9 @@
         "signature": "function getMRIToken() returns (address)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1000,7 +1048,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1027,7 +1077,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1054,7 +1106,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1081,7 +1135,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1108,7 +1164,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1135,7 +1193,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1162,7 +1222,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1189,7 +1251,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1216,7 +1280,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1243,7 +1309,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1270,7 +1338,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1288,7 +1358,9 @@
         "signature": "function owner() returns (address)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1306,7 +1378,9 @@
         "signature": "function proxiableUUID() returns (bytes32)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1324,7 +1398,9 @@
         "signature": "function renounceOwnership()",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1359,7 +1435,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1386,7 +1464,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1421,7 +1501,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1448,7 +1530,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1483,7 +1567,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1518,7 +1604,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1569,7 +1657,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1604,7 +1694,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1631,7 +1723,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1658,7 +1752,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1693,7 +1789,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1736,7 +1834,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1771,7 +1871,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1861,7 +1963,9 @@
       },
       "body": "{\"address\":\"{{ auth.address }}\"}"
     },
-    "allowedHosts": ["grindery-nexus-orchestrator:3000"],
+    "allowedHosts": [
+      "grindery-nexus-orchestrator:3000"
+    ],
     "oauth2Config": {
       "authorizeUrl": "https://microsites.grindery.org/grindery-nexus-connector-web3-microsite/?path=flow",
       "getAccessToken": {
