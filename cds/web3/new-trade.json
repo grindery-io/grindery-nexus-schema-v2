@@ -1897,6 +1897,16 @@
             "computed": false,
             "type": "string",
             "placeholder": "Blockchain"
+          },
+          {
+            "key": "_mercariMasterContractAddress",
+            "label": "Mercari master contract address",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false,
+            "type": "string",
+            "placeholder": "Mercari master contract address"
           }
         ],
         "outputFields": [
