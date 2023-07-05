@@ -60,7 +60,10 @@
       "name": "Beacon Upgraded",
       "display": {
         "label": "Beacon Upgraded",
-        "description": "Beacon Upgraded"
+        "description": "Beacon Upgraded",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
