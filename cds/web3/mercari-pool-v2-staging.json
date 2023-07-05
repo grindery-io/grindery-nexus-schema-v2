@@ -1093,7 +1093,10 @@
       "name": "Get Requester",
       "display": {
         "label": "Get Requester",
-        "description": "Get Requester"
+        "description": "Get Requester",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
