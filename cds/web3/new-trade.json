@@ -184,7 +184,10 @@
       "name": "Log New Trade",
       "display": {
         "label": "Log New Trade",
-        "description": "Log New Trade"
+        "description": "Log New Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
