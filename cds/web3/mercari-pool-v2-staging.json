@@ -977,7 +977,10 @@
       "name": "Get Nonce Deposit",
       "display": {
         "label": "Get Nonce Deposit",
-        "description": "Get Nonce Deposit"
+        "description": "Get Nonce Deposit",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
