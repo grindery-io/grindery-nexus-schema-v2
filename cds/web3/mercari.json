@@ -1,6 +1,6 @@
 {
-  "key": "new-trade",
-  "name": "Mercari 2",
+  "key": "mercari",
+  "name": "Mercari Pool v1.10",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
@@ -10,7 +10,7 @@
       "name": "Admin Changed",
       "display": {
         "label": "Admin Changed",
-        "description": "Admin Changed",
+        "description": "The admin of the contract has been changed.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -24,14 +24,16 @@
             "label": "Previous Admin",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The previous admin's address."
           },
           {
             "key": "newAdmin",
             "label": "New Admin",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The new admin's address."
           }
         ],
         "outputFields": [
@@ -58,7 +60,7 @@
       "name": "Beacon Upgraded",
       "display": {
         "label": "Beacon Upgraded",
-        "description": "Beacon Upgraded",
+        "description": "The beacon contract has been upgraded.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -72,7 +74,8 @@
             "label": "Beacon",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The new beacon's address."
           }
         ],
         "outputFields": [
@@ -92,7 +95,7 @@
       "name": "Initialized",
       "display": {
         "label": "Initialized",
-        "description": "Initialized",
+        "description": "The contract has been initialized.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -106,7 +109,8 @@
             "label": "Version",
             "type": "number",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The version of the contract."
           }
         ],
         "outputFields": [
@@ -126,7 +130,7 @@
       "name": "Log New Offer",
       "display": {
         "label": "Log New Offer",
-        "description": "Log New Offer",
+        "description": "A new offer has been created.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -140,21 +144,24 @@
             "label": "Offer Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "_token",
             "label": "Token",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The token's address."
           },
           {
             "key": "_chainId",
             "label": "Chain Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The chain ID."
           }
         ],
         "outputFields": [
@@ -188,7 +195,7 @@
       "name": "Log New Trade",
       "display": {
         "label": "Log New Trade",
-        "description": "Log New Trade",
+        "description": "A new trade has been made.",
         "instructions": "",
         "featured": false,
         "hidden": false
@@ -196,80 +203,9 @@
       "operation": {
         "type": "blockchain:event",
         "signature": "event LogNewTrade(address indexed _seller, bytes32 indexed _tradeId, address indexed _token, uint256 _amount, bytes32 _offerId)",
-        "inputFields": [
-          {
-            "key": "_seller",
-            "label": "Seller",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "_tradeId",
-            "label": "Trade Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_token",
-            "label": "Token",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "_amount",
-            "label": "Amount",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_offerId",
-            "label": "Offer Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "_seller",
-            "label": "Seller",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "_tradeId",
-            "label": "Trade Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_token",
-            "label": "Token",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "_amount",
-            "label": "Amount",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_offerId",
-            "label": "Offer Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          }
-        ],
+        "inputFieldProviderUrl": "https://delight-api.grindery.org/v2/view-blockchains/master-contract-address",
+        "inputFields": [],
+        "outputFields": [],
         "sample": {}
       }
     },
@@ -278,7 +214,7 @@
       "name": "Log Set Chain Id Offer",
       "display": {
         "label": "Log Set Chain Id Offer",
-        "description": "Log Set Chain Id Offer",
+        "description": "The chain ID of an offer has been updated.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -292,14 +228,16 @@
             "label": "Offer Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "_chainId",
             "label": "Chain Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The new chain ID."
           }
         ],
         "outputFields": [
@@ -326,7 +264,7 @@
       "name": "Log Set Max Price Limit Offer",
       "display": {
         "label": "Log Set Max Price Limit Offer",
-        "description": "Log Set Max Price Limit Offer",
+        "description": "The upper price limit of an offer has been updated.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -340,14 +278,16 @@
             "label": "Offer Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "_upperPriceLimit",
             "label": "Upper Price Limit",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The new upper price limit."
           }
         ],
         "outputFields": [
@@ -374,7 +314,7 @@
       "name": "Log Set Min Price Limit Offer",
       "display": {
         "label": "Log Set Min Price Limit Offer",
-        "description": "Log Set Min Price Limit Offer",
+        "description": "The lower price limit of an offer has been updated.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -388,14 +328,16 @@
             "label": "Offer Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "_lowerPriceLimit",
             "label": "Lower Price Limit",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The new lower price limit."
           }
         ],
         "outputFields": [
@@ -422,7 +364,7 @@
       "name": "Log Set Status Offer",
       "display": {
         "label": "Log Set Status Offer",
-        "description": "Log Set Status Offer",
+        "description": "The status of an offer has been updated.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -436,14 +378,16 @@
             "label": "Offer Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "_isActive",
             "label": "Is Active",
             "type": "boolean",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The new status."
           }
         ],
         "outputFields": [
@@ -470,7 +414,7 @@
       "name": "Log Set Token Offer",
       "display": {
         "label": "Log Set Token Offer",
-        "description": "Log Set Token Offer",
+        "description": "The token of an offer has been updated.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -484,14 +428,16 @@
             "label": "Offer Id",
             "type": "string",
             "placeholder": "",
-            "list": false
+            "list": false,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "_token",
             "label": "Token",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The new token's address."
           }
         ],
         "outputFields": [
@@ -518,7 +464,7 @@
       "name": "Ownership Transferred",
       "display": {
         "label": "Ownership Transferred",
-        "description": "Ownership Transferred",
+        "description": "The ownership of the contract has been transferred.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -532,14 +478,16 @@
             "label": "Previous Owner",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The previous owner's address."
           },
           {
             "key": "newOwner",
             "label": "New Owner",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The new owner's address."
           }
         ],
         "outputFields": [
@@ -566,7 +514,7 @@
       "name": "Upgraded",
       "display": {
         "label": "Upgraded",
-        "description": "Upgraded",
+        "description": "The contract has been upgraded.",
         "instructions": "",
         "featured": false,
         "hidden": true
@@ -580,7 +528,8 @@
             "label": "Implementation",
             "type": "address",
             "placeholder": "Enter a blockchain address",
-            "list": false
+            "list": false,
+            "helpText": "The new implementation's address."
           }
         ],
         "outputFields": [
@@ -602,10 +551,7 @@
       "name": "Check Max Price Limit Offer",
       "display": {
         "label": "Check Max Price Limit Offer",
-        "description": "Check Max Price Limit Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Checks if the price of an offer is below a maximum price limit."
       },
       "operation": {
         "type": "blockchain:call",
@@ -617,7 +563,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "maxPriceLimit",
@@ -625,7 +572,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The maximum price limit in bytes format."
           }
         ],
         "outputFields": [],
@@ -637,10 +585,7 @@
       "name": "Check Min Price Limit Offer",
       "display": {
         "label": "Check Min Price Limit Offer",
-        "description": "Check Min Price Limit Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Checks if the price of an offer is above a minimum price limit."
       },
       "operation": {
         "type": "blockchain:call",
@@ -652,7 +597,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "minPriceLimit",
@@ -660,7 +606,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The minimum price limit in bytes format."
           }
         ],
         "outputFields": [],
@@ -672,10 +619,7 @@
       "name": "Deposit MRI Token And Accept Offer",
       "display": {
         "label": "Deposit MRI Token And Accept Offer",
-        "description": "Deposit MRI Token And Accept Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Deposits a specified amount of MRI token and accepts an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -687,7 +631,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the token."
           },
           {
             "key": "amount",
@@ -695,7 +640,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The amount of tokens to deposit."
           },
           {
             "key": "offerId",
@@ -703,7 +649,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "destAddress",
@@ -711,7 +658,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The destination address for the tokens."
           },
           {
             "key": "amountOffer",
@@ -719,7 +667,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The amount of tokens offered."
           }
         ],
         "outputFields": [],
@@ -731,10 +680,7 @@
       "name": "Deposit Native And Accept Offer",
       "display": {
         "label": "Deposit Native And Accept Offer",
-        "description": "Deposit Native And Accept Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Deposits a specified amount of native currency and accepts an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -746,7 +692,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "destAddress",
@@ -754,7 +701,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The destination address for the native currency."
           },
           {
             "key": "amountOffer",
@@ -762,7 +710,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The amount of tokens offered."
           }
         ],
         "outputFields": [],
@@ -774,10 +723,7 @@
       "name": "Get Amount Offer For Trade",
       "display": {
         "label": "Get Amount Offer For Trade",
-        "description": "Get Amount Offer For Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the amount of tokens offered for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -789,7 +735,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -801,10 +748,7 @@
       "name": "Get Buyer Trade",
       "display": {
         "label": "Get Buyer Trade",
-        "description": "Get Buyer Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the buyer's address for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -816,7 +760,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -828,10 +773,7 @@
       "name": "Get Chain Id Offer",
       "display": {
         "label": "Get Chain Id Offer",
-        "description": "Get Chain Id Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the chain ID of an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -843,7 +785,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           }
         ],
         "outputFields": [],
@@ -855,10 +798,7 @@
       "name": "Get Deposit Amount Trade",
       "display": {
         "label": "Get Deposit Amount Trade",
-        "description": "Get Deposit Amount Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the deposit amount for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -870,7 +810,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -882,10 +823,7 @@
       "name": "Get Deposit Chain Id Trade",
       "display": {
         "label": "Get Deposit Chain Id Trade",
-        "description": "Get Deposit Chain Id Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the deposit chain ID for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -897,7 +835,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -909,10 +848,7 @@
       "name": "Get Deposit Token Trade",
       "display": {
         "label": "Get Deposit Token Trade",
-        "description": "Get Deposit Token Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the deposit token address for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -924,7 +860,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -936,10 +873,7 @@
       "name": "Get Destination Address Trade",
       "display": {
         "label": "Get Destination Address Trade",
-        "description": "Get Destination Address Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the destination address for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -951,7 +885,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -963,10 +898,7 @@
       "name": "Get MRI Token",
       "display": {
         "label": "Get MRI Token",
-        "description": "Get MRI Token",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the address of the MRI token."
       },
       "operation": {
         "type": "blockchain:call",
@@ -981,10 +913,7 @@
       "name": "Get Max Price Limit Hash Offer",
       "display": {
         "label": "Get Max Price Limit Hash Offer",
-        "description": "Get Max Price Limit Hash Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the hash of the maximum price limit for an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -996,7 +925,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           }
         ],
         "outputFields": [],
@@ -1008,10 +938,7 @@
       "name": "Get Min Price Limit Hash Offer",
       "display": {
         "label": "Get Min Price Limit Hash Offer",
-        "description": "Get Min Price Limit Hash Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the hash of the minimum price limit for an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1023,7 +950,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           }
         ],
         "outputFields": [],
@@ -1035,10 +963,7 @@
       "name": "Get Nonce Offer",
       "display": {
         "label": "Get Nonce Offer",
-        "description": "Get Nonce Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the nonce of an offer for a user."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1050,7 +975,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the user."
           }
         ],
         "outputFields": [],
@@ -1062,10 +988,7 @@
       "name": "Get Nonce User Trade",
       "display": {
         "label": "Get Nonce User Trade",
-        "description": "Get Nonce User Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the nonce of a user for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1077,7 +1000,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the user."
           }
         ],
         "outputFields": [],
@@ -1089,10 +1013,7 @@
       "name": "Get Offer Id For Trade",
       "display": {
         "label": "Get Offer Id For Trade",
-        "description": "Get Offer Id For Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the ID of the offer associated with a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1104,7 +1025,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -1116,10 +1038,7 @@
       "name": "Get Payment Info Trade",
       "display": {
         "label": "Get Payment Info Trade",
-        "description": "Get Payment Info Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the payment information for a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1131,7 +1050,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -1143,10 +1063,7 @@
       "name": "Get Seller Offer",
       "display": {
         "label": "Get Seller Offer",
-        "description": "Get Seller Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the seller's address for an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1158,7 +1075,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           }
         ],
         "outputFields": [],
@@ -1170,10 +1088,7 @@
       "name": "Get Status Offer",
       "display": {
         "label": "Get Status Offer",
-        "description": "Get Status Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Gets the status of an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1185,7 +1100,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           }
         ],
         "outputFields": [],
@@ -1197,10 +1113,7 @@
       "name": "Get Token Offer",
       "display": {
         "label": "Get Token Offer",
-        "description": "Get Token Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Get the token offer address for a given offer ID."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1212,7 +1125,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           }
         ],
         "outputFields": [],
@@ -1224,10 +1138,7 @@
       "name": "Initialize",
       "display": {
         "label": "Initialize",
-        "description": "Initialize",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Initialize the contract with the address of the tokenMRI contract."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1239,7 +1150,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the tokenMRI contract."
           }
         ],
         "outputFields": [],
@@ -1251,10 +1163,7 @@
       "name": "Is Complete Trade",
       "display": {
         "label": "Is Complete Trade",
-        "description": "Is Complete Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Check if a trade with the given trade ID is complete."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1266,7 +1175,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -1278,10 +1188,7 @@
       "name": "Owner",
       "display": {
         "label": "Owner",
-        "description": "Owner",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Get the owner address of the contract."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1296,10 +1203,7 @@
       "name": "Proxiable UUID",
       "display": {
         "label": "Proxiable UUID",
-        "description": "Proxiable UUID",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Get the UUID of the proxiable contract."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1314,10 +1218,7 @@
       "name": "Renounce Ownership",
       "display": {
         "label": "Renounce Ownership",
-        "description": "Renounce Ownership",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Renounce ownership of the contract."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1332,10 +1233,7 @@
       "name": "Set Chain Id Offer",
       "display": {
         "label": "Set Chain Id Offer",
-        "description": "Set Chain Id Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the chain ID for a specific offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1347,7 +1245,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "chainId",
@@ -1355,7 +1254,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The chain ID to set."
           }
         ],
         "outputFields": [],
@@ -1367,10 +1267,7 @@
       "name": "Set Complete Trade",
       "display": {
         "label": "Set Complete Trade",
-        "description": "Set Complete Trade",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the complete status of a trade."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1382,7 +1279,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the trade."
           }
         ],
         "outputFields": [],
@@ -1394,10 +1292,7 @@
       "name": "Set Is Active Offer",
       "display": {
         "label": "Set Is Active Offer",
-        "description": "Set Is Active Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the active status of an offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1409,7 +1304,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "isActive",
@@ -1417,7 +1313,8 @@
             "type": "boolean",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The active status to set."
           }
         ],
         "outputFields": [],
@@ -1429,10 +1326,7 @@
       "name": "Set MRI Token",
       "display": {
         "label": "Set MRI Token",
-        "description": "Set MRI Token",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the tokenMRI contract address."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1444,7 +1338,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the tokenMRI contract."
           }
         ],
         "outputFields": [],
@@ -1456,10 +1351,7 @@
       "name": "Set Max Price Limit Offer",
       "display": {
         "label": "Set Max Price Limit Offer",
-        "description": "Set Max Price Limit Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the maximum price limit for a specific offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1471,7 +1363,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "maxPriceLimit",
@@ -1479,7 +1372,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The maximum price limit to set."
           }
         ],
         "outputFields": [],
@@ -1491,10 +1385,7 @@
       "name": "Set Min Price Limit Offer",
       "display": {
         "label": "Set Min Price Limit Offer",
-        "description": "Set Min Price Limit Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the minimum price limit for a specific offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1506,7 +1397,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "minPriceLimit",
@@ -1514,7 +1406,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The minimum price limit to set."
           }
         ],
         "outputFields": [],
@@ -1526,10 +1419,7 @@
       "name": "Set Offer",
       "display": {
         "label": "Set Offer",
-        "description": "Set Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Create a new offer with the specified parameters."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1541,7 +1431,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the token."
           },
           {
             "key": "chainId",
@@ -1549,7 +1440,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The chain ID."
           },
           {
             "key": "minPriceLimit",
@@ -1557,7 +1449,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The minimum price limit."
           },
           {
             "key": "maxPriceLimit",
@@ -1565,7 +1458,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The maximum price limit."
           }
         ],
         "outputFields": [],
@@ -1577,10 +1471,7 @@
       "name": "Set Token Offer",
       "display": {
         "label": "Set Token Offer",
-        "description": "Set Token Offer",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Set the token address for a specific offer."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1592,7 +1483,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The ID of the offer."
           },
           {
             "key": "token",
@@ -1600,7 +1492,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the token."
           }
         ],
         "outputFields": [],
@@ -1612,10 +1505,7 @@
       "name": "Transfer Ownership",
       "display": {
         "label": "Transfer Ownership",
-        "description": "Transfer Ownership",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Transfer ownership of the contract to a new owner."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1627,7 +1517,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the new owner."
           }
         ],
         "outputFields": [],
@@ -1639,10 +1530,7 @@
       "name": "Upgrade To",
       "display": {
         "label": "Upgrade To",
-        "description": "Upgrade To",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Upgrade the contract to a new implementation."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1654,7 +1542,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the new implementation."
           }
         ],
         "outputFields": [],
@@ -1666,10 +1555,7 @@
       "name": "Upgrade To And Call",
       "display": {
         "label": "Upgrade To And Call",
-        "description": "Upgrade To And Call",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Upgrade the contract to a new implementation and call a function on the new implementation."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1681,7 +1567,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the new implementation."
           },
           {
             "key": "data",
@@ -1689,7 +1576,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The data to call on the new implementation."
           }
         ],
         "outputFields": [],
@@ -1701,10 +1589,7 @@
       "name": "Withdraw ERC 20 Tokens",
       "display": {
         "label": "Withdraw ERC 20 Tokens",
-        "description": "Withdraw ERC 20 Tokens",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Withdraw ERC20 tokens from the contract."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1716,7 +1601,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address of the token to withdraw."
           },
           {
             "key": "amount",
@@ -1724,7 +1610,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The amount to withdraw."
           },
           {
             "key": "to",
@@ -1732,7 +1619,8 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address to send the tokens to."
           }
         ],
         "outputFields": [],
@@ -1744,10 +1632,7 @@
       "name": "Withdraw Native",
       "display": {
         "label": "Withdraw Native",
-        "description": "Withdraw Native",
-        "instructions": "",
-        "featured": false,
-        "hidden": true
+        "description": "Withdraw native tokens from the contract."
       },
       "operation": {
         "type": "blockchain:call",
@@ -1759,7 +1644,8 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The amount to withdraw."
           },
           {
             "key": "to",
@@ -1767,111 +1653,21 @@
             "type": "address",
             "placeholder": "Enter a blockchain address",
             "list": false,
-            "required": true
+            "required": true,
+            "helpText": "The address to send the tokens to."
           }
         ],
         "outputFields": [],
         "sample": {}
       }
-    },
-    {
-      "key": "GetMasterContractAddress",
-      "name": "Get Master Contract Address",
-      "display": {
-        "label": "Get Master Contract Address",
-        "description": "Get Master Contract Address",
-        "instructions": "",
-        "featured": false,
-        "hidden": false
-      },
-      "operation": {
-        "inputFields": [
-          {
-            "key": "_grinderyChain",
-            "label": "Blockchain",
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false,
-            "type": "string",
-            "placeholder": "Blockchain"
-          },
-          {
-            "key": "_mercariMasterContractAddress",
-            "label": "Mercari master contract address",
-            "helpText": "",
-            "default": "{{ _mercariMasterContractAddress }}",
-            "required": true,
-            "computed": false,
-            "type": "string",
-            "placeholder": "Mercari master contract address"
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "_grinderyChain",
-            "label": "Blockchain",
-            "type": "string"
-          },
-          {
-            "key": "_mercariMasterContractAddress",
-            "label": "Mercari master contract address",
-            "type": "string"
-          }
-        ],
-        "sample": {
-          "_grinderyChain": "eip155:5",
-          "_mercariMasterContractAddress": "0xe36BD65609c08Cd17b53520293523CF4560533d0"
-        },
-        "type": "api",
-        "operation": {
-          "method": "POST",
-          "url": "ws://grindery-nexus-connector-web3-staging:3000/",
-          "body": "",
-          "params": "",
-          "headers": "",
-          "auth": ""
-        }
-      }
     }
   ],
-  "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMwQjBEMTciLz4KPHBhdGggZD0iTTE2LjMyIDE2LjE5MTVMMTMuNzEwOCAxNy44NTQyQzEzLjMxNTUgMTguMTA2MSAxMy4yMDMyIDE4LjYyNDcgMTMuNDU5OSAxOS4wMTI1QzEzLjcxMzQgMTkuMzk1NiAxNC4yMzIyIDE5LjUwNzkgMTQuNjI1OCAxOS4yNjc3TDE2LjI0NjkgMTguMTgwOEwxNy42Nzg3IDE3LjIxODlDMTcuNzAxNSAxNy4yMDQgMTcuNzI0MyAxNy4xODkzIDE3Ljc0NyAxNy4xNzVMMTcuODE5MiAxNy4xMjY1QzE3Ljg2MDUgMTcuMDk4OCAxNy45MDMzIDE3LjA3NDkgMTcuOTQ3MSAxNy4wNTQ2QzE3Ljk4MjUgMTcuMDM0NCAxOC4wMTc4IDE3LjAxNDkgMTguMDUzIDE2Ljk5NjFDMTguOTEwMSAxNi41Mzc2IDE5Ljk4MzggMTYuODQ3NyAyMC40NTEgMTcuNjg4OEMyMC44NjAzIDE4LjQyNTYgMjAuNjczNCAxOS4zNDQyIDIwLjAwNzIgMTkuODcwM0MyMC4xMTE5IDE5LjYyMzcgMjAuMDk0OSAxOS4zMzIzIDE5LjkzNTQgMTkuMDkxNEMxOS42ODE5IDE4LjcwODIgMTkuMTYzMSAxOC41OTYgMTguNzY5NSAxOC44MzYxTDE3LjE0ODQgMTkuOTIzMUwxNS43MTY1IDIwLjg4NUMxNS43MDMgMjAuODkzNiAxNS42ODk0IDIwLjkwMjEgMTUuNjc1NyAyMC45MTA1TDE1LjU3NiAyMC45Nzc0QzE1LjQ5MjIgMjEuMDMzNiAxNS40MDIyIDIxLjA3NDUgMTUuMzA5NyAyMS4xMDA2QzE0LjA2MzEgMjEuNjM3NSAxMi41NjgyIDIxLjIyNTUgMTEuODAyNiAyMC4wNjg2QzExLjAwNjMgMTguODY1NSAxMS4yODEgMTcuMjgyOSAxMi4zOTI5IDE2LjRDMTEuODY0NyAxNi4xOTk0IDExLjM2MzkgMTUuOTAyOCAxMC45MTc5IDE1LjUwODZDOC45NTQyNSAxMy43NzM3IDguNzkzNzIgMTAuODA3MyAxMC41NTkzIDguODgzMDhDMTIuMzI1IDYuOTU4ODYgMTUuMzQ4MSA2LjgwNTQ1IDE3LjMxMTggOC41NDA0MkMxOS4yNzU0IDEwLjI3NTQgMTkuNDM1OSAxMy4yNDE4IDE3LjY3MDMgMTUuMTY2QzE3LjI3NDcgMTUuNTk3MiAxNi44MTU5IDE1LjkzOTQgMTYuMzIgMTYuMTkxNVpNMTYuMDY3MSAxMy43ODcxQzE3LjA4MDcgMTIuNjc0NiAxNi45ODg1IDEwLjk1OTQgMTUuODYxMyA5Ljk1NjI0QzE0LjczNDEgOC45NTMwNyAxMi45OTg2IDkuMDQxNzggMTEuOTg1MSAxMC4xNTQ0QzEwLjk3MTUgMTEuMjY2OSAxMS4wNjM3IDEyLjk4MjEgMTIuMTkwOSAxMy45ODUzQzEzLjMxODEgMTQuOTg4NCAxNS4wNTM2IDE0Ljg5OTcgMTYuMDY3MSAxMy43ODcxWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==",
-  "description": "",
-  "user": "eip155:1:0xCbDf3d0C2C255d4582171Fc652E8BdCF043b13fE",
-  "workspace": "eip155:1:0xCbDf3d0C2C255d4582171Fc652E8BdCF043b13fE",
+  "description": "A web3 connector for interacting with a smart contract that manages offers and trades. It allows users to create and accept offers, deposit tokens or native currency, and perform various actions related to offers and trades.",
+  "icon": "data:image/png;base64,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",
+  "user": "eip155:1:0x62E45140ea73a2becfB964c797314EF7efDAEFBE",
+  "workspace": "eip155:1:0x62E45140ea73a2becfB964c797314EF7efDAEFBE",
   "access": "Private",
   "contributor": "juniormp",
-  "submitted": true,
   "triggersDescription": "",
-  "actionsDescription": "",
-  "authentication": {
-    "type": "oauth2",
-    "test": {
-      "method": "POST",
-      "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/echo",
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "body": "{\"address\":\"{{ auth.address }}\"}"
-    },
-    "defaultDisplayName": "{{ auth.address }}",
-    "authenticatedRequestTemplate": {
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "body": "{\"address\":\"{{ auth.address }}\"}"
-    },
-    "allowedHosts": ["grindery-nexus-orchestrator:3000"],
-    "oauth2Config": {
-      "authorizeUrl": "https://microsites.grindery.org/grindery-nexus-connector-web3-microsite/?path=flow",
-      "getAccessToken": {
-        "method": "POST",
-        "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/flowCreateAccountComplete",
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "body": "{\"code\":\"{{ code }}\"}"
-      }
-    }
-  }
+  "actionsDescription": ""
 }
