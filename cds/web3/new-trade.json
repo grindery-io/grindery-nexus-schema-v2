@@ -1511,7 +1511,10 @@
       "name": "Set MRI Token",
       "display": {
         "label": "Set MRI Token",
-        "description": "Set MRI Token"
+        "description": "Set MRI Token",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
