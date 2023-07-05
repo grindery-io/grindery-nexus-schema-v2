@@ -980,7 +980,10 @@
       "name": "Get Destination Address Trade",
       "display": {
         "label": "Get Destination Address Trade",
-        "description": "Get Destination Address Trade"
+        "description": "Get Destination Address Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
