@@ -1220,7 +1220,10 @@
       "name": "Proxiable UUID",
       "display": {
         "label": "Proxiable UUID",
-        "description": "Proxiable UUID"
+        "description": "Proxiable UUID",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
