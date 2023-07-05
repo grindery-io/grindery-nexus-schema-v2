@@ -1174,7 +1174,10 @@
       "name": "Get Payment Info Trade",
       "display": {
         "label": "Get Payment Info Trade",
-        "description": "Get Payment Info Trade"
+        "description": "Get Payment Info Trade",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
