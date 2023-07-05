@@ -1297,7 +1297,10 @@
       "name": "Set Is Active",
       "display": {
         "label": "Set Is Active",
-        "description": "Set Is Active"
+        "description": "Set Is Active",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
