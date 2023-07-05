@@ -1290,7 +1290,10 @@
       "name": "Initialize",
       "display": {
         "label": "Initialize",
-        "description": "Initialize"
+        "description": "Initialize",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:call",
