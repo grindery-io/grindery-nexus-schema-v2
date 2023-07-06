@@ -1251,6 +1251,8 @@
   "description": "Super land con la que casi me forro en una testnet",
   "user": "eip155:1:0xc8B54eC37c35F622C7a23a54d21d8a8c8b2C72f5",
   "workspace": "eip155:1:0xc8B54eC37c35F622C7a23a54d21d8a8c8b2C72f5",
-  "access": "Private",
-  "contributor": "netzulo"
+  "access": "Beta",
+  "contributor": "netzulo",
+  "triggersDescription": "",
+  "actionsDescription": ""
 }
