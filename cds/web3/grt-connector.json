@@ -61,9 +61,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -122,9 +120,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
@@ -158,9 +154,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -192,9 +186,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -218,9 +210,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -235,9 +225,7 @@
         "signature": "function decimals() returns (uint8)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -269,9 +257,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -303,9 +289,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -337,9 +321,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -354,9 +336,7 @@
         "signature": "function name() returns (string)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -371,9 +351,7 @@
         "signature": "function symbol() returns (string)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -388,9 +366,7 @@
         "signature": "function totalSupply() returns (uint256)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -422,9 +398,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -464,9 +438,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
