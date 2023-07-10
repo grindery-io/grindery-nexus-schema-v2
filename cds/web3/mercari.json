@@ -511,7 +511,7 @@
         "description": "The token of an offer has been updated.",
         "instructions": "",
         "featured": false,
-        "hidden": false
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
