@@ -300,7 +300,10 @@
       "name": "Log Set Chain Id Offer",
       "display": {
         "label": "Log Set Chain Id Offer",
-        "description": "The chain ID of an offer has been updated."
+        "description": "The chain ID of an offer has been updated.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
