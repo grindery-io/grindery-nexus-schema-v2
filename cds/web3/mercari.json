@@ -404,7 +404,10 @@
       "name": "Log Set Min Price Limit Offer",
       "display": {
         "label": "Log Set Min Price Limit Offer",
-        "description": "The lower price limit of an offer has been updated."
+        "description": "The lower price limit of an offer has been updated.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
