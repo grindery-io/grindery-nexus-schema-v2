@@ -560,7 +560,10 @@
       "name": "Ownership Transferred",
       "display": {
         "label": "Ownership Transferred",
-        "description": "The ownership of the contract has been transferred."
+        "description": "The ownership of the contract has been transferred.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
