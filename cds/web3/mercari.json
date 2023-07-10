@@ -1,0 +1,1813 @@
+{
+  "key": "mercari",
+  "name": "mercari",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "AdminChangedTrigger",
+      "name": "Admin Changed",
+      "display": {
+        "label": "Admin Changed",
+        "description": "The admin of the contract has been changed."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event AdminChanged(address previousAdmin, address newAdmin)",
+        "inputFields": [
+          {
+            "key": "previousAdmin",
+            "label": "Previous Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The previous admin's address."
+          },
+          {
+            "key": "newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new admin's address."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "previousAdmin",
+            "label": "Previous Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "BeaconUpgradedTrigger",
+      "name": "Beacon Upgraded",
+      "display": {
+        "label": "Beacon Upgraded",
+        "description": "The beacon contract has been upgraded."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event BeaconUpgraded(address indexed beacon)",
+        "inputFields": [
+          {
+            "key": "beacon",
+            "label": "Beacon",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new beacon's address."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "beacon",
+            "label": "Beacon",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "InitializedTrigger",
+      "name": "Initialized",
+      "display": {
+        "label": "Initialized",
+        "description": "The contract has been initialized."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Initialized(uint8 version)",
+        "inputFields": [
+          {
+            "key": "version",
+            "label": "Version",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The version of the contract."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "version",
+            "label": "Version",
+            "type": "number",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogNewOfferTrigger",
+      "name": "Log New Offer",
+      "display": {
+        "label": "Log New Offer",
+        "description": "A new offer has been created."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogNewOffer(bytes32 indexed _offerId, address indexed _token, uint256 _chainId)",
+        "inputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The token's address."
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The chain ID."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogNewTradeTrigger",
+      "name": "Log New Trade",
+      "display": {
+        "label": "Log New Trade",
+        "description": "A new trade has been made."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogNewTrade(address indexed _seller, bytes32 indexed _tradeId, address indexed _token, uint256 _amount, bytes32 _offerId)",
+        "inputFields": [
+          {
+            "key": "_seller",
+            "label": "Seller",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The seller's address."
+          },
+          {
+            "key": "_tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the trade."
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The token's address."
+          },
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The amount of the trade."
+          },
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_seller",
+            "label": "Seller",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetChainIdOfferTrigger",
+      "name": "Log Set Chain Id Offer",
+      "display": {
+        "label": "Log Set Chain Id Offer",
+        "description": "The chain ID of an offer has been updated."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetChainIdOffer(bytes32 indexed _offerId, uint256 indexed _chainId)",
+        "inputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The new chain ID."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetMaxPriceLimitOfferTrigger",
+      "name": "Log Set Max Price Limit Offer",
+      "display": {
+        "label": "Log Set Max Price Limit Offer",
+        "description": "The upper price limit of an offer has been updated."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetMaxPriceLimitOffer(bytes32 indexed _offerId, bytes32 indexed _upperPriceLimit)",
+        "inputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "_upperPriceLimit",
+            "label": "Upper Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The new upper price limit."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_upperPriceLimit",
+            "label": "Upper Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetMinPriceLimitOfferTrigger",
+      "name": "Log Set Min Price Limit Offer",
+      "display": {
+        "label": "Log Set Min Price Limit Offer",
+        "description": "The lower price limit of an offer has been updated."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetMinPriceLimitOffer(bytes32 indexed _offerId, bytes32 indexed _lowerPriceLimit)",
+        "inputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "_lowerPriceLimit",
+            "label": "Lower Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The new lower price limit."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_lowerPriceLimit",
+            "label": "Lower Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetStatusOfferTrigger",
+      "name": "Log Set Status Offer",
+      "display": {
+        "label": "Log Set Status Offer",
+        "description": "The status of an offer has been updated."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetStatusOffer(bytes32 indexed _offerId, bool indexed _isActive)",
+        "inputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "_isActive",
+            "label": "Is Active",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The new status."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_isActive",
+            "label": "Is Active",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "LogSetTokenOfferTrigger",
+      "name": "Log Set Token Offer",
+      "display": {
+        "label": "Log Set Token Offer",
+        "description": "The token of an offer has been updated."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event LogSetTokenOffer(bytes32 indexed _offerId, address indexed _token)",
+        "inputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new token's address."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "OwnershipTransferredTrigger",
+      "name": "Ownership Transferred",
+      "display": {
+        "label": "Ownership Transferred",
+        "description": "The ownership of the contract has been transferred."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)",
+        "inputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The previous owner's address."
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new owner's address."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "UpgradedTrigger",
+      "name": "Upgraded",
+      "display": {
+        "label": "Upgraded",
+        "description": "The contract has been upgraded."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Upgraded(address indexed implementation)",
+        "inputFields": [
+          {
+            "key": "implementation",
+            "label": "Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new implementation's address."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "implementation",
+            "label": "Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "checkMaxPriceLimitOfferAction",
+      "name": "Check Max Price Limit Offer",
+      "display": {
+        "label": "Check Max Price Limit Offer",
+        "description": "Checks if the price of an offer is below a maximum price limit."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function checkMaxPriceLimitOffer(bytes32 offerId, bytes maxPriceLimit) returns (bool)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "maxPriceLimit",
+            "label": "Max Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The maximum price limit in bytes format."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "checkMinPriceLimitOfferAction",
+      "name": "Check Min Price Limit Offer",
+      "display": {
+        "label": "Check Min Price Limit Offer",
+        "description": "Checks if the price of an offer is above a minimum price limit."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function checkMinPriceLimitOffer(bytes32 offerId, bytes minPriceLimit) returns (bool)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "minPriceLimit",
+            "label": "Min Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The minimum price limit in bytes format."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "depositMRITokenAndAcceptOfferAction",
+      "name": "Deposit MRI Token And Accept Offer",
+      "display": {
+        "label": "Deposit MRI Token And Accept Offer",
+        "description": "Deposits a specified amount of MRI token and accepts an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function depositMRITokenAndAcceptOffer(address token, uint256 amount, bytes32 offerId, address destAddress, uint256 amountOffer) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the token."
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens to deposit."
+          },
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "destAddress",
+            "label": "Dest Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The destination address for the tokens."
+          },
+          {
+            "key": "amountOffer",
+            "label": "Amount Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens offered."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "depositNativeAndAcceptOfferAction",
+      "name": "Deposit Native And Accept Offer",
+      "display": {
+        "label": "Deposit Native And Accept Offer",
+        "description": "Deposits a specified amount of native currency and accepts an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function depositNativeAndAcceptOffer(bytes32 offerId, address destAddress, uint256 amountOffer) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "destAddress",
+            "label": "Dest Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The destination address for the native currency."
+          },
+          {
+            "key": "amountOffer",
+            "label": "Amount Offer",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens offered."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getAmountOfferForTradeAction",
+      "name": "Get Amount Offer For Trade",
+      "display": {
+        "label": "Get Amount Offer For Trade",
+        "description": "Gets the amount of tokens offered for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getAmountOfferForTrade(bytes32 tradeId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getBuyerTradeAction",
+      "name": "Get Buyer Trade",
+      "display": {
+        "label": "Get Buyer Trade",
+        "description": "Gets the buyer's address for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getBuyerTrade(bytes32 tradeId) returns (address)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getChainIdOfferAction",
+      "name": "Get Chain Id Offer",
+      "display": {
+        "label": "Get Chain Id Offer",
+        "description": "Gets the chain ID of an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getChainIdOffer(bytes32 offerId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDepositAmountTradeAction",
+      "name": "Get Deposit Amount Trade",
+      "display": {
+        "label": "Get Deposit Amount Trade",
+        "description": "Gets the deposit amount for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDepositAmountTrade(bytes32 tradeId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDepositChainIdTradeAction",
+      "name": "Get Deposit Chain Id Trade",
+      "display": {
+        "label": "Get Deposit Chain Id Trade",
+        "description": "Gets the deposit chain ID for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDepositChainIdTrade(bytes32 tradeId) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDepositTokenTradeAction",
+      "name": "Get Deposit Token Trade",
+      "display": {
+        "label": "Get Deposit Token Trade",
+        "description": "Gets the deposit token address for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDepositTokenTrade(bytes32 tradeId) returns (address)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDestinationAddressTradeAction",
+      "name": "Get Destination Address Trade",
+      "display": {
+        "label": "Get Destination Address Trade",
+        "description": "Gets the destination address for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDestinationAddressTrade(bytes32 tradeId) returns (address)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getMRITokenAction",
+      "name": "Get MRI Token",
+      "display": {
+        "label": "Get MRI Token",
+        "description": "Gets the address of the MRI token."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getMRIToken() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getMaxPriceLimitHashOfferAction",
+      "name": "Get Max Price Limit Hash Offer",
+      "display": {
+        "label": "Get Max Price Limit Hash Offer",
+        "description": "Gets the hash of the maximum price limit for an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getMaxPriceLimitHashOffer(bytes32 offerId) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getMinPriceLimitHashOfferAction",
+      "name": "Get Min Price Limit Hash Offer",
+      "display": {
+        "label": "Get Min Price Limit Hash Offer",
+        "description": "Gets the hash of the minimum price limit for an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getMinPriceLimitHashOffer(bytes32 offerId) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getNonceOfferAction",
+      "name": "Get Nonce Offer",
+      "display": {
+        "label": "Get Nonce Offer",
+        "description": "Gets the nonce of an offer for a user."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getNonceOffer(address user) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the user."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getNonceUserTradeAction",
+      "name": "Get Nonce User Trade",
+      "display": {
+        "label": "Get Nonce User Trade",
+        "description": "Gets the nonce of a user for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getNonceUserTrade(address user) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the user."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getOfferIdForTradeAction",
+      "name": "Get Offer Id For Trade",
+      "display": {
+        "label": "Get Offer Id For Trade",
+        "description": "Gets the ID of the offer associated with a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getOfferIdForTrade(bytes32 tradeId) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getPaymentInfoTradeAction",
+      "name": "Get Payment Info Trade",
+      "display": {
+        "label": "Get Payment Info Trade",
+        "description": "Gets the payment information for a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getPaymentInfoTrade(bytes32 tradeId) returns (bytes32, address, address, uint256)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getSellerOfferAction",
+      "name": "Get Seller Offer",
+      "display": {
+        "label": "Get Seller Offer",
+        "description": "Gets the seller's address for an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getSellerOffer(bytes32 offerId) returns (address)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getStatusOfferAction",
+      "name": "Get Status Offer",
+      "display": {
+        "label": "Get Status Offer",
+        "description": "Gets the status of an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getStatusOffer(bytes32 offerId) returns (bool)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getTokenOfferAction",
+      "name": "Get Token Offer",
+      "display": {
+        "label": "Get Token Offer",
+        "description": "Get the token offer address for a given offer ID."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getTokenOffer(bytes32 offerId) returns (address)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "initializeAction",
+      "name": "Initialize",
+      "display": {
+        "label": "Initialize",
+        "description": "Initialize the contract with the address of the tokenMRI contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function initialize(address tokenMRI)",
+        "inputFields": [
+          {
+            "key": "tokenMRI",
+            "label": "Token MRI",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the tokenMRI contract."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "isCompleteTradeAction",
+      "name": "Is Complete Trade",
+      "display": {
+        "label": "Is Complete Trade",
+        "description": "Check if a trade with the given trade ID is complete."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isCompleteTrade(bytes32 tradeId) returns (bool)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ownerAction",
+      "name": "Owner",
+      "display": {
+        "label": "Owner",
+        "description": "Get the owner address of the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function owner() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "proxiableUUIDAction",
+      "name": "Proxiable UUID",
+      "display": {
+        "label": "Proxiable UUID",
+        "description": "Get the UUID of the proxiable contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function proxiableUUID() returns (bytes32)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "renounceOwnershipAction",
+      "name": "Renounce Ownership",
+      "display": {
+        "label": "Renounce Ownership",
+        "description": "Renounce ownership of the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function renounceOwnership()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setChainIdOfferAction",
+      "name": "Set Chain Id Offer",
+      "display": {
+        "label": "Set Chain Id Offer",
+        "description": "Set the chain ID for a specific offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setChainIdOffer(bytes32 offerId, uint256 chainId)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The chain ID to set."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setCompleteTradeAction",
+      "name": "Set Complete Trade",
+      "display": {
+        "label": "Set Complete Trade",
+        "description": "Set the complete status of a trade."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setCompleteTrade(bytes32 tradeId) returns (bool)",
+        "inputFields": [
+          {
+            "key": "tradeId",
+            "label": "Trade Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the trade."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setIsActiveOfferAction",
+      "name": "Set Is Active Offer",
+      "display": {
+        "label": "Set Is Active Offer",
+        "description": "Set the active status of an offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setIsActiveOffer(bytes32 offerId, bool isActive)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "isActive",
+            "label": "Is Active",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The active status to set."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setMRITokenAction",
+      "name": "Set MRI Token",
+      "display": {
+        "label": "Set MRI Token",
+        "description": "Set the tokenMRI contract address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setMRIToken(address tokenMRI)",
+        "inputFields": [
+          {
+            "key": "tokenMRI",
+            "label": "Token MRI",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the tokenMRI contract."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setMaxPriceLimitOfferAction",
+      "name": "Set Max Price Limit Offer",
+      "display": {
+        "label": "Set Max Price Limit Offer",
+        "description": "Set the maximum price limit for a specific offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setMaxPriceLimitOffer(bytes32 offerId, bytes maxPriceLimit)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "maxPriceLimit",
+            "label": "Max Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The maximum price limit to set."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setMinPriceLimitOfferAction",
+      "name": "Set Min Price Limit Offer",
+      "display": {
+        "label": "Set Min Price Limit Offer",
+        "description": "Set the minimum price limit for a specific offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setMinPriceLimitOffer(bytes32 offerId, bytes minPriceLimit)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "minPriceLimit",
+            "label": "Min Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The minimum price limit to set."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setOfferAction",
+      "name": "Set Offer",
+      "display": {
+        "label": "Set Offer",
+        "description": "Create a new offer with the specified parameters."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setOffer(address token, uint256 chainId, bytes minPriceLimit, bytes maxPriceLimit) returns (bytes32)",
+        "inputFields": [
+          {
+            "key": "token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the token."
+          },
+          {
+            "key": "chainId",
+            "label": "Chain Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The chain ID."
+          },
+          {
+            "key": "minPriceLimit",
+            "label": "Min Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The minimum price limit."
+          },
+          {
+            "key": "maxPriceLimit",
+            "label": "Max Price Limit",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The maximum price limit."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setTokenOfferAction",
+      "name": "Set Token Offer",
+      "display": {
+        "label": "Set Token Offer",
+        "description": "Set the token address for a specific offer."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setTokenOffer(bytes32 offerId, address token)",
+        "inputFields": [
+          {
+            "key": "offerId",
+            "label": "Offer Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the offer."
+          },
+          {
+            "key": "token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the token."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferOwnershipAction",
+      "name": "Transfer Ownership",
+      "display": {
+        "label": "Transfer Ownership",
+        "description": "Transfer ownership of the contract to a new owner."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferOwnership(address newOwner)",
+        "inputFields": [
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the new owner."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "upgradeToAction",
+      "name": "Upgrade To",
+      "display": {
+        "label": "Upgrade To",
+        "description": "Upgrade the contract to a new implementation."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function upgradeTo(address newImplementation)",
+        "inputFields": [
+          {
+            "key": "newImplementation",
+            "label": "New Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the new implementation."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "upgradeToAndCallAction",
+      "name": "Upgrade To And Call",
+      "display": {
+        "label": "Upgrade To And Call",
+        "description": "Upgrade the contract to a new implementation and call a function on the new implementation."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function upgradeToAndCall(address newImplementation, bytes data)",
+        "inputFields": [
+          {
+            "key": "newImplementation",
+            "label": "New Implementation",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the new implementation."
+          },
+          {
+            "key": "data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The data to call on the new implementation."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "withdrawERC20TokensAction",
+      "name": "Withdraw ERC 20 Tokens",
+      "display": {
+        "label": "Withdraw ERC 20 Tokens",
+        "description": "Withdraw ERC20 tokens from the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function withdrawERC20Tokens(address token, uint256 amount, address to)",
+        "inputFields": [
+          {
+            "key": "token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the token to withdraw."
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount to withdraw."
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to send the tokens to."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "withdrawNativeAction",
+      "name": "Withdraw Native",
+      "display": {
+        "label": "Withdraw Native",
+        "description": "Withdraw native tokens from the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function withdrawNative(uint256 amount, address to)",
+        "inputFields": [
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount to withdraw."
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to send the tokens to."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "description": "A web3 connector for interacting with a smart contract that manages offers and trades. It allows users to create and accept offers, deposit tokens or native currency, and perform various actions related to offers and trades.",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAyOSAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3Ljc1NDMgMjIuNzc4MkwxMS4xMjM3IDI3LjA1MzlDMTAuMTE5MyAyNy43MDE1IDkuODMzODggMjkuMDM1MSAxMC40ODYxIDMwLjAzMjRDMTEuMTMwNSAzMS4wMTc2IDEyLjQ0ODggMzEuMzA2MiAxMy40NDkgMzAuNjg4N0wxNy41Njg0IDI3Ljg5MzdMMjEuMjA3MSAyNS40MjAyQzIxLjI2NSAyNS4zODE4IDIxLjMyMjggMjUuMzQ0MiAyMS4zODA1IDI1LjMwNzNMMjEuNTY0MSAyNS4xODI3QzIxLjY2OSAyNS4xMTE1IDIxLjc3NzYgMjUuMDQ5OSAyMS44ODg5IDI0Ljk5NzdDMjEuOTc5IDI0Ljk0NTggMjIuMDY4NyAyNC44OTU2IDIyLjE1ODEgMjQuODQ3MkMyNC4zMzYzIDIzLjY2ODMgMjcuMDY0NSAyNC40NjU4IDI4LjI1MTggMjYuNjI4NkMyOS4yOTE5IDI4LjUyMzIgMjguODE3IDMwLjg4NTMgMjcuMTI0IDMyLjIzODFDMjcuMzkwMiAzMS42MDQxIDI3LjM0NjkgMzAuODU0NyAyNi45NDE3IDMwLjIzNTJDMjYuMjk3MyAyOS4yNSAyNC45NzkgMjguOTYxNCAyMy45Nzg4IDI5LjU3ODlMMTkuODU5NCAzMi4zNzM4TDE2LjIyMDcgMzQuODQ3NEMxNi4xODYzIDM0Ljg2OTYgMTYuMTUxNyAzNC44OTE0IDE2LjExNyAzNC45MTNMMTUuODYzNyAzNS4wODQ5QzE1LjY1MDYgMzUuMjI5NSAxNS40MjIgMzUuMzM0NSAxNS4xODY4IDM1LjQwMTdDMTIuMDE5MSAzNi43ODIyIDguMjIwMTggMzUuNzIyOSA2LjI3NDY0IDMyLjc0ODFDNC4yNTEyNiAyOS42NTQzIDQuOTQ5MzQgMjUuNTg0OCA3Ljc3NDg0IDIzLjMxNDZDNi40MzI0OCAyMi43OTg3IDUuMTYwMDQgMjIuMDM1OSA0LjAyNjUyIDIxLjAyMjRDLTAuOTYzNDMyIDE2LjU2MTEgLTEuMzcxMzUgOC45MzMyNiAzLjExNTQxIDMuOTg1MjdDNy42MDIxNyAtMC45NjI3MjMgMTUuMjg0NiAtMS4zNTcyMSAyMC4yNzQ1IDMuMTA0MTVDMjUuMjY0NSA3LjU2NTUxIDI1LjY3MjQgMTUuMTkzMyAyMS4xODU2IDIwLjE0MTNDMjAuMTgwMiAyMS4yNTAxIDE5LjAxNDQgMjIuMTMwMiAxNy43NTQzIDIyLjc3ODJaTTE3LjExMTYgMTYuNTk1N0MxOS42ODcyIDEzLjczNDggMTkuNDUzMSA5LjMyNDM4IDE2LjU4ODYgNi43NDQ4MkMxMy43MjQxIDQuMTY1MjYgOS4zMTQwMiA0LjM5MzM1IDYuNzM4NCA3LjI1NDI5QzQuMTYyNzggMTAuMTE1MiA0LjM5Njk0IDE0LjUyNTYgNy4yNjE0MiAxNy4xMDUyQzEwLjEyNTkgMTkuNjg0NyAxNC41MzYgMTkuNDU2NiAxNy4xMTE2IDE2LjU5NTdaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K",
+  "user": "eip155:1:0x62E45140ea73a2becfB964c797314EF7efDAEFBE",
+  "workspace": "eip155:1:0x62E45140ea73a2becfB964c797314EF7efDAEFBE",
+  "access": "Private",
+  "contributor": "juniormp"
+}
