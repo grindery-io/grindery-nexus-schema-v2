@@ -136,7 +136,10 @@
       "name": "Log New Offer",
       "display": {
         "label": "Log New Offer",
-        "description": "A new offer has been created."
+        "description": "A new offer has been created.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
