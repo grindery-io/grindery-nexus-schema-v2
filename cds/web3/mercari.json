@@ -352,7 +352,10 @@
       "name": "Log Set Max Price Limit Offer",
       "display": {
         "label": "Log Set Max Price Limit Offer",
-        "description": "The upper price limit of an offer has been updated."
+        "description": "The upper price limit of an offer has been updated.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
