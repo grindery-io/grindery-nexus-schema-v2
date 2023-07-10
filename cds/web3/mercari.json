@@ -456,7 +456,10 @@
       "name": "Log Set Status Offer",
       "display": {
         "label": "Log Set Status Offer",
-        "description": "The status of an offer has been updated."
+        "description": "The status of an offer has been updated.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
