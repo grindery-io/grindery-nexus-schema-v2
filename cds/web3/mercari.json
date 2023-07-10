@@ -203,7 +203,10 @@
       "name": "Log New Trade",
       "display": {
         "label": "Log New Trade",
-        "description": "A new trade has been made."
+        "description": "A new trade has been made.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
