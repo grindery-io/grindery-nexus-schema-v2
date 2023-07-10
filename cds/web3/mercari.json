@@ -99,7 +99,10 @@
       "name": "Initialized",
       "display": {
         "label": "Initialized",
-        "description": "The contract has been initialized."
+        "description": "The contract has been initialized.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
