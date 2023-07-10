@@ -206,7 +206,7 @@
         "description": "A new trade has been made.",
         "instructions": "",
         "featured": false,
-        "hidden": true
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
