@@ -612,7 +612,10 @@
       "name": "Upgraded",
       "display": {
         "label": "Upgraded",
-        "description": "The contract has been upgraded."
+        "description": "The contract has been upgraded.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
