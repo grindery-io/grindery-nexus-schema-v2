@@ -62,7 +62,10 @@
       "name": "Beacon Upgraded",
       "display": {
         "label": "Beacon Upgraded",
-        "description": "The beacon contract has been upgraded."
+        "description": "The beacon contract has been upgraded.",
+        "instructions": "",
+        "featured": false,
+        "hidden": true
       },
       "operation": {
         "type": "blockchain:event",
