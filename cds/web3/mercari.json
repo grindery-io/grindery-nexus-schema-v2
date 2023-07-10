@@ -1,6 +1,6 @@
 {
   "key": "mercari",
-  "name": "Mercari Pool v1.2",
+  "name": "Mercari Pool v1.5",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
@@ -52,9 +52,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -89,9 +87,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -126,9 +122,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -193,9 +187,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -214,102 +206,15 @@
         "inputFieldProviderUrl": "https://delight-api.grindery.org/v2/view-blockchains/master-contract-address",
         "inputFields": [
           {
-            "key": "_mercariMasterContractAddress",
-            "label": "Master Contract",
-            "type": "address",
-            "placeholder": "Enter a master contract address",
-            "list": false
-          },
-          {
-            "key": "_seller",
-            "label": "Seller",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "helpText": "The seller's address."
-          },
-          {
-            "key": "_tradeId",
-            "label": "Trade Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false,
-            "helpText": "The ID of the trade."
-          },
-          {
-            "key": "_token",
-            "label": "Token",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "helpText": "The token's address."
-          },
-          {
-            "key": "_amount",
-            "label": "Amount",
-            "type": "string",
-            "placeholder": "",
-            "list": false,
-            "helpText": "The amount of the trade."
-          },
-          {
-            "key": "_offerId",
-            "label": "Offer Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false,
-            "helpText": "The ID of the offer."
-          },
-          {
-            "key": "foo",
-            "label": "foo",
-            "helpText": "",
-            "default": "",
-            "required": true,
-            "computed": false,
-            "type": "address"
-          }
-        ],
-        "outputFields": [
-          {
-            "key": "_seller",
-            "label": "Seller",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "_tradeId",
-            "label": "Trade Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_token",
-            "label": "Token",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false
-          },
-          {
-            "key": "_amount",
-            "label": "Amount",
-            "type": "string",
-            "placeholder": "",
-            "list": false
-          },
-          {
-            "key": "_offerId",
-            "label": "Offer Id",
+            "key": "_exchangeRate",
+            "label": "Exchange rate",
             "type": "string",
             "placeholder": "",
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "outputFields": [],
+        "sample": {}
       }
     },
     {
@@ -359,9 +264,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -411,9 +314,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -463,9 +364,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -515,9 +414,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -567,9 +464,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -619,9 +514,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -656,9 +549,7 @@
             "list": false
           }
         ],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
@@ -694,9 +585,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -730,9 +619,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -793,9 +680,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -838,9 +723,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -865,9 +748,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -892,9 +773,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -919,9 +798,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -946,9 +823,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -973,9 +848,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1000,9 +873,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1027,9 +898,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1044,9 +913,7 @@
         "signature": "function getMRIToken() returns (address)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1071,9 +938,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1098,9 +963,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1125,9 +988,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1152,9 +1013,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1179,9 +1038,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1206,9 +1063,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1233,9 +1088,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1260,9 +1113,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1287,9 +1138,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1314,9 +1163,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1341,9 +1188,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1358,9 +1203,7 @@
         "signature": "function owner() returns (address)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1375,9 +1218,7 @@
         "signature": "function proxiableUUID() returns (bytes32)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1392,9 +1233,7 @@
         "signature": "function renounceOwnership()",
         "inputFields": [],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1428,9 +1267,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1455,9 +1292,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1491,9 +1326,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1518,9 +1351,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1554,9 +1385,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1590,9 +1419,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1644,9 +1471,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1680,9 +1505,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1707,9 +1530,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1734,9 +1555,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1770,9 +1589,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1815,9 +1632,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     },
     {
@@ -1851,9 +1666,7 @@
           }
         ],
         "outputFields": [],
-        "sample": {
-          
-        }
+        "sample": {}
       }
     }
   ],
