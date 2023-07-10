@@ -52,7 +52,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -87,7 +89,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -122,7 +126,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -187,7 +193,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -251,6 +259,15 @@
             "placeholder": "",
             "list": false,
             "helpText": "The ID of the offer."
+          },
+          {
+            "key": "foo",
+            "label": "foo",
+            "helpText": "",
+            "default": "",
+            "required": true,
+            "computed": false,
+            "type": "address"
           }
         ],
         "outputFields": [
@@ -290,7 +307,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -340,7 +359,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -390,7 +411,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -440,7 +463,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -490,7 +515,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -540,7 +567,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -590,7 +619,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -625,7 +656,9 @@
             "list": false
           }
         ],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
@@ -661,7 +694,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -695,7 +730,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -756,7 +793,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -799,7 +838,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -824,7 +865,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -849,7 +892,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -874,7 +919,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -899,7 +946,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -924,7 +973,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -949,7 +1000,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -974,7 +1027,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -989,7 +1044,9 @@
         "signature": "function getMRIToken() returns (address)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1014,7 +1071,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1039,7 +1098,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1064,7 +1125,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1089,7 +1152,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1114,7 +1179,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1139,7 +1206,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1164,7 +1233,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1189,7 +1260,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1214,7 +1287,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1239,7 +1314,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1264,7 +1341,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1279,7 +1358,9 @@
         "signature": "function owner() returns (address)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1294,7 +1375,9 @@
         "signature": "function proxiableUUID() returns (bytes32)",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1309,7 +1392,9 @@
         "signature": "function renounceOwnership()",
         "inputFields": [],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1343,7 +1428,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1368,7 +1455,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1402,7 +1491,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1427,7 +1518,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1461,7 +1554,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1495,7 +1590,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1547,7 +1644,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1581,7 +1680,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1606,7 +1707,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1631,7 +1734,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1665,7 +1770,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1708,7 +1815,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     },
     {
@@ -1742,7 +1851,9 @@
           }
         ],
         "outputFields": [],
-        "sample": {}
+        "sample": {
+          
+        }
       }
     }
   ],
