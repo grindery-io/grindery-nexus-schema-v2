@@ -20,12 +20,6 @@
           },
           "inputFields": [
             {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
-            {
               "key": "_grinderyContractAddress",
               "type": "address",
               "label": "Safe Address",
@@ -72,12 +66,6 @@
             "url": "ws://grindery-nexus-connector-web3-staging:3000/"
           },
           "inputFields": [
-            {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
             {
               "key": "_grinderyContractAddress",
               "type": "address",
@@ -131,12 +119,6 @@
           },
           "inputFields": [
             {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
-            {
               "key": "_grinderyContractAddress",
               "type": "address",
               "label": "Safe Address",
@@ -180,12 +162,6 @@
           },
           "inputFields": [
             {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
-            {
               "key": "_grinderyContractAddress",
               "type": "address",
               "label": "Safe Address",
@@ -227,12 +203,6 @@
           "signature": "event ChangedThreshold(uint256 threshold)",
           "inputFields": [
             {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
-            {
               "key": "_grinderyContractAddress",
               "type": "address",
               "label": "Safe Address",
@@ -265,12 +235,6 @@
             "url": "ws://grindery-nexus-connector-web3-staging:3000/"
           },
           "inputFields": [
-            {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
             {
               "key": "_grinderyContractAddress",
               "type": "address",
@@ -314,12 +278,6 @@
           },
           "inputFields": [
             {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
-            {
               "key": "_grinderyContractAddress",
               "type": "address",
               "label": "Safe Address",
@@ -354,12 +312,6 @@
             "url": "ws://grindery-nexus-connector-web3-staging:3000/"
           },
           "inputFields": [
-            {
-              "key": "_grinderyChain",
-              "type": "string",
-              "label": "Chain",
-              "required": true
-            },
             {
               "key": "_grinderyContractAddress",
               "type": "address",
