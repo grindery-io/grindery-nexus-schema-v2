@@ -75,10 +75,10 @@
         ],
         "outputFields": [
           {
-            "key": "transactionHash",
-            "label": "Transaction hash",
+            "key": "newItemId",
+            "label": "new Item Id",
             "type": "string",
-            "placeholder": "Transaction hash",
+            "placeholder": "new Item Id",
             "list": false,
             "helpText": "",
             "default": "",
