@@ -1,0 +1,80 @@
+{
+    "key": "twitter",
+    "name": "Twitter",
+    "version": "1.0.0",
+    "platformVersion": "1",
+    "actions": [],
+    "triggers": [
+        {
+            "key": "newFollowerTrigger",
+            "name": "New Follower",
+            "display": {
+                "label": "New Follower",
+                "description": "",
+                "instructions": "",
+                "featured": false
+            },
+            "operation": {
+                "type": "polling",
+                "operation": {
+                    "url": "ws://grindery-nexus-connector-twitter:3000/"
+                },
+                "inputFields": [
+                    {
+                        "key": "handle",
+                        "label": "Twitter handle",
+                        "type": "string",
+                        "validation": {},
+                        "placeholder": "Example: elonmusk",
+                        "required": true,
+                        "sample": "elonmusk",
+                        "computed": false
+                    }
+                ]
+            }
+        }
+    ],
+    "authentication": {
+        "type": "oauth2",
+        "test": {
+            "method": "GET",
+            "url": "https://api.twitter.com/2/users/me"
+        },
+        "defaultDisplayName": "@{{ data.data.name }} - {{ data.data.username }}",
+        "allowedHosts": [
+            "api.twitter.com"
+        ],
+        "authenticatedRequestTemplate": {
+            "headers": {
+                "Authorization": "Bearer {{ auth.access_token }}"
+            }
+        },
+        "oauth2Config": {
+            "authorizeUrl": "https://twitter.com/i/oauth2/authorize?response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=tweet.read+users.read+follows.read+like.read+offline.access&code_challenge=challenge&code_challenge_method=plain",
+            "getAccessToken": {
+                "method": "POST",
+                "url": "https://api.twitter.com/2/oauth2/token",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic {{ secrets.auth_header }}"
+                },
+                "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code&code_verifier=challenge"
+            },
+            "autoRefresh": true,
+            "refreshAccessToken": {
+                "method": "POST",
+                "url": "https://api.twitter.com/2/oauth2/token",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic {{ secrets.auth_header }}"
+                },
+                "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&grant_type=refresh_token"
+            }
+        }
+    },
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI0OCAyMDQiIHZpZXdCb3g9IjAgMCAyNDggMjA0Ij48cGF0aCBkPSJNMjIxLjk1IDUxLjI5Yy4xNSAyLjE3LjE1IDQuMzQuMTUgNi41MyAwIDY2LjczLTUwLjggMTQzLjY5LTE0My42OSAxNDMuNjl2LS4wNGMtMjcuNDQuMDQtNTQuMzEtNy44Mi03Ny40MS0yMi42NCAzLjk5LjQ4IDggLjcyIDEyLjAyLjczIDIyLjc0LjAyIDQ0LjgzLTcuNjEgNjIuNzItMjEuNjYtMjEuNjEtLjQxLTQwLjU2LTE0LjUtNDcuMTgtMzUuMDdhNTAuMzM4IDUwLjMzOCAwIDAgMCAyMi44LS44N0MyNy44IDExNy4yIDEwLjg1IDk2LjUgMTAuODUgNzIuNDZ2LS42NGE1MC4xOCA1MC4xOCAwIDAgMCAyMi45MiA2LjMyQzExLjU4IDYzLjMxIDQuNzQgMzMuNzkgMTguMTQgMTAuNzFhMTQzLjMzMyAxNDMuMzMzIDAgMCAwIDEwNC4wOCA1Mi43NiA1MC41MzIgNTAuNTMyIDAgMCAxIDE0LjYxLTQ4LjI1YzIwLjM0LTE5LjEyIDUyLjMzLTE4LjE0IDcxLjQ1IDIuMTkgMTEuMzEtMi4yMyAyMi4xNS02LjM4IDMyLjA3LTEyLjI2YTUwLjY5IDUwLjY5IDAgMCAxLTIyLjIgMjcuOTNjMTAuMDEtMS4xOCAxOS43OS0zLjg2IDI5LTcuOTVhMTAyLjU5NCAxMDIuNTk0IDAgMCAxLTI1LjIgMjYuMTZ6IiBzdHlsZT0iZmlsbDojMWQ5YmYwIi8+PC9zdmc+",
+    "type": "web2",
+    "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+    "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+    "access": "Public"
+}
