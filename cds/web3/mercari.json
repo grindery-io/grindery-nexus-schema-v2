@@ -1,6 +1,6 @@
 {
   "key": "mercari",
-  "name": "Mercari Pool v1.5",
+  "name": "Mercari Pool",
   "version": "1.0.0",
   "platformVersion": "1.0.0",
   "type": "web3",
@@ -133,35 +133,20 @@
         "description": "A new offer has been created.",
         "instructions": "",
         "featured": false,
-        "hidden": true
+        "hidden": false
       },
       "operation": {
         "type": "blockchain:event",
         "signature": "event LogNewOffer(bytes32 indexed _offerId, address indexed _token, uint256 _chainId)",
+        "inputFieldProviderUrl": "https://delight-api.grindery.org/v2/view-blockchains/master-contract-address",
         "inputFields": [
           {
-            "key": "_offerId",
-            "label": "Offer Id",
+            "key": "_grinderyContractAddress",
             "type": "string",
-            "placeholder": "",
-            "list": false,
-            "helpText": "The ID of the offer."
-          },
-          {
-            "key": "_token",
-            "label": "Token",
-            "type": "address",
-            "placeholder": "Enter a blockchain address",
-            "list": false,
-            "helpText": "The token's address."
-          },
-          {
-            "key": "_chainId",
-            "label": "Chain Id",
-            "type": "string",
-            "placeholder": "",
-            "list": false,
-            "helpText": "The chain ID."
+            "computed": true,
+            "label": "Contract Address",
+            "helpText": "",
+            "required": false
           }
         ],
         "outputFields": [
@@ -206,14 +191,59 @@
         "inputFieldProviderUrl": "https://delight-api.grindery.org/v2/view-blockchains/master-contract-address",
         "inputFields": [
           {
-            "key": "_exchangeRate",
-            "label": "Exchange rate",
+            "key": "_grinderyContractAddress",
+            "type": "string",
+            "computed": true,
+            "label": "Contract Address",
+            "helpText": "",
+            "required": false
+          },
+          {
+            "key": "foo",
+            "type": "string",
+            "computed": false,
+            "label": "Foo",
+            "helpText": "",
+            "required": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_offerer",
+            "label": "Offerer",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_idTrade",
+            "label": "Id Trade",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_token",
+            "label": "Token",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_idOffer",
+            "label": "Id Offer",
             "type": "string",
             "placeholder": "",
             "list": false
           }
         ],
-        "outputFields": [],
         "sample": {}
       }
     },
