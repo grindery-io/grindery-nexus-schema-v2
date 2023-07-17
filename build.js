@@ -23,6 +23,16 @@ for (const path of ["web2", "web3"]) {
         }
       }
       index[data.key] = data;
+      
+      // clone Slack Cds for Safe
+      if (data.key === "slack") {
+        const slackSafeKey = "slack__safe";
+        data.key = slackSafeKey;
+        data.access = "Private";
+        index[slackSafeKey] = data;
+        fs.writeFileSync(`dist/${slackSafeKey}.json`, JSON.stringify(data));
+      }
+
     } catch (e) {
       console.warn(`Invalid CDS: ${base}/${file}`);
     }
