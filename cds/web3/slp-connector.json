@@ -927,5 +927,6 @@
   "user": "eip155:1:0xc8B54eC37c35F622C7a23a54d21d8a8c8b2C72f5",
   "workspace": "ws-413320cd-0b2f-49ab-9b22-1e74e6675a90",
   "access": "Private",
-  "contributor": "netzulo"
+  "contributor": "netzulo",
+  "submitted": true
 }
