@@ -6,10 +6,10 @@
     "actions": [],
     "triggers": [
         {
-            "key": "newFollowerTrigger",
-            "name": "New Follower",
+            "key": "NewLikeTrigger",
+            "name": "New like on a tweet",
             "display": {
-                "label": "New Follower",
+                "label": "New like on a tweet",
                 "description": "",
                 "instructions": "",
                 "featured": false
@@ -21,13 +21,16 @@
                 },
                 "inputFields": [
                     {
-                        "key": "handle",
-                        "label": "Twitter handle",
-                        "type": "string",
-                        "validation": {},
-                        "placeholder": "Example: elonmusk",
+                        "key": "url",
+                        "label": "Tweet URL",
+                        "helpText": "Note: Due to Twitter limitation, we can only check for new likes once every 3 minutes, this quota is shared between all triggers using the same Twitter account, so polling interval will be longer if more than one trigger instances are activated.",
+                        "type": "url",
+                        "validation": {
+                            "pattern": "^https?:\\/\\/twitter\\.com\\/(?:#!\\/)?\\w+\\/status(?:es)?\\/(\\d+)$"
+                        },
+                        "placeholder": "Example: https://twitter.com/elonmusk/status/1680391106037534721",
                         "required": true,
-                        "sample": "elonmusk",
+                        "sample": "https://twitter.com/elonmusk/status/1680391106037534721",
                         "computed": false
                     }
                 ]
