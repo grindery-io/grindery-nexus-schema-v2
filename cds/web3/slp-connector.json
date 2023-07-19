@@ -1,0 +1,931 @@
+{
+  "key": "slp-connector",
+  "name": "SLP Connector",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "AdminChangedTrigger",
+      "name": "Admin Changed",
+      "display": {
+        "label": "Admin Changed",
+        "description": "This event is triggered when the admin of the contract is changed."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event AdminChanged(address indexed _oldAdmin, address indexed _newAdmin)",
+        "inputFields": [
+          {
+            "key": "_oldAdmin",
+            "label": "Old Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The previous admin address"
+          },
+          {
+            "key": "_newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new admin address"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_oldAdmin",
+            "label": "Old Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "AdminRemovedTrigger",
+      "name": "Admin Removed",
+      "display": {
+        "label": "Admin Removed",
+        "description": "This event is emitted when an admin is removed from the contract."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event AdminRemoved(address indexed _oldAdmin)",
+        "inputFields": [
+          {
+            "key": "_oldAdmin",
+            "label": "Old Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the admin that was removed."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_oldAdmin",
+            "label": "Old Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ApprovalTrigger",
+      "name": "Approval",
+      "display": {
+        "label": "Approval",
+        "description": "This event is triggered when an approval is made for a specific address to spend a specific amount of tokens."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Approval(address indexed _owner, address indexed _spender, uint256 _value)",
+        "inputFields": [
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address that approves the spending of tokens."
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address that is approved to spend tokens."
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The amount of tokens that are approved to be spent."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "MinterAddedTrigger",
+      "name": "Minter Added",
+      "display": {
+        "label": "Minter Added",
+        "description": "This event is emitted when a new minter is added."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event MinterAdded(address indexed _minter)",
+        "inputFields": [
+          {
+            "key": "_minter",
+            "label": "Minter",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the new minter."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_minter",
+            "label": "Minter",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "MinterRemovedTrigger",
+      "name": "Minter Removed",
+      "display": {
+        "label": "Minter Removed",
+        "description": "This event is emitted when a minter is removed."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event MinterRemoved(address indexed _minter)",
+        "inputFields": [
+          {
+            "key": "_minter",
+            "label": "Minter",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the minter that was removed."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_minter",
+            "label": "Minter",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "TransferTrigger",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "This event is emitted when tokens are transferred from one address to another."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Transfer(address indexed _from, address indexed _to, uint256 _value)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address from which the tokens are being transferred."
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address to which the tokens are being transferred."
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The amount of tokens being transferred."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "addMintersAction",
+      "name": "Add Minters",
+      "display": {
+        "label": "Add Minters",
+        "description": "This function adds new addresses to the list of minters."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function addMinters(address[] _addedMinters)",
+        "inputFields": [
+          {
+            "key": "_addedMinters",
+            "label": "Added Minters",
+            "type": "address",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of addresses to be added as minters."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "adminAction",
+      "name": "Admin (View function)",
+      "display": {
+        "label": "Admin (View function)",
+        "description": "This function is used by the admin to view the address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function admin() view returns (address)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Admin",
+            "type": "address"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "allowanceAction",
+      "name": "Allowance (View function)",
+      "display": {
+        "label": "Allowance (View function)",
+        "description": "This function returns the amount of tokens that the specified spender is allowed to transfer on behalf of the owner."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function allowance(address _owner, address _spender) view returns (uint256)",
+        "inputFields": [
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the token owner."
+          },
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the spender."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Allowance",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "approveAction",
+      "name": "Approve",
+      "display": {
+        "label": "Approve",
+        "description": "Approves the specified address to spend the specified amount of tokens on behalf of the sender."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approve(address _spender, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address that is approved to spend the tokens."
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens that the address is approved to spend."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "balanceOfAction",
+      "name": "Balance Of (View function)",
+      "display": {
+        "label": "Balance Of (View function)",
+        "description": "This function returns the balance of a specific address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address param0) view returns (uint256)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address for which you want to check the balance."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Balance Of",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "changeAdminAction",
+      "name": "Change Admin",
+      "display": {
+        "label": "Change Admin",
+        "description": "This function is used to change the admin address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function changeAdmin(address _newAdmin)",
+        "inputFields": [
+          {
+            "key": "_newAdmin",
+            "label": "New Admin",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The new admin address."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "decimalsAction",
+      "name": "Decimals (View function)",
+      "display": {
+        "label": "Decimals (View function)",
+        "description": "This function returns the number of decimal places used for the token."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decimals() view returns (uint8)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Decimals",
+            "type": "number"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "decreaseAllowanceAction",
+      "name": "Decrease Allowance",
+      "display": {
+        "label": "Decrease Allowance",
+        "description": "Decreases the allowance granted to a spender."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decreaseAllowance(address _spender, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "Address of the spender"
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Amount to decrease the allowance by"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "increaseAllowanceAction",
+      "name": "Increase Allowance",
+      "display": {
+        "label": "Increase Allowance",
+        "description": "Increases the allowance of a spender to spend a certain amount of tokens on behalf of the owner."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function increaseAllowance(address _spender, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "Address of the spender"
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Amount to increase the allowance"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "isMinterAction",
+      "name": "Is Minter (View function)",
+      "display": {
+        "label": "Is Minter (View function)",
+        "description": "Checks if the given address is a minter."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isMinter(address _addr) view returns (bool)",
+        "inputFields": [
+          {
+            "key": "_addr",
+            "label": "Addr",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to check."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Is Minter",
+            "type": "boolean"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "mainchainGatewayAction",
+      "name": "Mainchain Gateway (View function)",
+      "display": {
+        "label": "Mainchain Gateway (View function)",
+        "description": "This function returns the address of the mainchain gateway."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function mainchainGateway() view returns (address)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Mainchain Gateway",
+            "type": "address"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "mintAction",
+      "name": "Mint",
+      "display": {
+        "label": "Mint",
+        "description": "Mint new tokens and assign them to the specified address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function mint(address _to, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to which the new tokens will be assigned."
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens to be minted."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "minterAction",
+      "name": "Minter (View function)",
+      "display": {
+        "label": "Minter (View function)",
+        "description": "This function checks if the given address is a minter."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function minter(address param0) view returns (bool)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to check."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Minter",
+            "type": "boolean"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "mintersAction",
+      "name": "Minters (View function)",
+      "display": {
+        "label": "Minters (View function)",
+        "description": "This function returns the address of the minter at the specified index."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function minters(uint256 param0) view returns (address)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The index of the minter."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Minters",
+            "type": "address"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "nameAction",
+      "name": "Name (View function)",
+      "display": {
+        "label": "Name (View function)",
+        "description": "This function returns a string value."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function name() view returns (string)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Name",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "removeAdminAction",
+      "name": "Remove Admin",
+      "display": {
+        "label": "Remove Admin",
+        "description": "This function removes an admin from the system."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function removeAdmin()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "removeMintersAction",
+      "name": "Remove Minters",
+      "display": {
+        "label": "Remove Minters",
+        "description": "Remove minters from the list of allowed minters."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function removeMinters(address[] _removedMinters)",
+        "inputFields": [
+          {
+            "key": "_removedMinters",
+            "label": "Removed Minters",
+            "type": "address",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of addresses representing the minters to be removed."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "symbolAction",
+      "name": "Symbol (View function)",
+      "display": {
+        "label": "Symbol (View function)",
+        "description": "This function returns a string."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function symbol() view returns (string)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Symbol",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "totalSupplyAction",
+      "name": "Total Supply (View function)",
+      "display": {
+        "label": "Total Supply (View function)",
+        "description": "This function returns the total supply of a token."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function totalSupply() view returns (uint256)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Total Supply",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferAction",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer tokens from the caller's address to the specified address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transfer(address _to, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to which the tokens will be transferred."
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens to be transferred."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferFromAction",
+      "name": "Transfer From",
+      "display": {
+        "label": "Transfer From",
+        "description": "Transfers tokens from one address to another"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferFrom(address _from, address _to, uint256 _value) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address from which the tokens will be transferred"
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to which the tokens will be transferred"
+          },
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The amount of tokens to be transferred"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "description": "Web3 connector for interacting with a smart contract that manages minters, admins, and token transfers.",
+  "icon": "data:image/webp;base64,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",
+  "user": "eip155:1:0xc8B54eC37c35F622C7a23a54d21d8a8c8b2C72f5",
+  "workspace": "ws-413320cd-0b2f-49ab-9b22-1e74e6675a90",
+  "access": "Private",
+  "contributor": "netzulo"
+}
