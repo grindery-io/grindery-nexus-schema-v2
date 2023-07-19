@@ -100,7 +100,7 @@
                     "created_at": "2018-05-26T16:32:11.000Z",
                     "description": "A fantastic user",
                     "protected": false,
-                    "name": "John_Doe",
+                    "name": "John Doe",
                     "profile_image_url": "https://pbs.twimg.com/profile_images/1594380422223936904/61aaaaAX_normal.jpg",
                     "location": "USA"
                 }
