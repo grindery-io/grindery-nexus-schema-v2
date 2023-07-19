@@ -17,20 +17,26 @@ for (const path of ["web2", "web3"]) {
         console.warn(`Invalid key: ${base}/${file}`);
         continue;
       }
+
+      // clone Slack Cds for Safe
+      const slackSafeKey = "slack__safe";
+      if (data.key === "slack") {
+        const slackSafeData = {...data, key: slackSafeKey, access: "Private"};
+        fs.writeFileSync(`dist/${slackSafeKey}.json`, JSON.stringify(slackSafeData));
+      }
+
       for (const key of ["triggers", "actions"]) {
         if (key in data) {
           data[key].forEach((x) => delete x.operation);
         }
       }
       index[data.key] = data;
-      
-      // clone Slack Cds for Safe
+
+      // add Slack Cds for Safe in index
       if (data.key === "slack") {
-        const slackSafeKey = "slack__safe";
-        const slackSafeData = {...data, key: slackSafeKey, access: "Private"};
         index[slackSafeKey] = slackSafeData;
-        fs.writeFileSync(`dist/${slackSafeKey}.json`, JSON.stringify(slackSafeData));
       }
+
 
     } catch (e) {
       console.warn(`Invalid CDS: ${base}/${file}`);
