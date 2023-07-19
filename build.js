@@ -21,8 +21,7 @@ for (const path of ["web2", "web3"]) {
       // clone Slack Cds for Safe
       const slackSafeKey = "slack__safe";
       if (data.key === "slack") {
-        const slackSafeData = {...data, key: slackSafeKey, access: "Private"};
-        fs.writeFileSync(`dist/${slackSafeKey}.json`, JSON.stringify(slackSafeData));
+        fs.writeFileSync(`dist/${slackSafeKey}.json`, JSON.stringify({...data, key: slackSafeKey, access: "Private"}));
       }
 
       for (const key of ["triggers", "actions"]) {
@@ -34,7 +33,7 @@ for (const path of ["web2", "web3"]) {
 
       // add Slack Cds for Safe in index
       if (data.key === "slack") {
-        index[slackSafeKey] = slackSafeData;
+        index[slackSafeKey] = {...data, key: slackSafeKey, access: "Private"};
       }
 
 
