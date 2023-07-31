@@ -19,6 +19,14 @@
           },
           "inputFields": [
             {
+              "key": "apiKey",
+              "label": "OpenAI API Key",
+              "type": "string",
+              "required": true,
+              "placeholder": "Paste OpenAI API Key",
+              "helpText": "Paste OpenAI API Key from https://platform.openai.com/account/api-keys"
+            },
+            {
               "key": "prompt",
               "label": "Prompt",
               "type": "string",
