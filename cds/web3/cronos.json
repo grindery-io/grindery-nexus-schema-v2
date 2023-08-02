@@ -1,0 +1,412 @@
+{
+  "key": "cronos",
+  "name": "Cronos blockchain",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "triggers": [
+    {
+      "key": "ApprovalTrigger",
+      "name": "Approval",
+      "display": {
+        "label": "Approval",
+        "description": "Approval"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Approval(address indexed owner, address indexed spender, uint256 value)",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    },
+    {
+      "key": "TransferTrigger",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer"
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Transfer(address indexed from, address indexed to, uint256 value)",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {}
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "allowanceAction",
+      "name": "Allowance",
+      "display": {
+        "label": "Allowance",
+        "description": "Allowance"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function allowance(address owner, address spender) returns uint256",
+        "inputFields": [
+          {
+            "key": "owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "approveAction",
+      "name": "Approve",
+      "display": {
+        "label": "Approve",
+        "description": "Approve"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function approve(address spender, uint256 amount) returns bool",
+        "inputFields": [
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "balanceOfAction",
+      "name": "Balance Of",
+      "display": {
+        "label": "Balance Of",
+        "description": "Balance Of"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address account) returns uint256",
+        "inputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "decimalsAction",
+      "name": "Decimals",
+      "display": {
+        "label": "Decimals",
+        "description": "Decimals"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decimals() returns uint8",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "decreaseAllowanceAction",
+      "name": "Decrease Allowance",
+      "display": {
+        "label": "Decrease Allowance",
+        "description": "Decrease Allowance"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function decreaseAllowance(address spender, uint256 subtractedValue) returns bool",
+        "inputFields": [
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "subtractedValue",
+            "label": "Subtracted Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "increaseAllowanceAction",
+      "name": "Increase Allowance",
+      "display": {
+        "label": "Increase Allowance",
+        "description": "Increase Allowance"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function increaseAllowance(address spender, uint256 addedValue) returns bool",
+        "inputFields": [
+          {
+            "key": "spender",
+            "label": "Spender",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "addedValue",
+            "label": "Added Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "nameAction",
+      "name": "Name",
+      "display": {
+        "label": "Name",
+        "description": "Name"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function name() returns string",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "symbolAction",
+      "name": "Symbol",
+      "display": {
+        "label": "Symbol",
+        "description": "Symbol"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function symbol() returns string",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "totalSupplyAction",
+      "name": "Total Supply",
+      "display": {
+        "label": "Total Supply",
+        "description": "Total Supply"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function totalSupply() returns uint256",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "transferAction",
+      "name": "Transfer",
+      "display": {
+        "label": "Transfer",
+        "description": "Transfer"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transfer(address to, uint256 amount) returns bool",
+        "inputFields": [
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    },
+    {
+      "key": "transferFromAction",
+      "name": "Transfer From",
+      "display": {
+        "label": "Transfer From",
+        "description": "Transfer From"
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferFrom(address from, address to, uint256 amount) returns bool",
+        "inputFields": [
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true
+          },
+          {
+            "key": "amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true
+          }
+        ],
+        "outputFields": [],
+        "sample": {}
+      }
+    }
+  ]
+}
