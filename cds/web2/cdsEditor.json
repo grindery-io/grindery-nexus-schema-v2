@@ -76,6 +76,13 @@
               "computed": true
             },
             {
+              "key": "method",
+              "label": "Method",
+              "type": "string",
+              "default": "GET",
+              "computed": true
+            },
+            {
               "key": "query.environment",
               "label": "Environment",
               "type": "string",
