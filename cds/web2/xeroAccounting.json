@@ -34623,5 +34623,6 @@
           "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&client_secret={{ secrets.client_secret|urlencode }}&grant_type=refresh_token"
         }
       }
-    }
+    },
+    "access": "Beta"
   }
