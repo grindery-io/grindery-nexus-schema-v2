@@ -69,6 +69,13 @@
           },
           "inputFields": [
             {
+              "key": "url",
+              "label": "URL",
+              "type": "string",
+              "default": "https://cds-editor.grindery.org/api/v1/blockchains",
+              "computed": true
+            },
+            {
               "key": "query.environment",
               "label": "Environment",
               "type": "string",
