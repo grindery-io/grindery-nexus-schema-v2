@@ -661,7 +661,7 @@
           "method": "POST",
           "url": "https://orchestrator.grindery.org/oauth/token",
           "headers": {
-            "Content-Type": "application/json"
+            "Content-Type": "application/x-www-form-urlencoded"
           },
           "body": "code={{ code|urlencode }}&grant_type=authorization_code"
         },
