@@ -1,0 +1,682 @@
+{
+    "key": "cdsEditor",
+    "name": "Grindery CDS Editor API",
+    "version": "1.0.1",
+    "platformVersion": "1.0.0",
+    "actions": [
+      {
+        "key": "api_v1_abi_get",
+        "name": "Get smart-contract ABI",
+        "display": {
+          "label": "Get smart-contract ABI",
+          "description": "Get smart-contract ABI by blockchain and smart-contract address.",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "query.blockchain",
+              "label": "Blockchain",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "An Id of the chain, following CAIP-2 schema e.g. eip155:1.",
+              "computed": false
+            },
+            {
+              "key": "query.address",
+              "label": "Address",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Smart-contract address",
+              "computed": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_blockchains_get",
+        "name": "Get blockchains",
+        "display": {
+          "label": "Get blockchains",
+          "description": "Get list of supported blockchains",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "query.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`.",
+              "computed": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_get",
+        "name": "Get Connectors",
+        "display": {
+          "label": "Get Connectors",
+          "description": "Get a list of user's connectors",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "query.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`.",
+              "computed": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_post",
+        "name": "Add Connector",
+        "display": {
+          "label": "Add Connector",
+          "description": "Add a new Connector",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "body.cds",
+              "label": "Cds",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector CDS JSON string."
+            },
+            {
+              "key": "body.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`."
+            },
+            {
+              "key": "body.username",
+              "label": "Username",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "Author's GitHub username"
+            },
+            {
+              "key": "_serializedPreset",
+              "label": "Request configuration",
+              "type": "string",
+              "default": "{\"method\":\"post\",\"url\":\"https://cds-editor.grindery.org/api/v1/cds\",\"header\":{\"content-type\":\"application/json\"},\"bodyType\":\"json\"}",
+              "computed": true
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_patch",
+        "name": "Update Connector",
+        "display": {
+          "label": "Update Connector",
+          "description": "Update Connector",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "body.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`."
+            },
+            {
+              "key": "body.cds",
+              "label": "Cds",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector CDS JSON string."
+            },
+            {
+              "key": "_serializedPreset",
+              "label": "Request configuration",
+              "type": "string",
+              "default": "{\"method\":\"patch\",\"url\":\"https://cds-editor.grindery.org/api/v1/cds\",\"header\":{\"content-type\":\"application/json\"},\"bodyType\":\"json\"}",
+              "computed": true
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_check_key_get",
+        "name": "Check connector",
+        "display": {
+          "label": "Check connector",
+          "description": "Check if connector with the `key` exists",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "query.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`.",
+              "computed": false
+            },
+            {
+              "key": "path.key",
+              "label": "Key",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector `key`.",
+              "computed": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_publish_post",
+        "name": "Submit connector for publishing",
+        "display": {
+          "label": "Submit connector for publishing",
+          "description": "Submits HubSpot form.",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "body.email",
+              "label": "Email",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "User email"
+            },
+            {
+              "key": "body.connector_name",
+              "label": "Connector name",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector name"
+            },
+            {
+              "key": "body.connector_key",
+              "label": "Connector key",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector key"
+            },
+            {
+              "key": "body.comment",
+              "label": "Comment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "Comment from user, optional."
+            },
+            {
+              "key": "body.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`."
+            },
+            {
+              "key": "_serializedPreset",
+              "label": "Request configuration",
+              "type": "string",
+              "default": "{\"method\":\"post\",\"url\":\"https://cds-editor.grindery.org/api/v1/cds/publish\",\"header\":{\"content-type\":\"application/json\"},\"bodyType\":\"json\"}",
+              "computed": true
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_clone_post",
+        "name": "Clone Connector",
+        "display": {
+          "label": "Clone Connector",
+          "description": "Clone connector CDS.",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "body.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`."
+            },
+            {
+              "key": "body.cds",
+              "label": "Cds",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector CDS JSON string."
+            },
+            {
+              "key": "body.username",
+              "label": "Username",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector creator's GitHub username."
+            },
+            {
+              "key": "_serializedPreset",
+              "label": "Request configuration",
+              "type": "string",
+              "default": "{\"method\":\"post\",\"url\":\"https://cds-editor.grindery.org/api/v1/cds/clone\",\"header\":{\"content-type\":\"application/json\"},\"bodyType\":\"json\"}",
+              "computed": true
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_cds_convert_post",
+        "name": "Submit ABI for conversion to CDS",
+        "display": {
+          "label": "Submit ABI for conversion to CDS",
+          "description": "Submit ABI for conversion to CDS",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "body.abi",
+              "label": "Abi",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "ABI"
+            },
+            {
+              "key": "body.name",
+              "label": "Name",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector name"
+            },
+            {
+              "key": "body.icon",
+              "label": "Icon",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Connector icon"
+            },
+            {
+              "key": "body.description",
+              "label": "Description",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "Connector description."
+            },
+            {
+              "key": "body.enhancedByOpenAI",
+              "label": "Enhanced By Open AI",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Enhanced or not by AI."
+            },
+            {
+              "key": "body.batchSizeOpenAI",
+              "label": "Batch Size Open AI",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": true,
+              "helpText": "Batch size for OpenAI."
+            },
+            {
+              "key": "_serializedPreset",
+              "label": "Request configuration",
+              "type": "string",
+              "default": "{\"method\":\"post\",\"url\":\"https://cds-editor.grindery.org/api/v1/cds/convert\",\"header\":{\"content-type\":\"application/json\"},\"bodyType\":\"json\"}",
+              "computed": true
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_contributor_get",
+        "name": "Get contributor",
+        "display": {
+          "label": "Get contributor",
+          "description": "Get a contributor by userID",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "query.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`.",
+              "computed": false
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      },
+      {
+        "key": "api_v1_contributor_post",
+        "name": "Save contributor",
+        "display": {
+          "label": "Save contributor",
+          "description": "Authenticate and save GitHub user",
+          "instructions": ""
+        },
+        "operation": {
+          "type": "api",
+          "operation": {
+            "url": "ws://grindery-nexus-connector-generic-http:3000/"
+          },
+          "inputFields": [
+            {
+              "key": "body.environment",
+              "label": "Environment",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "One of `production` or `staging`. Default is `production`."
+            },
+            {
+              "key": "body.code",
+              "label": "Code",
+              "type": "string",
+              "validation": {},
+              "placeholder": "",
+              "required": false,
+              "helpText": "GitHub authentication code."
+            },
+            {
+              "key": "_serializedPreset",
+              "label": "Request configuration",
+              "type": "string",
+              "default": "{\"method\":\"post\",\"url\":\"https://cds-editor.grindery.org/api/v1/contributor\",\"header\":{\"content-type\":\"application/json\"},\"bodyType\":\"json\"}",
+              "computed": true
+            }
+          ],
+          "outputFields": [
+            {
+              "key": "status",
+              "label": "HTTP status code",
+              "type": "number"
+            },
+            {
+              "key": "headers",
+              "label": "Response headers",
+              "type": "string",
+              "dict": true
+            }
+          ]
+        }
+      }
+    ],
+    "triggers": [],
+    "type": "web2",
+    "authentication": {
+      "type": "oauth2",
+      "authenticatedRequestTemplate": {
+        "headers": {
+          "Authorization": "Bearer {{ auth.access_token }}"
+        }
+      },
+      "test": {
+        "method": "GET",
+        "url": "https://cds-editor.grindery.org/api/v1/contributor"
+      },
+      "defaultDisplayName": "{{ data.username }}",
+      "allowedHosts": [
+        "orchestrator.grindery.org",
+        "login,grindery.io",
+        "cds-editor.grindery.org"
+      ],
+      "oauth2Config": {
+        "authorizeUrl": "https://login.grindery.io?response_type=code",
+        "getAccessToken": {
+          "method": "POST",
+          "url": "https://orchestrator.grindery.org/oauth/token",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": "code={{ code|urlencode }}&grant_type=authorization_code"
+        },
+        "autoRefresh": true,
+        "refreshAccessToken": {
+          "method": "POST",
+          "url": "https://orchestrator.grindery.org/oauth/token",
+          "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "body": "refresh_token={{ auth.refresh_token|urlencode }}&grant_type=refresh_token"
+        }
+      }
+    },
+    "access": "Private",
+    "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+    "workspace": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b"
+  }
