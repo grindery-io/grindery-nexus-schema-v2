@@ -1,0 +1,153 @@
+{
+    "key": "twitter",
+    "name": "Twitter",
+    "version": "1.0.0",
+    "platformVersion": "1",
+    "actions": [],
+    "triggers": [
+        {
+            "key": "NewLikeTrigger",
+            "name": "New like on a tweet",
+            "display": {
+                "label": "New like on a tweet",
+                "description": "",
+                "instructions": "",
+                "featured": false
+            },
+            "operation": {
+                "type": "polling",
+                "operation": {
+                    "url": "ws://grindery-nexus-connector-twitter:3000/"
+                },
+                "inputFields": [
+                    {
+                        "key": "url",
+                        "label": "Tweet URL",
+                        "helpText": "Note: Due to Twitter limitation, we can only check for new likes once every 3 minutes, this quota is shared between all triggers using the same Twitter account, so polling interval will be longer if more than one trigger instances are activated.",
+                        "type": "url",
+                        "validation": {
+                            "pattern": "^https?:\\/\\/twitter\\.com\\/(?:#!\\/)?\\w+\\/status(?:es)?\\/(\\d+)$"
+                        },
+                        "placeholder": "Example: https://twitter.com/elonmusk/status/1680391106037534721",
+                        "required": true,
+                        "sample": "https://twitter.com/elonmusk/status/1680391106037534721",
+                        "computed": false
+                    }
+                ],
+                "outputFields": [
+                    {
+                        "key": "verified_type",
+                        "label": "Verified type",
+                        "type": "string"
+                    },
+                    {
+                        "key": "id",
+                        "label": "ID",
+                        "type": "string"
+                    },
+                    {
+                        "key": "username",
+                        "label": "User name",
+                        "type": "string"
+                    },
+                    {
+                        "key": "created_at",
+                        "label": "Created at",
+                        "type": "string"
+                    },
+                    {
+                        "key": "description",
+                        "label": "Description",
+                        "type": "string"
+                    },
+                    {
+                        "key": "name",
+                        "label": "Name",
+                        "type": "string"
+                    },
+                    {
+                        "key": "profile_image_url",
+                        "label": "Profile image URL",
+                        "type": "url"
+                    },
+                    {
+                        "key": "location",
+                        "label": "Location",
+                        "type": "string"
+                    },
+                    {
+                        "key": "protected",
+                        "label": "Protected",
+                        "type": "boolean"
+                    },
+                    {
+                        "key": "verified",
+                        "label": "Verified",
+                        "type": "boolean"
+                    }
+                ],
+                "sample": {
+                    "verified_type": "none",
+                    "public_metrics": {
+                        "followers_count": 88,
+                        "following_count": 630,
+                        "tweet_count": 3493,
+                        "listed_count": 0
+                    },
+                    "verified": false,
+                    "id": "968155271333337904",
+                    "username": "someuser",
+                    "created_at": "2018-05-26T16:32:11.000Z",
+                    "description": "A fantastic user",
+                    "protected": false,
+                    "name": "John Doe",
+                    "profile_image_url": "https://pbs.twimg.com/profile_images/1594380422223936904/61aaaaAX_normal.jpg",
+                    "location": "USA"
+                }
+            }
+        }
+    ],
+    "authentication": {
+        "type": "oauth2",
+        "test": {
+            "method": "GET",
+            "url": "https://api.twitter.com/2/users/me"
+        },
+        "defaultDisplayName": "@{{ data.data.name }} - {{ data.data.username }}",
+        "allowedHosts": [
+            "api.twitter.com"
+        ],
+        "authenticatedRequestTemplate": {
+            "headers": {
+                "Authorization": "Bearer {{ auth.access_token }}"
+            }
+        },
+        "oauth2Config": {
+            "authorizeUrl": "https://twitter.com/i/oauth2/authorize?response_type=code&client_id={{ secrets.client_id|urlencode }}&scope=tweet.read+users.read+follows.read+like.read+offline.access&code_challenge=challenge&code_challenge_method=plain",
+            "getAccessToken": {
+                "method": "POST",
+                "url": "https://api.twitter.com/2/oauth2/token",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic {{ secrets.auth_header }}"
+                },
+                "body": "code={{ code|urlencode }}&client_id={{ secrets.client_id|urlencode }}&redirect_uri={{ redirect_uri|urlencode }}&grant_type=authorization_code&code_verifier=challenge"
+            },
+            "autoRefresh": true,
+            "refreshAccessToken": {
+                "method": "POST",
+                "url": "https://api.twitter.com/2/oauth2/token",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic {{ secrets.auth_header }}"
+                },
+                "body": "refresh_token={{ auth.refresh_token|urlencode }}&client_id={{ secrets.client_id|urlencode }}&grant_type=refresh_token"
+            }
+        }
+    },
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI0OCAyMDQiIHZpZXdCb3g9IjAgMCAyNDggMjA0Ij48cGF0aCBkPSJNMjIxLjk1IDUxLjI5Yy4xNSAyLjE3LjE1IDQuMzQuMTUgNi41MyAwIDY2LjczLTUwLjggMTQzLjY5LTE0My42OSAxNDMuNjl2LS4wNGMtMjcuNDQuMDQtNTQuMzEtNy44Mi03Ny40MS0yMi42NCAzLjk5LjQ4IDggLjcyIDEyLjAyLjczIDIyLjc0LjAyIDQ0LjgzLTcuNjEgNjIuNzItMjEuNjYtMjEuNjEtLjQxLTQwLjU2LTE0LjUtNDcuMTgtMzUuMDdhNTAuMzM4IDUwLjMzOCAwIDAgMCAyMi44LS44N0MyNy44IDExNy4yIDEwLjg1IDk2LjUgMTAuODUgNzIuNDZ2LS42NGE1MC4xOCA1MC4xOCAwIDAgMCAyMi45MiA2LjMyQzExLjU4IDYzLjMxIDQuNzQgMzMuNzkgMTguMTQgMTAuNzFhMTQzLjMzMyAxNDMuMzMzIDAgMCAwIDEwNC4wOCA1Mi43NiA1MC41MzIgNTAuNTMyIDAgMCAxIDE0LjYxLTQ4LjI1YzIwLjM0LTE5LjEyIDUyLjMzLTE4LjE0IDcxLjQ1IDIuMTkgMTEuMzEtMi4yMyAyMi4xNS02LjM4IDMyLjA3LTEyLjI2YTUwLjY5IDUwLjY5IDAgMCAxLTIyLjIgMjcuOTNjMTAuMDEtMS4xOCAxOS43OS0zLjg2IDI5LTcuOTVhMTAyLjU5NCAxMDIuNTk0IDAgMCAxLTI1LjIgMjYuMTZ6IiBzdHlsZT0iZmlsbDojMWQ5YmYwIi8+PC9zdmc+",
+    "type": "web2",
+    "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+    "workspace": "ws-499e41a8-c813-4d6a-aaa8-4ecf686e5e9d",
+    "access": "Public"
+}
