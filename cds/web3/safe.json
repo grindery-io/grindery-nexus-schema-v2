@@ -771,6 +771,7 @@
       "body": "{\"address\":\"{{ auth.safe }}\"}"
     },
     "defaultDisplayName": "[{{ auth.chainName }}] {{ auth.safe }}",
+    "credentialId": "[{{ auth.chainName }}] {{ auth.safe }}",
     "authenticatedRequestTemplate": {
       "headers": {
         "Content-Type": "application/json"

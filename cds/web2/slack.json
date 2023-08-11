@@ -29,6 +29,7 @@
       "url": "https://slack.com/api/team.info"
     },
     "defaultDisplayName": "{{ auth.team.name }}",
+    "credentialId": "{{ auth.team.id }}",
     "authenticatedRequestTemplate": {
       "headers": {
         "Authorization": "Bearer {{ auth.access_token }}"

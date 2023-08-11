@@ -664,6 +664,7 @@
         "url": "https://cds-editor.grindery.org/api/v1/contributor"
       },
       "defaultDisplayName": "{{ data.username }}",
+      "credentialId": "{{ data.id }}",
       "allowedHosts": [
         "orchestrator.grindery.org",
         "login,grindery.io",

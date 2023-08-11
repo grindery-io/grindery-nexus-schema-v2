@@ -29,6 +29,7 @@
       "url": "https://discordapp.com/api/users/@me"
     },
     "defaultDisplayName": "{{ data.guild.name }} - {{ data.username }}#{{ data.discriminator }}",
+    "credentialId": "{{ data.id }}",
     "authenticatedRequestTemplate": {
       "headers": {
         "Authorization": "Bearer {{ auth.access_token }}"

@@ -351,6 +351,7 @@
       "body": "{\"address\":\"{{ auth.address }}\"}"
     },
     "defaultDisplayName": "{{ auth.address }}",
+    "credentialId": "{{ auth.address }}",
     "authenticatedRequestTemplate": {
       "headers": {
         "Content-Type": "application/json"

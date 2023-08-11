@@ -34600,6 +34600,7 @@
         "url": "https://api.xero.com/connections"
       },
       "defaultDisplayName": "{{ data[0].tenantName }} ({{ data[0].tenantId }})",
+      "credentialId": "{{ data[0].tenantId }}",
       "allowedHosts": [
         "api.xero.com"
       ],
