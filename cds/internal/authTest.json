@@ -84,6 +84,7 @@
         "url": "https://www.googleapis.com/oauth2/v3/userinfo"
       },
       "defaultDisplayName": "{{ data.email }}",
+      "credentialId": "{{ data.sub }}",
       "authenticatedRequestTemplate": {
         "headers": {
           "Authorization": "Bearer {{ auth.access_token }}"

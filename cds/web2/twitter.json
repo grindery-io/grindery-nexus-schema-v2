@@ -114,6 +114,7 @@
             "url": "https://api.twitter.com/2/users/me"
         },
         "defaultDisplayName": "@{{ data.data.name }} - {{ data.data.username }}",
+        "credentialId": "{{ data.data.id }}",
         "allowedHosts": [
             "api.twitter.com"
         ],
