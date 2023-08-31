@@ -1504,8 +1504,10 @@
             "type": "string",
             "placeholder": "",
             "list": false,
-            "required": true,
-            "helpText": "Additional data"
+            "required": false,
+            "helpText": "Additional data",
+            "default": "",
+            "computed": false
           }
         ],
         "outputFields": [],
