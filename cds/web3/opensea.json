@@ -1,0 +1,1931 @@
+{
+  "key": "opensea",
+  "name": "OpenSea",
+  "version": "1.0.0",
+  "platformVersion": "1.0.0",
+  "type": "web3",
+  "triggers": [
+    {
+      "key": "ApprovalForAllTrigger",
+      "name": "Approval For All",
+      "display": {
+        "label": "Approval For All",
+        "description": "ApprovalForAll event is emitted when the approval status for an operator for a given owner changes."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event ApprovalForAll(address indexed account, address indexed operator, bool approved)",
+        "inputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "account: The address of the account that owns the tokens."
+          },
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "operator: The address of the account that is approved or disapproved."
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false,
+            "helpText": "approved: A boolean indicating whether the operator is approved or disapproved."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "CreatorChangedTrigger",
+      "name": "Creator Changed",
+      "display": {
+        "label": "Creator Changed",
+        "description": "This event is triggered when the creator of an item is changed."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event CreatorChanged(uint256 indexed _id, address indexed _creator)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the item that had its creator changed."
+          },
+          {
+            "key": "_creator",
+            "label": "Creator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new address of the creator."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_creator",
+            "label": "Creator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "MetaTransactionExecutedTrigger",
+      "name": "Meta Transaction Executed",
+      "display": {
+        "label": "Meta Transaction Executed",
+        "description": "This event is emitted when a meta transaction is executed."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event MetaTransactionExecuted(address userAddress, address relayerAddress, bytes functionSignature)",
+        "inputFields": [
+          {
+            "key": "userAddress",
+            "label": "User Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the user who initiated the meta transaction."
+          },
+          {
+            "key": "relayerAddress",
+            "label": "Relayer Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the relayer who executed the meta transaction."
+          },
+          {
+            "key": "functionSignature",
+            "label": "Function Signature",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The function signature of the meta transaction."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "userAddress",
+            "label": "User Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "relayerAddress",
+            "label": "Relayer Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "functionSignature",
+            "label": "Function Signature",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "OwnershipTransferredTrigger",
+      "name": "Ownership Transferred",
+      "display": {
+        "label": "Ownership Transferred",
+        "description": "This event is emitted when ownership of the contract is transferred from one address to another."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)",
+        "inputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The previous owner's address"
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The new owner's address"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "previousOwner",
+            "label": "Previous Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "PausedTrigger",
+      "name": "Paused",
+      "display": {
+        "label": "Paused",
+        "description": "This event is triggered when an account is paused."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Paused(address account)",
+        "inputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the account that was paused."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "PermanentURITrigger",
+      "name": "Permanent URI",
+      "display": {
+        "label": "Permanent URI",
+        "description": "This event is triggered when a permanent URI is set for a specific value and ID."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event PermanentURI(string _value, uint256 indexed _id)",
+        "inputFields": [
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The value for which the permanent URI is set."
+          },
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the value."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "_value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "TransferBatchTrigger",
+      "name": "Transfer Batch",
+      "display": {
+        "label": "Transfer Batch",
+        "description": "This event is emitted when a batch of tokens is transferred from one address to another."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event TransferBatch(address indexed operator, address indexed from, address indexed to, uint256[] ids, uint256[] values)",
+        "inputFields": [
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the operator performing the transfer."
+          },
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address from which the tokens are being transferred."
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address to which the tokens are being transferred."
+          },
+          {
+            "key": "ids",
+            "label": "Ids",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "helpText": "An array of token IDs being transferred."
+          },
+          {
+            "key": "values",
+            "label": "Values",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "helpText": "An array of corresponding token values being transferred."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "ids",
+            "label": "Ids",
+            "type": "string",
+            "placeholder": "",
+            "list": true
+          },
+          {
+            "key": "values",
+            "label": "Values",
+            "type": "string",
+            "placeholder": "",
+            "list": true
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "TransferSingleTrigger",
+      "name": "Transfer Single",
+      "display": {
+        "label": "Transfer Single",
+        "description": "This event is triggered when a single token is transferred from one address to another."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value)",
+        "inputFields": [
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the operator performing the transfer."
+          },
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address from which the token is being transferred."
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address to which the token is being transferred."
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The unique identifier of the token being transferred."
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The amount of tokens being transferred."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "URITrigger",
+      "name": "URI",
+      "display": {
+        "label": "URI",
+        "description": "This event is triggered when a URI is set for an item."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event URI(string value, uint256 indexed id)",
+        "inputFields": [
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The URI of the item. (string value)"
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "helpText": "The ID of the item. (uint256 indexed)"
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "value",
+            "label": "Value",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          },
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "UnpausedTrigger",
+      "name": "Unpaused",
+      "display": {
+        "label": "Unpaused",
+        "description": "This event is emitted when the contract is unpaused for a specific account."
+      },
+      "operation": {
+        "type": "blockchain:event",
+        "signature": "event Unpaused(address account)",
+        "inputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "helpText": "The address of the account that is unpaused."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "account",
+            "label": "Account",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "actions": [
+    {
+      "key": "ERC712_VERSIONAction",
+      "name": "ERC 712 VERSION",
+      "display": {
+        "label": "ERC 712 VERSION",
+        "description": "Returns the version of the ERC712 contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function ERC712_VERSION() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "addSharedProxyAddressAction",
+      "name": "Add Shared Proxy Address",
+      "display": {
+        "label": "Add Shared Proxy Address",
+        "description": "This function adds a shared proxy address to the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function addSharedProxyAddress(address _address)",
+        "inputFields": [
+          {
+            "key": "_address",
+            "label": "Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the shared proxy."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "balanceOfAction",
+      "name": "Balance Of",
+      "display": {
+        "label": "Balance Of",
+        "description": "This function returns the balance of a specific token owned by a specific address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOf(address _owner, uint256 _id) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the token owner"
+          },
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the token"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "balanceOfBatchAction",
+      "name": "Balance Of Batch",
+      "display": {
+        "label": "Balance Of Batch",
+        "description": "This function returns the balance of multiple accounts for a given set of token IDs."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function balanceOfBatch(address[] accounts, uint256[] ids) returns (uint256[])",
+        "inputFields": [
+          {
+            "key": "accounts",
+            "label": "Accounts",
+            "type": "address",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of addresses representing the accounts."
+          },
+          {
+            "key": "ids",
+            "label": "Ids",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of uint256 values representing the token IDs."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "batchBurnAction",
+      "name": "Batch Burn",
+      "display": {
+        "label": "Batch Burn",
+        "description": "This function allows the specified address to burn multiple tokens at once."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function batchBurn(address _from, uint256[] _ids, uint256[] _quantities)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address from which the tokens will be burned."
+          },
+          {
+            "key": "_ids",
+            "label": "Ids",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of token IDs to be burned."
+          },
+          {
+            "key": "_quantities",
+            "label": "Quantities",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of quantities specifying the amount of each token to be burned."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "batchMintAction",
+      "name": "Batch Mint",
+      "display": {
+        "label": "Batch Mint",
+        "description": "This function allows batch minting of multiple tokens to a specified address. It takes four arguments: the address to mint the tokens to, an array of token IDs, an array of quantities corresponding to each token ID, and optional data that can be used for additional functionality."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function batchMint(address _to, uint256[] _ids, uint256[] _quantities, bytes _data)",
+        "inputFields": [
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to mint the tokens to"
+          },
+          {
+            "key": "_ids",
+            "label": "Ids",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of token IDs"
+          },
+          {
+            "key": "_quantities",
+            "label": "Quantities",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of quantities corresponding to each token ID"
+          },
+          {
+            "key": "_data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Optional data that can be used for additional functionality"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "burnAction",
+      "name": "Burn",
+      "display": {
+        "label": "Burn",
+        "description": "Burns a specified amount of tokens from a given address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function burn(address _from, uint256 _id, uint256 _quantity)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address from which to burn tokens."
+          },
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the token to burn."
+          },
+          {
+            "key": "_quantity",
+            "label": "Quantity",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The quantity of tokens to burn."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "creatorAction",
+      "name": "Creator",
+      "display": {
+        "label": "Creator",
+        "description": "This function creates a new instance of a contract and returns the address of the new instance."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function creator(uint256 _id) returns (address)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the contract to create."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "disableMigrateAction",
+      "name": "Disable Migrate",
+      "display": {
+        "label": "Disable Migrate",
+        "description": "Disables the migration feature."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function disableMigrate()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "executeMetaTransactionAction",
+      "name": "Execute Meta Transaction",
+      "display": {
+        "label": "Execute Meta Transaction",
+        "description": "Executes a meta transaction on behalf of a user."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function executeMetaTransaction(address userAddress, bytes functionSignature, bytes32 sigR, bytes32 sigS, uint8 sigV) returns (bytes)",
+        "inputFields": [
+          {
+            "key": "userAddress",
+            "label": "User Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the user who is initiating the meta transaction."
+          },
+          {
+            "key": "functionSignature",
+            "label": "Function Signature",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The function signature of the method to be executed."
+          },
+          {
+            "key": "sigR",
+            "label": "Sig R",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The R component of the signature."
+          },
+          {
+            "key": "sigS",
+            "label": "Sig S",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The S component of the signature."
+          },
+          {
+            "key": "sigV",
+            "label": "Sig V",
+            "type": "number",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The V component of the signature."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "existsAction",
+      "name": "Exists",
+      "display": {
+        "label": "Exists",
+        "description": "Checks if a given ID exists in the system."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function exists(uint256 _id) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID to check for existence."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getChainIdAction",
+      "name": "Get Chain Id",
+      "display": {
+        "label": "Get Chain Id",
+        "description": "This function returns the Chain ID of the blockchain network."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getChainId() returns (uint256)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getDomainSeperatorAction",
+      "name": "Get Domain Seperator",
+      "display": {
+        "label": "Get Domain Seperator",
+        "description": "This function returns the domain separator value."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getDomainSeperator() returns (bytes32)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "getNonceAction",
+      "name": "Get Nonce",
+      "display": {
+        "label": "Get Nonce",
+        "description": "This function returns the nonce of a user's address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function getNonce(address user) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "user",
+            "label": "User",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The user's address."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "isApprovedForAllAction",
+      "name": "Is Approved For All",
+      "display": {
+        "label": "Is Approved For All",
+        "description": "Checks whether the specified operator is approved to manage all of the owner's tokens."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isApprovedForAll(address _owner, address _operator) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_owner",
+            "label": "Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the owner of the tokens."
+          },
+          {
+            "key": "_operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the operator to check."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "isPermanentURIAction",
+      "name": "Is Permanent URI",
+      "display": {
+        "label": "Is Permanent URI",
+        "description": "Checks if a given URI is permanent."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function isPermanentURI(uint256 _id) returns (bool)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the URI to check."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "maxSupplyAction",
+      "name": "Max Supply",
+      "display": {
+        "label": "Max Supply",
+        "description": "This function returns the maximum supply for a given ID."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function maxSupply(uint256 _id) pure returns (uint256)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the item."
+          }
+        ],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Max Supply",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "migrateAction",
+      "name": "Migrate",
+      "display": {
+        "label": "Migrate",
+        "description": "This function is used to migrate ownership data from one system to another."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function migrate(tuple[] _ownerships)",
+        "inputFields": [
+          {
+            "key": "_ownerships",
+            "label": "Ownerships",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of tuples representing ownership data. Each tuple should contain the address of the owner and the corresponding ownership value."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "migrationTargetAction",
+      "name": "Migration Target",
+      "display": {
+        "label": "Migration Target",
+        "description": "This function returns the migration target address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function migrationTarget() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "mintAction",
+      "name": "Mint",
+      "display": {
+        "label": "Mint",
+        "description": "Mint new tokens and send them to the specified address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function mint(address _to, uint256 _id, uint256 _quantity, bytes _data)",
+        "inputFields": [
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to send the minted tokens to."
+          },
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the token to mint."
+          },
+          {
+            "key": "_quantity",
+            "label": "Quantity",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The quantity of tokens to mint."
+          },
+          {
+            "key": "_data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Additional data to include in the mint transaction."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "nameAction",
+      "name": "Name",
+      "display": {
+        "label": "Name",
+        "description": "This function takes no arguments and returns a string."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function name() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "openSeaVersionAction",
+      "name": "Open Sea Version",
+      "display": {
+        "label": "Open Sea Version",
+        "description": "This function returns the version of the OpenSea platform."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function openSeaVersion() pure returns (string)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Open Sea Version",
+            "type": "string"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "ownerAction",
+      "name": "Owner",
+      "display": {
+        "label": "Owner",
+        "description": "This function returns the address of the owner of the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function owner() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "pauseAction",
+      "name": "Pause",
+      "display": {
+        "label": "Pause",
+        "description": "Pauses the execution of the program."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function pause()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "pausedAction",
+      "name": "Paused",
+      "display": {
+        "label": "Paused",
+        "description": "Checks if the function is currently paused."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function paused() returns (bool)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "proxyRegistryAddressAction",
+      "name": "Proxy Registry Address",
+      "display": {
+        "label": "Proxy Registry Address",
+        "description": "This function returns the address of the proxy registry."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function proxyRegistryAddress() returns (address)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "removeSharedProxyAddressAction",
+      "name": "Remove Shared Proxy Address",
+      "display": {
+        "label": "Remove Shared Proxy Address",
+        "description": "This function removes a shared proxy address from the list of addresses."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function removeSharedProxyAddress(address _address)",
+        "inputFields": [
+          {
+            "key": "_address",
+            "label": "Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the shared proxy to be removed."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "renounceOwnershipAction",
+      "name": "Renounce Ownership",
+      "display": {
+        "label": "Renounce Ownership",
+        "description": "This function allows the current owner to renounce their ownership of the contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function renounceOwnership()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "safeBatchTransferFromAction",
+      "name": "Safe Batch Transfer From",
+      "display": {
+        "label": "Safe Batch Transfer From",
+        "description": "This function allows for a batch transfer of multiple ERC1155 tokens from one address to another address. It is a safe transfer, meaning that it will revert if any of the transfers fail."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function safeBatchTransferFrom(address _from, address _to, uint256[] _ids, uint256[] _amounts, bytes _data)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address from which the tokens will be transferred."
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address to which the tokens will be transferred."
+          },
+          {
+            "key": "_ids",
+            "label": "Ids",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of token IDs to be transferred."
+          },
+          {
+            "key": "_amounts",
+            "label": "Amounts",
+            "type": "string",
+            "placeholder": "",
+            "list": true,
+            "required": true,
+            "helpText": "An array of corresponding amounts of tokens to be transferred."
+          },
+          {
+            "key": "_data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Additional data to be passed to the receiving contract, if any."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "safeTransferFromAction",
+      "name": "Safe Transfer From",
+      "display": {
+        "label": "Safe Transfer From",
+        "description": "Transfers specified amount of tokens from one address to another address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function safeTransferFrom(address _from, address _to, uint256 _id, uint256 _amount, bytes _data)",
+        "inputFields": [
+          {
+            "key": "_from",
+            "label": "From",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "Address of the sender"
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "Address of the recipient"
+          },
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "ID of the token"
+          },
+          {
+            "key": "_amount",
+            "label": "Amount",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Amount of tokens to transfer"
+          },
+          {
+            "key": "_data",
+            "label": "Data",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Additional data"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setApprovalForAllAction",
+      "name": "Set Approval For All",
+      "display": {
+        "label": "Set Approval For All",
+        "description": "Sets or revokes approval for the specified operator to manage all of the caller's tokens."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setApprovalForAll(address operator, bool approved)",
+        "inputFields": [
+          {
+            "key": "operator",
+            "label": "Operator",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the operator."
+          },
+          {
+            "key": "approved",
+            "label": "Approved",
+            "type": "boolean",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "A boolean indicating whether to approve or revoke the operator."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setCreatorAction",
+      "name": "Set Creator",
+      "display": {
+        "label": "Set Creator",
+        "description": "This function sets the creator of a specific item identified by its ID."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setCreator(uint256 _id, address _to)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the item."
+          },
+          {
+            "key": "_to",
+            "label": "To",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the new creator."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setPermanentURIAction",
+      "name": "Set Permanent URI",
+      "display": {
+        "label": "Set Permanent URI",
+        "description": "This function sets a permanent URI for a given ID."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setPermanentURI(uint256 _id, string _uri)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the item"
+          },
+          {
+            "key": "_uri",
+            "label": "Uri",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The URI to be set"
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setProxyRegistryAddressAction",
+      "name": "Set Proxy Registry Address",
+      "display": {
+        "label": "Set Proxy Registry Address",
+        "description": "Sets the address of the proxy registry contract."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setProxyRegistryAddress(address _address)",
+        "inputFields": [
+          {
+            "key": "_address",
+            "label": "Address",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the proxy registry contract."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setTemplateURIAction",
+      "name": "Set Template URI",
+      "display": {
+        "label": "Set Template URI",
+        "description": "Sets the URI of the template to be used."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setTemplateURI(string _uri)",
+        "inputFields": [
+          {
+            "key": "_uri",
+            "label": "Uri",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The URI of the template."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "setURIAction",
+      "name": "Set URI",
+      "display": {
+        "label": "Set URI",
+        "description": "This function allows you to set the URI for a specific ID."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function setURI(uint256 _id, string _uri)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the item."
+          },
+          {
+            "key": "_uri",
+            "label": "Uri",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The new URI for the item."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "sharedProxyAddressesAction",
+      "name": "Shared Proxy Addresses",
+      "display": {
+        "label": "Shared Proxy Addresses",
+        "description": "This function takes an address as input and returns a boolean value."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function sharedProxyAddresses(address param0) returns (bool)",
+        "inputFields": [
+          {
+            "key": "param0",
+            "label": "Param 0",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "Enter the address you want to check for shared proxy addresses."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "supportsFactoryInterfaceAction",
+      "name": "Supports Factory Interface",
+      "display": {
+        "label": "Supports Factory Interface",
+        "description": "Checks if the function supports the factory interface."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function supportsFactoryInterface() pure returns (bool)",
+        "inputFields": [],
+        "outputFields": [
+          {
+            "key": "returnValue",
+            "label": "Return value of Supports Factory Interface",
+            "type": "boolean"
+          }
+        ],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "supportsInterfaceAction",
+      "name": "Supports Interface",
+      "display": {
+        "label": "Supports Interface",
+        "description": "Checks if the contract supports a specific interface."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function supportsInterface(bytes4 interfaceId) returns (bool)",
+        "inputFields": [
+          {
+            "key": "interfaceId",
+            "label": "Interface Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The interface ID to check."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "symbolAction",
+      "name": "Symbol",
+      "display": {
+        "label": "Symbol",
+        "description": "This function returns a string."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function symbol() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "templateURIAction",
+      "name": "Template URI",
+      "display": {
+        "label": "Template URI",
+        "description": "The `templateURI` function returns a string representing the URI of a template."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function templateURI() returns (string)",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "totalSupplyAction",
+      "name": "Total Supply",
+      "display": {
+        "label": "Total Supply",
+        "description": "This function returns the total supply of a specific token."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function totalSupply(uint256 _id) returns (uint256)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "The ID of the token for which to get the total supply."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "transferOwnershipAction",
+      "name": "Transfer Ownership",
+      "display": {
+        "label": "Transfer Ownership",
+        "description": "This function is used to transfer the ownership of a contract to a new address."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function transferOwnership(address newOwner)",
+        "inputFields": [
+          {
+            "key": "newOwner",
+            "label": "New Owner",
+            "type": "address",
+            "placeholder": "Enter a blockchain address",
+            "list": false,
+            "required": true,
+            "helpText": "The address of the new owner."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "unpauseAction",
+      "name": "Unpause",
+      "display": {
+        "label": "Unpause",
+        "description": "This function is used to unpause a process."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function unpause()",
+        "inputFields": [],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    },
+    {
+      "key": "uriAction",
+      "name": "Uri",
+      "display": {
+        "label": "Uri",
+        "description": "This function takes an unsigned integer as input and returns a string."
+      },
+      "operation": {
+        "type": "blockchain:call",
+        "signature": "function uri(uint256 _id) returns (string)",
+        "inputFields": [
+          {
+            "key": "_id",
+            "label": "Id",
+            "type": "string",
+            "placeholder": "",
+            "list": false,
+            "required": true,
+            "helpText": "Enter an unsigned integer."
+          }
+        ],
+        "outputFields": [],
+        "sample": {
+          
+        }
+      }
+    }
+  ],
+  "description": "Web3 connector for interacting with a smart contract that manages ERC721 tokens and supports meta transactions.",
+  "icon": "data:image/png;base64,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",
+  "user": "eip155:1:0x4245cd11b5a9E54F57bE19B643E564AA4Ee86D1b",
+  "workspace": "ws-fc032dde-811a-409b-a421-ade7865f7037",
+  "access": "Private",
+  "contributor": "milukove"
+}
