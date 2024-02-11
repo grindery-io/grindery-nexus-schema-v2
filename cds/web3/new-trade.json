@@ -1968,7 +1968,7 @@
       "grindery-nexus-orchestrator:3000"
     ],
     "oauth2Config": {
-      "authorizeUrl": "https://microsites.grindery.org/grindery-nexus-connector-web3-microsite/?path=flow",
+      "authorizeUrl": "https://microsites.grindery.com/grindery-nexus-connector-web3-microsite/?path=flow",
       "getAccessToken": {
         "method": "POST",
         "url": "http://grindery-nexus-orchestrator:3000/webhook/web3/callSmartContract/flowCreateAccountComplete",
